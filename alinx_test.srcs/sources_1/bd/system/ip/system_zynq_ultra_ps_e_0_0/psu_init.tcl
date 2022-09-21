@@ -1583,7 +1583,7 @@ set psu_ddr_init_data {
 		# DDR2: Value to write to EMR2 register. DDR3/DDR4: Value to write to MR2
     # register LPDDR2/LPDDR3/LPDDR4: Value to write to MR3 register mDDR: Unus
     # ed
-		# PSU_DDRC_INIT4_EMR2                                                             0x18
+		# PSU_DDRC_INIT4_EMR2                                                             0x28
 
 		# DDR2: Value to write to EMR3 register. DDR3/DDR4: Value to write to MR3
     # register mDDR/LPDDR2/LPDDR3: Unused LPDDR4: Value to write to MR13 regis
@@ -1591,8 +1591,8 @@ set psu_ddr_init_data {
 		# PSU_DDRC_INIT4_EMR3                                                             0x200
 
 		# SDRAM Initialization Register 4
-		#(OFFSET, MASK, VALUE)      (0XFD0700E0, 0xFFFFFFFFU ,0x00180200U)  */
-    mask_write 0XFD0700E0 0xFFFFFFFF 0x00180200
+		#(OFFSET, MASK, VALUE)      (0XFD0700E0, 0xFFFFFFFFU ,0x00280200U)  */
+    mask_write 0XFD0700E0 0xFFFFFFFF 0x00280200
 		# Register : INIT5 @ 0XFD0700E4</p>
 
 		# ZQ initial calibration, tZQINIT. Present only in designs configured to s
@@ -1775,7 +1775,7 @@ set psu_ddr_init_data {
     #  above value by 2. No rounding up. For configurations with MEMC_FREQ_RAT
     # IO=2, 2T mode or LPDDR4 mode, divide the above value by 2 and round it u
     # p to the next integer value.
-		# PSU_DDRC_DRAMTMG0_WR2PRE                                                        0x11
+		# PSU_DDRC_DRAMTMG0_WR2PRE                                                        0x13
 
 		# tFAW Valid only when 8 or more banks(or banks x bank groups) are present
     # . In 8-bank design, at most 4 banks must be activated in a rolling windo
@@ -1800,8 +1800,8 @@ set psu_ddr_init_data {
 		# PSU_DDRC_DRAMTMG0_T_RAS_MIN                                                     0x13
 
 		# SDRAM Timing Register 0
-		#(OFFSET, MASK, VALUE)      (0XFD070100, 0x7F3F7F3FU ,0x11122813U)  */
-    mask_write 0XFD070100 0x7F3F7F3F 0x11122813
+		#(OFFSET, MASK, VALUE)      (0XFD070100, 0x7F3F7F3FU ,0x13122813U)  */
+    mask_write 0XFD070100 0x7F3F7F3F 0x13122813
 		# Register : DRAMTMG1 @ 0XFD070104</p>
 
 		# tXP: Minimum time after power-down exit to any operation. For DDR3, this
@@ -1841,7 +1841,7 @@ set psu_ddr_init_data {
     # egister field is not required for DDR2 and DDR3 (except if MEMC_TRAINING
     #  is set), as the DFI read and write latencies defined in DFITMG0 and DFI
     # TMG1 are sufficient for those protocols Unit: clocks
-		# PSU_DDRC_DRAMTMG2_WRITE_LATENCY                                                 0x6
+		# PSU_DDRC_DRAMTMG2_WRITE_LATENCY                                                 0x8
 
 		# Set to RL Time from read command to read data on SDRAM interface. This m
     # ust be set to RL. Note that, depending on the PHY, if using RDIMM, it ma
@@ -1868,7 +1868,7 @@ set psu_ddr_init_data {
     # erating is enabled (DERATEEN.derate_enable=1), derated tDQSCKmax should
     # be used. For configurations with MEMC_FREQ_RATIO=2, divide the value cal
     # culated using the above equation by 2, and round it up to next integer.
-		# PSU_DDRC_DRAMTMG2_RD2WR                                                         0x7
+		# PSU_DDRC_DRAMTMG2_RD2WR                                                         0x5
 
 		# DDR4: CWL + PL + BL/2 + tWTR_L Others: CWL + BL/2 + tWTR In DDR4, minimu
     # m time from write command to read command for same bank group. In others
@@ -1883,11 +1883,11 @@ set psu_ddr_init_data {
     # PDDR3/LPDDR4 operation. For configurations with MEMC_FREQ_RATIO=2, divid
     # e the value calculated using the above equation by 2, and round it up to
     #  next integer.
-		# PSU_DDRC_DRAMTMG2_WR2RD                                                         0xd
+		# PSU_DDRC_DRAMTMG2_WR2RD                                                         0xf
 
 		# SDRAM Timing Register 2
-		#(OFFSET, MASK, VALUE)      (0XFD070108, 0x3F3F3F3FU ,0x0608070DU)  */
-    mask_write 0XFD070108 0x3F3F3F3F 0x0608070D
+		#(OFFSET, MASK, VALUE)      (0XFD070108, 0x3F3F3F3FU ,0x0808050FU)  */
+    mask_write 0XFD070108 0x3F3F3F3F 0x0808050F
 		# Register : DRAMTMG3 @ 0XFD07010C</p>
 
 		# Time to wait after a mode register write or read (MRW or MRR). Present o
@@ -2099,11 +2099,11 @@ set psu_ddr_init_data {
     # is comes directly from the SDRAM specification. For configurations with
     # MEMC_FREQ_RATIO=2, divide the value calculated using the above equation
     # by 2, and round it up to next integer.
-		# PSU_DDRC_DRAMTMG9_WR2RD_S                                                       0xa
+		# PSU_DDRC_DRAMTMG9_WR2RD_S                                                       0xc
 
 		# SDRAM Timing Register 9
-		#(OFFSET, MASK, VALUE)      (0XFD070124, 0x40070F3FU ,0x0002040AU)  */
-    mask_write 0XFD070124 0x40070F3F 0x0002040A
+		#(OFFSET, MASK, VALUE)      (0XFD070124, 0x40070F3FU ,0x0002040CU)  */
+    mask_write 0XFD070124 0x40070F3F 0x0002040C
 		# Register : DRAMTMG11 @ 0XFD07012C</p>
 
 		# tXMPDLL: This is the minimum Exit MPSM to commands requiring a locked DL
@@ -2271,11 +2271,11 @@ set psu_ddr_init_data {
     # n the PHY, if using RDIMM, it may be necessary to use the value (CL + 1)
     #  in the calculation of tphy_wrlat. This is to compensate for the extra c
     # ycle of latency through the RDIMM.
-		# PSU_DDRC_DFITMG0_DFI_TPHY_WRLAT                                                 0x9
+		# PSU_DDRC_DFITMG0_DFI_TPHY_WRLAT                                                 0xd
 
 		# DFI Timing Register 0
-		#(OFFSET, MASK, VALUE)      (0XFD070190, 0x1FBFBF3FU ,0x048C8209U)  */
-    mask_write 0XFD070190 0x1FBFBF3F 0x048C8209
+		#(OFFSET, MASK, VALUE)      (0XFD070190, 0x1FBFBF3FU ,0x048C820DU)  */
+    mask_write 0XFD070190 0x1FBFBF3F 0x048C820D
 		# Register : DFITMG1 @ 0XFD070194</p>
 
 		# Specifies the number of DFI PHY clocks between when the dfi_cs signal is
@@ -2467,11 +2467,11 @@ set psu_ddr_init_data {
     #  interface and when the associated dfi_wrdata_cs signal is asserted. Thi
     # s corresponds to the DFI timing parameter tphy_wrcslat. Refer to PHY spe
     # cification for correct value.
-		# PSU_DDRC_DFITMG2_DFI_TPHY_WRCSLAT                                               0x7
+		# PSU_DDRC_DFITMG2_DFI_TPHY_WRCSLAT                                               0xb
 
 		# DFI Timing Register 2
-		#(OFFSET, MASK, VALUE)      (0XFD0701B4, 0x00003F3FU ,0x00000A07U)  */
-    mask_write 0XFD0701B4 0x00003F3F 0x00000A07
+		#(OFFSET, MASK, VALUE)      (0XFD0701B4, 0x00003F3FU ,0x00000A0BU)  */
+    mask_write 0XFD0701B4 0x00003F3F 0x00000A0B
 		# Register : DBICTL @ 0XFD0701C0</p>
 
 		# Read DBI enable signal in DDRC. - 0 - Read DBI is disabled. - 1 - Read D
@@ -2871,11 +2871,11 @@ set psu_ddr_init_data {
     # amble) If (CL - CWL - RD_PREAMBLE + WR_PREAMBLE) < 0, uMCTL2 does not su
     # pport ODT for read operation. LPDDR3: - RL + RD(tDQSCK(min)/tCK) - 1 - R
     # U(tODTon(max)/tCK)
-		# PSU_DDRC_ODTCFG_RD_ODT_DELAY                                                    0x3
+		# PSU_DDRC_ODTCFG_RD_ODT_DELAY                                                    0x0
 
 		# ODT Configuration Register
-		#(OFFSET, MASK, VALUE)      (0XFD070240, 0x0F1F0F7CU ,0x0600060CU)  */
-    mask_write 0XFD070240 0x0F1F0F7C 0x0600060C
+		#(OFFSET, MASK, VALUE)      (0XFD070240, 0x0F1F0F7CU ,0x06000600U)  */
+    mask_write 0XFD070240 0x0F1F0F7C 0x06000600
 		# Register : ODTMAP @ 0XFD070244</p>
 
 		# Indicates which remote ODTs must be turned on during a read from rank 1.
@@ -4742,7 +4742,7 @@ set psu_ddr_init_data {
 		# PSU_DDR_PHY_DTPR6_RESERVED_29_14                                                0x0
 
 		# Write Latency
-		# PSU_DDR_PHY_DTPR6_PUBWL                                                         0xc
+		# PSU_DDR_PHY_DTPR6_PUBWL                                                         0x10
 
 		# Reserved. Return zeroes on reads.
 		# PSU_DDR_PHY_DTPR6_RESERVED_7_6                                                  0x0
@@ -4751,8 +4751,8 @@ set psu_ddr_init_data {
 		# PSU_DDR_PHY_DTPR6_PUBRL                                                         0x10
 
 		# DRAM Timing Parameters Register 6
-		#(OFFSET, MASK, VALUE)      (0XFD080128, 0xFFFFFFFFU ,0x00000C10U)  */
-    mask_write 0XFD080128 0xFFFFFFFF 0x00000C10
+		#(OFFSET, MASK, VALUE)      (0XFD080128, 0xFFFFFFFFU ,0x00001010U)  */
+    mask_write 0XFD080128 0xFFFFFFFF 0x00001010
 		# Register : RDIMMGCR0 @ 0XFD080140</p>
 
 		# Reserved. Return zeroes on reads.
@@ -4972,14 +4972,14 @@ set psu_ddr_init_data {
 		# PSU_DDR_PHY_MR2_WLS                                                             0x0
 
 		# Write Latency
-		# PSU_DDR_PHY_MR2_WL                                                              0x3
+		# PSU_DDR_PHY_MR2_WL                                                              0x5
 
 		# Read Latency
 		# PSU_DDR_PHY_MR2_RL                                                              0x0
 
 		# LPDDR4 Mode Register 2
-		#(OFFSET, MASK, VALUE)      (0XFD080188, 0xFFFFFFFFU ,0x00000018U)  */
-    mask_write 0XFD080188 0xFFFFFFFF 0x00000018
+		#(OFFSET, MASK, VALUE)      (0XFD080188, 0xFFFFFFFFU ,0x00000028U)  */
+    mask_write 0XFD080188 0xFFFFFFFF 0x00000028
 		# Register : MR3 @ 0XFD08018C</p>
 
 		# Reserved. Return zeroes on reads.

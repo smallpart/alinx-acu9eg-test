@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1.3 (win64) Build 2644227 Wed Sep  4 09:45:24 MDT 2019
-//Date        : Thu Sep 15 18:42:06 2022
+//Date        : Wed Sep 21 18:51:14 2022
 //Host        : atom-pc running 64-bit major release  (build 9200)
 //Command     : generate_target system.bd
 //Design      : system
@@ -1123,24 +1123,24 @@ module system
     led_pl_tri_o,
     uart_control_rxd,
     uart_control_txd);
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 dac_txen " *) output [1:0]dac_txen_tri_o;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 fmc_spi " *) input fmc_spi_io0_i;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 fmc_spi " *) output fmc_spi_io0_o;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 fmc_spi " *) output fmc_spi_io0_t;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 fmc_spi " *) input fmc_spi_io1_i;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 fmc_spi " *) output fmc_spi_io1_o;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 fmc_spi " *) output fmc_spi_io1_t;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 fmc_spi " *) input fmc_spi_sck_i;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 fmc_spi " *) output fmc_spi_sck_o;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 fmc_spi " *) output fmc_spi_sck_t;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 fmc_spi " *) input [1:0]fmc_spi_ss_i;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 fmc_spi " *) output [1:0]fmc_spi_ss_o;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 fmc_spi " *) output fmc_spi_ss_t;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio_spi_en " *) output [0:0]gpio_spi_en_tri_o;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio_status " *) input [1:0]gpio_status_tri_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 dac_txen TRI_O" *) output [1:0]dac_txen_tri_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 fmc_spi IO0_I" *) input fmc_spi_io0_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 fmc_spi IO0_O" *) output fmc_spi_io0_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 fmc_spi IO0_T" *) output fmc_spi_io0_t;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 fmc_spi IO1_I" *) input fmc_spi_io1_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 fmc_spi IO1_O" *) output fmc_spi_io1_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 fmc_spi IO1_T" *) output fmc_spi_io1_t;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 fmc_spi SCK_I" *) input fmc_spi_sck_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 fmc_spi SCK_O" *) output fmc_spi_sck_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 fmc_spi SCK_T" *) output fmc_spi_sck_t;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 fmc_spi SS_I" *) input [1:0]fmc_spi_ss_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 fmc_spi SS_O" *) output [1:0]fmc_spi_ss_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 fmc_spi SS_T" *) output fmc_spi_ss_t;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio_spi_en TRI_O" *) output [0:0]gpio_spi_en_tri_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio_status TRI_I" *) input [1:0]gpio_status_tri_i;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 led_pl TRI_O" *) output [0:0]led_pl_tri_o;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 uart_control " *) input uart_control_rxd;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 uart_control " *) output uart_control_txd;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 uart_control RxD" *) input uart_control_rxd;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 uart_control TxD" *) output uart_control_txd;
 
   wire [1:0]axi_gpio_dac_txen_GPIO_TRI_O;
   wire [0:0]axi_gpio_fmc_GPIO_TRI_O;

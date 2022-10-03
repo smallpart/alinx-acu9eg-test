@@ -64,7 +64,7 @@ void DAC9173_Init(void) {
     DAC9173_Write(0x0790, 0xff);
     DAC9173_Write(0x0791, 0xff);
     /* ADC clock output divider */
-    DAC9173_Write(0x0799, (0 << 6) | 0x08);
+    DAC9173_Write(0x0799, (3 << 6) | 0x08);
 
     /* Disable holds all digital logic */
     DAC9173_Write(0x0100, 0x00);

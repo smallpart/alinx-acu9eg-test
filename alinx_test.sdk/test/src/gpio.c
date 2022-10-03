@@ -47,13 +47,13 @@ uint16_t GPIO_Init(void) {
     XGpio_Initialize      (&gpio_led_pl,     XPAR_AXI_GPIO_LED_DEVICE_ID);
     XGpio_SetDataDirection(&gpio_led_pl,     GPIO_DIRECTION_OUT);
 
-    XGpio_Initialize      (&gpio_spi_en,     XPAR_AXI_GPIO_LED_DEVICE_ID);
+    XGpio_Initialize      (&gpio_spi_en,     XPAR_AXI_GPIO_SPI_EN_DEVICE_ID);
     XGpio_SetDataDirection(&gpio_spi_en,     GPIO_DIRECTION_OUT);
 
-    XGpio_Initialize      (&gpio_dac_txen,   XPAR_AXI_GPIO_LED_DEVICE_ID);
+    XGpio_Initialize      (&gpio_dac_txen,   XPAR_AXI_GPIO_DAC_TXEN_DEVICE_ID);
     XGpio_SetDataDirection(&gpio_dac_txen,   GPIO_DIRECTION_OUT);
 
-    XGpio_Initialize      (&gpio_fmc_status, XPAR_AXI_GPIO_LED_DEVICE_ID);
+    XGpio_Initialize      (&gpio_fmc_status, XPAR_AXI_GPIO_FMC_STATUS_DEVICE_ID);
     XGpio_SetDataDirection(&gpio_fmc_status, GPIO_DIRECTION_IN);
 
     /* Initialization PS GPIO */

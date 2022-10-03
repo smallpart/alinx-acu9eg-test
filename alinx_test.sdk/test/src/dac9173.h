@@ -17,6 +17,7 @@
  * Defines
  ******************************************/
 #define DAC9173_AMPLITUDE       (0x50ff)
+//#define DAC9173_AMPLITUDE       (0x7fff)
 
 #define DAC9173_FTW_83_2_MHZ    (0x03858DAE3038ULL)
 #define DAC9173_FTW_84_MHZ      (0x038e38e38e39ULL)

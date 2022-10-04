@@ -577,6 +577,11 @@
 #define XPAR_PSU_DDR_1_S_AXI_HIGHADDR 0x87FFFFFFF
 
 
+/* Definitions for peripheral PSU_QSPI_LINEAR_0 */
+#define XPAR_PSU_QSPI_LINEAR_0_S_AXI_BASEADDR 0xC0000000
+#define XPAR_PSU_QSPI_LINEAR_0_S_AXI_HIGHADDR 0xDFFFFFFF
+
+
 /******************************************************************/
 
 /* Definitions for driver GPIO */
@@ -727,6 +732,33 @@
 #define  XPAR_XIPIPS_TARGET_PSU_PMU_0_CH3_MASK  XPAR_PSU_IPI_6_BIT_MASK
 #define  XPAR_XIPIPS_TARGET_PSU_PMU_0_CH3_INDEX  6U
 
+/* Definitions for driver QSPIPSU */
+#define XPAR_XQSPIPSU_NUM_INSTANCES 1
+
+/* Definitions for peripheral PSU_QSPI_0 */
+#define XPAR_PSU_QSPI_0_DEVICE_ID 0
+#define XPAR_PSU_QSPI_0_BASEADDR 0xFF0F0000
+#define XPAR_PSU_QSPI_0_HIGHADDR 0xFF0FFFFF
+#define XPAR_PSU_QSPI_0_QSPI_CLK_FREQ_HZ 299997009
+#define XPAR_PSU_QSPI_0_QSPI_MODE 2
+#define XPAR_PSU_QSPI_0_QSPI_BUS_WIDTH 2
+
+
+/******************************************************************/
+
+#define XPAR_PSU_QSPI_0_IS_CACHE_COHERENT 0
+/* Canonical definitions for peripheral PSU_QSPI_0 */
+#define XPAR_XQSPIPSU_0_DEVICE_ID XPAR_PSU_QSPI_0_DEVICE_ID
+#define XPAR_XQSPIPSU_0_BASEADDR 0xFF0F0000
+#define XPAR_XQSPIPSU_0_HIGHADDR 0xFF0FFFFF
+#define XPAR_XQSPIPSU_0_QSPI_CLK_FREQ_HZ 299997009
+#define XPAR_XQSPIPSU_0_QSPI_MODE 2
+#define XPAR_XQSPIPSU_0_QSPI_BUS_WIDTH 2
+#define XPAR_XQSPIPSU_0_IS_CACHE_COHERENT 0
+
+
+/******************************************************************/
+
 /* Definitions for driver RESETPS and CLOCKPS */
 #define XPAR_XCRPSU_NUM_INSTANCES 1U
 
@@ -796,6 +828,39 @@
 #define XPAR_SCUGIC_0_CPU_BASEADDR 0xF9020000U
 #define XPAR_SCUGIC_0_CPU_HIGHADDR 0xF9020FFFU
 #define XPAR_SCUGIC_0_DIST_BASEADDR 0xF9010000U
+
+
+/******************************************************************/
+
+/* Definitions for driver SDPS */
+#define XPAR_XSDPS_NUM_INSTANCES 1
+
+/* Definitions for peripheral PSU_SD_0 */
+#define XPAR_PSU_SD_0_DEVICE_ID 0
+#define XPAR_PSU_SD_0_BASEADDR 0xFF160000
+#define XPAR_PSU_SD_0_HIGHADDR 0xFF16FFFF
+#define XPAR_PSU_SD_0_SDIO_CLK_FREQ_HZ 177776001
+#define XPAR_PSU_SD_0_HAS_CD 0
+#define XPAR_PSU_SD_0_HAS_WP 0
+#define XPAR_PSU_SD_0_BUS_WIDTH 8
+#define XPAR_PSU_SD_0_MIO_BANK 0
+#define XPAR_PSU_SD_0_HAS_EMIO 0
+
+
+/******************************************************************/
+
+#define XPAR_PSU_SD_0_IS_CACHE_COHERENT 0
+/* Canonical definitions for peripheral PSU_SD_0 */
+#define XPAR_XSDPS_0_DEVICE_ID XPAR_PSU_SD_0_DEVICE_ID
+#define XPAR_XSDPS_0_BASEADDR 0xFF160000
+#define XPAR_XSDPS_0_HIGHADDR 0xFF16FFFF
+#define XPAR_XSDPS_0_SDIO_CLK_FREQ_HZ 177776001
+#define XPAR_XSDPS_0_HAS_CD 0
+#define XPAR_XSDPS_0_HAS_WP 0
+#define XPAR_XSDPS_0_BUS_WIDTH 8
+#define XPAR_XSDPS_0_MIO_BANK 0
+#define XPAR_XSDPS_0_HAS_EMIO 0
+#define XPAR_XSDPS_0_IS_CACHE_COHERENT 0
 
 
 /******************************************************************/

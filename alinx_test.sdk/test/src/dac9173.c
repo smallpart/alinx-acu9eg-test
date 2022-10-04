@@ -24,6 +24,17 @@
 void DAC9173_GpioInit (void);
 
 /*******************************************
+ * Global variables
+ ******************************************/
+bool    clk_out_en  = true;
+uint8_t clk_out_div = 3;
+uint16_t dac_en     = DAC9173_DAC0 | DAC9173_DAC1;
+uint64_t freq0      = DAC9173_DAC0_FREQUENCY;
+uint64_t freq1      = DAC9173_DAC1_FREQUENCY;
+uint16_t amp0       = DAC9173_AMPLITUDE;
+uint16_t amp1       = DAC9173_AMPLITUDE;
+
+/*******************************************
  * DAC9173 Initialize GPIO
  ******************************************/
 void DAC9173_GpioInit(void) {
@@ -51,12 +62,15 @@ void DAC9173_Init(void) {
 
     /* Enable boot loader */
     DAC9173_Write(0x0705, 0x01);
+    for (volatile uint32_t delay = 0; delay < 50000000; delay++) ;
     /* Wait 10 ms for boot loader to load */
     while ( ( DAC9173_Read(0x0705) & (1 << 1) ) == 0 ) ;
 
     /* Power on DACs and bias circuitry */
-    DAC9173_Write(0x0090, 0x00);
-    DAC9173_Write(0x0091, 0x00);
+//    DAC9173_Write(0x0090, 0x00);
+//    DAC9173_Write(0x0091, 0x00);
+    DAC9173_OutputEnable(DAC9173_DAC0, (dac_en & DAC9173_DAC0) != 0);
+    DAC9173_OutputEnable(DAC9173_DAC1, (dac_en & DAC9173_DAC1) != 0);
 
     /* Enable direct clocking (bypassing the PLL clock) */
     DAC9173_Write(0x0095, 0x01);
@@ -64,17 +78,42 @@ void DAC9173_Init(void) {
     DAC9173_Write(0x0790, 0xff);
     DAC9173_Write(0x0791, 0xff);
     /* ADC clock output divider */
-    DAC9173_Write(0x0799, (3 << 6) | 0x08);
+//    DAC9173_Write(0x0799, (3 << 6) | 0x08);
+    DAC9173_ClkOutEnable(clk_out_en);
+    DAC9173_ClkOutSetDiv(clk_out_div);
 
     /* Disable holds all digital logic */
     DAC9173_Write(0x0100, 0x00);
 
     /* Initialization outputs */
-    DAC9173_SetFrequency(DAC9173_DAC0, DAC9173_DAC0_FREQUENCY);
-    DAC9173_SetAmplitude(DAC9173_DAC0, DAC9173_AMPLITUDE);
+//    DAC9173_SetFrequency(DAC9173_DAC0, DAC9173_DAC0_FREQUENCY);
+//    DAC9173_SetAmplitude(DAC9173_DAC0, DAC9173_AMPLITUDE);
+//
+//    DAC9173_SetFrequency(DAC9173_DAC1, DAC9173_DAC1_FREQUENCY);
+//    DAC9173_SetAmplitude(DAC9173_DAC1, DAC9173_AMPLITUDE);
+    DAC9173_SetFrequency(DAC9173_DAC0, freq0);
+    DAC9173_SetAmplitude(DAC9173_DAC0, amp0);
 
-    DAC9173_SetFrequency(DAC9173_DAC1, DAC9173_DAC1_FREQUENCY);
-    DAC9173_SetAmplitude(DAC9173_DAC1, DAC9173_AMPLITUDE);
+    DAC9173_SetFrequency(DAC9173_DAC1, freq1);
+    DAC9173_SetAmplitude(DAC9173_DAC1, amp1);
+}
+
+/*******************************************
+ * DAC9173 Output Enable
+ ******************************************/
+void DAC9173_OutputEnable(uint16_t dac, bool state) {
+    uint8_t reg_data = DAC9173_Read(0x0090);
+
+    if (state) {
+        dac_en |= dac;
+    } else {
+        dac_en &= ~dac;
+    }
+
+    reg_data |= 3 << 0;
+    reg_data &= ~dac_en;
+
+    DAC9173_Write(0x0090, reg_data);
 }
 
 /*******************************************
@@ -105,6 +144,13 @@ void DAC9173_SetFrequency(uint16_t dac, uint64_t ftw) {
 
     /* Enable TXEN */
     DAC9173_Write(0x0596, (1 << 3) | (1 << 2));
+
+    if ( (dac & DAC9173_DAC0) != 0 ) {
+        freq0 = ftw;
+    }
+    if ( (dac & DAC9173_DAC1) != 0 ) {
+        freq1 = ftw;
+    }
 }
 
 /*******************************************
@@ -117,6 +163,43 @@ void DAC9173_SetAmplitude(uint16_t dac, uint16_t amp) {
     /* DC test tone amplitude */
     DAC9173_Write(0x0148, (amp >> 0) & 0xff);
     DAC9173_Write(0x0149, (amp >> 8) & 0xff);
+
+    if ( (dac & DAC9173_DAC0) != 0 ) {
+        amp0 = amp;
+    }
+    if ( (dac & DAC9173_DAC1) != 0 ) {
+        amp1 = amp;
+    }
+}
+
+/*******************************************
+ * DAC9173 Clock Output Enable
+ ******************************************/
+void DAC9173_ClkOutEnable(bool state) {
+    uint8_t reg_data = DAC9173_Read(0x008f);
+
+    reg_data |= 1 << 0;
+    if (state) {
+        reg_data &= ~(1 << 0);
+    }
+
+    DAC9173_Write(0x008f, reg_data);
+
+    clk_out_en = state;
+}
+
+/*******************************************
+ * DAC9173 Set Divider for Clock Output
+ ******************************************/
+void DAC9173_ClkOutSetDiv(uint8_t div) {
+    uint8_t reg_data = DAC9173_Read(0x0799);
+
+    reg_data &= ~(3 << 6);
+    reg_data |= (div - 1) << 6;
+
+    DAC9173_Write(0x0799, reg_data);
+
+    clk_out_div = div;
 }
 
 /*******************************************

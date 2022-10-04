@@ -12,21 +12,19 @@
  * Includes
  ******************************************/
 #include <stdint.h>
+#include <stdbool.h>
 
 /*******************************************
  * Defines
  ******************************************/
 #define DAC9173_AMPLITUDE       (0x50ff)
-//#define DAC9173_AMPLITUDE       (0x7fff)
 
-#define DAC9173_FTW_83_2_MHZ    (0x03858DAE3038ULL)
-#define DAC9173_FTW_84_MHZ      (0x038e38e38e39ULL)
-#define DAC9173_FTW_84_2_MHZ    (0x039063B0E5B9ULL)
-#define DAC9173_FTW_1343_MHZ    (0x38D8B8362E0EULL)
-#define DAC9173_FTW_1344_MHZ    (0x38e38e38e38eULL)
+/* For Ref_clk = 3000 MHz */
+#define DAC9173_FTW_100_MHZ      (0x088888888889ULL)
+#define DAC9173_FTW_1235_4_MHZ   (0x696BB98C7E28ULL)
 
-#define DAC9173_DAC0_FREQUENCY  DAC9173_FTW_1344_MHZ
-#define DAC9173_DAC1_FREQUENCY  DAC9173_FTW_84_MHZ
+#define DAC9173_DAC0_FREQUENCY  DAC9173_FTW_1235_4_MHZ
+#define DAC9173_DAC1_FREQUENCY  DAC9173_FTW_100_MHZ
 
 #define DAC9173_DAC0            (1 << 0)
 #define DAC9173_DAC1            (1 << 1)
@@ -37,6 +35,9 @@
 void DAC9173_Init        (void);
 void DAC9173_SetFrequency(uint16_t dac, uint64_t ftw);
 void DAC9173_SetAmplitude(uint16_t dac, uint16_t amp);
+void DAC9173_OutputEnable(uint16_t dac, bool state);
+void DAC9173_ClkOutEnable(bool state);
+void DAC9173_ClkOutSetDiv(uint8_t div);
 
 #endif /* SRC_DAC9173_H_ */
 

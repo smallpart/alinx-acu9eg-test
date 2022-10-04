@@ -18,6 +18,7 @@ void std_action_getid(uint32_t *id) {
  * Set ID
  ******************************************/
 void std_action_setid(uint32_t id) {
+    DAC9173_Init();
 }
 
 /*******************************************
@@ -132,6 +133,12 @@ void std_action_upddelay(uint32_t delay) {
  * Actuator control
  ******************************************/
 void std_action_actctrl(uint16_t act_num, uint16_t state) {
+    if (act_num == 0) {
+        DAC9173_ClkOutEnable(false);
+    } else {
+        DAC9173_ClkOutEnable(true);
+        DAC9173_ClkOutSetDiv(act_num);
+    }
 }
 
 /*******************************************
@@ -144,6 +151,11 @@ void std_action_outen(uint32_t mask, uint32_t state) {
  * Signal enable
  ******************************************/
 void std_action_sigen(uint16_t sig_num, uint16_t state) {
+    if (sig_num == 0) {
+        DAC9173_OutputEnable(DAC9173_DAC0, state);
+    } else {
+        DAC9173_OutputEnable(DAC9173_DAC1, state);
+    }
 }
 
 /*******************************************

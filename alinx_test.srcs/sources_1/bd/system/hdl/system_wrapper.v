@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1.3 (win64) Build 2644227 Wed Sep  4 09:45:24 MDT 2019
-//Date        : Tue Oct  4 18:50:39 2022
+//Date        : Wed Oct 19 16:15:53 2022
 //Host        : atom-pc running 64-bit major release  (build 9200)
 //Command     : generate_target system_wrapper.bd
 //Design      : system_wrapper
@@ -10,7 +10,9 @@
 `timescale 1 ps / 1 ps
 
 module system_wrapper
-   (dac_txen_tri_o,
+   (clk_jesd_n,
+    clk_jesd_p,
+    dac_txen_tri_o,
     fmc_spi_io0_io,
     fmc_spi_io1_io,
     fmc_spi_sck_io,
@@ -18,8 +20,16 @@ module system_wrapper
     gpio_spi_en_tri_o,
     gpio_status_tri_i,
     led_pl_tri_o,
+    sync_clk_n,
+    sync_clk_p,
+    sysref_clk_n,
+    sysref_clk_p,
+    txn_out_0,
+    txp_out_0,
     uart_control_rxd,
     uart_control_txd);
+  input clk_jesd_n;
+  input clk_jesd_p;
   output [1:0]dac_txen_tri_o;
   inout fmc_spi_io0_io;
   inout fmc_spi_io1_io;
@@ -28,9 +38,17 @@ module system_wrapper
   output [0:0]gpio_spi_en_tri_o;
   input [1:0]gpio_status_tri_i;
   output [0:0]led_pl_tri_o;
+  input [0:0]sync_clk_n;
+  input [0:0]sync_clk_p;
+  input [0:0]sysref_clk_n;
+  input [0:0]sysref_clk_p;
+  output [3:0]txn_out_0;
+  output [3:0]txp_out_0;
   input uart_control_rxd;
   output uart_control_txd;
 
+  wire clk_jesd_n;
+  wire clk_jesd_p;
   wire [1:0]dac_txen_tri_o;
   wire fmc_spi_io0_i;
   wire fmc_spi_io0_io;
@@ -54,6 +72,12 @@ module system_wrapper
   wire [0:0]gpio_spi_en_tri_o;
   wire [1:0]gpio_status_tri_i;
   wire [0:0]led_pl_tri_o;
+  wire [0:0]sync_clk_n;
+  wire [0:0]sync_clk_p;
+  wire [0:0]sysref_clk_n;
+  wire [0:0]sysref_clk_p;
+  wire [3:0]txn_out_0;
+  wire [3:0]txp_out_0;
   wire uart_control_rxd;
   wire uart_control_txd;
 
@@ -83,7 +107,9 @@ module system_wrapper
         .O(fmc_spi_ss_i_1),
         .T(fmc_spi_ss_t));
   system system_i
-       (.dac_txen_tri_o(dac_txen_tri_o),
+       (.clk_jesd_n(clk_jesd_n),
+        .clk_jesd_p(clk_jesd_p),
+        .dac_txen_tri_o(dac_txen_tri_o),
         .fmc_spi_io0_i(fmc_spi_io0_i),
         .fmc_spi_io0_o(fmc_spi_io0_o),
         .fmc_spi_io0_t(fmc_spi_io0_t),
@@ -99,6 +125,12 @@ module system_wrapper
         .gpio_spi_en_tri_o(gpio_spi_en_tri_o),
         .gpio_status_tri_i(gpio_status_tri_i),
         .led_pl_tri_o(led_pl_tri_o),
+        .sync_clk_n(sync_clk_n),
+        .sync_clk_p(sync_clk_p),
+        .sysref_clk_n(sysref_clk_n),
+        .sysref_clk_p(sysref_clk_p),
+        .txn_out_0(txn_out_0),
+        .txp_out_0(txp_out_0),
         .uart_control_rxd(uart_control_rxd),
         .uart_control_txd(uart_control_txd));
 endmodule

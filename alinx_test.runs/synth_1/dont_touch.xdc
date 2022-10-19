@@ -36,6 +36,36 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_axi_gpio
 # IP: bd/system/ip/system_axi_uartlite_0_0/system_axi_uartlite_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_axi_uartlite_0_0 || ORIG_REF_NAME==system_axi_uartlite_0_0} -quiet] -quiet
 
+# IP: bd/system/ip/system_jesd204_0_0/system_jesd204_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_jesd204_0_0 || ORIG_REF_NAME==system_jesd204_0_0} -quiet] -quiet
+
+# IP: bd/system/ip/system_jesd204_phy_0_0/system_jesd204_phy_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_jesd204_phy_0_0 || ORIG_REF_NAME==system_jesd204_phy_0_0} -quiet] -quiet
+
+# IP: bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_clk_wiz_0_0 || ORIG_REF_NAME==system_clk_wiz_0_0} -quiet] -quiet
+
+# IP: bd/system/ip/system_util_ds_buf_1_0/system_util_ds_buf_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_util_ds_buf_1_0 || ORIG_REF_NAME==system_util_ds_buf_1_0} -quiet] -quiet
+
+# IP: bd/system/ip/system_xlconstant_0_0/system_xlconstant_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_xlconstant_0_0 || ORIG_REF_NAME==system_xlconstant_0_0} -quiet] -quiet
+
+# IP: bd/system/ip/system_util_ds_buf_0_0/system_util_ds_buf_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_util_ds_buf_0_0 || ORIG_REF_NAME==system_util_ds_buf_0_0} -quiet] -quiet
+
+# IP: bd/system/ip/system_xlconstant_0_1/system_xlconstant_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_xlconstant_0_1 || ORIG_REF_NAME==system_xlconstant_0_1} -quiet] -quiet
+
+# IP: bd/system/ip/system_xlconstant_0_2/system_xlconstant_0_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_xlconstant_0_2 || ORIG_REF_NAME==system_xlconstant_0_2} -quiet] -quiet
+
+# IP: bd/system/ip/system_util_ds_buf_2_0/system_util_ds_buf_2_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_util_ds_buf_2_0 || ORIG_REF_NAME==system_util_ds_buf_2_0} -quiet] -quiet
+
+# IP: bd/system/ip/system_util_ds_buf_sysref_0/system_util_ds_buf_sysref_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_util_ds_buf_sysref_0 || ORIG_REF_NAME==system_util_ds_buf_sysref_0} -quiet] -quiet
+
 # IP: bd/system/ip/system_auto_pc_0/system_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_auto_pc_0 || ORIG_REF_NAME==system_auto_pc_0} -quiet] -quiet
 

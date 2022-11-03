@@ -132,7 +132,7 @@
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.QPLL0_REFCLK_PORT.ASSOCIATED_BUSIF"/>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.QPLL0_REFCLK_PORT.ASSOCIATED_RESET"/>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.QPLL0_REFCLK_PORT.CLK_DOMAIN">system_clk_jesd_n</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.QPLL0_REFCLK_PORT.FREQ_HZ">168000000</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.QPLL0_REFCLK_PORT.FREQ_HZ">400000000</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.QPLL0_REFCLK_PORT.INSERT_VIP">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.QPLL0_REFCLK_PORT.PHASE">0.000</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.QPLL1_REFCLK_PORT.ASSOCIATED_BUSIF"/>
@@ -162,7 +162,7 @@
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.RX_CORECLK_PORT.ASSOCIATED_BUSIF"/>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.RX_CORECLK_PORT.ASSOCIATED_RESET"/>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.RX_CORECLK_PORT.CLK_DOMAIN">system_clk_jesd_n</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.RX_CORECLK_PORT.FREQ_HZ">168000000</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.RX_CORECLK_PORT.FREQ_HZ">400000000</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.RX_CORECLK_PORT.INSERT_VIP">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.RX_CORECLK_PORT.PHASE">0.0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI.ADDR_WIDTH">32</spirit:configurableElementValue>
@@ -216,7 +216,7 @@
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.TX_CORECLK_PORT.ASSOCIATED_BUSIF"/>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.TX_CORECLK_PORT.ASSOCIATED_RESET"/>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.TX_CORECLK_PORT.CLK_DOMAIN">system_clk_jesd_n</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.TX_CORECLK_PORT.FREQ_HZ">168000000</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.TX_CORECLK_PORT.FREQ_HZ">400000000</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.TX_CORECLK_PORT.INSERT_VIP">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.TX_CORECLK_PORT.PHASE">0.0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_AXICLK_FREQ">100.0</spirit:configurableElementValue>

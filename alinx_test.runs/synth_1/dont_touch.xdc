@@ -66,6 +66,9 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_util_ds_
 # IP: bd/system/ip/system_util_ds_buf_sysref_0/system_util_ds_buf_sysref_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_util_ds_buf_sysref_0 || ORIG_REF_NAME==system_util_ds_buf_sysref_0} -quiet] -quiet
 
+# IP: bd/system/ip/system_modulator_0_0/system_modulator_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_modulator_0_0 || ORIG_REF_NAME==system_modulator_0_0} -quiet] -quiet
+
 # IP: bd/system/ip/system_auto_pc_0/system_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_auto_pc_0 || ORIG_REF_NAME==system_auto_pc_0} -quiet] -quiet
 

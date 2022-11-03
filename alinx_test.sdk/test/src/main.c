@@ -12,11 +12,15 @@
 #include "spi.h"
 #include "dac9173.h"
 #include "ext_communication.h"
+#include "hmc7044.h"
+#include "jesd.h"
+#include "system.h"
 
 /*******************************************
  * Global variables
  ******************************************/
 uint32_t led_state;
+modulator_t *modulator = (modulator_t *) XPAR_MODULATOR_0_S00_AXI_BASEADDR;
 
 /*******************************************
  * Main function
@@ -26,8 +30,15 @@ int main() {
 
     GPIO_Init();
     SPI_Init();
+    HMC7044_Init();
     DAC9173_Init();
     Communication_Init();
+
+    modulator->config.lfm_on    = 0;
+    modulator->lfm_start_freq_h = 0;
+    modulator->lfm_start_freq_l = 0;
+
+    JESD_Init();
 
     while (1) {
 //        uint32_t delay;

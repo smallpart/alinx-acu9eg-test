@@ -60,23 +60,36 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {HDL-1065} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param power.BramSDPPropagationFix 1
   set_param chipscope.maxJobs 4
-  set_param power.enableUnconnectedCarry8PinPower 1
-  set_param power.enableCarry8RouteBelPower 1
-  set_param power.enableLutRouteBelPower 1
-  reset_param project.defaultXPMLibraries 
-  open_checkpoint D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/impl_1/system_wrapper.dcp
+  create_project -in_memory -part xczu9eg-ffvb1156-2-i
+  set_property design_mode GateLvl [current_fileset]
+  set_param project.singleFileAddWarning.threshold 0
   set_property webtalk.parent_dir D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.cache/wt [current_project]
   set_property parent.project_path D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.xpr [current_project]
+  set_property ip_repo_paths {
+  D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/modulator_1.0
+  D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator_1.0
+} [current_project]
+  update_ip_catalog
   set_property ip_output_repo D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
+  add_files -quiet D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/system_wrapper.dcp
+  set_msg_config -source 4 -id {BD 41-1661} -limit 0
+  set_param project.isImplRun true
+  add_files D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/system.bd
+  set_param project.isImplRun false
+  read_xdc D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/constrs_1/new/pinout.xdc
+  set_param project.isImplRun true
+  link_design -top system_wrapper -part xczu9eg-ffvb1156-2-i
+  set_param project.isImplRun false
+  write_hwdef -force -file system_wrapper.hwdef
   close_msg_db -file init_design.pb
 } RESULT]
 if {$rc} {

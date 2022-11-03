@@ -17,11 +17,8 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param power.BramSDPPropagationFix 1
 set_param chipscope.maxJobs 4
-set_param power.enableUnconnectedCarry8PinPower 1
-set_param power.enableCarry8RouteBelPower 1
-set_param power.enableLutRouteBelPower 1
+set_msg_config -id {HDL-1065} -limit 10000
 create_project -in_memory -part xczu9eg-ffvb1156-2-i
 
 set_param project.singleFileAddWarning.threshold 0
@@ -33,6 +30,11 @@ set_property parent.project_path D:/atom/program/mwsystems/test/acu9eg_ad9173/al
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
+set_property ip_repo_paths {
+  d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/modulator_1.0
+  d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator_1.0
+} [current_project]
+update_ip_catalog
 set_property ip_output_repo d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/hdl/system_wrapper.v
@@ -64,16 +66,16 @@ set_property used_in_implementation false [get_files -all d:/atom/program/mwsyst
 set_property used_in_implementation false [get_files -all d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_axi_uartlite_0_0/system_axi_uartlite_0_0.xdc]
 set_property used_in_implementation false [get_files -all d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_0_0/synth/system_jesd204_0_0.xdc]
 set_property used_in_implementation false [get_files -all d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_0_0/synth/system_jesd204_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/ip_0/synth/system_jesd204_phy_0_0_gt_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/ip_0/synth/system_jesd204_phy_0_0_gt.xdc]
 set_property used_in_implementation false [get_files -all d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc]
 set_property used_in_implementation false [get_files -all d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0_clock_group.xdc]
 set_property used_in_implementation false [get_files -all d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/ip_0/synth/system_jesd204_phy_0_0_gt_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/ip_0/synth/system_jesd204_phy_0_0_gt.xdc]
 set_property used_in_implementation false [get_files -all d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0.xdc]
-set_property used_in_implementation false [get_files -all d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0_late.xdc]
+set_property used_in_implementation false [get_files -all d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_util_ds_buf_1_0/system_util_ds_buf_1_0_board.xdc]
 set_property used_in_implementation false [get_files -all d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_util_ds_buf_1_0/system_util_ds_buf_1_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_util_ds_buf_0_0/system_util_ds_buf_0_0_board.xdc]
@@ -82,6 +84,7 @@ set_property used_in_implementation false [get_files -all d:/atom/program/mwsyst
 set_property used_in_implementation false [get_files -all d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_util_ds_buf_2_0/system_util_ds_buf_2_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_util_ds_buf_sysref_0/system_util_ds_buf_sysref_0_board.xdc]
 set_property used_in_implementation false [get_files -all d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_util_ds_buf_sysref_0/system_util_ds_buf_sysref_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/edit_modulator_v1_0.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/system_ooc.xdc]
 

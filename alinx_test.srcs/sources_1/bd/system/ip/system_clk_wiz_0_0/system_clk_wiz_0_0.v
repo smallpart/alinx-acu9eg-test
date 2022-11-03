@@ -56,21 +56,23 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// clk_jesd___168.000______0.000______50.0_______98.451_____84.144
+// _clk_400___400.000______0.000______50.0_______73.940_____73.069
+// _clk_200___200.000______0.000______50.0_______84.775_____73.069
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
 //----------------------------------------------------------------------------
-// __primary_____________168____________0.010
+// __primary_____________400____________0.010
 
 `timescale 1ps/1ps
 
-(* CORE_GENERATION_INFO = "system_clk_wiz_0_0,clk_wiz_v6_0_3_0_0,{component_name=system_clk_wiz_0_0,use_phase_alignment=true,use_min_o_jitter=false,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,enable_axi=0,feedback_source=FDBK_AUTO,PRIMITIVE=MMCM,num_out_clk=1,clkin1_period=5.952,clkin2_period=10.0,use_power_down=false,use_reset=false,use_locked=false,use_inclk_stopped=false,feedback_type=SINGLE,CLOCK_MGR_TYPE=NA,manual_override=false}" *)
+(* CORE_GENERATION_INFO = "system_clk_wiz_0_0,clk_wiz_v6_0_3_0_0,{component_name=system_clk_wiz_0_0,use_phase_alignment=true,use_min_o_jitter=false,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,enable_axi=0,feedback_source=FDBK_AUTO,PRIMITIVE=MMCM,num_out_clk=2,clkin1_period=2.500,clkin2_period=10.0,use_power_down=false,use_reset=false,use_locked=false,use_inclk_stopped=false,feedback_type=SINGLE,CLOCK_MGR_TYPE=NA,manual_override=false}" *)
 
 module system_clk_wiz_0_0 
  (
   // Clock out ports
-  output        clk_jesd,
+  output        clk_400,
+  output        clk_200,
  // Clock in ports
   input         clk_in1
  );
@@ -78,7 +80,8 @@ module system_clk_wiz_0_0
   system_clk_wiz_0_0_clk_wiz inst
   (
   // Clock out ports  
-  .clk_jesd(clk_jesd),
+  .clk_400(clk_400),
+  .clk_200(clk_200),
  // Clock in ports
   .clk_in1(clk_in1)
   );

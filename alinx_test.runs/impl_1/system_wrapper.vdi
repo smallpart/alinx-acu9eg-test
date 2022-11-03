@@ -2,37 +2,361 @@
 # Vivado v2019.1.3 (64-bit)
 # SW Build 2644227 on Wed Sep  4 09:45:24 MDT 2019
 # IP Build 2633630 on Wed Sep  4 12:30:14 MDT 2019
-# Start of session at: Wed Oct 19 17:01:19 2022
-# Process ID: 14320
+# Start of session at: Thu Nov  3 15:34:39 2022
+# Process ID: 6784
 # Current directory: D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/impl_1
 # Command line: vivado.exe -log system_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source system_wrapper.tcl -notrace
 # Log file: D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/impl_1/system_wrapper.vdi
 # Journal file: D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
 source system_wrapper.tcl -notrace
-Command: open_checkpoint D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/impl_1/system_wrapper.dcp
-
-Starting open_checkpoint Task
-
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 298.953 ; gain = 0.000
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/modulator_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+Command: link_design -top system_wrapper -part xczu9eg-ffvb1156-2-i
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
 INFO: [Device 21-403] Loading part xczu9eg-ffvb1156-2-i
-INFO: [Netlist 29-17] Analyzing 36 Unisim elements for replacement
+INFO: [Project 1-454] Reading design checkpoint 'd:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_axi_gpio_0_2/system_axi_gpio_0_2.dcp' for cell 'system_i/axi_gpio_dac_control'
+INFO: [Project 1-454] Reading design checkpoint 'd:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_axi_gpio_0_3/system_axi_gpio_0_3.dcp' for cell 'system_i/axi_gpio_fmc_status'
+INFO: [Project 1-454] Reading design checkpoint 'd:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0.dcp' for cell 'system_i/axi_gpio_led'
+INFO: [Project 1-454] Reading design checkpoint 'd:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_axi_gpio_0_1/system_axi_gpio_0_1.dcp' for cell 'system_i/axi_gpio_spi_en'
+INFO: [Project 1-454] Reading design checkpoint 'd:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_axi_quad_spi_0_0/system_axi_quad_spi_0_0.dcp' for cell 'system_i/axi_quad_spi_fmc'
+INFO: [Project 1-454] Reading design checkpoint 'd:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_axi_uartlite_0_0/system_axi_uartlite_0_0.dcp' for cell 'system_i/axi_uartlite_control'
+INFO: [Project 1-454] Reading design checkpoint 'd:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0.dcp' for cell 'system_i/clk_wiz_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_0_0/system_jesd204_0_0.dcp' for cell 'system_i/jesd204_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/system_jesd204_phy_0_0.dcp' for cell 'system_i/jesd204_phy_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_modulator_0_0/system_modulator_0_0.dcp' for cell 'system_i/modulator_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_rst_ps8_0_96M_0/system_rst_ps8_0_96M_0.dcp' for cell 'system_i/rst_ps8_0_96M'
+INFO: [Project 1-454] Reading design checkpoint 'd:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_util_ds_buf_0_0/system_util_ds_buf_0_0.dcp' for cell 'system_i/util_ds_buf_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_util_ds_buf_1_0/system_util_ds_buf_1_0.dcp' for cell 'system_i/util_ds_buf_1'
+INFO: [Project 1-454] Reading design checkpoint 'd:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_util_ds_buf_sysref_0/system_util_ds_buf_sysref_0.dcp' for cell 'system_i/util_ds_buf_sync'
+INFO: [Project 1-454] Reading design checkpoint 'd:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_util_ds_buf_2_0/system_util_ds_buf_2_0.dcp' for cell 'system_i/util_ds_buf_sysref'
+INFO: [Project 1-454] Reading design checkpoint 'd:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_zynq_ultra_ps_e_0_0/system_zynq_ultra_ps_e_0_0.dcp' for cell 'system_i/zynq_ultra_ps_e_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_xbar_0/system_xbar_0.dcp' for cell 'system_i/ps8_0_axi_periph/xbar'
+INFO: [Project 1-454] Reading design checkpoint 'd:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0.dcp' for cell 'system_i/ps8_0_axi_periph/s00_couplers/auto_pc'
+INFO: [Netlist 29-17] Analyzing 198 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2019.1.3
 INFO: [Project 1-570] Preparing netlist for logic optimization
 WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'system_i/util_ds_buf_sync/IBUF_OUT[0]' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
 WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'system_i/util_ds_buf_sysref/IBUF_OUT[0]' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
-INFO: [Timing 38-478] Restoring timing data from binary archive.
-INFO: [Timing 38-479] Binary timing data restore complete.
-INFO: [Project 1-856] Restoring constraints from binary archive.
-INFO: [Project 1-853] Binary constraint restore complete.
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.157 . Memory (MB): peak = 1608.801 ; gain = 0.977
-Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.157 . Memory (MB): peak = 1608.801 ; gain = 0.977
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1613.059 ; gain = 0.000
+Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_zynq_ultra_ps_e_0_0/system_zynq_ultra_ps_e_0_0.xdc] for cell 'system_i/zynq_ultra_ps_e_0/inst'
+Finished Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_zynq_ultra_ps_e_0_0/system_zynq_ultra_ps_e_0_0.xdc] for cell 'system_i/zynq_ultra_ps_e_0/inst'
+Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0_board.xdc] for cell 'system_i/axi_gpio_led/U0'
+Finished Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0_board.xdc] for cell 'system_i/axi_gpio_led/U0'
+Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0.xdc] for cell 'system_i/axi_gpio_led/U0'
+Finished Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0.xdc] for cell 'system_i/axi_gpio_led/U0'
+Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_rst_ps8_0_96M_0/system_rst_ps8_0_96M_0_board.xdc] for cell 'system_i/rst_ps8_0_96M/U0'
+Finished Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_rst_ps8_0_96M_0/system_rst_ps8_0_96M_0_board.xdc] for cell 'system_i/rst_ps8_0_96M/U0'
+Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_rst_ps8_0_96M_0/system_rst_ps8_0_96M_0.xdc] for cell 'system_i/rst_ps8_0_96M/U0'
+Finished Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_rst_ps8_0_96M_0/system_rst_ps8_0_96M_0.xdc] for cell 'system_i/rst_ps8_0_96M/U0'
+Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_axi_quad_spi_0_0/system_axi_quad_spi_0_0_board.xdc] for cell 'system_i/axi_quad_spi_fmc/U0'
+Finished Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_axi_quad_spi_0_0/system_axi_quad_spi_0_0_board.xdc] for cell 'system_i/axi_quad_spi_fmc/U0'
+Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_axi_quad_spi_0_0/system_axi_quad_spi_0_0.xdc] for cell 'system_i/axi_quad_spi_fmc/U0'
+Finished Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_axi_quad_spi_0_0/system_axi_quad_spi_0_0.xdc] for cell 'system_i/axi_quad_spi_fmc/U0'
+Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_axi_gpio_0_1/system_axi_gpio_0_1_board.xdc] for cell 'system_i/axi_gpio_spi_en/U0'
+Finished Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_axi_gpio_0_1/system_axi_gpio_0_1_board.xdc] for cell 'system_i/axi_gpio_spi_en/U0'
+Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_axi_gpio_0_1/system_axi_gpio_0_1.xdc] for cell 'system_i/axi_gpio_spi_en/U0'
+Finished Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_axi_gpio_0_1/system_axi_gpio_0_1.xdc] for cell 'system_i/axi_gpio_spi_en/U0'
+Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_axi_gpio_0_2/system_axi_gpio_0_2_board.xdc] for cell 'system_i/axi_gpio_dac_control/U0'
+Finished Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_axi_gpio_0_2/system_axi_gpio_0_2_board.xdc] for cell 'system_i/axi_gpio_dac_control/U0'
+Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_axi_gpio_0_2/system_axi_gpio_0_2.xdc] for cell 'system_i/axi_gpio_dac_control/U0'
+Finished Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_axi_gpio_0_2/system_axi_gpio_0_2.xdc] for cell 'system_i/axi_gpio_dac_control/U0'
+Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_axi_gpio_0_3/system_axi_gpio_0_3_board.xdc] for cell 'system_i/axi_gpio_fmc_status/U0'
+Finished Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_axi_gpio_0_3/system_axi_gpio_0_3_board.xdc] for cell 'system_i/axi_gpio_fmc_status/U0'
+Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_axi_gpio_0_3/system_axi_gpio_0_3.xdc] for cell 'system_i/axi_gpio_fmc_status/U0'
+Finished Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_axi_gpio_0_3/system_axi_gpio_0_3.xdc] for cell 'system_i/axi_gpio_fmc_status/U0'
+Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_axi_uartlite_0_0/system_axi_uartlite_0_0_board.xdc] for cell 'system_i/axi_uartlite_control/U0'
+Finished Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_axi_uartlite_0_0/system_axi_uartlite_0_0_board.xdc] for cell 'system_i/axi_uartlite_control/U0'
+Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_axi_uartlite_0_0/system_axi_uartlite_0_0.xdc] for cell 'system_i/axi_uartlite_control/U0'
+Finished Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_axi_uartlite_0_0/system_axi_uartlite_0_0.xdc] for cell 'system_i/axi_uartlite_control/U0'
+Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_0_0/synth/system_jesd204_0_0.xdc] for cell 'system_i/jesd204_0/inst'
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*/jesd204_i/inst/IP2Bus_Data_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_0_0/synth/system_jesd204_0_0.xdc:77]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*/jesd204_i/inst/IP2Bus_Data_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_0_0/synth/system_jesd204_0_0.xdc:77]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*/jesd204_block_i/IP2Bus_Data_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_0_0/synth/system_jesd204_0_0.xdc:81]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*/jesd204_block_i/IP2Bus_Data_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_0_0/synth/system_jesd204_0_0.xdc:81]
+Finished Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_0_0/synth/system_jesd204_0_0.xdc] for cell 'system_i/jesd204_0/inst'
+Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc] for cell 'system_i/jesd204_phy_0/inst'
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:79]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:79]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {name=~*_transDbgCtrl_*x_i/slv_rdata_reg[*]}'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:79]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter {name=~*_transDbgCtrl_*x_i/slv_rdata_reg[*]}]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:79]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*axi_register_if_i/slv_addr_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:83]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*axi_register_if_i/slv_addr_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:83]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:83]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~CE -of [get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:83]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*axi_register_if_i/slv_addr_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:87]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*axi_register_if_i/slv_addr_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:87]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:87]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:87]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_*x_i/slv_rden_r_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:91]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_*x_i/slv_rden_r_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:91]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:91]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~CE -of [get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:91]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_*x_i/slv_rden_r_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:95]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_*x_i/slv_rden_r_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:95]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:95]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:95]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_async_i/*_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:99]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_async_i/*_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:99]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_cpll_cal_*x_i/*cpll_cal_state_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:99]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*_cpll_cal_*x_i/*cpll_cal_state_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:99]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_async_i/*_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:103]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_async_i/*_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:103]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_cpll_cal_*x_i/cal_fail_store_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:103]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*_cpll_cal_*x_i/cal_fail_store_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:103]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_async_i/*_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:107]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_async_i/*_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:107]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_cpll_cal_*x_i/*repeat_ctr_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:107]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~CE -of [get_cells -hier -filter name=~*_cpll_cal_*x_i/*repeat_ctr_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:107]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_async_i/*_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:111]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_async_i/*_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:111]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_gt*e4_cpll_cal_*x_i/gen_cal_*x_en.cal_fail_store_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:111]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*_gt*e4_cpll_cal_*x_i/gen_cal_*x_en.cal_fail_store_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:111]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/drp_if_select_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:115]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*Mailbox_i/drp_if_select_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:115]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_drp_arb_i*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:115]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~CE -of [get_cells -hier -filter name=~*_drp_arb_i*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:115]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/drp_if_select_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:119]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*Mailbox_i/drp_if_select_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:119]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/drp_read_data_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:119]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~CE -of [get_cells -hier -filter name=~*Mailbox_i/drp_read_data_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:119]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/access_type_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:123]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*Mailbox_i/access_type_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:123]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/drp_read_data_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:123]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~CE -of [get_cells -hier -filter name=~*Mailbox_i/drp_read_data_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:123]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/drp_if_select_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:127]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*Mailbox_i/drp_if_select_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:127]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/clk2clk_handshake_pulse_gen_i/clk2_ready_reg'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:127]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*Mailbox_i/clk2clk_handshake_pulse_gen_i/clk2_ready_reg]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:127]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~Mailbox_i/drp_if_select_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:131]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~Mailbox_i/drp_if_select_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:131]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_phyAxiConfig_i/gt_interface_sel_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:134]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_phyAxiConfig_i/gt_interface_sel_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:134]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:134]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:134]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_phyAxiConfig_i/gt_interface_sel_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:138]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_phyAxiConfig_i/gt_interface_sel_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:138]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:138]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~CE -of [get_cells -hier -filter name=~*_transDbgCtrl_*x_i/*_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:138]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {name=~*_transDbgCtrl_async_i/*xpllclksel_reg[*]}'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:142]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter {name=~*_transDbgCtrl_async_i/*xpllclksel_reg[*]}]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:142]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_async_i/*xpllclksel_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:149]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_async_i/*xpllclksel_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:149]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*RXRESETDONE/data_sync_reg1'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:157]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*RXRESETDONE/data_sync_reg1]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:157]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*TXRESETDONE/data_sync_reg1'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:161]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*TXRESETDONE/data_sync_reg1]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:161]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*USER_CPLLLOCK_OUT_reg'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:165]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*USER_CPLLLOCK_OUT_reg]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:165]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {name=~*_transDbgCtrl_async_i/*xpllclksel_reg[*]}'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:169]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter {name=~*_transDbgCtrl_async_i/*xpllclksel_reg[*]}]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:169]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_cpll_cal_inst/reset_synchronizer_resetin_*x_inst/rst_in_meta_reg'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:169]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~PRE -of [get_cells -hier -filter name=~*_cpll_cal_inst/reset_synchronizer_resetin_*x_inst/rst_in_meta_reg]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:169]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_async_i/cpll_pd_*_reg'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:173]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_async_i/cpll_pd_*_reg]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:173]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_cpll_cal_inst/reset_synchronizer_resetin_*x_inst/rst_in_meta_reg'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:173]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~PRE -of [get_cells -hier -filter name=~*_cpll_cal_inst/reset_synchronizer_resetin_*x_inst/rst_in_meta_reg]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:173]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*cpll_cal_*x_i/gen_cal_*x_en.mask_user_in_reg'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:177]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*cpll_cal_*x_i/gen_cal_*x_en.mask_user_in_reg]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:177]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_async_i/*x_sys_reset_axi_reg'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:181]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_async_i/*x_sys_reset_axi_reg]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:181]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*sync_RXRESETDONE/data_sync_reg1'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:185]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*sync_RXRESETDONE/data_sync_reg1]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:185]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*_transDbgCtrl_async_i/*xpllclksel_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:188]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*_transDbgCtrl_async_i/*xpllclksel_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:188]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {name=~*OUTCLK_FREQ_COUNTER/state_reg[0]}'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:198]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter {name=~*OUTCLK_FREQ_COUNTER/state_reg[0]}]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:198]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {name=~*OUTCLK_FREQ_COUNTER/state_reg[0]}'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:202]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter {name=~*OUTCLK_FREQ_COUNTER/state_reg[0]}]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:202]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*OUTCLK_FREQ_COUNTER/tstclk_rst_dly1_reg'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:202]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*OUTCLK_FREQ_COUNTER/tstclk_rst_dly1_reg]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:202]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*x_pll_lock_i_reg'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:206]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*x_pll_lock_i_reg]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:206]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*sync_RXRESETDONE/data_sync_reg1'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:213]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*sync_RXRESETDONE/data_sync_reg1]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:213]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/drp_if_select_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:219]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*Mailbox_i/drp_if_select_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:219]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/access_type_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:222]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*Mailbox_i/access_type_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:222]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*drpChannelMailbox_i/drp_int_addr_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:228]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*drpChannelMailbox_i/drp_int_addr_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:228]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*drpChannelMailbox_i/drp_write_data_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:231]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*drpChannelMailbox_i/drp_write_data_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:231]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*drpCommonMailbox_i/drp_int_addr_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:234]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*drpCommonMailbox_i/drp_int_addr_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:234]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*drpCommonMailbox_i/drp_write_data_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:237]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*drpCommonMailbox_i/drp_write_data_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:237]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/drp_read_data_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:243]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*Mailbox_i/drp_read_data_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:243]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*axi_register_if_i/axi_rdata_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:243]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*axi_register_if_i/axi_rdata_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:243]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/drp_if_select_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:247]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*Mailbox_i/drp_if_select_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:247]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*Mailbox_i/drp_read_data_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:247]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*Mailbox_i/drp_read_data_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:247]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*transDbgCtrl_rx_i/slv_wdata_r_internal_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:251]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*transDbgCtrl_rx_i/slv_wdata_r_internal_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:251]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*hold_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:251]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*hold_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:251]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*transDbgCtrl_tx_i/slv_wdata_r_internal_reg*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:255]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~C -of [get_cells -hier -filter name=~*transDbgCtrl_tx_i/slv_wdata_r_internal_reg*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:255]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter name=~*transDbgCtrl_tx_i/txdiffctrl*'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:255]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~D -of [get_cells -hier -filter name=~*transDbgCtrl_tx_i/txdiffctrl*]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc:255]
+Finished Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.xdc] for cell 'system_i/jesd204_phy_0/inst'
+Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/ip_0/synth/system_jesd204_phy_0_0_gt.xdc] for cell 'system_i/jesd204_phy_0/inst/jesd204_phy_block_i/system_jesd204_phy_0_0_gt_i/inst'
+Finished Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/ip_0/synth/system_jesd204_phy_0_0_gt.xdc] for cell 'system_i/jesd204_phy_0/inst/jesd204_phy_block_i/system_jesd204_phy_0_0_gt_i/inst'
+Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0_board.xdc] for cell 'system_i/clk_wiz_0/inst'
+Finished Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0_board.xdc] for cell 'system_i/clk_wiz_0/inst'
+Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0.xdc] for cell 'system_i/clk_wiz_0/inst'
+Finished Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0.xdc] for cell 'system_i/clk_wiz_0/inst'
+Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_util_ds_buf_1_0/system_util_ds_buf_1_0_board.xdc] for cell 'system_i/util_ds_buf_1/U0'
+Finished Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_util_ds_buf_1_0/system_util_ds_buf_1_0_board.xdc] for cell 'system_i/util_ds_buf_1/U0'
+Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_util_ds_buf_0_0/system_util_ds_buf_0_0_board.xdc] for cell 'system_i/util_ds_buf_0/U0'
+Finished Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_util_ds_buf_0_0/system_util_ds_buf_0_0_board.xdc] for cell 'system_i/util_ds_buf_0/U0'
+Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_util_ds_buf_2_0/system_util_ds_buf_2_0_board.xdc] for cell 'system_i/util_ds_buf_sysref/U0'
+Finished Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_util_ds_buf_2_0/system_util_ds_buf_2_0_board.xdc] for cell 'system_i/util_ds_buf_sysref/U0'
+Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_util_ds_buf_sysref_0/system_util_ds_buf_sysref_0_board.xdc] for cell 'system_i/util_ds_buf_sync/U0'
+Finished Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_util_ds_buf_sysref_0/system_util_ds_buf_sysref_0_board.xdc] for cell 'system_i/util_ds_buf_sync/U0'
+Parsing XDC File [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/constrs_1/new/pinout.xdc]
+Finished Parsing XDC File [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/constrs_1/new/pinout.xdc]
+Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_axi_quad_spi_0_0/system_axi_quad_spi_0_0_clocks.xdc] for cell 'system_i/axi_quad_spi_fmc/U0'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_axi_quad_spi_0_0/system_axi_quad_spi_0_0_clocks.xdc:51]
+get_clocks: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1792.293 ; gain = 416.559
+Finished Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_axi_quad_spi_0_0/system_axi_quad_spi_0_0_clocks.xdc] for cell 'system_i/axi_quad_spi_fmc/U0'
+Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0_clock_group.xdc] for cell 'system_i/jesd204_phy_0/inst'
+Finished Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0_clock_group.xdc] for cell 'system_i/jesd204_phy_0/inst'
+Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0_clocks.xdc] for cell 'system_i/jesd204_phy_0/inst'
+WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -of_objects [get_ports -scoped_to_current_instance rx_core_clk]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0_clocks.xdc:13]
+Resolution: Verify the create_clock command was called to create the clock object before it is referenced.
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0_clocks.xdc:13]
+WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -of_objects [get_ports -scoped_to_current_instance tx_core_clk]'. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0_clocks.xdc:15]
+Resolution: Verify the create_clock command was called to create the clock object before it is referenced.
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0_clocks.xdc:15]
+Finished Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0_clocks.xdc] for cell 'system_i/jesd204_phy_0/inst'
+Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0_late.xdc] for cell 'system_i/clk_wiz_0/inst'
+Finished Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0_late.xdc] for cell 'system_i/clk_wiz_0/inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'system_i/jesd204_0/inst/i_system_jesd204_0_0_reset_block/sync_core_rst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'system_i/jesd204_0/inst/i_system_jesd204_0_0_reset_block/sync_core_rst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'system_i/jesd204_phy_0/inst/jesd204_phy_block_i/sync_rx_reset_all/xpm_cdc_async_rst_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'system_i/jesd204_phy_0/inst/jesd204_phy_block_i/sync_rx_reset_all/xpm_cdc_async_rst_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'system_i/jesd204_phy_0/inst/jesd204_phy_block_i/sync_tx_reset_all/xpm_cdc_async_rst_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'system_i/jesd204_phy_0/inst/jesd204_phy_block_i/sync_tx_reset_all/xpm_cdc_async_rst_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'system_i/jesd204_phy_0/inst/jesd204_phy_block_i/sync_gtwiz_userclk_tx_active/xpm_cdc_async_rst_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'system_i/jesd204_phy_0/inst/jesd204_phy_block_i/sync_gtwiz_userclk_tx_active/xpm_cdc_async_rst_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'system_i/jesd204_phy_0/inst/jesd204_phy_block_i/sync_gtwiz_userclk_rx_active/xpm_cdc_async_rst_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'system_i/jesd204_phy_0/inst/jesd204_phy_block_i/sync_gtwiz_userclk_rx_active/xpm_cdc_async_rst_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'system_i/jesd204_phy_0/inst/jesd204_phy_block_i/sync_tx_reset_data/xpm_cdc_async_rst_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'system_i/jesd204_phy_0/inst/jesd204_phy_block_i/sync_tx_reset_data/xpm_cdc_async_rst_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'system_i/jesd204_phy_0/inst/jesd204_phy_block_i/sync_rx_reset_data/xpm_cdc_async_rst_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'system_i/jesd204_phy_0/inst/jesd204_phy_block_i/sync_rx_reset_data/xpm_cdc_async_rst_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst' of design 'design_1' [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst' of design 'design_1' [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst' of design 'design_1' [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst' of design 'design_1' [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst' of design 'design_1' [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst' of design 'design_1' [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst' of design 'design_1' [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst' of design 'design_1' [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'system_i/jesd204_0/inst/sync_tx_sync'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'system_i/jesd204_0/inst/sync_tx_sync'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'system_i/jesd204_0/inst/sync_D21_5_pattern_enable'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'system_i/jesd204_0/inst/sync_D21_5_pattern_enable'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'system_i/jesd204_0/inst/sync_prbs_patterns_enable'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'system_i/jesd204_0/inst/sync_prbs_patterns_enable'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'system_i/jesd204_0/inst/i_system_jesd204_0_0_reset_block/sync_gt_resetdone'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'system_i/jesd204_0/inst/i_system_jesd204_0_0_reset_block/sync_gt_resetdone'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'system_i/jesd204_0/inst/sync_tx_sysref_captured'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'system_i/jesd204_0/inst/sync_tx_sysref_captured'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'system_i/jesd204_phy_0/inst/jesd204_phy_block_i/sync_txresetdone/cdc_i'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'system_i/jesd204_phy_0/inst/jesd204_phy_block_i/sync_txresetdone/cdc_i'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'system_i/jesd204_phy_0/inst/jesd204_phy_block_i/sync_gt_txresetdone/cdc_i'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'system_i/jesd204_phy_0/inst/jesd204_phy_block_i/sync_gt_txresetdone/cdc_i'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'system_i/jesd204_phy_0/inst/jesd204_phy_block_i/sync_gt_rxresetdone/cdc_i'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'system_i/jesd204_phy_0/inst/jesd204_phy_block_i/sync_gt_rxresetdone/cdc_i'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'system_i/jesd204_phy_0/inst/jesd204_phy_block_i/sync_rxresetdone/cdc_i'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'system_i/jesd204_phy_0/inst/jesd204_phy_block_i/sync_rxresetdone/cdc_i'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.rrst_wr_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.rrst_wr_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.wrst_rd_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.wrst_rd_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.rrst_wr_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.rrst_wr_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.wrst_rd_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.wrst_rd_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II'
+Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'system_i/axi_quad_spi_fmc/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1792.293 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 12 instances were transformed.
   IBUF => IBUF (IBUFCTRL, INBUF): 3 instances
@@ -40,8 +364,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 5 instances
   RAM32M16 => RAM32M16 (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 2 instances
 
-INFO: [Project 1-604] Checkpoint was created with Vivado v2019.1.3 (64-bit) build 2644227
-open_checkpoint: Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1613.059 ; gain = 1314.105
+39 Infos, 143 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1792.293 ; gain = 1428.816
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xczu9eg'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu9eg'
@@ -52,58 +377,58 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1636.023 ; gain = 22.965
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 1792.293 ; gain = 0.000
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: 90f6309b
+Ending Cache Timing Information Task | Checksum: 1054115ad
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1703.270 ; gain = 67.246
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.995 . Memory (MB): peak = 1792.293 ; gain = 0.000
 
 Starting Logic Optimization Task
 
 Phase 1 Retarget
-INFO: [Opt 31-138] Pushed 29 inverter(s) to 388 load pin(s).
+INFO: [Opt 31-138] Pushed 31 inverter(s) to 1525 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 1839a5db0
+Phase 1 Retarget | Checksum: 1e010c39b
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.684 . Memory (MB): peak = 1864.160 ; gain = 0.000
-INFO: [Opt 31-389] Phase Retarget created 101 cells and removed 421 cells
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.906 . Memory (MB): peak = 1915.816 ; gain = 0.391
+INFO: [Opt 31-389] Phase Retarget created 147 cells and removed 473 cells
 INFO: [Opt 31-1021] In phase Retarget, 6 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 2 Constant propagation
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 2 Constant propagation | Checksum: 1ad54a429
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
+Phase 2 Constant propagation | Checksum: 16a210353
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.902 . Memory (MB): peak = 1864.160 ; gain = 0.000
-INFO: [Opt 31-389] Phase Constant propagation created 147 cells and removed 326 cells
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1915.816 ; gain = 0.391
+INFO: [Opt 31-389] Phase Constant propagation created 26 cells and removed 88 cells
 INFO: [Opt 31-1021] In phase Constant propagation, 2 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: 181e87ac6
+Phase 3 Sweep | Checksum: 1ba22f719
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1864.160 ; gain = 0.000
-INFO: [Opt 31-389] Phase Sweep created 2 cells and removed 303 cells
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1915.816 ; gain = 0.391
+INFO: [Opt 31-389] Phase Sweep created 3 cells and removed 443 cells
 INFO: [Opt 31-1021] In phase Sweep, 61 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 4 BUFG optimization
-Phase 4 BUFG optimization | Checksum: 181e87ac6
+Phase 4 BUFG optimization | Checksum: 1ba22f719
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1864.160 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1915.816 ; gain = 0.391
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 5 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 5 Shift Register Optimization | Checksum: 181e87ac6
+Phase 5 Shift Register Optimization | Checksum: 1ba22f719
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1864.160 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1915.816 ; gain = 0.391
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 6 Post Processing Netlist
-Phase 6 Post Processing Netlist | Checksum: 1487d691d
+Phase 6 Post Processing Netlist | Checksum: 203e0fa26
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1864.160 ; gain = 0.000
-INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1915.816 ; gain = 0.391
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 1 cells
 INFO: [Opt 31-1021] In phase Post Processing Netlist, 2 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 Opt_design Change Summary
 =========================
@@ -112,56 +437,70 @@ Opt_design Change Summary
 -------------------------------------------------------------------------------------------------------------------------
 |  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
 -------------------------------------------------------------------------------------------------------------------------
-|  Retarget                     |             101  |             421  |                                              6  |
-|  Constant propagation         |             147  |             326  |                                              2  |
-|  Sweep                        |               2  |             303  |                                             61  |
+|  Retarget                     |             147  |             473  |                                              6  |
+|  Constant propagation         |              26  |              88  |                                              2  |
+|  Sweep                        |               3  |             443  |                                             61  |
 |  BUFG optimization            |               0  |               0  |                                              0  |
 |  Shift Register Optimization  |               0  |               0  |                                              0  |
-|  Post Processing Netlist      |               0  |               0  |                                              2  |
+|  Post Processing Netlist      |               0  |               1  |                                              2  |
 -------------------------------------------------------------------------------------------------------------------------
 
 
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1864.160 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: 18f454fe9
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1915.816 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 14571e56e
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1864.160 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1915.816 ; gain = 0.391
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
-Ending Power Optimization Task | Checksum: 18f454fe9
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=7.357 | TNS=0.000 |
+Running Vector-less Activity Propagation...
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1864.160 ; gain = 0.000
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 8 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 0 newly gated: 0 Total Ports: 16
+Ending PowerOpt Patch Enables Task | Checksum: 14571e56e
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.089 . Memory (MB): peak = 4237.113 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 14571e56e
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:32 . Memory (MB): peak = 4237.113 ; gain = 2321.297
 
 Starting Final Cleanup Task
-Ending Final Cleanup Task | Checksum: 18f454fe9
+Ending Final Cleanup Task | Checksum: 14571e56e
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1864.160 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4237.113 ; gain = 0.000
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1864.160 ; gain = 0.000
-Ending Netlist Obfuscation Task | Checksum: 18f454fe9
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 4237.113 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 14571e56e
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1864.160 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 4237.113 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-32 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+66 Infos, 143 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1864.160 ; gain = 251.102
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1864.160 ; gain = 0.000
+opt_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:40 . Memory (MB): peak = 4237.113 ; gain = 2444.820
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 4237.113 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.100 . Memory (MB): peak = 1864.160 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.100 . Memory (MB): peak = 4237.113 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/impl_1/system_wrapper_opt.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file system_wrapper_drc_opted.rpt -pb system_wrapper_drc_opted.pb -rpx system_wrapper_drc_opted.rpx
 Command: report_drc -file system_wrapper_drc_opted.rpt -pb system_wrapper_drc_opted.pb -rpx system_wrapper_drc_opted.rpx
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Coretcl 2-168] The results of DRC are in file D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/impl_1/system_wrapper_drc_opted.rpt.
 report_drc completed successfully
@@ -182,37 +521,37 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1864.160 ; gain = 0.000
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 14ed56546
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 4237.113 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 108374453
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1864.160 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1864.160 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 4237.113 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 4237.113 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: d8358ef5
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 9a498483
 
-Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 3712.773 ; gain = 1848.613
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 4237.113 ; gain = 0.000
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: e1ecc3c7
+Phase 1.3 Build Placer Netlist Model | Checksum: fc603295
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:31 . Memory (MB): peak = 3712.773 ; gain = 1848.613
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 4237.113 ; gain = 0.000
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: e1ecc3c7
+Phase 1.4 Constrain Clocks/Macros | Checksum: fc603295
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:31 . Memory (MB): peak = 3712.773 ; gain = 1848.613
-Phase 1 Placer Initialization | Checksum: e1ecc3c7
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 4237.113 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: fc603295
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:31 . Memory (MB): peak = 3712.773 ; gain = 1848.613
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 4237.113 ; gain = 0.000
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
-Phase 2.1 Floorplanning | Checksum: 1ff44e951
+Phase 2.1 Floorplanning | Checksum: 134467ce0
 
-Time (s): cpu = 00:00:35 ; elapsed = 00:00:33 . Memory (MB): peak = 3712.773 ; gain = 1848.613
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 4237.113 ; gain = 0.000
 
 Phase 2.2 Global Placement Core
 
@@ -225,7 +564,7 @@ INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization wa
 INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
 INFO: [Physopt 32-949] No candidate nets found for HD net replication
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 3712.773 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 4237.113 ; gain = 0.000
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -243,65 +582,65 @@ Summary of Physical Synthesis Optimizations
 ----------------------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.2.1 Physical Synthesis In Placer | Checksum: 15fd359b9
+Phase 2.2.1 Physical Synthesis In Placer | Checksum: b92fc346
 
-Time (s): cpu = 00:00:50 ; elapsed = 00:00:44 . Memory (MB): peak = 3712.773 ; gain = 1848.613
-Phase 2.2 Global Placement Core | Checksum: 16266c61a
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:24 . Memory (MB): peak = 4237.113 ; gain = 0.000
+Phase 2.2 Global Placement Core | Checksum: e2410238
 
-Time (s): cpu = 00:00:52 ; elapsed = 00:00:44 . Memory (MB): peak = 3712.773 ; gain = 1848.613
-Phase 2 Global Placement | Checksum: 16266c61a
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:25 . Memory (MB): peak = 4237.113 ; gain = 0.000
+Phase 2 Global Placement | Checksum: e2410238
 
-Time (s): cpu = 00:00:52 ; elapsed = 00:00:44 . Memory (MB): peak = 3712.773 ; gain = 1848.613
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:25 . Memory (MB): peak = 4237.113 ; gain = 0.000
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 190993a9c
+Phase 3.1 Commit Multi Column Macros | Checksum: 10d4f9e11
 
-Time (s): cpu = 00:00:52 ; elapsed = 00:00:45 . Memory (MB): peak = 3712.773 ; gain = 1848.613
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:26 . Memory (MB): peak = 4237.113 ; gain = 0.000
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 20dfd638b
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 17a0ed15f
 
-Time (s): cpu = 00:00:53 ; elapsed = 00:00:45 . Memory (MB): peak = 3712.773 ; gain = 1848.613
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:26 . Memory (MB): peak = 4237.113 ; gain = 0.000
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 182516a10
+Phase 3.3 Area Swap Optimization | Checksum: 1aafdb8df
 
-Time (s): cpu = 00:00:53 ; elapsed = 00:00:45 . Memory (MB): peak = 3712.773 ; gain = 1848.613
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:26 . Memory (MB): peak = 4237.113 ; gain = 0.000
 
 Phase 3.4 Small Shape Clustering
-Phase 3.4 Small Shape Clustering | Checksum: 1d7c89a2a
+Phase 3.4 Small Shape Clustering | Checksum: 189ea7c7c
 
-Time (s): cpu = 00:00:53 ; elapsed = 00:00:46 . Memory (MB): peak = 3712.773 ; gain = 1848.613
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:27 . Memory (MB): peak = 4237.113 ; gain = 0.000
 
 Phase 3.5 Flow Legalize Slice Clusters
-Phase 3.5 Flow Legalize Slice Clusters | Checksum: 204765403
+Phase 3.5 Flow Legalize Slice Clusters | Checksum: 1daf103b6
 
-Time (s): cpu = 00:00:54 ; elapsed = 00:00:46 . Memory (MB): peak = 3712.773 ; gain = 1848.613
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:27 . Memory (MB): peak = 4237.113 ; gain = 0.000
 
 Phase 3.6 Slice Area Swap
-Phase 3.6 Slice Area Swap | Checksum: 17bfe67e0
+Phase 3.6 Slice Area Swap | Checksum: 16d9f51da
 
-Time (s): cpu = 00:00:54 ; elapsed = 00:00:46 . Memory (MB): peak = 3712.773 ; gain = 1848.613
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:28 . Memory (MB): peak = 4237.113 ; gain = 0.000
 
 Phase 3.7 Commit Slice Clusters
-Phase 3.7 Commit Slice Clusters | Checksum: 270b7e5c6
+Phase 3.7 Commit Slice Clusters | Checksum: d15a8afd
 
-Time (s): cpu = 00:00:56 ; elapsed = 00:00:47 . Memory (MB): peak = 3712.773 ; gain = 1848.613
+Time (s): cpu = 00:00:42 ; elapsed = 00:00:29 . Memory (MB): peak = 4237.113 ; gain = 0.000
 
 Phase 3.8 Re-assign LUT pins
-Phase 3.8 Re-assign LUT pins | Checksum: 27092baad
+Phase 3.8 Re-assign LUT pins | Checksum: 15b652400
 
-Time (s): cpu = 00:00:56 ; elapsed = 00:00:48 . Memory (MB): peak = 3712.773 ; gain = 1848.613
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:30 . Memory (MB): peak = 4237.113 ; gain = 0.000
 
 Phase 3.9 Pipeline Register Optimization
-Phase 3.9 Pipeline Register Optimization | Checksum: 2305eb5a3
+Phase 3.9 Pipeline Register Optimization | Checksum: 20ddc3c1b
 
-Time (s): cpu = 00:00:56 ; elapsed = 00:00:48 . Memory (MB): peak = 3712.773 ; gain = 1848.613
-Phase 3 Detail Placement | Checksum: 2305eb5a3
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:30 . Memory (MB): peak = 4237.113 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 20ddc3c1b
 
-Time (s): cpu = 00:00:56 ; elapsed = 00:00:48 . Memory (MB): peak = 3712.773 ; gain = 1848.613
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:30 . Memory (MB): peak = 4237.113 ; gain = 0.000
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -309,60 +648,62 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 1431a495d
+Post Placement Optimization Initialization | Checksum: 1cb461d20
 
 Phase 4.1.1.1 BUFG Insertion
-INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
-Phase 4.1.1.1 BUFG Insertion | Checksum: 1431a495d
+INFO: [Place 46-35] Processed net system_i/rst_ps8_0_96M/U0/peripheral_aresetn[0], inserted BUFG to drive 1381 loads.
+INFO: [Place 46-45] Replicated bufg driver system_i/rst_ps8_0_96M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_bufg_rep
+INFO: [Place 46-56] BUFG insertion identified 1 candidate nets. Inserted BUFG: 1, Replicated BUFG Driver: 1, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+Phase 4.1.1.1 BUFG Insertion | Checksum: 17eadd0f3
 
-Time (s): cpu = 00:01:00 ; elapsed = 00:00:51 . Memory (MB): peak = 3712.773 ; gain = 1848.613
-INFO: [Place 30-746] Post Placement Timing Summary WNS=6.803. For the most accurate timing information please run report_timing.
-Phase 4.1.1 Post Placement Optimization | Checksum: 1a61fa0b8
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:34 . Memory (MB): peak = 4237.113 ; gain = 0.000
+INFO: [Place 30-746] Post Placement Timing Summary WNS=6.472. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 1883a83f8
 
-Time (s): cpu = 00:01:00 ; elapsed = 00:00:51 . Memory (MB): peak = 3712.773 ; gain = 1848.613
-Phase 4.1 Post Commit Optimization | Checksum: 1a61fa0b8
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:34 . Memory (MB): peak = 4237.113 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 1883a83f8
 
-Time (s): cpu = 00:01:00 ; elapsed = 00:00:51 . Memory (MB): peak = 3712.773 ; gain = 1848.613
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:34 . Memory (MB): peak = 4237.113 ; gain = 0.000
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 1a61fa0b8
+Phase 4.2 Post Placement Cleanup | Checksum: 1883a83f8
 
-Time (s): cpu = 00:01:00 ; elapsed = 00:00:51 . Memory (MB): peak = 3712.773 ; gain = 1848.613
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 3712.773 ; gain = 0.000
+Time (s): cpu = 00:00:49 ; elapsed = 00:00:34 . Memory (MB): peak = 4237.113 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.104 . Memory (MB): peak = 4237.113 ; gain = 0.000
 
 Phase 4.3 Placer Reporting
-Phase 4.3 Placer Reporting | Checksum: 23f175bdd
+Phase 4.3 Placer Reporting | Checksum: 212285755
 
-Time (s): cpu = 00:01:07 ; elapsed = 00:00:57 . Memory (MB): peak = 3712.773 ; gain = 1848.613
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:40 . Memory (MB): peak = 4237.113 ; gain = 0.000
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 3712.773 ; gain = 0.000
-Phase 4.4 Final Placement Cleanup | Checksum: 23f32efde
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 4237.113 ; gain = 0.000
+Phase 4.4 Final Placement Cleanup | Checksum: 22a571e3c
 
-Time (s): cpu = 00:01:07 ; elapsed = 00:00:57 . Memory (MB): peak = 3712.773 ; gain = 1848.613
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 23f32efde
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:40 . Memory (MB): peak = 4237.113 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 22a571e3c
 
-Time (s): cpu = 00:01:07 ; elapsed = 00:00:57 . Memory (MB): peak = 3712.773 ; gain = 1848.613
-Ending Placer Task | Checksum: 1c8ba1dc7
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:40 . Memory (MB): peak = 4237.113 ; gain = 0.000
+Ending Placer Task | Checksum: 1e91238b3
 
-Time (s): cpu = 00:01:07 ; elapsed = 00:00:57 . Memory (MB): peak = 3712.773 ; gain = 1848.613
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:40 . Memory (MB): peak = 4237.113 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-61 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+95 Infos, 143 Warnings, 0 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:01:10 ; elapsed = 00:00:59 . Memory (MB): peak = 3712.773 ; gain = 1848.613
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 3712.773 ; gain = 0.000
+place_design: Time (s): cpu = 00:01:00 ; elapsed = 00:00:43 . Memory (MB): peak = 4237.113 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 4237.113 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.780 . Memory (MB): peak = 3712.773 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.742 . Memory (MB): peak = 4237.113 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/impl_1/system_wrapper_placed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_io -file system_wrapper_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.126 . Memory (MB): peak = 3712.773 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.128 . Memory (MB): peak = 4237.113 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file system_wrapper_utilization_placed.rpt -pb system_wrapper_utilization_placed.pb
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file system_wrapper_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.152 . Memory (MB): peak = 3712.773 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.201 . Memory (MB): peak = 4237.113 ; gain = 0.000
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xczu9eg'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu9eg'
@@ -374,122 +715,129 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 
 Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
-Checksum: PlaceDB: a660041a ConstDB: 0 ShapeSum: 89625e88 RouteDB: 98f7bb25
+Checksum: PlaceDB: e4126cfd ConstDB: 0 ShapeSum: 7b11f859 RouteDB: 89edd35d
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: 13f9468ba
+Phase 1 Build RT Design | Checksum: 1446bd472
 
-Time (s): cpu = 00:01:28 ; elapsed = 00:01:16 . Memory (MB): peak = 3712.773 ; gain = 0.000
-Post Restoration Checksum: NetGraph: 7fd45577 NumContArr: f499f6a3 Constraints: c485b7e8 Timing: 0
+Time (s): cpu = 00:01:28 ; elapsed = 00:01:15 . Memory (MB): peak = 4237.113 ; gain = 0.000
+Post Restoration Checksum: NetGraph: 16fc0cf2 NumContArr: 58ecf79b Constraints: 60be7b0f Timing: 0
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: 238f40402
+Phase 2.1 Create Timer | Checksum: d0a77f9c
 
-Time (s): cpu = 00:01:28 ; elapsed = 00:01:16 . Memory (MB): peak = 3712.773 ; gain = 0.000
+Time (s): cpu = 00:01:28 ; elapsed = 00:01:15 . Memory (MB): peak = 4237.113 ; gain = 0.000
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: 238f40402
+Phase 2.2 Fix Topology Constraints | Checksum: d0a77f9c
 
-Time (s): cpu = 00:01:28 ; elapsed = 00:01:16 . Memory (MB): peak = 3712.773 ; gain = 0.000
+Time (s): cpu = 00:01:28 ; elapsed = 00:01:15 . Memory (MB): peak = 4237.113 ; gain = 0.000
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: 238f40402
+Phase 2.3 Pre Route Cleanup | Checksum: d0a77f9c
 
-Time (s): cpu = 00:01:28 ; elapsed = 00:01:16 . Memory (MB): peak = 3712.773 ; gain = 0.000
+Time (s): cpu = 00:01:28 ; elapsed = 00:01:15 . Memory (MB): peak = 4237.113 ; gain = 0.000
 
 Phase 2.4 Global Clock Net Routing
  Number of Nodes with overlaps = 0
-Phase 2.4 Global Clock Net Routing | Checksum: 7995d4c6
+Phase 2.4 Global Clock Net Routing | Checksum: 1ba35c01d
 
-Time (s): cpu = 00:01:31 ; elapsed = 00:01:19 . Memory (MB): peak = 3712.773 ; gain = 0.000
+Time (s): cpu = 00:01:31 ; elapsed = 00:01:18 . Memory (MB): peak = 4237.113 ; gain = 0.000
 
 Phase 2.5 Update Timing
-Phase 2.5 Update Timing | Checksum: 21020e3e0
+Phase 2.5 Update Timing | Checksum: 2205da56f
 
-Time (s): cpu = 00:01:34 ; elapsed = 00:01:20 . Memory (MB): peak = 3712.773 ; gain = 0.000
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=6.836  | TNS=0.000  | WHS=-0.032 | THS=-0.410 |
+Time (s): cpu = 00:01:35 ; elapsed = 00:01:21 . Memory (MB): peak = 4237.113 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=6.546  | TNS=0.000  | WHS=-0.032 | THS=-0.449 |
 
-Phase 2 Router Initialization | Checksum: 2d3cee196
+Phase 2 Router Initialization | Checksum: 1d86074b5
 
-Time (s): cpu = 00:01:36 ; elapsed = 00:01:21 . Memory (MB): peak = 3712.773 ; gain = 0.000
+Time (s): cpu = 00:01:37 ; elapsed = 00:01:22 . Memory (MB): peak = 4237.113 ; gain = 0.000
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 0.00207698 %
-  Global Horizontal Routing Utilization  = 0.000580085 %
+  Global Vertical Routing Utilization    = 0.000110907 %
+  Global Horizontal Routing Utilization  = 6.2152e-05 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
-  Number of Failed Nets               = 6252
+  Number of Failed Nets               = 8343
     (Failed Nets is the sum of unrouted and partially routed nets)
-  Number of Unrouted Nets             = 4705
-  Number of Partially Routed Nets     = 1547
-  Number of Node Overlaps             = 1
+  Number of Unrouted Nets             = 6589
+  Number of Partially Routed Nets     = 1754
+  Number of Node Overlaps             = 0
 
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: 1e2d4b9dd
+Phase 3 Initial Routing | Checksum: 1d36b1e44
 
-Time (s): cpu = 00:01:39 ; elapsed = 00:01:24 . Memory (MB): peak = 3712.773 ; gain = 0.000
+Time (s): cpu = 00:01:42 ; elapsed = 00:01:25 . Memory (MB): peak = 4237.113 ; gain = 0.000
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 1075
- Number of Nodes with overlaps = 70
+ Number of Nodes with overlaps = 1671
+ Number of Nodes with overlaps = 104
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=6.765  | TNS=0.000  | WHS=0.018  | THS=0.000  |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=6.079  | TNS=0.000  | WHS=-0.003 | THS=-0.003 |
 
-Phase 4.1 Global Iteration 0 | Checksum: efe923a6
+Phase 4.1 Global Iteration 0 | Checksum: 2303c3afb
 
-Time (s): cpu = 00:01:45 ; elapsed = 00:01:27 . Memory (MB): peak = 3712.773 ; gain = 0.000
+Time (s): cpu = 00:01:50 ; elapsed = 00:01:30 . Memory (MB): peak = 4237.113 ; gain = 0.000
 
 Phase 4.2 Additional Iteration for Hold
-Phase 4.2 Additional Iteration for Hold | Checksum: 13570112b
+Phase 4.2 Additional Iteration for Hold | Checksum: 1edafd760
 
-Time (s): cpu = 00:01:45 ; elapsed = 00:01:27 . Memory (MB): peak = 3712.773 ; gain = 0.000
-Phase 4 Rip-up And Reroute | Checksum: 13570112b
+Time (s): cpu = 00:01:50 ; elapsed = 00:01:30 . Memory (MB): peak = 4237.113 ; gain = 0.000
+Phase 4 Rip-up And Reroute | Checksum: 1edafd760
 
-Time (s): cpu = 00:01:45 ; elapsed = 00:01:27 . Memory (MB): peak = 3712.773 ; gain = 0.000
+Time (s): cpu = 00:01:50 ; elapsed = 00:01:30 . Memory (MB): peak = 4237.113 ; gain = 0.000
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
-Phase 5.1 Delay CleanUp | Checksum: 11ed38c9e
 
-Time (s): cpu = 00:01:45 ; elapsed = 00:01:27 . Memory (MB): peak = 3712.773 ; gain = 0.000
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 2475d25a8
+
+Time (s): cpu = 00:01:52 ; elapsed = 00:01:31 . Memory (MB): peak = 4237.113 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=6.079  | TNS=0.000  | WHS=0.014  | THS=0.000  |
+
+Phase 5.1 Delay CleanUp | Checksum: 2475d25a8
+
+Time (s): cpu = 00:01:52 ; elapsed = 00:01:31 . Memory (MB): peak = 4237.113 ; gain = 0.000
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 11ed38c9e
+Phase 5.2 Clock Skew Optimization | Checksum: 2475d25a8
 
-Time (s): cpu = 00:01:45 ; elapsed = 00:01:27 . Memory (MB): peak = 3712.773 ; gain = 0.000
-Phase 5 Delay and Skew Optimization | Checksum: 11ed38c9e
+Time (s): cpu = 00:01:52 ; elapsed = 00:01:31 . Memory (MB): peak = 4237.113 ; gain = 0.000
+Phase 5 Delay and Skew Optimization | Checksum: 2475d25a8
 
-Time (s): cpu = 00:01:45 ; elapsed = 00:01:27 . Memory (MB): peak = 3712.773 ; gain = 0.000
+Time (s): cpu = 00:01:52 ; elapsed = 00:01:31 . Memory (MB): peak = 4237.113 ; gain = 0.000
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: c4480886
+Phase 6.1.1 Update Timing | Checksum: 307f5d09c
 
-Time (s): cpu = 00:01:46 ; elapsed = 00:01:28 . Memory (MB): peak = 3712.773 ; gain = 0.000
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=6.765  | TNS=0.000  | WHS=0.018  | THS=0.000  |
+Time (s): cpu = 00:01:53 ; elapsed = 00:01:32 . Memory (MB): peak = 4237.113 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=6.079  | TNS=0.000  | WHS=0.014  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: 171e3901c
+Phase 6.1 Hold Fix Iter | Checksum: 2b5326d8b
 
-Time (s): cpu = 00:01:46 ; elapsed = 00:01:28 . Memory (MB): peak = 3712.773 ; gain = 0.000
-Phase 6 Post Hold Fix | Checksum: 171e3901c
+Time (s): cpu = 00:01:53 ; elapsed = 00:01:32 . Memory (MB): peak = 4237.113 ; gain = 0.000
+Phase 6 Post Hold Fix | Checksum: 2b5326d8b
 
-Time (s): cpu = 00:01:46 ; elapsed = 00:01:28 . Memory (MB): peak = 3712.773 ; gain = 0.000
+Time (s): cpu = 00:01:53 ; elapsed = 00:01:32 . Memory (MB): peak = 4237.113 ; gain = 0.000
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 0.441842 %
-  Global Horizontal Routing Utilization  = 0.276597 %
+  Global Vertical Routing Utilization    = 0.460978 %
+  Global Horizontal Routing Utilization  = 0.364169 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -499,46 +847,46 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 7 Route finalize | Checksum: 9df4c238
+Phase 7 Route finalize | Checksum: 2a9d690af
 
-Time (s): cpu = 00:01:46 ; elapsed = 00:01:28 . Memory (MB): peak = 3712.773 ; gain = 0.000
+Time (s): cpu = 00:01:54 ; elapsed = 00:01:32 . Memory (MB): peak = 4237.113 ; gain = 0.000
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 9df4c238
+Phase 8 Verifying routed nets | Checksum: 2a9d690af
 
-Time (s): cpu = 00:01:46 ; elapsed = 00:01:28 . Memory (MB): peak = 3712.773 ; gain = 0.000
+Time (s): cpu = 00:01:54 ; elapsed = 00:01:32 . Memory (MB): peak = 4237.113 ; gain = 0.000
 
 Phase 9 Depositing Routes
 INFO: [Route 35-467] Router swapped GT pin system_i/jesd204_phy_0/inst/jesd204_phy_gt_common_0_i/system_jesd204_phy_0_0_gt_common_i/common_inst/gthe4_common_gen.GTHE4_COMMON_PRIM_INST/GTREFCLK00 to physical pin GTHE4_COMMON_X0Y2/COM0_REFCLKOUT5
-Phase 9 Depositing Routes | Checksum: 9df4c238
+Phase 9 Depositing Routes | Checksum: 2a9d690af
 
-Time (s): cpu = 00:01:47 ; elapsed = 00:01:29 . Memory (MB): peak = 3712.773 ; gain = 0.000
+Time (s): cpu = 00:01:55 ; elapsed = 00:01:33 . Memory (MB): peak = 4237.113 ; gain = 0.000
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=6.765  | TNS=0.000  | WHS=0.018  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=6.079  | TNS=0.000  | WHS=0.014  | THS=0.000  |
 
 INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
-Phase 10 Post Router Timing | Checksum: 9df4c238
+Phase 10 Post Router Timing | Checksum: 2a9d690af
 
-Time (s): cpu = 00:01:47 ; elapsed = 00:01:29 . Memory (MB): peak = 3712.773 ; gain = 0.000
+Time (s): cpu = 00:01:55 ; elapsed = 00:01:33 . Memory (MB): peak = 4237.113 ; gain = 0.000
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:01:47 ; elapsed = 00:01:29 . Memory (MB): peak = 3712.773 ; gain = 0.000
+Time (s): cpu = 00:01:55 ; elapsed = 00:01:33 . Memory (MB): peak = 4237.113 ; gain = 0.000
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-79 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+114 Infos, 143 Warnings, 0 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:01:50 ; elapsed = 00:01:31 . Memory (MB): peak = 3712.773 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 3712.773 ; gain = 0.000
+route_design: Time (s): cpu = 00:01:59 ; elapsed = 00:01:36 . Memory (MB): peak = 4237.113 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 4237.113 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.715 . Memory (MB): peak = 3712.773 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.919 . Memory (MB): peak = 4237.113 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/impl_1/system_wrapper_routed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file system_wrapper_drc_routed.rpt -pb system_wrapper_drc_routed.pb -rpx system_wrapper_drc_routed.rpx
 Command: report_drc -file system_wrapper_drc_routed.rpt -pb system_wrapper_drc_routed.pb -rpx system_wrapper_drc_routed.rpx
@@ -558,9 +906,9 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
-91 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+126 Infos, 143 Warnings, 0 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
-report_power: Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 3712.773 ; gain = 0.000
+report_power: Time (s): cpu = 00:00:17 ; elapsed = 00:00:14 . Memory (MB): peak = 4237.113 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_route_status -file system_wrapper_route_status.rpt -pb system_wrapper_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file system_wrapper_timing_summary_routed.rpt -pb system_wrapper_timing_summary_routed.pb -rpx system_wrapper_timing_summary_routed.rpx -warn_on_violation 
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: I, Delay Type: min_max.
@@ -594,7 +942,7 @@ Creating bitstream...
 Writing bitstream ./system_wrapper.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Common 17-83] Releasing license: Implementation
-111 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+146 Infos, 146 Warnings, 0 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:46 ; elapsed = 00:00:40 . Memory (MB): peak = 3728.086 ; gain = 15.312
-INFO: [Common 17-206] Exiting Vivado at Wed Oct 19 17:05:29 2022...
+write_bitstream: Time (s): cpu = 00:00:47 ; elapsed = 00:00:40 . Memory (MB): peak = 4237.113 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Nov  3 15:39:30 2022...

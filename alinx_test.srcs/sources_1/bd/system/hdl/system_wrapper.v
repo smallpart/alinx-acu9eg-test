@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1.3 (win64) Build 2644227 Wed Sep  4 09:45:24 MDT 2019
-//Date        : Wed Oct 19 16:15:53 2022
+//Date        : Thu Nov  3 15:32:19 2022
 //Host        : atom-pc running 64-bit major release  (build 9200)
 //Command     : generate_target system_wrapper.bd
 //Design      : system_wrapper
@@ -30,7 +30,7 @@ module system_wrapper
     uart_control_txd);
   input clk_jesd_n;
   input clk_jesd_p;
-  output [1:0]dac_txen_tri_o;
+  output [2:0]dac_txen_tri_o;
   inout fmc_spi_io0_io;
   inout fmc_spi_io1_io;
   inout fmc_spi_sck_io;
@@ -49,7 +49,7 @@ module system_wrapper
 
   wire clk_jesd_n;
   wire clk_jesd_p;
-  wire [1:0]dac_txen_tri_o;
+  wire [2:0]dac_txen_tri_o;
   wire fmc_spi_io0_i;
   wire fmc_spi_io0_io;
   wire fmc_spi_io0_o;

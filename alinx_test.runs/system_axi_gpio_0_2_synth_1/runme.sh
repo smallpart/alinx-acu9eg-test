@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/atom/program/mwsystems/alinx_test/alinx_test.runs/system_axi_gpio_0_2_synth_1'
+HD_PWD='D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/system_axi_gpio_0_2_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

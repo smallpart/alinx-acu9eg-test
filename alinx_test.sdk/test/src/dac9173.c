@@ -10,6 +10,13 @@
 #include "spi.h"
 #include "gpio.h"
 
+#include "spi_extra.h"
+#include "parameters.h"
+#include "gpio_extra.h"
+#include "util.h"
+#include "delay.h"
+#include "ad9172.h"
+
 /*******************************************
  * Defines
  ******************************************/
@@ -22,6 +29,8 @@
  * Private function prototypes
  ******************************************/
 void DAC9173_GpioInit (void);
+void DAC9173_InitOnlyNco(void);
+void DAC9173_InitJesd(void);
 
 /*******************************************
  * Global variables
@@ -33,6 +42,56 @@ uint64_t freq0      = DAC9173_DAC0_FREQUENCY;
 uint64_t freq1      = DAC9173_DAC1_FREQUENCY;
 uint16_t amp0       = DAC9173_AMPLITUDE;
 uint16_t amp1       = DAC9173_AMPLITUDE;
+
+struct xil_spi_init_param xil_spi_param = {
+    .type = SPI_PL,
+    .device_id = SPI_DEVICE_ID,
+    .flags = 0
+};
+
+struct spi_init_param ad9172_spi_param = {
+    .max_speed_hz = 1000000,
+    .mode = SPI_MODE_0,
+    .chip_select = SPI_AD9172_CS,
+    .platform_ops = &xil_platform_ops,
+    .extra = &xil_spi_param
+};
+
+struct xil_gpio_init_param xilinx_gpio_init_param = {
+    .type = GPIO_PL,
+    .device_id = GPIO_DEVICE_ID
+};
+
+struct ad9172_init_param ad9172_param = {
+    .spi_init = &ad9172_spi_param,  /* spi_init_param */
+    .gpio_reset = {
+        .number = 2,
+        .platform_ops = &xil_gpio_platform_ops,
+        .extra = &xilinx_gpio_init_param
+    },
+    .gpio_txen0 = {
+        .number = 0,
+        .platform_ops = &xil_gpio_platform_ops,
+        .extra = &xilinx_gpio_init_param
+    },
+    .gpio_txen1 = {
+        .number = 1,
+        .platform_ops = &xil_gpio_platform_ops,
+        .extra = &xilinx_gpio_init_param
+    },
+    .dac_rate_khz = 400000,
+    .dac_clkin_Hz = 9600000000,
+    .jesd_link_mode = 3,
+    .jesd_subclass = 0,
+    .dac_interpolation = 8,
+    .channel_interpolation = 3,
+    .clock_output_config = 4,
+    .syncoutb_type = SIGNAL_LVDS,
+    .sysref_coupling = COUPLING_AC,
+};
+
+struct ad9172_dev *ad9172_device;
+ad917x_handle_t   *ad917x_h;
 
 /*******************************************
  * DAC9173 Initialize GPIO
@@ -48,6 +107,13 @@ void DAC9173_GpioInit(void) {
 void DAC9173_Init(void) {
     DAC9173_GpioInit();
 
+    DAC9173_InitOnlyNco();
+}
+
+/*******************************************
+ * DAC9173 Initialize Only NCO without AD API
+ ******************************************/
+void DAC9173_InitOnlyNco(void) {
     /* Soft reset */
     DAC9173_Write(0x0000, 0x81);
 
@@ -67,8 +133,6 @@ void DAC9173_Init(void) {
     while ( ( DAC9173_Read(0x0705) & (1 << 1) ) == 0 ) ;
 
     /* Power on DACs and bias circuitry */
-//    DAC9173_Write(0x0090, 0x00);
-//    DAC9173_Write(0x0091, 0x00);
     DAC9173_OutputEnable(DAC9173_DAC0, (dac_en & DAC9173_DAC0) != 0);
     DAC9173_OutputEnable(DAC9173_DAC1, (dac_en & DAC9173_DAC1) != 0);
 
@@ -78,7 +142,6 @@ void DAC9173_Init(void) {
     DAC9173_Write(0x0790, 0xff);
     DAC9173_Write(0x0791, 0xff);
     /* ADC clock output divider */
-//    DAC9173_Write(0x0799, (3 << 6) | 0x08);
     DAC9173_ClkOutEnable(clk_out_en);
     DAC9173_ClkOutSetDiv(clk_out_div);
 
@@ -86,16 +149,121 @@ void DAC9173_Init(void) {
     DAC9173_Write(0x0100, 0x00);
 
     /* Initialization outputs */
-//    DAC9173_SetFrequency(DAC9173_DAC0, DAC9173_DAC0_FREQUENCY);
-//    DAC9173_SetAmplitude(DAC9173_DAC0, DAC9173_AMPLITUDE);
-//
-//    DAC9173_SetFrequency(DAC9173_DAC1, DAC9173_DAC1_FREQUENCY);
-//    DAC9173_SetAmplitude(DAC9173_DAC1, DAC9173_AMPLITUDE);
     DAC9173_SetFrequency(DAC9173_DAC0, freq0);
     DAC9173_SetAmplitude(DAC9173_DAC0, amp0);
 
     DAC9173_SetFrequency(DAC9173_DAC1, freq1);
     DAC9173_SetAmplitude(DAC9173_DAC1, amp1);
+}
+
+/*******************************************
+ * DAC9173 Initialize NCO and JESD with AD API
+ ******************************************/
+void DAC9173_InitJesd(void) {
+    ad9172_init(&ad9172_device, &ad9172_param);
+
+    uint8_t revision[3] = {0, 0, 0};
+    uint8_t pll_lock_status = 0, dll_lock_stat = 0;
+    adi_chip_id_t dac_chip_id;
+    uint64_t dac_rate_Hz;
+    uint64_t dac_clkin_Hz, lane_rate_kHz;
+    ad917x_jesd_link_stat_t link_status;
+    ad917x_h = &ad9172_device->st->dac_h;
+    uint8_t dac_mask, chan_mask;
+
+    ad9172_device->st->interpolation = ad9172_device->st->dac_interpolation *
+            ad9172_device->st->channel_interpolation;
+
+    ad9172_device->st->jesd_dual_link_mode = 1;
+
+    /* Initialize DAC Module */
+    ad917x_init(ad917x_h);
+
+    ad917x_reset(ad917x_h, 0);
+
+    ad917x_get_chip_id(ad917x_h, &dac_chip_id);
+
+    ad917x_get_revision(ad917x_h, &revision[0], &revision[1],
+                  &revision[2]);
+
+    dac_clkin_Hz = 9600000000;
+
+    ad917x_set_dac_clk(ad917x_h, (uint64_t)dac_clkin_Hz, 0, dac_clkin_Hz);
+
+    mdelay(100); /* Wait 100 ms for PLL to lock */
+
+    ad917x_get_dac_clk_status(ad917x_h,
+                    &pll_lock_status, &dll_lock_stat);
+
+    if (ad9172_device->st->clock_output_config) {
+        /* DEBUG: route DAC clock to output, so we can meassure it */
+        ad917x_set_clkout_config(ad917x_h,
+                ad9172_device->st->clock_output_config);
+    }
+
+    ad917x_nco_set(ad917x_h, AD917X_DAC0, 0, 1235000000, 0xffff, 0, 0);
+//    ad917x_nco_set(ad917x_h, AD917X_DAC1, 0,   79000000, 0xffff, 0, 0);
+
+    ad917x_jesd_set_lane_xbar(ad917x_h, 0, 0);
+    ad917x_jesd_set_lane_xbar(ad917x_h, 1, 1);
+    ad917x_jesd_set_lane_xbar(ad917x_h, 2, 2);
+    ad917x_jesd_set_lane_xbar(ad917x_h, 3, 3);
+
+    ad917x_jesd_config_datapath(ad917x_h, ad9172_device->st->jesd_dual_link_mode,
+            ad9172_device->st->jesd_link_mode,
+            ad9172_device->st->channel_interpolation,
+            ad9172_device->st->dac_interpolation);
+    ad917x_jesd_get_cfg_param(ad917x_h, &ad9172_device->st->appJesdConfig);
+
+    ad917x_jesd_set_scrambler_enable(ad917x_h, 1);
+
+    ad917x_jesd_enable_datapath(ad917x_h, 0xFF, 0x1, 0x1);
+
+    ad917x_jesd_set_syncoutb_enable(ad917x_h, SYNCOUTB_0, 1);
+
+    mdelay(100);
+
+    ad917x_jesd_get_pll_status(ad917x_h, &pll_lock_status);
+
+    ad917x_get_dac_clk_freq(ad917x_h, &dac_rate_Hz);
+
+    lane_rate_kHz = dac_rate_Hz * 20 * ad9172_device->st->appJesdConfig.jesd_M;
+    do_div(&lane_rate_kHz, ad9172_device->st->appJesdConfig.jesd_L *
+            ad9172_device->st->interpolation * 1000);
+
+    ad917x_jesd_set_sysref_enable(ad917x_h, 0); /* subclass 0 */
+
+    /*Enable Link*/
+    ad917x_jesd_enable_link(ad917x_h, JESD_LINK_ALL, 0x1);
+
+    mdelay(100);
+
+    ad917x_jesd_get_link_status(ad917x_h, JESD_LINK_0, &link_status);
+
+    if (ad9172_device->st->jesd_dual_link_mode || ad9172_device->st->interpolation == 1)
+        dac_mask = AD917X_DAC0 | AD917X_DAC1;
+    else
+        dac_mask = AD917X_DAC0;
+
+    if (ad9172_device->st->interpolation > 1) {
+        chan_mask = GENMASK(ad9172_device->st->appJesdConfig.jesd_M / 2, 0);
+        ad917x_set_page_idx(ad917x_h, AD917X_DAC_NONE, chan_mask);
+        ad917x_set_channel_gain(ad917x_h, 2048); /* GAIN = 1 */
+
+        ad9172_device->st->nco_main_enable = dac_mask;
+
+        ad917x_nco_enable(ad917x_h, ad9172_device->st->nco_main_enable, 0);
+    }
+
+    ad917x_set_page_idx(ad917x_h, dac_mask, AD917X_CH_NONE);
+
+    ad917x_register_write(ad917x_h, 0x596, 0x1c); /* SPI turn on TXENx feature */
+
+    uint8_t link_st[8];
+    uint8_t i = 0;
+    for (i = 0; i < 8; i++) {
+        ad917x_register_read(ad917x_h, 0x4b0 + i, &link_st[i]);
+    }
 }
 
 /*******************************************

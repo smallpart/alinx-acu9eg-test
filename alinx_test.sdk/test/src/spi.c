@@ -9,6 +9,10 @@
 #include "spi.h"
 #include "xspi.h"
 
+#include <inttypes.h>
+#include <stdlib.h>
+#include "error.h"
+
 /*******************************************
  * Global variables
  ******************************************/
@@ -99,6 +103,61 @@ uint16_t SPI_Read(uint16_t dev, uint16_t addr) {
 
     return read_data;
 }
+
+
+
+/*******************************************************************************
+ * spi.c
+ * Copyright 2019(c) Analog Devices, Inc.
+ ******************************************************************************/
+
+/**
+ * @brief Initialize the SPI communication peripheral.
+ * @param desc - The SPI descriptor.
+ * @param param - The structure that contains the SPI parameters.
+ * @return SUCCESS in case of success, FAILURE otherwise.
+ */
+int32_t spi_init(struct spi_desc **desc,
+         const struct spi_init_param *param)
+{
+    if (!param)
+        return FAILURE;
+
+    if ((param->platform_ops->spi_ops_init(desc, param)))
+        return FAILURE;
+
+    (*desc)->platform_ops = param->platform_ops;
+
+    return SUCCESS;
+}
+
+/**
+ * @brief Free the resources allocated by spi_init().
+ * @param desc - The SPI descriptor.
+ * @return SUCCESS in case of success, FAILURE otherwise.
+ */
+int32_t spi_remove(struct spi_desc *desc)
+{
+    return desc->platform_ops->spi_ops_remove(desc);
+}
+
+/**
+ * @brief Write and read data to/from SPI.
+ * @param desc - The SPI descriptor.
+ * @param data - The buffer with the transmitted/received data.
+ * @param bytes_number - Number of bytes to write/read.
+ * @return SUCCESS in case of success, FAILURE otherwise.
+ */
+int32_t spi_write_and_read(struct spi_desc *desc,
+               uint8_t *data,
+               uint16_t bytes_number)
+{
+    return desc->platform_ops->spi_ops_write_and_read(desc, data, bytes_number);
+}
+
+/******************************************************************************/
+/************************ End spi.c for Analog Devices ************************/
+/******************************************************************************/
 
 /*******************************************
  * End of file spi.c

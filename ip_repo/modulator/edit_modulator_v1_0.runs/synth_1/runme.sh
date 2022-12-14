@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.runs/synth_1'
+HD_PWD='D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

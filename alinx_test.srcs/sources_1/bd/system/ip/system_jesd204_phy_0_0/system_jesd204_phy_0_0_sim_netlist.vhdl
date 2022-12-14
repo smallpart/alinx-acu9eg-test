@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1.3 (win64) Build 2644227 Wed Sep  4 09:45:24 MDT 2019
--- Date        : Wed Oct 19 11:32:02 2022
+-- Date        : Wed Dec 14 18:13:00 2022
 -- Host        : atom-pc running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/system_jesd204_phy_0_0_sim_netlist.vhdl
+--               D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/system_jesd204_phy_0_0_sim_netlist.vhdl
 -- Design      : system_jesd204_phy_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -1762,7 +1762,7 @@ begin
       CHAN_BOND_SEQ_2_ENABLE => B"1111",
       CHAN_BOND_SEQ_2_USE => "FALSE",
       CHAN_BOND_SEQ_LEN => 1,
-      CH_HSPMUX => X"4444",
+      CH_HSPMUX => X"6868",
       CKCAL1_CFG_0 => B"1100000011000000",
       CKCAL1_CFG_1 => B"0101000011000000",
       CKCAL1_CFG_2 => B"0000000000001010",
@@ -1877,8 +1877,8 @@ begin
       PCIE3_CLK_COR_MAX_LAT => B"00100",
       PCIE3_CLK_COR_MIN_LAT => B"00000",
       PCIE3_CLK_COR_THRSH_TIMER => B"001000",
-      PCIE_BUFG_DIV_CTRL => X"1000",
-      PCIE_PLL_SEL_MODE_GEN12 => B"00",
+      PCIE_BUFG_DIV_CTRL => X"3500",
+      PCIE_PLL_SEL_MODE_GEN12 => B"10",
       PCIE_PLL_SEL_MODE_GEN3 => B"10",
       PCIE_PLL_SEL_MODE_GEN4 => B"10",
       PCIE_RXPCS_CFG_GEN3 => X"0AA5",
@@ -2018,7 +2018,7 @@ begin
       RXPHSLIP_CFG => X"9933",
       RXPH_MONITOR_SEL => B"00000",
       RXPI_AUTO_BW_SEL_BYPASS => '0',
-      RXPI_CFG0 => X"0104",
+      RXPI_CFG0 => X"0004",
       RXPI_CFG1 => B"0000000000000000",
       RXPI_LPM => '0',
       RXPI_SEL_LC => B"00",
@@ -2038,7 +2038,7 @@ begin
       RX_BIAS_CFG0 => X"1554",
       RX_BUFFER_CFG => B"000000",
       RX_CAPFF_SARC_ENB => '0',
-      RX_CLK25_DIV => 7,
+      RX_CLK25_DIV => 8,
       RX_CLKMUX_EN => '1',
       RX_CLK_SLIP_OVRD => B"00000",
       RX_CM_BUF_CFG => B"1010",
@@ -2134,7 +2134,7 @@ begin
       TXPI_CFG1 => B"00",
       TXPI_CFG2 => B"00",
       TXPI_CFG3 => '0',
-      TXPI_CFG4 => '1',
+      TXPI_CFG4 => '0',
       TXPI_CFG5 => B"000",
       TXPI_GRAY_SEL => '0',
       TXPI_INVSTROBE_SEL => '0',
@@ -2149,7 +2149,7 @@ begin
       TXSYNC_MULTILANE => '1',
       TXSYNC_OVRD => '0',
       TXSYNC_SKIP_DA => '0',
-      TX_CLK25_DIV => 7,
+      TX_CLK25_DIV => 8,
       TX_CLKMUX_EN => '1',
       TX_DATA_WIDTH => 40,
       TX_DCC_LOOP_RST_CFG => X"0004",
@@ -2181,7 +2181,7 @@ begin
       TX_PHICAL_CFG0 => X"0000",
       TX_PHICAL_CFG1 => X"7E00",
       TX_PHICAL_CFG2 => X"0201",
-      TX_PI_BIASSET => 2,
+      TX_PI_BIASSET => 3,
       TX_PI_IBIAS_MID => B"00",
       TX_PMADATA_OPT => '0',
       TX_PMA_POWER_SAVE => '0',
@@ -2612,7 +2612,7 @@ begin
       CHAN_BOND_SEQ_2_ENABLE => B"1111",
       CHAN_BOND_SEQ_2_USE => "FALSE",
       CHAN_BOND_SEQ_LEN => 1,
-      CH_HSPMUX => X"4444",
+      CH_HSPMUX => X"6868",
       CKCAL1_CFG_0 => B"1100000011000000",
       CKCAL1_CFG_1 => B"0101000011000000",
       CKCAL1_CFG_2 => B"0000000000001010",
@@ -2727,8 +2727,8 @@ begin
       PCIE3_CLK_COR_MAX_LAT => B"00100",
       PCIE3_CLK_COR_MIN_LAT => B"00000",
       PCIE3_CLK_COR_THRSH_TIMER => B"001000",
-      PCIE_BUFG_DIV_CTRL => X"1000",
-      PCIE_PLL_SEL_MODE_GEN12 => B"00",
+      PCIE_BUFG_DIV_CTRL => X"3500",
+      PCIE_PLL_SEL_MODE_GEN12 => B"10",
       PCIE_PLL_SEL_MODE_GEN3 => B"10",
       PCIE_PLL_SEL_MODE_GEN4 => B"10",
       PCIE_RXPCS_CFG_GEN3 => X"0AA5",
@@ -2868,7 +2868,7 @@ begin
       RXPHSLIP_CFG => X"9933",
       RXPH_MONITOR_SEL => B"00000",
       RXPI_AUTO_BW_SEL_BYPASS => '0',
-      RXPI_CFG0 => X"0104",
+      RXPI_CFG0 => X"0004",
       RXPI_CFG1 => B"0000000000000000",
       RXPI_LPM => '0',
       RXPI_SEL_LC => B"00",
@@ -2888,7 +2888,7 @@ begin
       RX_BIAS_CFG0 => X"1554",
       RX_BUFFER_CFG => B"000000",
       RX_CAPFF_SARC_ENB => '0',
-      RX_CLK25_DIV => 7,
+      RX_CLK25_DIV => 8,
       RX_CLKMUX_EN => '1',
       RX_CLK_SLIP_OVRD => B"00000",
       RX_CM_BUF_CFG => B"1010",
@@ -2984,7 +2984,7 @@ begin
       TXPI_CFG1 => B"00",
       TXPI_CFG2 => B"00",
       TXPI_CFG3 => '0',
-      TXPI_CFG4 => '1',
+      TXPI_CFG4 => '0',
       TXPI_CFG5 => B"000",
       TXPI_GRAY_SEL => '0',
       TXPI_INVSTROBE_SEL => '0',
@@ -2999,7 +2999,7 @@ begin
       TXSYNC_MULTILANE => '1',
       TXSYNC_OVRD => '0',
       TXSYNC_SKIP_DA => '0',
-      TX_CLK25_DIV => 7,
+      TX_CLK25_DIV => 8,
       TX_CLKMUX_EN => '1',
       TX_DATA_WIDTH => 40,
       TX_DCC_LOOP_RST_CFG => X"0004",
@@ -3031,7 +3031,7 @@ begin
       TX_PHICAL_CFG0 => X"0000",
       TX_PHICAL_CFG1 => X"7E00",
       TX_PHICAL_CFG2 => X"0201",
-      TX_PI_BIASSET => 2,
+      TX_PI_BIASSET => 3,
       TX_PI_IBIAS_MID => B"00",
       TX_PMADATA_OPT => '0',
       TX_PMA_POWER_SAVE => '0',
@@ -3462,7 +3462,7 @@ begin
       CHAN_BOND_SEQ_2_ENABLE => B"1111",
       CHAN_BOND_SEQ_2_USE => "FALSE",
       CHAN_BOND_SEQ_LEN => 1,
-      CH_HSPMUX => X"4444",
+      CH_HSPMUX => X"6868",
       CKCAL1_CFG_0 => B"1100000011000000",
       CKCAL1_CFG_1 => B"0101000011000000",
       CKCAL1_CFG_2 => B"0000000000001010",
@@ -3577,8 +3577,8 @@ begin
       PCIE3_CLK_COR_MAX_LAT => B"00100",
       PCIE3_CLK_COR_MIN_LAT => B"00000",
       PCIE3_CLK_COR_THRSH_TIMER => B"001000",
-      PCIE_BUFG_DIV_CTRL => X"1000",
-      PCIE_PLL_SEL_MODE_GEN12 => B"00",
+      PCIE_BUFG_DIV_CTRL => X"3500",
+      PCIE_PLL_SEL_MODE_GEN12 => B"10",
       PCIE_PLL_SEL_MODE_GEN3 => B"10",
       PCIE_PLL_SEL_MODE_GEN4 => B"10",
       PCIE_RXPCS_CFG_GEN3 => X"0AA5",
@@ -3718,7 +3718,7 @@ begin
       RXPHSLIP_CFG => X"9933",
       RXPH_MONITOR_SEL => B"00000",
       RXPI_AUTO_BW_SEL_BYPASS => '0',
-      RXPI_CFG0 => X"0104",
+      RXPI_CFG0 => X"0004",
       RXPI_CFG1 => B"0000000000000000",
       RXPI_LPM => '0',
       RXPI_SEL_LC => B"00",
@@ -3738,7 +3738,7 @@ begin
       RX_BIAS_CFG0 => X"1554",
       RX_BUFFER_CFG => B"000000",
       RX_CAPFF_SARC_ENB => '0',
-      RX_CLK25_DIV => 7,
+      RX_CLK25_DIV => 8,
       RX_CLKMUX_EN => '1',
       RX_CLK_SLIP_OVRD => B"00000",
       RX_CM_BUF_CFG => B"1010",
@@ -3834,7 +3834,7 @@ begin
       TXPI_CFG1 => B"00",
       TXPI_CFG2 => B"00",
       TXPI_CFG3 => '0',
-      TXPI_CFG4 => '1',
+      TXPI_CFG4 => '0',
       TXPI_CFG5 => B"000",
       TXPI_GRAY_SEL => '0',
       TXPI_INVSTROBE_SEL => '0',
@@ -3849,7 +3849,7 @@ begin
       TXSYNC_MULTILANE => '1',
       TXSYNC_OVRD => '0',
       TXSYNC_SKIP_DA => '0',
-      TX_CLK25_DIV => 7,
+      TX_CLK25_DIV => 8,
       TX_CLKMUX_EN => '1',
       TX_DATA_WIDTH => 40,
       TX_DCC_LOOP_RST_CFG => X"0004",
@@ -3881,7 +3881,7 @@ begin
       TX_PHICAL_CFG0 => X"0000",
       TX_PHICAL_CFG1 => X"7E00",
       TX_PHICAL_CFG2 => X"0201",
-      TX_PI_BIASSET => 2,
+      TX_PI_BIASSET => 3,
       TX_PI_IBIAS_MID => B"00",
       TX_PMADATA_OPT => '0',
       TX_PMA_POWER_SAVE => '0',
@@ -4312,7 +4312,7 @@ begin
       CHAN_BOND_SEQ_2_ENABLE => B"1111",
       CHAN_BOND_SEQ_2_USE => "FALSE",
       CHAN_BOND_SEQ_LEN => 1,
-      CH_HSPMUX => X"4444",
+      CH_HSPMUX => X"6868",
       CKCAL1_CFG_0 => B"1100000011000000",
       CKCAL1_CFG_1 => B"0101000011000000",
       CKCAL1_CFG_2 => B"0000000000001010",
@@ -4427,8 +4427,8 @@ begin
       PCIE3_CLK_COR_MAX_LAT => B"00100",
       PCIE3_CLK_COR_MIN_LAT => B"00000",
       PCIE3_CLK_COR_THRSH_TIMER => B"001000",
-      PCIE_BUFG_DIV_CTRL => X"1000",
-      PCIE_PLL_SEL_MODE_GEN12 => B"00",
+      PCIE_BUFG_DIV_CTRL => X"3500",
+      PCIE_PLL_SEL_MODE_GEN12 => B"10",
       PCIE_PLL_SEL_MODE_GEN3 => B"10",
       PCIE_PLL_SEL_MODE_GEN4 => B"10",
       PCIE_RXPCS_CFG_GEN3 => X"0AA5",
@@ -4568,7 +4568,7 @@ begin
       RXPHSLIP_CFG => X"9933",
       RXPH_MONITOR_SEL => B"00000",
       RXPI_AUTO_BW_SEL_BYPASS => '0',
-      RXPI_CFG0 => X"0104",
+      RXPI_CFG0 => X"0004",
       RXPI_CFG1 => B"0000000000000000",
       RXPI_LPM => '0',
       RXPI_SEL_LC => B"00",
@@ -4588,7 +4588,7 @@ begin
       RX_BIAS_CFG0 => X"1554",
       RX_BUFFER_CFG => B"000000",
       RX_CAPFF_SARC_ENB => '0',
-      RX_CLK25_DIV => 7,
+      RX_CLK25_DIV => 8,
       RX_CLKMUX_EN => '1',
       RX_CLK_SLIP_OVRD => B"00000",
       RX_CM_BUF_CFG => B"1010",
@@ -4684,7 +4684,7 @@ begin
       TXPI_CFG1 => B"00",
       TXPI_CFG2 => B"00",
       TXPI_CFG3 => '0',
-      TXPI_CFG4 => '1',
+      TXPI_CFG4 => '0',
       TXPI_CFG5 => B"000",
       TXPI_GRAY_SEL => '0',
       TXPI_INVSTROBE_SEL => '0',
@@ -4699,7 +4699,7 @@ begin
       TXSYNC_MULTILANE => '1',
       TXSYNC_OVRD => '0',
       TXSYNC_SKIP_DA => '0',
-      TX_CLK25_DIV => 7,
+      TX_CLK25_DIV => 8,
       TX_CLKMUX_EN => '1',
       TX_DATA_WIDTH => 40,
       TX_DCC_LOOP_RST_CFG => X"0004",
@@ -4731,7 +4731,7 @@ begin
       TX_PHICAL_CFG0 => X"0000",
       TX_PHICAL_CFG1 => X"7E00",
       TX_PHICAL_CFG2 => X"0201",
-      TX_PI_BIASSET => 2,
+      TX_PI_BIASSET => 3,
       TX_PI_IBIAS_MID => B"00",
       TX_PMADATA_OPT => '0',
       TX_PMA_POWER_SAVE => '0',
@@ -5275,16 +5275,16 @@ begin
       COMMON_CFG0 => X"0000",
       COMMON_CFG1 => X"0000",
       POR_CFG => X"0000",
-      PPF0_CFG => X"0900",
+      PPF0_CFG => X"0F00",
       PPF1_CFG => X"0600",
       QPLL0CLKOUT_RATE => "HALF",
       QPLL0_CFG0 => X"331C",
       QPLL0_CFG1 => X"D038",
       QPLL0_CFG1_G3 => X"D038",
-      QPLL0_CFG2 => X"87C3",
-      QPLL0_CFG2_G3 => X"87C3",
+      QPLL0_CFG2 => X"87C1",
+      QPLL0_CFG2_G3 => X"87C1",
       QPLL0_CFG3 => X"0120",
-      QPLL0_CFG4 => X"0004",
+      QPLL0_CFG4 => X"0045",
       QPLL0_CP => B"0011111111",
       QPLL0_CP_G3 => B"0000001111",
       QPLL0_FBDIV => 80,
@@ -5293,7 +5293,7 @@ begin
       QPLL0_INIT_CFG1 => X"00",
       QPLL0_LOCK_CFG => X"25E8",
       QPLL0_LOCK_CFG_G3 => X"25E8",
-      QPLL0_LPF => B"1000011111",
+      QPLL0_LPF => B"1101111111",
       QPLL0_LPF_G3 => B"0111010101",
       QPLL0_PCI_EN => '0',
       QPLL0_RATE_SW_USE_DRP => '1',
@@ -10078,7 +10078,7 @@ sm_reset_rx_cdr_to_clr_reg: unisim.vcomponents.FDSE
     );
 \sm_reset_rx_cdr_to_ctr[0]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFFFFFFFFF7"
+      INIT => X"FFFFFFFFFFFFFFFE"
     )
         port map (
       I0 => sm_reset_rx_cdr_to_ctr_reg(0),
@@ -10091,11 +10091,11 @@ sm_reset_rx_cdr_to_clr_reg: unisim.vcomponents.FDSE
     );
 \sm_reset_rx_cdr_to_ctr[0]_i_3\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFDFFFFFFFF"
+      INIT => X"FFFFFFFFFFFFDFFF"
     )
         port map (
-      I0 => sm_reset_rx_cdr_to_ctr_reg(19),
-      I1 => sm_reset_rx_cdr_to_ctr_reg(18),
+      I0 => sm_reset_rx_cdr_to_ctr_reg(18),
+      I1 => sm_reset_rx_cdr_to_ctr_reg(19),
       I2 => sm_reset_rx_cdr_to_ctr_reg(16),
       I3 => sm_reset_rx_cdr_to_ctr_reg(17),
       I4 => sm_reset_rx_cdr_to_ctr_reg(15),
@@ -10117,11 +10117,11 @@ sm_reset_rx_cdr_to_clr_reg: unisim.vcomponents.FDSE
     );
 \sm_reset_rx_cdr_to_ctr[0]_i_5\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFDFFFFFFFFF"
+      INIT => X"FFFFEFFFFFFFFFFF"
     )
         port map (
-      I0 => sm_reset_rx_cdr_to_ctr_reg(13),
-      I1 => sm_reset_rx_cdr_to_ctr_reg(12),
+      I0 => sm_reset_rx_cdr_to_ctr_reg(12),
+      I1 => sm_reset_rx_cdr_to_ctr_reg(13),
       I2 => sm_reset_rx_cdr_to_ctr_reg(10),
       I3 => sm_reset_rx_cdr_to_ctr_reg(11),
       I4 => sm_reset_rx_cdr_to_ctr_reg(8),
@@ -10130,13 +10130,13 @@ sm_reset_rx_cdr_to_clr_reg: unisim.vcomponents.FDSE
     );
 \sm_reset_rx_cdr_to_ctr[0]_i_6\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFFFFFFFFF7"
+      INIT => X"FFFFFFDFFFFFFFFF"
     )
         port map (
-      I0 => sm_reset_rx_cdr_to_ctr_reg(6),
-      I1 => sm_reset_rx_cdr_to_ctr_reg(7),
-      I2 => sm_reset_rx_cdr_to_ctr_reg(4),
-      I3 => sm_reset_rx_cdr_to_ctr_reg(5),
+      I0 => sm_reset_rx_cdr_to_ctr_reg(7),
+      I1 => sm_reset_rx_cdr_to_ctr_reg(6),
+      I2 => sm_reset_rx_cdr_to_ctr_reg(5),
+      I3 => sm_reset_rx_cdr_to_ctr_reg(4),
       I4 => sm_reset_rx_cdr_to_ctr_reg(3),
       I5 => sm_reset_rx_cdr_to_ctr_reg(2),
       O => \sm_reset_rx_cdr_to_ctr[0]_i_6_n_0\
@@ -10530,7 +10530,7 @@ sm_reset_rx_cdr_to_sat_i_1: unisim.vcomponents.LUT3
     );
 sm_reset_rx_cdr_to_sat_i_2: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"8000000000000000"
+      INIT => X"0000000000008000"
     )
         port map (
       I0 => sm_reset_rx_cdr_to_sat_i_3_n_0,
@@ -10543,15 +10543,15 @@ sm_reset_rx_cdr_to_sat_i_2: unisim.vcomponents.LUT6
     );
 sm_reset_rx_cdr_to_sat_i_3: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0001000000000000"
+      INIT => X"0000002000000000"
     )
         port map (
-      I0 => sm_reset_rx_cdr_to_ctr_reg(4),
-      I1 => sm_reset_rx_cdr_to_ctr_reg(5),
+      I0 => sm_reset_rx_cdr_to_ctr_reg(5),
+      I1 => sm_reset_rx_cdr_to_ctr_reg(4),
       I2 => sm_reset_rx_cdr_to_ctr_reg(2),
       I3 => sm_reset_rx_cdr_to_ctr_reg(3),
-      I4 => sm_reset_rx_cdr_to_ctr_reg(7),
-      I5 => sm_reset_rx_cdr_to_ctr_reg(6),
+      I4 => sm_reset_rx_cdr_to_ctr_reg(6),
+      I5 => sm_reset_rx_cdr_to_ctr_reg(7),
       O => sm_reset_rx_cdr_to_sat_i_3_n_0
     );
 sm_reset_rx_cdr_to_sat_i_4: unisim.vcomponents.LUT6
@@ -10569,28 +10569,28 @@ sm_reset_rx_cdr_to_sat_i_4: unisim.vcomponents.LUT6
     );
 sm_reset_rx_cdr_to_sat_i_5: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000001000000000"
+      INIT => X"0000000800000000"
     )
         port map (
       I0 => sm_reset_rx_cdr_to_ctr_reg(16),
       I1 => sm_reset_rx_cdr_to_ctr_reg(17),
       I2 => sm_reset_rx_cdr_to_ctr_reg(14),
       I3 => sm_reset_rx_cdr_to_ctr_reg(15),
-      I4 => sm_reset_rx_cdr_to_ctr_reg(18),
-      I5 => sm_reset_rx_cdr_to_ctr_reg(19),
+      I4 => sm_reset_rx_cdr_to_ctr_reg(19),
+      I5 => sm_reset_rx_cdr_to_ctr_reg(18),
       O => sm_reset_rx_cdr_to_sat_i_5_n_0
     );
 sm_reset_rx_cdr_to_sat_i_6: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000002000000000"
+      INIT => X"0000000000000080"
     )
         port map (
       I0 => sm_reset_rx_cdr_to_ctr_reg(10),
       I1 => sm_reset_rx_cdr_to_ctr_reg(11),
       I2 => sm_reset_rx_cdr_to_ctr_reg(9),
       I3 => sm_reset_rx_cdr_to_ctr_reg(8),
-      I4 => sm_reset_rx_cdr_to_ctr_reg(12),
-      I5 => sm_reset_rx_cdr_to_ctr_reg(13),
+      I4 => sm_reset_rx_cdr_to_ctr_reg(13),
+      I5 => sm_reset_rx_cdr_to_ctr_reg(12),
       O => sm_reset_rx_cdr_to_sat_i_6_n_0
     );
 sm_reset_rx_cdr_to_sat_reg: unisim.vcomponents.FDRE
@@ -13279,10 +13279,10 @@ end system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_gthe4;
 architecture STRUCTURE of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_gthe4 is
   signal \gen_gtwizard_gthe4.delay_pwrgood_gtrxreset_int\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \gen_gtwizard_gthe4.delay_pwrgood_rxpmareset_int\ : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal \gen_gtwizard_gthe4.gen_channel_container[1].gen_enabled_channel.gthe4_channel_wrapper_inst_n_0\ : STD_LOGIC;
-  signal \gen_gtwizard_gthe4.gen_channel_container[1].gen_enabled_channel.gthe4_channel_wrapper_inst_n_5\ : STD_LOGIC;
-  signal \gen_gtwizard_gthe4.gen_channel_container[1].gen_enabled_channel.gthe4_channel_wrapper_inst_n_6\ : STD_LOGIC;
-  signal \gen_gtwizard_gthe4.gen_channel_container[1].gen_enabled_channel.gthe4_channel_wrapper_inst_n_7\ : STD_LOGIC;
+  signal \gen_gtwizard_gthe4.gen_channel_container[3].gen_enabled_channel.gthe4_channel_wrapper_inst_n_0\ : STD_LOGIC;
+  signal \gen_gtwizard_gthe4.gen_channel_container[3].gen_enabled_channel.gthe4_channel_wrapper_inst_n_5\ : STD_LOGIC;
+  signal \gen_gtwizard_gthe4.gen_channel_container[3].gen_enabled_channel.gthe4_channel_wrapper_inst_n_6\ : STD_LOGIC;
+  signal \gen_gtwizard_gthe4.gen_channel_container[3].gen_enabled_channel.gthe4_channel_wrapper_inst_n_7\ : STD_LOGIC;
   signal \gen_gtwizard_gthe4.gen_pwrgood_delay_inst[0].delay_powergood_inst_n_1\ : STD_LOGIC;
   signal \gen_gtwizard_gthe4.gen_pwrgood_delay_inst[0].delay_powergood_inst_n_4\ : STD_LOGIC;
   signal \gen_gtwizard_gthe4.gen_pwrgood_delay_inst[0].delay_powergood_inst_n_5\ : STD_LOGIC;
@@ -13304,7 +13304,7 @@ architecture STRUCTURE of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwiz
   signal \^rxoutclkpcs_out\ : STD_LOGIC_VECTOR ( 3 downto 0 );
 begin
   rxoutclkpcs_out(3 downto 0) <= \^rxoutclkpcs_out\(3 downto 0);
-\gen_gtwizard_gthe4.gen_channel_container[1].gen_enabled_channel.gthe4_channel_wrapper_inst\: entity work.system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gthe4_channel_wrapper
+\gen_gtwizard_gthe4.gen_channel_container[3].gen_enabled_channel.gthe4_channel_wrapper_inst\: entity work.system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gthe4_channel_wrapper
      port map (
       GTHE4_CHANNEL_GTPOWERGOOD(3 downto 0) => \gen_gtwizard_gthe4.gtpowergood_int\(3 downto 0),
       GTHE4_CHANNEL_GTRXRESET(3 downto 0) => \gen_gtwizard_gthe4.delay_pwrgood_gtrxreset_int\(3 downto 0),
@@ -13355,10 +13355,10 @@ begin
       dmonitorout_out(63 downto 0) => dmonitorout_out(63 downto 0),
       dmonitoroutclk_out(3 downto 0) => dmonitoroutclk_out(3 downto 0),
       drpaddr_in(39 downto 0) => drpaddr_in(39 downto 0),
-      drpclk => \gen_gtwizard_gthe4.gen_channel_container[1].gen_enabled_channel.gthe4_channel_wrapper_inst_n_0\,
-      drpclk_0 => \gen_gtwizard_gthe4.gen_channel_container[1].gen_enabled_channel.gthe4_channel_wrapper_inst_n_5\,
-      drpclk_1 => \gen_gtwizard_gthe4.gen_channel_container[1].gen_enabled_channel.gthe4_channel_wrapper_inst_n_6\,
-      drpclk_2 => \gen_gtwizard_gthe4.gen_channel_container[1].gen_enabled_channel.gthe4_channel_wrapper_inst_n_7\,
+      drpclk => \gen_gtwizard_gthe4.gen_channel_container[3].gen_enabled_channel.gthe4_channel_wrapper_inst_n_0\,
+      drpclk_0 => \gen_gtwizard_gthe4.gen_channel_container[3].gen_enabled_channel.gthe4_channel_wrapper_inst_n_5\,
+      drpclk_1 => \gen_gtwizard_gthe4.gen_channel_container[3].gen_enabled_channel.gthe4_channel_wrapper_inst_n_6\,
+      drpclk_2 => \gen_gtwizard_gthe4.gen_channel_container[3].gen_enabled_channel.gthe4_channel_wrapper_inst_n_7\,
       drpclk_in(3 downto 0) => drpclk_in(3 downto 0),
       drpdi_in(63 downto 0) => drpdi_in(63 downto 0),
       drpdo_out(63 downto 0) => drpdo_out(63 downto 0),
@@ -13680,7 +13680,7 @@ begin
       GTHE4_CHANNEL_RXRATE(2 downto 1) => \gen_gtwizard_gthe4.rxrate_ch_int\(2 downto 1),
       GTHE4_CHANNEL_RXRATE(0) => \gen_gtwizard_gthe4.gen_pwrgood_delay_inst[0].delay_powergood_inst_n_4\,
       GTHE4_CHANNEL_RXRATEMODE(0) => \gen_gtwizard_gthe4.gen_pwrgood_delay_inst[0].delay_powergood_inst_n_1\,
-      \gen_powergood_delay.intclk_rrst_n_r_reg[0]_0\ => \gen_gtwizard_gthe4.gen_channel_container[1].gen_enabled_channel.gthe4_channel_wrapper_inst_n_0\,
+      \gen_powergood_delay.intclk_rrst_n_r_reg[0]_0\ => \gen_gtwizard_gthe4.gen_channel_container[3].gen_enabled_channel.gthe4_channel_wrapper_inst_n_0\,
       gtrxreset_in(0) => gtrxreset_in(0),
       \out\ => gtpowergood_out(0),
       rxpd_in(1 downto 0) => rxpd_in(1 downto 0),
@@ -13699,7 +13699,7 @@ begin
       GTHE4_CHANNEL_RXRATE(2 downto 1) => \gen_gtwizard_gthe4.rxrate_ch_int\(5 downto 4),
       GTHE4_CHANNEL_RXRATE(0) => \gen_gtwizard_gthe4.gen_pwrgood_delay_inst[1].delay_powergood_inst_n_4\,
       GTHE4_CHANNEL_RXRATEMODE(0) => \gen_gtwizard_gthe4.gen_pwrgood_delay_inst[1].delay_powergood_inst_n_1\,
-      \gen_powergood_delay.intclk_rrst_n_r_reg[0]_0\ => \gen_gtwizard_gthe4.gen_channel_container[1].gen_enabled_channel.gthe4_channel_wrapper_inst_n_5\,
+      \gen_powergood_delay.intclk_rrst_n_r_reg[0]_0\ => \gen_gtwizard_gthe4.gen_channel_container[3].gen_enabled_channel.gthe4_channel_wrapper_inst_n_5\,
       gtrxreset_in(0) => gtrxreset_in(1),
       \out\ => gtpowergood_out(1),
       rxpd_in(1 downto 0) => rxpd_in(3 downto 2),
@@ -13718,7 +13718,7 @@ begin
       GTHE4_CHANNEL_RXRATE(2 downto 1) => \gen_gtwizard_gthe4.rxrate_ch_int\(8 downto 7),
       GTHE4_CHANNEL_RXRATE(0) => \gen_gtwizard_gthe4.gen_pwrgood_delay_inst[2].delay_powergood_inst_n_4\,
       GTHE4_CHANNEL_RXRATEMODE(0) => \gen_gtwizard_gthe4.gen_pwrgood_delay_inst[2].delay_powergood_inst_n_1\,
-      \gen_powergood_delay.intclk_rrst_n_r_reg[0]_0\ => \gen_gtwizard_gthe4.gen_channel_container[1].gen_enabled_channel.gthe4_channel_wrapper_inst_n_6\,
+      \gen_powergood_delay.intclk_rrst_n_r_reg[0]_0\ => \gen_gtwizard_gthe4.gen_channel_container[3].gen_enabled_channel.gthe4_channel_wrapper_inst_n_6\,
       gtrxreset_in(0) => gtrxreset_in(2),
       \out\ => gtpowergood_out(2),
       rxpd_in(1 downto 0) => rxpd_in(5 downto 4),
@@ -13737,7 +13737,7 @@ begin
       GTHE4_CHANNEL_RXRATE(2 downto 1) => \gen_gtwizard_gthe4.rxrate_ch_int\(11 downto 10),
       GTHE4_CHANNEL_RXRATE(0) => \gen_gtwizard_gthe4.gen_pwrgood_delay_inst[3].delay_powergood_inst_n_4\,
       GTHE4_CHANNEL_RXRATEMODE(0) => \gen_gtwizard_gthe4.gen_pwrgood_delay_inst[3].delay_powergood_inst_n_1\,
-      \gen_powergood_delay.intclk_rrst_n_r_reg[0]_0\ => \gen_gtwizard_gthe4.gen_channel_container[1].gen_enabled_channel.gthe4_channel_wrapper_inst_n_7\,
+      \gen_powergood_delay.intclk_rrst_n_r_reg[0]_0\ => \gen_gtwizard_gthe4.gen_channel_container[3].gen_enabled_channel.gthe4_channel_wrapper_inst_n_7\,
       gtrxreset_in(0) => gtrxreset_in(3),
       \out\ => gtpowergood_out(3),
       rxpd_in(1 downto 0) => rxpd_in(7 downto 6),
@@ -14288,7 +14288,7 @@ entity system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top is
     txsyncout_out : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   attribute C_CHANNEL_ENABLE : string;
-  attribute C_CHANNEL_ENABLE of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is "192'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011110000";
+  attribute C_CHANNEL_ENABLE of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is "192'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111000000000000";
   attribute C_COMMON_SCALING_FACTOR : integer;
   attribute C_COMMON_SCALING_FACTOR of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is 1;
   attribute C_CPLL_VCO_FREQUENCY : string;
@@ -14376,13 +14376,13 @@ entity system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top is
   attribute C_RX_INT_DATA_WIDTH : integer;
   attribute C_RX_INT_DATA_WIDTH of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is 40;
   attribute C_RX_LINE_RATE : string;
-  attribute C_RX_LINE_RATE of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is "6.720000";
+  attribute C_RX_LINE_RATE of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is "8.000000";
   attribute C_RX_MASTER_CHANNEL_IDX : integer;
-  attribute C_RX_MASTER_CHANNEL_IDX of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is 4;
+  attribute C_RX_MASTER_CHANNEL_IDX of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is 12;
   attribute C_RX_OUTCLK_BUFG_GT_DIV : integer;
   attribute C_RX_OUTCLK_BUFG_GT_DIV of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is 1;
   attribute C_RX_OUTCLK_FREQUENCY : string;
-  attribute C_RX_OUTCLK_FREQUENCY of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is "168.000000";
+  attribute C_RX_OUTCLK_FREQUENCY of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is "200.000000";
   attribute C_RX_OUTCLK_SOURCE : integer;
   attribute C_RX_OUTCLK_SOURCE of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is 1;
   attribute C_RX_PLL_TYPE : integer;
@@ -14390,7 +14390,7 @@ entity system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top is
   attribute C_RX_RECCLK_OUTPUT : string;
   attribute C_RX_RECCLK_OUTPUT of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is "192'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
   attribute C_RX_REFCLK_FREQUENCY : string;
-  attribute C_RX_REFCLK_FREQUENCY of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is "168.000000";
+  attribute C_RX_REFCLK_FREQUENCY of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is "200.000000";
   attribute C_RX_SLIDE_MODE : integer;
   attribute C_RX_SLIDE_MODE of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is 0;
   attribute C_RX_USER_CLOCKING_CONTENTS : integer;
@@ -14406,9 +14406,9 @@ entity system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top is
   attribute C_RX_USER_DATA_WIDTH : integer;
   attribute C_RX_USER_DATA_WIDTH of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is 32;
   attribute C_RX_USRCLK2_FREQUENCY : string;
-  attribute C_RX_USRCLK2_FREQUENCY of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is "168.000000";
+  attribute C_RX_USRCLK2_FREQUENCY of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is "200.000000";
   attribute C_RX_USRCLK_FREQUENCY : string;
-  attribute C_RX_USRCLK_FREQUENCY of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is "168.000000";
+  attribute C_RX_USRCLK_FREQUENCY of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is "200.000000";
   attribute C_SECONDARY_QPLL_ENABLE : integer;
   attribute C_SECONDARY_QPLL_ENABLE of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is 1;
   attribute C_SECONDARY_QPLL_REFCLK_FREQUENCY : string;
@@ -14426,7 +14426,7 @@ entity system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top is
   attribute C_TXPROGDIV_FREQ_SOURCE : integer;
   attribute C_TXPROGDIV_FREQ_SOURCE of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is 0;
   attribute C_TXPROGDIV_FREQ_VAL : string;
-  attribute C_TXPROGDIV_FREQ_VAL of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is "168.000000";
+  attribute C_TXPROGDIV_FREQ_VAL of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is "200.000000";
   attribute C_TX_BUFFBYPASS_MODE : integer;
   attribute C_TX_BUFFBYPASS_MODE of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is 0;
   attribute C_TX_BUFFER_BYPASS_INSTANCE_CTRL : integer;
@@ -14440,19 +14440,19 @@ entity system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top is
   attribute C_TX_INT_DATA_WIDTH : integer;
   attribute C_TX_INT_DATA_WIDTH of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is 40;
   attribute C_TX_LINE_RATE : string;
-  attribute C_TX_LINE_RATE of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is "6.720000";
+  attribute C_TX_LINE_RATE of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is "8.000000";
   attribute C_TX_MASTER_CHANNEL_IDX : integer;
-  attribute C_TX_MASTER_CHANNEL_IDX of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is 4;
+  attribute C_TX_MASTER_CHANNEL_IDX of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is 12;
   attribute C_TX_OUTCLK_BUFG_GT_DIV : integer;
   attribute C_TX_OUTCLK_BUFG_GT_DIV of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is 1;
   attribute C_TX_OUTCLK_FREQUENCY : string;
-  attribute C_TX_OUTCLK_FREQUENCY of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is "168.000000";
+  attribute C_TX_OUTCLK_FREQUENCY of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is "200.000000";
   attribute C_TX_OUTCLK_SOURCE : integer;
   attribute C_TX_OUTCLK_SOURCE of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is 1;
   attribute C_TX_PLL_TYPE : integer;
   attribute C_TX_PLL_TYPE of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is 0;
   attribute C_TX_REFCLK_FREQUENCY : string;
-  attribute C_TX_REFCLK_FREQUENCY of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is "168.000000";
+  attribute C_TX_REFCLK_FREQUENCY of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is "200.000000";
   attribute C_TX_USER_CLOCKING_CONTENTS : integer;
   attribute C_TX_USER_CLOCKING_CONTENTS of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is 0;
   attribute C_TX_USER_CLOCKING_INSTANCE_CTRL : integer;
@@ -14466,9 +14466,9 @@ entity system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top is
   attribute C_TX_USER_DATA_WIDTH : integer;
   attribute C_TX_USER_DATA_WIDTH of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is 32;
   attribute C_TX_USRCLK2_FREQUENCY : string;
-  attribute C_TX_USRCLK2_FREQUENCY of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is "168.000000";
+  attribute C_TX_USRCLK2_FREQUENCY of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is "200.000000";
   attribute C_TX_USRCLK_FREQUENCY : string;
-  attribute C_TX_USRCLK_FREQUENCY of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is "168.000000";
+  attribute C_TX_USRCLK_FREQUENCY of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is "200.000000";
   attribute C_USER_GTPOWERGOOD_DELAY_EN : integer;
   attribute C_USER_GTPOWERGOOD_DELAY_EN of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top : entity is 1;
   attribute ORIG_REF_NAME : string;
@@ -15377,7 +15377,7 @@ architecture STRUCTURE of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt is
   signal NLW_inst_ubrsvdout_out_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_inst_ubtxuart_out_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   attribute C_CHANNEL_ENABLE : string;
-  attribute C_CHANNEL_ENABLE of inst : label is "192'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011110000";
+  attribute C_CHANNEL_ENABLE of inst : label is "192'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111000000000000";
   attribute C_COMMON_SCALING_FACTOR : integer;
   attribute C_COMMON_SCALING_FACTOR of inst : label is 1;
   attribute C_CPLL_VCO_FREQUENCY : string;
@@ -15465,13 +15465,13 @@ architecture STRUCTURE of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt is
   attribute C_RX_INT_DATA_WIDTH : integer;
   attribute C_RX_INT_DATA_WIDTH of inst : label is 40;
   attribute C_RX_LINE_RATE : string;
-  attribute C_RX_LINE_RATE of inst : label is "6.720000";
+  attribute C_RX_LINE_RATE of inst : label is "8.000000";
   attribute C_RX_MASTER_CHANNEL_IDX : integer;
-  attribute C_RX_MASTER_CHANNEL_IDX of inst : label is 4;
+  attribute C_RX_MASTER_CHANNEL_IDX of inst : label is 12;
   attribute C_RX_OUTCLK_BUFG_GT_DIV : integer;
   attribute C_RX_OUTCLK_BUFG_GT_DIV of inst : label is 1;
   attribute C_RX_OUTCLK_FREQUENCY : string;
-  attribute C_RX_OUTCLK_FREQUENCY of inst : label is "168.000000";
+  attribute C_RX_OUTCLK_FREQUENCY of inst : label is "200.000000";
   attribute C_RX_OUTCLK_SOURCE : integer;
   attribute C_RX_OUTCLK_SOURCE of inst : label is 1;
   attribute C_RX_PLL_TYPE : integer;
@@ -15479,7 +15479,7 @@ architecture STRUCTURE of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt is
   attribute C_RX_RECCLK_OUTPUT : string;
   attribute C_RX_RECCLK_OUTPUT of inst : label is "192'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
   attribute C_RX_REFCLK_FREQUENCY : string;
-  attribute C_RX_REFCLK_FREQUENCY of inst : label is "168.000000";
+  attribute C_RX_REFCLK_FREQUENCY of inst : label is "200.000000";
   attribute C_RX_SLIDE_MODE : integer;
   attribute C_RX_SLIDE_MODE of inst : label is 0;
   attribute C_RX_USER_CLOCKING_CONTENTS : integer;
@@ -15495,9 +15495,9 @@ architecture STRUCTURE of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt is
   attribute C_RX_USER_DATA_WIDTH : integer;
   attribute C_RX_USER_DATA_WIDTH of inst : label is 32;
   attribute C_RX_USRCLK2_FREQUENCY : string;
-  attribute C_RX_USRCLK2_FREQUENCY of inst : label is "168.000000";
+  attribute C_RX_USRCLK2_FREQUENCY of inst : label is "200.000000";
   attribute C_RX_USRCLK_FREQUENCY : string;
-  attribute C_RX_USRCLK_FREQUENCY of inst : label is "168.000000";
+  attribute C_RX_USRCLK_FREQUENCY of inst : label is "200.000000";
   attribute C_SECONDARY_QPLL_ENABLE : integer;
   attribute C_SECONDARY_QPLL_ENABLE of inst : label is 1;
   attribute C_SECONDARY_QPLL_REFCLK_FREQUENCY : string;
@@ -15515,7 +15515,7 @@ architecture STRUCTURE of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt is
   attribute C_TXPROGDIV_FREQ_SOURCE : integer;
   attribute C_TXPROGDIV_FREQ_SOURCE of inst : label is 0;
   attribute C_TXPROGDIV_FREQ_VAL : string;
-  attribute C_TXPROGDIV_FREQ_VAL of inst : label is "168.000000";
+  attribute C_TXPROGDIV_FREQ_VAL of inst : label is "200.000000";
   attribute C_TX_BUFFBYPASS_MODE : integer;
   attribute C_TX_BUFFBYPASS_MODE of inst : label is 0;
   attribute C_TX_BUFFER_BYPASS_INSTANCE_CTRL : integer;
@@ -15529,19 +15529,19 @@ architecture STRUCTURE of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt is
   attribute C_TX_INT_DATA_WIDTH : integer;
   attribute C_TX_INT_DATA_WIDTH of inst : label is 40;
   attribute C_TX_LINE_RATE : string;
-  attribute C_TX_LINE_RATE of inst : label is "6.720000";
+  attribute C_TX_LINE_RATE of inst : label is "8.000000";
   attribute C_TX_MASTER_CHANNEL_IDX : integer;
-  attribute C_TX_MASTER_CHANNEL_IDX of inst : label is 4;
+  attribute C_TX_MASTER_CHANNEL_IDX of inst : label is 12;
   attribute C_TX_OUTCLK_BUFG_GT_DIV : integer;
   attribute C_TX_OUTCLK_BUFG_GT_DIV of inst : label is 1;
   attribute C_TX_OUTCLK_FREQUENCY : string;
-  attribute C_TX_OUTCLK_FREQUENCY of inst : label is "168.000000";
+  attribute C_TX_OUTCLK_FREQUENCY of inst : label is "200.000000";
   attribute C_TX_OUTCLK_SOURCE : integer;
   attribute C_TX_OUTCLK_SOURCE of inst : label is 1;
   attribute C_TX_PLL_TYPE : integer;
   attribute C_TX_PLL_TYPE of inst : label is 0;
   attribute C_TX_REFCLK_FREQUENCY : string;
-  attribute C_TX_REFCLK_FREQUENCY of inst : label is "168.000000";
+  attribute C_TX_REFCLK_FREQUENCY of inst : label is "200.000000";
   attribute C_TX_USER_CLOCKING_CONTENTS : integer;
   attribute C_TX_USER_CLOCKING_CONTENTS of inst : label is 0;
   attribute C_TX_USER_CLOCKING_INSTANCE_CTRL : integer;
@@ -15555,9 +15555,9 @@ architecture STRUCTURE of system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt is
   attribute C_TX_USER_DATA_WIDTH : integer;
   attribute C_TX_USER_DATA_WIDTH of inst : label is 32;
   attribute C_TX_USRCLK2_FREQUENCY : string;
-  attribute C_TX_USRCLK2_FREQUENCY of inst : label is "168.000000";
+  attribute C_TX_USRCLK2_FREQUENCY of inst : label is "200.000000";
   attribute C_TX_USRCLK_FREQUENCY : string;
-  attribute C_TX_USRCLK_FREQUENCY of inst : label is "168.000000";
+  attribute C_TX_USRCLK_FREQUENCY of inst : label is "200.000000";
   attribute C_USER_GTPOWERGOOD_DELAY_EN : integer;
   attribute C_USER_GTPOWERGOOD_DELAY_EN of inst : label is 1;
 begin

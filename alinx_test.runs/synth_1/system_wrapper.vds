@@ -2,8 +2,8 @@
 # Vivado v2019.1.3 (64-bit)
 # SW Build 2644227 on Wed Sep  4 09:45:24 MDT 2019
 # IP Build 2633630 on Wed Sep  4 12:30:14 MDT 2019
-# Start of session at: Thu Nov  3 15:33:50 2022
-# Process ID: 10964
+# Start of session at: Wed Dec 14 18:13:02 2022
+# Process ID: 7472
 # Current directory: D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1
 # Command line: vivado.exe -log system_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_wrapper.tcl
 # Log file: D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/system_wrapper.vds
@@ -21,9 +21,9 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xczu9eg'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu9eg'
 INFO: [Device 21-403] Loading part xczu9eg-ffvb1156-2-i
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 1188 
+INFO: Helper process launched with PID 3596 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1349.586 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1349.180 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'system_wrapper' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/hdl/system_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'IOBUF' [C:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:36115]
@@ -32,91 +32,117 @@ INFO: [Synth 8-6157] synthesizing module 'IOBUF' [C:/Xilinx/Vivado/2019.1/script
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
 INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (1#1) [C:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:36115]
-INFO: [Synth 8-6157] synthesizing module 'system' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:1385]
-INFO: [Synth 8-6157] synthesizing module 'system_axi_gpio_0_2' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-10964-atom-pc/realtime/system_axi_gpio_0_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_axi_gpio_0_2' (2#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-10964-atom-pc/realtime/system_axi_gpio_0_2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'system_axi_gpio_0_3' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-10964-atom-pc/realtime/system_axi_gpio_0_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_axi_gpio_0_3' (3#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-10964-atom-pc/realtime/system_axi_gpio_0_3_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'system_axi_gpio_0_0' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-10964-atom-pc/realtime/system_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_axi_gpio_0_0' (4#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-10964-atom-pc/realtime/system_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'system_axi_gpio_0_1' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-10964-atom-pc/realtime/system_axi_gpio_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_axi_gpio_0_1' (5#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-10964-atom-pc/realtime/system_axi_gpio_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'system_axi_quad_spi_0_0' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-10964-atom-pc/realtime/system_axi_quad_spi_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_axi_quad_spi_0_0' (6#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-10964-atom-pc/realtime/system_axi_quad_spi_0_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'axi_quad_spi_fmc' of module 'system_axi_quad_spi_0_0' has 33 connections declared, but only 32 given [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:1777]
-INFO: [Synth 8-6157] synthesizing module 'system_axi_uartlite_0_0' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-10964-atom-pc/realtime/system_axi_uartlite_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_axi_uartlite_0_0' (7#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-10964-atom-pc/realtime/system_axi_uartlite_0_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'axi_uartlite_control' of module 'system_axi_uartlite_0_0' has 22 connections declared, but only 21 given [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:1810]
-INFO: [Synth 8-6157] synthesizing module 'system_clk_wiz_0_0' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-10964-atom-pc/realtime/system_clk_wiz_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'system_clk_wiz_0_0' (8#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-10964-atom-pc/realtime/system_clk_wiz_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'system_jesd204_0_0' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-10964-atom-pc/realtime/system_jesd204_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_jesd204_0_0' (9#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-10964-atom-pc/realtime/system_jesd204_0_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'jesd204_0' of module 'system_jesd204_0_0' has 39 connections declared, but only 35 given [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:1836]
-INFO: [Synth 8-6157] synthesizing module 'system_jesd204_phy_0_0' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-10964-atom-pc/realtime/system_jesd204_phy_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_jesd204_phy_0_0' (10#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-10964-atom-pc/realtime/system_jesd204_phy_0_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'jesd204_phy_0' of module 'system_jesd204_phy_0_0' has 46 connections declared, but only 23 given [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:1872]
-INFO: [Synth 8-6157] synthesizing module 'system_modulator_0_0' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-10964-atom-pc/realtime/system_modulator_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_modulator_0_0' (11#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-10964-atom-pc/realtime/system_modulator_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'system_ps8_0_axi_periph_0' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:2196]
+INFO: [Synth 8-6157] synthesizing module 'system' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:1517]
+INFO: [Synth 8-6157] synthesizing module 'system_axi_gpio_0_2' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-7472-atom-pc/realtime/system_axi_gpio_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_axi_gpio_0_2' (2#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-7472-atom-pc/realtime/system_axi_gpio_0_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_axi_gpio_0_3' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-7472-atom-pc/realtime/system_axi_gpio_0_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_axi_gpio_0_3' (3#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-7472-atom-pc/realtime/system_axi_gpio_0_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_axi_gpio_0_4' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-7472-atom-pc/realtime/system_axi_gpio_0_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_axi_gpio_0_4' (4#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-7472-atom-pc/realtime/system_axi_gpio_0_4_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_axi_gpio_0_0' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-7472-atom-pc/realtime/system_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_axi_gpio_0_0' (5#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-7472-atom-pc/realtime/system_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_axi_gpio_0_1' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-7472-atom-pc/realtime/system_axi_gpio_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_axi_gpio_0_1' (6#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-7472-atom-pc/realtime/system_axi_gpio_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_axi_quad_spi_0_0' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-7472-atom-pc/realtime/system_axi_quad_spi_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_axi_quad_spi_0_0' (7#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-7472-atom-pc/realtime/system_axi_quad_spi_0_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'axi_quad_spi_fmc' of module 'system_axi_quad_spi_0_0' has 33 connections declared, but only 32 given [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:1961]
+INFO: [Synth 8-6157] synthesizing module 'system_axi_uartlite_0_0' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-7472-atom-pc/realtime/system_axi_uartlite_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_axi_uartlite_0_0' (8#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-7472-atom-pc/realtime/system_axi_uartlite_0_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'axi_uartlite_control' of module 'system_axi_uartlite_0_0' has 22 connections declared, but only 21 given [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:1994]
+INFO: [Synth 8-6157] synthesizing module 'system_clk_wiz_0_0' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-7472-atom-pc/realtime/system_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'system_clk_wiz_0_0' (9#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-7472-atom-pc/realtime/system_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'system_jesd204_0_0' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-7472-atom-pc/realtime/system_jesd204_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_jesd204_0_0' (10#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-7472-atom-pc/realtime/system_jesd204_0_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'jesd204_0' of module 'system_jesd204_0_0' has 39 connections declared, but only 35 given [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:2020]
+INFO: [Synth 8-6157] synthesizing module 'system_jesd204_phy_0_0' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-7472-atom-pc/realtime/system_jesd204_phy_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_jesd204_phy_0_0' (11#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-7472-atom-pc/realtime/system_jesd204_phy_0_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'jesd204_phy_0' of module 'system_jesd204_phy_0_0' has 46 connections declared, but only 23 given [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:2056]
+INFO: [Synth 8-6157] synthesizing module 'system_modulator_0_0' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-7472-atom-pc/realtime/system_modulator_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_modulator_0_0' (12#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-7472-atom-pc/realtime/system_modulator_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_ps8_0_axi_periph_0' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:2404]
 INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_N6CHY9' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:12]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_N6CHY9' (12#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_N6CHY9' (13#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:12]
 INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1YGIC8G' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:144]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1YGIC8G' (13#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:144]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1YGIC8G' (14#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:144]
 INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_1MV52F6' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:276]
-INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_1MV52F6' (14#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:276]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_1MV52F6' (15#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:276]
 INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_XXQL8Z' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:408]
-INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_XXQL8Z' (15#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:408]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_XXQL8Z' (16#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:408]
 INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_11NL2LI' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:540]
-INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_11NL2LI' (16#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:540]
+INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_11NL2LI' (17#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:540]
 INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_BM87P3' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:672]
-INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_BM87P3' (17#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:672]
+INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_BM87P3' (18#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:672]
 INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_UZ9H' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:804]
-INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_UZ9H' (18#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:804]
+INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_UZ9H' (19#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:804]
 INFO: [Synth 8-6157] synthesizing module 'm07_couplers_imp_1CEZ7O4' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:936]
-INFO: [Synth 8-6155] done synthesizing module 'm07_couplers_imp_1CEZ7O4' (19#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:936]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_RR89KG' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:1082]
-INFO: [Synth 8-6157] synthesizing module 'system_auto_pc_0' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-10964-atom-pc/realtime/system_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_auto_pc_0' (20#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-10964-atom-pc/realtime/system_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_RR89KG' (21#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:1082]
-INFO: [Synth 8-6157] synthesizing module 'system_xbar_0' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-10964-atom-pc/realtime/system_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_xbar_0' (22#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-10964-atom-pc/realtime/system_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_ps8_0_axi_periph_0' (23#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:2196]
-INFO: [Synth 8-6157] synthesizing module 'system_rst_ps8_0_96M_0' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-10964-atom-pc/realtime/system_rst_ps8_0_96M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_rst_ps8_0_96M_0' (24#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-10964-atom-pc/realtime/system_rst_ps8_0_96M_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'rst_ps8_0_96M' of module 'system_rst_ps8_0_96M_0' has 10 connections declared, but only 7 given [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:2118]
-INFO: [Synth 8-6157] synthesizing module 'system_util_ds_buf_0_0' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-10964-atom-pc/realtime/system_util_ds_buf_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_util_ds_buf_0_0' (25#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-10964-atom-pc/realtime/system_util_ds_buf_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'system_util_ds_buf_1_0' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-10964-atom-pc/realtime/system_util_ds_buf_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_util_ds_buf_1_0' (26#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-10964-atom-pc/realtime/system_util_ds_buf_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'system_util_ds_buf_sysref_0' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-10964-atom-pc/realtime/system_util_ds_buf_sysref_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_util_ds_buf_sysref_0' (27#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-10964-atom-pc/realtime/system_util_ds_buf_sysref_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'system_util_ds_buf_2_0' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-10964-atom-pc/realtime/system_util_ds_buf_2_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_util_ds_buf_2_0' (28#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-10964-atom-pc/realtime/system_util_ds_buf_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm07_couplers_imp_1CEZ7O4' (20#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:936]
+INFO: [Synth 8-6157] synthesizing module 'm08_couplers_imp_91G9F2' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:1082]
+INFO: [Synth 8-6155] done synthesizing module 'm08_couplers_imp_91G9F2' (21#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:1082]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_RR89KG' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:1214]
+INFO: [Synth 8-6157] synthesizing module 'system_auto_pc_0' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-7472-atom-pc/realtime/system_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_auto_pc_0' (22#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-7472-atom-pc/realtime/system_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_RR89KG' (23#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:1214]
+INFO: [Synth 8-6157] synthesizing module 'system_xbar_0' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-7472-atom-pc/realtime/system_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_xbar_0' (24#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-7472-atom-pc/realtime/system_xbar_0_stub.v:6]
+WARNING: [Synth 8-689] width (24) of port connection 'm_axi_arprot' does not match port width (27) of module 'system_xbar_0' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:3819]
+WARNING: [Synth 8-689] width (24) of port connection 'm_axi_awprot' does not match port width (27) of module 'system_xbar_0' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:3823]
+INFO: [Synth 8-6155] done synthesizing module 'system_ps8_0_axi_periph_0' (25#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:2404]
+INFO: [Synth 8-6157] synthesizing module 'system_rst_ps8_0_96M_0' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-7472-atom-pc/realtime/system_rst_ps8_0_96M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_rst_ps8_0_96M_0' (26#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-7472-atom-pc/realtime/system_rst_ps8_0_96M_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'rst_ps8_0_96M' of module 'system_rst_ps8_0_96M_0' has 10 connections declared, but only 6 given [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:2321]
+INFO: [Synth 8-6157] synthesizing module 'system_util_ds_buf_0_0' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-7472-atom-pc/realtime/system_util_ds_buf_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_util_ds_buf_0_0' (27#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-7472-atom-pc/realtime/system_util_ds_buf_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_util_ds_buf_1_0' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-7472-atom-pc/realtime/system_util_ds_buf_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_util_ds_buf_1_0' (28#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-7472-atom-pc/realtime/system_util_ds_buf_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_util_ds_buf_sysref_0' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-7472-atom-pc/realtime/system_util_ds_buf_sysref_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_util_ds_buf_sysref_0' (29#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-7472-atom-pc/realtime/system_util_ds_buf_sysref_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_util_ds_buf_2_0' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-7472-atom-pc/realtime/system_util_ds_buf_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_util_ds_buf_2_0' (30#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-7472-atom-pc/realtime/system_util_ds_buf_2_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'system_xlconstant_0_2' [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_xlconstant_0_2/synth/system_xlconstant_0_2.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_6_xlconstant' [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
 	Parameter CONST_VAL bound to: 0 - type: integer 
 	Parameter CONST_WIDTH bound to: 3 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_6_xlconstant' (29#1) [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'system_xlconstant_0_2' (30#1) [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_xlconstant_0_2/synth/system_xlconstant_0_2.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_6_xlconstant' (31#1) [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'system_xlconstant_0_2' (32#1) [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_xlconstant_0_2/synth/system_xlconstant_0_2.v:57]
 INFO: [Synth 8-6157] synthesizing module 'system_xlconstant_0_1' [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_xlconstant_0_1/synth/system_xlconstant_0_1.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_6_xlconstant__parameterized0' [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
 	Parameter CONST_VAL bound to: 1 - type: integer 
 	Parameter CONST_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_6_xlconstant__parameterized0' (30#1) [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'system_xlconstant_0_1' (31#1) [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_xlconstant_0_1/synth/system_xlconstant_0_1.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_6_xlconstant__parameterized0' (32#1) [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'system_xlconstant_0_1' (33#1) [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_xlconstant_0_1/synth/system_xlconstant_0_1.v:57]
 INFO: [Synth 8-6157] synthesizing module 'system_xlconstant_0_0' [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_xlconstant_0_0/synth/system_xlconstant_0_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_6_xlconstant__parameterized1' [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
 	Parameter CONST_VAL bound to: 0 - type: integer 
 	Parameter CONST_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_6_xlconstant__parameterized1' (31#1) [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'system_xlconstant_0_0' (32#1) [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_xlconstant_0_0/synth/system_xlconstant_0_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'system_zynq_ultra_ps_e_0_0' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-10964-atom-pc/realtime/system_zynq_ultra_ps_e_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_zynq_ultra_ps_e_0_0' (33#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-10964-atom-pc/realtime/system_zynq_ultra_ps_e_0_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'system_zynq_ultra_ps_e_0_0' has 42 connections declared, but only 40 given [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:2153]
-INFO: [Synth 8-6155] done synthesizing module 'system' (34#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:1385]
-INFO: [Synth 8-6155] done synthesizing module 'system_wrapper' (35#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/hdl/system_wrapper.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_6_xlconstant__parameterized1' (33#1) [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'system_xlconstant_0_0' (34#1) [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_xlconstant_0_0/synth/system_xlconstant_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'system_xlslice_0_0' [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_xlslice_0_0/synth/system_xlslice_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice' [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ipshared/f044/hdl/xlslice_v1_0_vl_rfs.v:13]
+	Parameter DIN_WIDTH bound to: 2 - type: integer 
+	Parameter DIN_FROM bound to: 0 - type: integer 
+	Parameter DIN_TO bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice' (35#1) [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ipshared/f044/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'system_xlslice_0_0' (36#1) [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_xlslice_0_0/synth/system_xlslice_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'system_xlslice_jesd_reset_0' [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_xlslice_jesd_reset_0/synth/system_xlslice_jesd_reset_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ipshared/f044/hdl/xlslice_v1_0_vl_rfs.v:13]
+	Parameter DIN_WIDTH bound to: 2 - type: integer 
+	Parameter DIN_FROM bound to: 1 - type: integer 
+	Parameter DIN_TO bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' (36#1) [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ipshared/f044/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'system_xlslice_jesd_reset_0' (37#1) [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_xlslice_jesd_reset_0/synth/system_xlslice_jesd_reset_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'system_zynq_ultra_ps_e_0_0' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-7472-atom-pc/realtime/system_zynq_ultra_ps_e_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_zynq_ultra_ps_e_0_0' (38#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/.Xil/Vivado-7472-atom-pc/realtime/system_zynq_ultra_ps_e_0_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'system_zynq_ultra_ps_e_0_0' has 42 connections declared, but only 40 given [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:2361]
+INFO: [Synth 8-6155] done synthesizing module 'system' (39#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/synth/system.v:1517]
+INFO: [Synth 8-6155] done synthesizing module 'system_wrapper' (40#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/hdl/system_wrapper.v:12]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized0 has unconnected port Din[0]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice has unconnected port Din[1]
 WARNING: [Synth 8-3331] design s00_couplers_imp_RR89KG has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design s00_couplers_imp_RR89KG has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m08_couplers_imp_91G9F2 has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m08_couplers_imp_91G9F2 has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m08_couplers_imp_91G9F2 has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m08_couplers_imp_91G9F2 has unconnected port S_ARESETN
 WARNING: [Synth 8-3331] design m07_couplers_imp_1CEZ7O4 has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design m07_couplers_imp_1CEZ7O4 has unconnected port M_ARESETN
 WARNING: [Synth 8-3331] design m07_couplers_imp_1CEZ7O4 has unconnected port S_ACLK
@@ -165,10 +191,12 @@ WARNING: [Synth 8-3331] design system_ps8_0_axi_periph_0 has unconnected port M0
 WARNING: [Synth 8-3331] design system_ps8_0_axi_periph_0 has unconnected port M06_ARESETN
 WARNING: [Synth 8-3331] design system_ps8_0_axi_periph_0 has unconnected port M07_ACLK
 WARNING: [Synth 8-3331] design system_ps8_0_axi_periph_0 has unconnected port M07_ARESETN
+WARNING: [Synth 8-3331] design system_ps8_0_axi_periph_0 has unconnected port M08_ACLK
+WARNING: [Synth 8-3331] design system_ps8_0_axi_periph_0 has unconnected port M08_ARESETN
 WARNING: [Synth 8-3331] design system_ps8_0_axi_periph_0 has unconnected port S00_ACLK
 WARNING: [Synth 8-3331] design system_ps8_0_axi_periph_0 has unconnected port S00_ARESETN
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1396.820 ; gain = 47.234
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1395.281 ; gain = 46.102
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -181,10 +209,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1401.590 ; gain = 52.004
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1395.281 ; gain = 46.102
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1401.590 ; gain = 52.004
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1395.281 ; gain = 46.102
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -226,6 +254,8 @@ Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_
 Finished Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_util_ds_buf_sysref_0/system_util_ds_buf_sysref_0/system_util_ds_buf_2_0_in_context.xdc] for cell 'system_i/util_ds_buf_sync'
 Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_modulator_0_0/system_modulator_0_0/system_modulator_0_0_in_context.xdc] for cell 'system_i/modulator_0'
 Finished Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_modulator_0_0/system_modulator_0_0/system_modulator_0_0_in_context.xdc] for cell 'system_i/modulator_0'
+Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_axi_gpio_0_4/system_axi_gpio_0_4/system_axi_gpio_0_2_in_context.xdc] for cell 'system_i/axi_gpio_jesd'
+Finished Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_axi_gpio_0_4/system_axi_gpio_0_4/system_axi_gpio_0_2_in_context.xdc] for cell 'system_i/axi_gpio_jesd'
 Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0/system_auto_pc_0_in_context.xdc] for cell 'system_i/ps8_0_axi_periph/s00_couplers/auto_pc'
 Finished Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0/system_auto_pc_0_in_context.xdc] for cell 'system_i/ps8_0_axi_periph/s00_couplers/auto_pc'
 Parsing XDC File [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/constrs_1/new/pinout.xdc]
@@ -236,15 +266,16 @@ Parsing XDC File [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_
 Finished Parsing XDC File [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1491.746 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1483.730 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 5 instances were transformed.
   IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 5 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1491.746 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1483.730 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'system_i/axi_quad_spi_fmc' at clock pin 'ext_spi_clk' is different from the actual clock period '10.312', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'system_i/modulator_0' at clock pin 'clk' is different from the actual clock period '7.500', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1496.652 ; gain = 147.066
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1491.336 ; gain = 142.156
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -252,7 +283,7 @@ Start Loading Part and Timing Information
 Loading part: xczu9eg-ffvb1156-2-i
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1496.652 ; gain = 147.066
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1491.336 ; gain = 142.156
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -307,12 +338,15 @@ Applied set_property DONT_TOUCH = true for system_i/xlconstant_div1. (constraint
 Applied set_property DONT_TOUCH = true for system_i/util_ds_buf_sysref. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for system_i/util_ds_buf_sync. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for system_i/modulator_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/axi_gpio_jesd. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/xlslice_jesd_reset. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/xlslice_jesd_sync. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for system_i/ps8_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1496.652 ; gain = 147.066
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1491.336 ; gain = 142.156
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1496.652 ; gain = 147.066
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1491.336 ; gain = 142.156
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -347,6 +381,8 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design system_xlslice_jesd_reset_0 has unconnected port Din[0]
+WARNING: [Synth 8-3331] design system_xlslice_0_0 has unconnected port Din[1]
 WARNING: [Synth 8-3331] design system_ps8_0_axi_periph_0 has unconnected port M00_ACLK
 WARNING: [Synth 8-3331] design system_ps8_0_axi_periph_0 has unconnected port M00_ARESETN
 WARNING: [Synth 8-3331] design system_ps8_0_axi_periph_0 has unconnected port M01_ACLK
@@ -363,10 +399,12 @@ WARNING: [Synth 8-3331] design system_ps8_0_axi_periph_0 has unconnected port M0
 WARNING: [Synth 8-3331] design system_ps8_0_axi_periph_0 has unconnected port M06_ARESETN
 WARNING: [Synth 8-3331] design system_ps8_0_axi_periph_0 has unconnected port M07_ACLK
 WARNING: [Synth 8-3331] design system_ps8_0_axi_periph_0 has unconnected port M07_ARESETN
+WARNING: [Synth 8-3331] design system_ps8_0_axi_periph_0 has unconnected port M08_ACLK
+WARNING: [Synth 8-3331] design system_ps8_0_axi_periph_0 has unconnected port M08_ARESETN
 WARNING: [Synth 8-3331] design system_ps8_0_axi_periph_0 has unconnected port S00_ACLK
 WARNING: [Synth 8-3331] design system_ps8_0_axi_periph_0 has unconnected port S00_ARESETN
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1496.652 ; gain = 147.066
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1491.336 ; gain = 142.156
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -385,22 +423,22 @@ INFO: [Synth 8-5783] Moving clock source from hierarchical pin 'system_i/jesd204
 INFO: [Synth 8-5578] Moved timing constraint from pin 'system_i/jesd204_phy_0/common0_qpll0_refclk_out' to pin 'system_i/jesd204_phy_0/bbstub_common0_qpll0_refclk_out/O'
 INFO: [Synth 8-5783] Moving clock source from hierarchical pin 'system_i/jesd204_phy_0/qpll0_refclk' to 'system_i/util_ds_buf_1/bbstub_IBUF_OUT[0]/O'
 INFO: [Synth 8-5578] Moved timing constraint from pin 'system_i/clk_wiz_0/clk_200' to pin 'system_i/clk_wiz_0/bbstub_clk_200/O'
-INFO: [Synth 8-5783] Moving clock source from hierarchical pin 'system_i/clk_wiz_0/clk_in1' to 'system_i/util_ds_buf_0/bbstub_BUFG_GT_O[0]/O'
+INFO: [Synth 8-5783] Moving clock source from hierarchical pin 'system_i/clk_wiz_0/clk_in1' to 'jesd_clk_in_div[0]'
 INFO: [Synth 8-5578] Moved timing constraint from pin 'system_i/clk_wiz_0/clk_400' to pin 'system_i/clk_wiz_0/bbstub_clk_400/O'
-INFO: [Synth 8-5783] Moving clock source from hierarchical pin 'system_i/clk_wiz_0/clk_in1' to 'system_i/util_ds_buf_0/bbstub_BUFG_GT_O[0]/O'
+INFO: [Synth 8-5783] Moving clock source from hierarchical pin 'system_i/clk_wiz_0/clk_in1' to 'jesd_clk_in_div[0]'
 INFO: [Synth 8-5578] Moved timing constraint from pin 'system_i/util_ds_buf_1/IBUF_DS_ODIV2[0]' to pin '{system_i/util_ds_buf_1/bbstub_IBUF_DS_ODIV2[0]/O}'
 INFO: [Synth 8-5578] Moved timing constraint from pin 'system_i/util_ds_buf_1/IBUF_OUT[0]' to pin '{system_i/util_ds_buf_1/bbstub_IBUF_OUT[0]/O}'
 INFO: [Synth 8-5578] Moved timing constraint from pin 'system_i/util_ds_buf_sysref/IBUF_OUT[0]' to pin '{system_i/util_ds_buf_sysref/bbstub_IBUF_OUT[0]/O}'
 INFO: [Synth 8-5578] Moved timing constraint from pin 'system_i/util_ds_buf_sync/IBUF_OUT[0]' to pin '{system_i/util_ds_buf_sync/bbstub_IBUF_OUT[0]/O}'
 INFO: [Synth 8-5819] Moved 13 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2076.785 ; gain = 727.199
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2073.125 ; gain = 723.945
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2077.008 ; gain = 727.422
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2073.352 ; gain = 724.172
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -412,7 +450,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2087.027 ; gain = 737.441
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2083.465 ; gain = 734.285
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -436,7 +474,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2100.809 ; gain = 751.223
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2097.750 ; gain = 748.570
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -449,7 +487,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2100.809 ; gain = 751.223
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2097.750 ; gain = 748.570
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -461,25 +499,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2100.809 ; gain = 751.223
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2097.750 ; gain = 748.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2100.809 ; gain = 751.223
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2097.750 ; gain = 748.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2100.809 ; gain = 751.223
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2097.750 ; gain = 748.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2100.809 ; gain = 751.223
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2097.750 ; gain = 748.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -493,20 +531,21 @@ Report BlackBoxes:
 |2     |system_auto_pc_0            |         1|
 |3     |system_axi_gpio_0_2         |         1|
 |4     |system_axi_gpio_0_3         |         1|
-|5     |system_axi_gpio_0_0         |         1|
-|6     |system_axi_gpio_0_1         |         1|
-|7     |system_axi_quad_spi_0_0     |         1|
-|8     |system_axi_uartlite_0_0     |         1|
-|9     |system_clk_wiz_0_0          |         1|
-|10    |system_jesd204_0_0          |         1|
-|11    |system_jesd204_phy_0_0      |         1|
-|12    |system_modulator_0_0        |         1|
-|13    |system_rst_ps8_0_96M_0      |         1|
-|14    |system_util_ds_buf_0_0      |         1|
-|15    |system_util_ds_buf_1_0      |         1|
-|16    |system_util_ds_buf_sysref_0 |         1|
-|17    |system_util_ds_buf_2_0      |         1|
-|18    |system_zynq_ultra_ps_e_0_0  |         1|
+|5     |system_axi_gpio_0_4         |         1|
+|6     |system_axi_gpio_0_0         |         1|
+|7     |system_axi_gpio_0_1         |         1|
+|8     |system_axi_quad_spi_0_0     |         1|
+|9     |system_axi_uartlite_0_0     |         1|
+|10    |system_clk_wiz_0_0          |         1|
+|11    |system_jesd204_0_0          |         1|
+|12    |system_jesd204_phy_0_0      |         1|
+|13    |system_modulator_0_0        |         1|
+|14    |system_rst_ps8_0_96M_0      |         1|
+|15    |system_util_ds_buf_0_0      |         1|
+|16    |system_util_ds_buf_1_0      |         1|
+|17    |system_util_ds_buf_sysref_0 |         1|
+|18    |system_util_ds_buf_2_0      |         1|
+|19    |system_zynq_ultra_ps_e_0_0  |         1|
 +------+----------------------------+----------+
 
 Report Cell Usage: 
@@ -518,60 +557,63 @@ Report Cell Usage:
 |3     |system_axi_gpio_0_1         |     1|
 |4     |system_axi_gpio_0_2         |     1|
 |5     |system_axi_gpio_0_3         |     1|
-|6     |system_axi_quad_spi_0_0     |     1|
-|7     |system_axi_uartlite_0_0     |     1|
-|8     |system_clk_wiz_0_0          |     1|
-|9     |system_jesd204_0_0          |     1|
-|10    |system_jesd204_phy_0_0      |     1|
-|11    |system_modulator_0_0        |     1|
-|12    |system_rst_ps8_0_96M_0      |     1|
-|13    |system_util_ds_buf_0_0      |     1|
-|14    |system_util_ds_buf_1_0      |     1|
-|15    |system_util_ds_buf_2_0      |     1|
-|16    |system_util_ds_buf_sysref_0 |     1|
-|17    |system_xbar_0               |     1|
-|18    |system_zynq_ultra_ps_e_0_0  |     1|
-|19    |IBUF                        |     3|
-|20    |IOBUF                       |     5|
-|21    |OBUF                        |     6|
+|6     |system_axi_gpio_0_4         |     1|
+|7     |system_axi_quad_spi_0_0     |     1|
+|8     |system_axi_uartlite_0_0     |     1|
+|9     |system_clk_wiz_0_0          |     1|
+|10    |system_jesd204_0_0          |     1|
+|11    |system_jesd204_phy_0_0      |     1|
+|12    |system_modulator_0_0        |     1|
+|13    |system_rst_ps8_0_96M_0      |     1|
+|14    |system_util_ds_buf_0_0      |     1|
+|15    |system_util_ds_buf_1_0      |     1|
+|16    |system_util_ds_buf_2_0      |     1|
+|17    |system_util_ds_buf_sysref_0 |     1|
+|18    |system_xbar_0               |     1|
+|19    |system_zynq_ultra_ps_e_0_0  |     1|
+|20    |IBUF                        |     3|
+|21    |IOBUF                       |     5|
+|22    |OBUF                        |    10|
 +------+----------------------------+------+
 
 Report Instance Areas: 
-+------+---------------------+--------------------------+------+
-|      |Instance             |Module                    |Cells |
-+------+---------------------+--------------------------+------+
-|1     |top                  |                          |  2346|
-|2     |  system_i           |system                    |  2332|
-|3     |    ps8_0_axi_periph |system_ps8_0_axi_periph_0 |  1258|
-|4     |      s00_couplers   |s00_couplers_imp_RR89KG   |   201|
-|5     |    xlconstant_div1  |system_xlconstant_0_2     |     0|
-|6     |    xlconstant_one   |system_xlconstant_0_1     |     0|
-|7     |    xlconstant_zero  |system_xlconstant_0_0     |     0|
-+------+---------------------+--------------------------+------+
++------+-----------------------+----------------------------+------+
+|      |Instance               |Module                      |Cells |
++------+-----------------------+----------------------------+------+
+|1     |top                    |                            |  2520|
+|2     |  system_i             |system                      |  2502|
+|3     |    ps8_0_axi_periph   |system_ps8_0_axi_periph_0   |  1385|
+|4     |      s00_couplers     |s00_couplers_imp_RR89KG     |   201|
+|5     |    xlconstant_div1    |system_xlconstant_0_2       |     0|
+|6     |    xlconstant_one     |system_xlconstant_0_1       |     0|
+|7     |    xlconstant_zero    |system_xlconstant_0_0       |     0|
+|8     |    xlslice_jesd_reset |system_xlslice_0_0          |     0|
+|9     |    xlslice_jesd_sync  |system_xlslice_jesd_reset_0 |     0|
++------+-----------------------+----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2100.809 ; gain = 751.223
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2097.750 ; gain = 748.570
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 18 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 2100.809 ; gain = 656.160
-Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2100.809 ; gain = 751.223
+Synthesis finished with 0 errors, 0 critical warnings and 22 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 2097.750 ; gain = 652.516
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2097.750 ; gain = 748.570
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2149.789 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2144.695 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 8 instances were transformed.
   IBUF => IBUF (IBUFCTRL, INBUF): 3 instances
   IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 5 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-108 Infos, 78 Warnings, 0 Critical Warnings and 0 Errors encountered.
+120 Infos, 93 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 2149.789 ; gain = 1803.648
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2149.789 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 2144.695 ; gain = 1799.598
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2144.695 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/synth_1/system_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file system_wrapper_utilization_synth.rpt -pb system_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Nov  3 15:34:32 2022...
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 14 18:13:44 2022...

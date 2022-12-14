@@ -590,7 +590,7 @@
 /******************************************************************/
 
 /* Definitions for driver GPIO */
-#define XPAR_XGPIO_NUM_INSTANCES 4
+#define XPAR_XGPIO_NUM_INSTANCES 5
 
 /* Definitions for peripheral AXI_GPIO_FMC_STATUS */
 #define XPAR_AXI_GPIO_FMC_STATUS_BASEADDR 0x80004000
@@ -624,6 +624,14 @@
 #define XPAR_AXI_GPIO_DAC_CONTROL_IS_DUAL 0
 
 
+/* Definitions for peripheral AXI_GPIO_JESD */
+#define XPAR_AXI_GPIO_JESD_BASEADDR 0x80008000
+#define XPAR_AXI_GPIO_JESD_HIGHADDR 0x80008FFF
+#define XPAR_AXI_GPIO_JESD_DEVICE_ID 4
+#define XPAR_AXI_GPIO_JESD_INTERRUPT_PRESENT 0
+#define XPAR_AXI_GPIO_JESD_IS_DUAL 0
+
+
 /******************************************************************/
 
 /* Canonical definitions for peripheral AXI_GPIO_FMC_STATUS */
@@ -653,6 +661,13 @@
 #define XPAR_GPIO_3_DEVICE_ID XPAR_AXI_GPIO_DAC_CONTROL_DEVICE_ID
 #define XPAR_GPIO_3_INTERRUPT_PRESENT 0
 #define XPAR_GPIO_3_IS_DUAL 0
+
+/* Canonical definitions for peripheral AXI_GPIO_JESD */
+#define XPAR_GPIO_4_BASEADDR 0x80008000
+#define XPAR_GPIO_4_HIGHADDR 0x80008FFF
+#define XPAR_GPIO_4_DEVICE_ID XPAR_AXI_GPIO_JESD_DEVICE_ID
+#define XPAR_GPIO_4_INTERRUPT_PRESENT 0
+#define XPAR_GPIO_4_IS_DUAL 0
 
 
 /******************************************************************/

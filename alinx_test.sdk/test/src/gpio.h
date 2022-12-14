@@ -41,7 +41,8 @@ void     GPIO_SetGpioPlLed(uint32_t value);
 void     GPIO_SetSpiEnable(uint32_t value);
 void     GPIO_SetDacTxen  (uint32_t value);
 uint32_t GPIO_GetFmcStatus(void);
-
+void     GPIO_SetJesdReset(uint32_t value);
+void     GPIO_SetJesdSync (uint32_t value);
 
 
 

@@ -48,7 +48,7 @@
 
 
 // IP VLNV: mig-trading.ru:atom:modulator:1.0
-// IP Revision: 2
+// IP Revision: 4
 
 (* X_CORE_INFO = "modulator_v1_0,Vivado 2019.1.3" *)
 (* CHECK_LICENSE_TYPE = "system_modulator_0_0,modulator_v1_0,{}" *)

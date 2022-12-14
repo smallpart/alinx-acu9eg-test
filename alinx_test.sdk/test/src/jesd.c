@@ -10,6 +10,7 @@
 #include "xil_printf.h"
 #include "xgpio.h"
 #include "jesd.h"
+#include "gpio.h"
 
 /*******************************************
  * Private function prototypes
@@ -98,10 +99,10 @@ void conf_jesdmode3_dual_links() {
 void JESD_Init() {
     uint32_t delay;
 
-//    /* Reset IP-core */
-//    GPIO_SetJesdReset(1);
-//    for (delay = 0; delay < JESD_DELAY; delay++);
-//    GPIO_SetJesdReset(0);
+    /* Reset IP-core */
+    GPIO_SetJesdReset(1);
+    for (delay = 0; delay < JESD_DELAY; delay++);
+    GPIO_SetJesdReset(0);
 
     /* Get version IP-core */
     unsigned int ver =  jesd204_core_read(0);
@@ -114,20 +115,24 @@ void JESD_Init() {
     /* Configure JESD IP-core */
     conf_jesdmode3_dual_links();
 
-//    /* sync_b = 0 */
-//    GPIO_SetJesdSync(0);
+    /* sync_b = 0 */
+    GPIO_SetJesdSync(0);
 
     /* Reset interface */
     jesd204_core_write(1, 1);
-    while ( jesd204_core_read(1) != 0 ) {
+    if ( jesd204_core_read(1) != 0 ) {
       xil_printf("[MCU0] JESD ip-core waiting for reset release...\r\n");
     }
+    while ( jesd204_core_read(1) != 0 ) {
+        xil_printf("...\r");
+    }
+    xil_printf("\r\n");
     xil_printf("[MCU0] JESD ip-core reset DONE!\r\n");
 
     for (delay = 0; delay < JESD_DELAY; delay++);
 
-//    /* sync_b = 1 */
-//    GPIO_SetJesdSync(1);
+    /* sync_b = 1 */
+    GPIO_SetJesdSync(1);
 }
 
 /*******************************************

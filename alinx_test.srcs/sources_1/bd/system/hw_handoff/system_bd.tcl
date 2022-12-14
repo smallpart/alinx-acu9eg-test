@@ -173,14 +173,18 @@ proc create_root_design { parentCell } {
 
 
   # Create ports
+  set clk_200 [ create_bd_port -dir O -type clk clk_200 ]
+  set clk_400 [ create_bd_port -dir O -type clk clk_400 ]
   set clk_jesd_n [ create_bd_port -dir I -type clk clk_jesd_n ]
   set_property -dict [ list \
-   CONFIG.FREQ_HZ {400000000} \
+   CONFIG.FREQ_HZ {200000000} \
  ] $clk_jesd_n
   set clk_jesd_p [ create_bd_port -dir I -type clk clk_jesd_p ]
   set_property -dict [ list \
-   CONFIG.FREQ_HZ {400000000} \
+   CONFIG.FREQ_HZ {200000000} \
  ] $clk_jesd_p
+  set dac_sync [ create_bd_port -dir O -from 0 -to 0 dac_sync ]
+  set jesd_clk_in_div [ create_bd_port -dir O -from 0 -to 0 -type clk jesd_clk_in_div ]
   set txn_out_0 [ create_bd_port -dir O -from 3 -to 0 txn_out_0 ]
   set txp_out_0 [ create_bd_port -dir O -from 3 -to 0 txp_out_0 ]
 
@@ -197,6 +201,13 @@ proc create_root_design { parentCell } {
    CONFIG.C_ALL_INPUTS {1} \
    CONFIG.C_GPIO_WIDTH {2} \
  ] $axi_gpio_fmc_status
+
+  # Create instance: axi_gpio_jesd, and set properties
+  set axi_gpio_jesd [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_jesd ]
+  set_property -dict [ list \
+   CONFIG.C_ALL_OUTPUTS {1} \
+   CONFIG.C_GPIO_WIDTH {2} \
+ ] $axi_gpio_jesd
 
   # Create instance: axi_gpio_led, and set properties
   set axi_gpio_led [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_led ]
@@ -228,14 +239,14 @@ proc create_root_design { parentCell } {
   # Create instance: clk_wiz_0, and set properties
   set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0 ]
   set_property -dict [ list \
-   CONFIG.CLKIN1_JITTER_PS {25.0} \
+   CONFIG.CLKIN1_JITTER_PS {50.0} \
    CONFIG.CLKOUT1_DRIVES {Buffer} \
-   CONFIG.CLKOUT1_JITTER {73.940} \
-   CONFIG.CLKOUT1_PHASE_ERROR {73.069} \
-   CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {400} \
+   CONFIG.CLKOUT1_JITTER {81.254} \
+   CONFIG.CLKOUT1_PHASE_ERROR {82.655} \
+   CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {400.000} \
    CONFIG.CLKOUT2_DRIVES {Buffer} \
-   CONFIG.CLKOUT2_JITTER {84.775} \
-   CONFIG.CLKOUT2_PHASE_ERROR {73.069} \
+   CONFIG.CLKOUT2_JITTER {92.799} \
+   CONFIG.CLKOUT2_PHASE_ERROR {82.655} \
    CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {200.000} \
    CONFIG.CLKOUT2_USED {true} \
    CONFIG.CLKOUT3_DRIVES {Buffer} \
@@ -245,14 +256,14 @@ proc create_root_design { parentCell } {
    CONFIG.CLKOUT7_DRIVES {Buffer} \
    CONFIG.CLK_OUT1_PORT {clk_400} \
    CONFIG.CLK_OUT2_PORT {clk_200} \
-   CONFIG.MMCM_CLKFBOUT_MULT_F {3.000} \
-   CONFIG.MMCM_CLKIN1_PERIOD {2.500} \
+   CONFIG.MMCM_CLKFBOUT_MULT_F {6.000} \
+   CONFIG.MMCM_CLKIN1_PERIOD {5.000} \
    CONFIG.MMCM_CLKIN2_PERIOD {10.0} \
    CONFIG.MMCM_CLKOUT0_DIVIDE_F {3.000} \
    CONFIG.MMCM_CLKOUT1_DIVIDE {6} \
    CONFIG.MMCM_DIVCLK_DIVIDE {1} \
    CONFIG.NUM_OUT_CLKS {2} \
-   CONFIG.PRIM_IN_FREQ {400} \
+   CONFIG.PRIM_IN_FREQ {200.000} \
    CONFIG.PRIM_SOURCE {No_buffer} \
    CONFIG.SECONDARY_SOURCE {Single_ended_clock_capable_pin} \
    CONFIG.USE_LOCKED {false} \
@@ -271,12 +282,13 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.C_LANES {4} \
    CONFIG.C_PLL_SELECTION {1} \
-   CONFIG.GT_Line_Rate {6.720} \
-   CONFIG.GT_REFCLK_FREQ {168} \
-   CONFIG.Max_Line_Rate {6.72} \
-   CONFIG.Min_Line_Rate {6.72} \
-   CONFIG.RX_GT_Line_Rate {6.720} \
-   CONFIG.RX_GT_REFCLK_FREQ {168} \
+   CONFIG.GT_Line_Rate {8.000} \
+   CONFIG.GT_Location {X0Y12} \
+   CONFIG.GT_REFCLK_FREQ {200} \
+   CONFIG.Max_Line_Rate {8.0} \
+   CONFIG.Min_Line_Rate {8.0} \
+   CONFIG.RX_GT_Line_Rate {8.000} \
+   CONFIG.RX_GT_REFCLK_FREQ {200} \
    CONFIG.RX_PLL_SELECTION {1} \
  ] $jesd204_phy_0
 
@@ -286,7 +298,7 @@ proc create_root_design { parentCell } {
   # Create instance: ps8_0_axi_periph, and set properties
   set ps8_0_axi_periph [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 ps8_0_axi_periph ]
   set_property -dict [ list \
-   CONFIG.NUM_MI {8} \
+   CONFIG.NUM_MI {9} \
  ] $ps8_0_axi_periph
 
   # Create instance: rst_ps8_0_96M, and set properties
@@ -325,6 +337,23 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.CONST_VAL {0} \
  ] $xlconstant_zero
+
+  # Create instance: xlslice_jesd_reset, and set properties
+  set xlslice_jesd_reset [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_jesd_reset ]
+  set_property -dict [ list \
+   CONFIG.DIN_FROM {0} \
+   CONFIG.DIN_TO {0} \
+   CONFIG.DIN_WIDTH {2} \
+ ] $xlslice_jesd_reset
+
+  # Create instance: xlslice_jesd_sync, and set properties
+  set xlslice_jesd_sync [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_jesd_sync ]
+  set_property -dict [ list \
+   CONFIG.DIN_FROM {1} \
+   CONFIG.DIN_TO {1} \
+   CONFIG.DIN_WIDTH {2} \
+   CONFIG.DOUT_WIDTH {1} \
+ ] $xlslice_jesd_sync
 
   # Create instance: zynq_ultra_ps_e_0, and set properties
   set zynq_ultra_ps_e_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:zynq_ultra_ps_e:3.3 zynq_ultra_ps_e_0 ]
@@ -1806,35 +1835,39 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net ps8_0_axi_periph_M05_AXI [get_bd_intf_pins axi_uartlite_control/S_AXI] [get_bd_intf_pins ps8_0_axi_periph/M05_AXI]
   connect_bd_intf_net -intf_net ps8_0_axi_periph_M06_AXI [get_bd_intf_pins jesd204_0/s_axi] [get_bd_intf_pins ps8_0_axi_periph/M06_AXI]
   connect_bd_intf_net -intf_net ps8_0_axi_periph_M07_AXI [get_bd_intf_pins modulator_0/S00_AXI] [get_bd_intf_pins ps8_0_axi_periph/M07_AXI]
+  connect_bd_intf_net -intf_net ps8_0_axi_periph_M08_AXI [get_bd_intf_pins axi_gpio_jesd/S_AXI] [get_bd_intf_pins ps8_0_axi_periph/M08_AXI]
   connect_bd_intf_net -intf_net zynq_ultra_ps_e_0_M_AXI_HPM0_LPD [get_bd_intf_pins ps8_0_axi_periph/S00_AXI] [get_bd_intf_pins zynq_ultra_ps_e_0/M_AXI_HPM0_LPD]
 
   # Create port connections
+  connect_bd_net -net axi_gpio_jesd_gpio_io_o [get_bd_pins axi_gpio_jesd/gpio_io_o] [get_bd_pins xlslice_jesd_reset/Din] [get_bd_pins xlslice_jesd_sync/Din]
   connect_bd_net -net clk_jesd_n_1 [get_bd_ports clk_jesd_n] [get_bd_pins util_ds_buf_1/IBUF_DS_N]
   connect_bd_net -net clk_jesd_p_1 [get_bd_ports clk_jesd_p] [get_bd_pins util_ds_buf_1/IBUF_DS_P]
-  connect_bd_net -net clk_wiz_0_clk_200 [get_bd_pins clk_wiz_0/clk_200] [get_bd_pins modulator_0/clk_half]
-  connect_bd_net -net clk_wiz_0_clk_jesd [get_bd_pins clk_wiz_0/clk_400] [get_bd_pins jesd204_0/tx_core_clk] [get_bd_pins jesd204_phy_0/rx_core_clk] [get_bd_pins jesd204_phy_0/tx_core_clk] [get_bd_pins modulator_0/clk]
+  connect_bd_net -net clk_wiz_0_clk_200 [get_bd_ports clk_200] [get_bd_pins clk_wiz_0/clk_200] [get_bd_pins jesd204_0/tx_core_clk] [get_bd_pins jesd204_phy_0/rx_core_clk] [get_bd_pins jesd204_phy_0/tx_core_clk] [get_bd_pins modulator_0/clk_half]
+  connect_bd_net -net clk_wiz_0_clk_jesd [get_bd_ports clk_400] [get_bd_pins clk_wiz_0/clk_400] [get_bd_pins modulator_0/clk]
   connect_bd_net -net jesd204_0_gt_prbssel_out [get_bd_pins jesd204_0/gt_prbssel_out] [get_bd_pins jesd204_phy_0/gt_prbssel]
   connect_bd_net -net jesd204_0_tx_reset_gt [get_bd_pins jesd204_0/tx_reset_gt] [get_bd_pins jesd204_phy_0/rx_reset_gt] [get_bd_pins jesd204_phy_0/tx_reset_gt]
   connect_bd_net -net jesd204_phy_0_tx_reset_done [get_bd_pins jesd204_0/tx_reset_done] [get_bd_pins jesd204_phy_0/tx_reset_done]
   connect_bd_net -net jesd204_phy_0_txn_out [get_bd_ports txn_out_0] [get_bd_pins jesd204_phy_0/txn_out]
   connect_bd_net -net jesd204_phy_0_txp_out [get_bd_ports txp_out_0] [get_bd_pins jesd204_phy_0/txp_out]
   connect_bd_net -net modulator_0_data_out [get_bd_pins jesd204_0/tx_tdata] [get_bd_pins modulator_0/data_out]
-  connect_bd_net -net rst_ps8_0_96M_peripheral_aresetn [get_bd_pins axi_gpio_dac_control/s_axi_aresetn] [get_bd_pins axi_gpio_fmc_status/s_axi_aresetn] [get_bd_pins axi_gpio_led/s_axi_aresetn] [get_bd_pins axi_gpio_spi_en/s_axi_aresetn] [get_bd_pins axi_quad_spi_fmc/s_axi_aresetn] [get_bd_pins axi_uartlite_control/s_axi_aresetn] [get_bd_pins jesd204_0/s_axi_aresetn] [get_bd_pins modulator_0/reset_n] [get_bd_pins modulator_0/s00_axi_aresetn] [get_bd_pins ps8_0_axi_periph/ARESETN] [get_bd_pins ps8_0_axi_periph/M00_ARESETN] [get_bd_pins ps8_0_axi_periph/M01_ARESETN] [get_bd_pins ps8_0_axi_periph/M02_ARESETN] [get_bd_pins ps8_0_axi_periph/M03_ARESETN] [get_bd_pins ps8_0_axi_periph/M04_ARESETN] [get_bd_pins ps8_0_axi_periph/M05_ARESETN] [get_bd_pins ps8_0_axi_periph/M06_ARESETN] [get_bd_pins ps8_0_axi_periph/M07_ARESETN] [get_bd_pins ps8_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps8_0_96M/peripheral_aresetn]
-  connect_bd_net -net rst_ps8_0_96M_peripheral_reset [get_bd_pins jesd204_0/tx_reset] [get_bd_pins jesd204_phy_0/rx_sys_reset] [get_bd_pins jesd204_phy_0/tx_sys_reset] [get_bd_pins rst_ps8_0_96M/peripheral_reset]
-  connect_bd_net -net util_ds_buf_0_BUFG_GT_O [get_bd_pins clk_wiz_0/clk_in1] [get_bd_pins util_ds_buf_0/BUFG_GT_O]
+  connect_bd_net -net rst_ps8_0_96M_peripheral_aresetn [get_bd_pins axi_gpio_dac_control/s_axi_aresetn] [get_bd_pins axi_gpio_fmc_status/s_axi_aresetn] [get_bd_pins axi_gpio_jesd/s_axi_aresetn] [get_bd_pins axi_gpio_led/s_axi_aresetn] [get_bd_pins axi_gpio_spi_en/s_axi_aresetn] [get_bd_pins axi_quad_spi_fmc/s_axi_aresetn] [get_bd_pins axi_uartlite_control/s_axi_aresetn] [get_bd_pins jesd204_0/s_axi_aresetn] [get_bd_pins modulator_0/reset_n] [get_bd_pins modulator_0/s00_axi_aresetn] [get_bd_pins ps8_0_axi_periph/ARESETN] [get_bd_pins ps8_0_axi_periph/M00_ARESETN] [get_bd_pins ps8_0_axi_periph/M01_ARESETN] [get_bd_pins ps8_0_axi_periph/M02_ARESETN] [get_bd_pins ps8_0_axi_periph/M03_ARESETN] [get_bd_pins ps8_0_axi_periph/M04_ARESETN] [get_bd_pins ps8_0_axi_periph/M05_ARESETN] [get_bd_pins ps8_0_axi_periph/M06_ARESETN] [get_bd_pins ps8_0_axi_periph/M07_ARESETN] [get_bd_pins ps8_0_axi_periph/M08_ARESETN] [get_bd_pins ps8_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps8_0_96M/peripheral_aresetn]
+  connect_bd_net -net rst_ps8_0_96M_peripheral_reset [get_bd_pins jesd204_0/tx_reset] [get_bd_pins jesd204_phy_0/rx_sys_reset] [get_bd_pins jesd204_phy_0/tx_sys_reset] [get_bd_pins xlslice_jesd_reset/Dout]
+  connect_bd_net -net util_ds_buf_0_BUFG_GT_O [get_bd_ports jesd_clk_in_div] [get_bd_pins clk_wiz_0/clk_in1] [get_bd_pins util_ds_buf_0/BUFG_GT_O]
   connect_bd_net -net util_ds_buf_1_IBUF_DS_ODIV2 [get_bd_pins util_ds_buf_0/BUFG_GT_I] [get_bd_pins util_ds_buf_1/IBUF_DS_ODIV2]
   connect_bd_net -net util_ds_buf_1_IBUF_OUT [get_bd_pins jesd204_phy_0/qpll0_refclk] [get_bd_pins util_ds_buf_1/IBUF_OUT]
-  connect_bd_net -net util_ds_buf_sync_IBUF_OUT [get_bd_pins jesd204_0/tx_sync] [get_bd_pins util_ds_buf_sync/IBUF_OUT]
+  connect_bd_net -net util_ds_buf_sync_IBUF_OUT [get_bd_ports dac_sync] [get_bd_pins util_ds_buf_sync/IBUF_OUT]
   connect_bd_net -net util_ds_buf_sysref_IBUF_OUT [get_bd_pins jesd204_0/tx_sysref] [get_bd_pins util_ds_buf_sysref/IBUF_OUT]
   connect_bd_net -net xlconstant_div1_dout [get_bd_pins util_ds_buf_0/BUFG_GT_DIV] [get_bd_pins xlconstant_div1/dout]
   connect_bd_net -net xlconstant_one_dout [get_bd_pins util_ds_buf_0/BUFG_GT_CE] [get_bd_pins util_ds_buf_0/BUFG_GT_CEMASK] [get_bd_pins util_ds_buf_0/BUFG_GT_CLRMASK] [get_bd_pins xlconstant_one/dout]
   connect_bd_net -net xlconstant_zero_dout [get_bd_pins jesd204_phy_0/rxencommaalign] [get_bd_pins util_ds_buf_0/BUFG_GT_CLR] [get_bd_pins xlconstant_zero/dout]
-  connect_bd_net -net zynq_ultra_ps_e_0_pl_clk0 [get_bd_pins axi_gpio_dac_control/s_axi_aclk] [get_bd_pins axi_gpio_fmc_status/s_axi_aclk] [get_bd_pins axi_gpio_led/s_axi_aclk] [get_bd_pins axi_gpio_spi_en/s_axi_aclk] [get_bd_pins axi_quad_spi_fmc/ext_spi_clk] [get_bd_pins axi_quad_spi_fmc/s_axi_aclk] [get_bd_pins axi_uartlite_control/s_axi_aclk] [get_bd_pins jesd204_0/s_axi_aclk] [get_bd_pins jesd204_phy_0/drpclk] [get_bd_pins modulator_0/s00_axi_aclk] [get_bd_pins ps8_0_axi_periph/ACLK] [get_bd_pins ps8_0_axi_periph/M00_ACLK] [get_bd_pins ps8_0_axi_periph/M01_ACLK] [get_bd_pins ps8_0_axi_periph/M02_ACLK] [get_bd_pins ps8_0_axi_periph/M03_ACLK] [get_bd_pins ps8_0_axi_periph/M04_ACLK] [get_bd_pins ps8_0_axi_periph/M05_ACLK] [get_bd_pins ps8_0_axi_periph/M06_ACLK] [get_bd_pins ps8_0_axi_periph/M07_ACLK] [get_bd_pins ps8_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps8_0_96M/slowest_sync_clk] [get_bd_pins zynq_ultra_ps_e_0/maxihpm0_lpd_aclk] [get_bd_pins zynq_ultra_ps_e_0/pl_clk0]
+  connect_bd_net -net xlslice_jesd_sync_Dout [get_bd_pins jesd204_0/tx_sync] [get_bd_pins xlslice_jesd_sync/Dout]
+  connect_bd_net -net zynq_ultra_ps_e_0_pl_clk0 [get_bd_pins axi_gpio_dac_control/s_axi_aclk] [get_bd_pins axi_gpio_fmc_status/s_axi_aclk] [get_bd_pins axi_gpio_jesd/s_axi_aclk] [get_bd_pins axi_gpio_led/s_axi_aclk] [get_bd_pins axi_gpio_spi_en/s_axi_aclk] [get_bd_pins axi_quad_spi_fmc/ext_spi_clk] [get_bd_pins axi_quad_spi_fmc/s_axi_aclk] [get_bd_pins axi_uartlite_control/s_axi_aclk] [get_bd_pins jesd204_0/s_axi_aclk] [get_bd_pins jesd204_phy_0/drpclk] [get_bd_pins modulator_0/s00_axi_aclk] [get_bd_pins ps8_0_axi_periph/ACLK] [get_bd_pins ps8_0_axi_periph/M00_ACLK] [get_bd_pins ps8_0_axi_periph/M01_ACLK] [get_bd_pins ps8_0_axi_periph/M02_ACLK] [get_bd_pins ps8_0_axi_periph/M03_ACLK] [get_bd_pins ps8_0_axi_periph/M04_ACLK] [get_bd_pins ps8_0_axi_periph/M05_ACLK] [get_bd_pins ps8_0_axi_periph/M06_ACLK] [get_bd_pins ps8_0_axi_periph/M07_ACLK] [get_bd_pins ps8_0_axi_periph/M08_ACLK] [get_bd_pins ps8_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps8_0_96M/slowest_sync_clk] [get_bd_pins zynq_ultra_ps_e_0/maxihpm0_lpd_aclk] [get_bd_pins zynq_ultra_ps_e_0/pl_clk0]
   connect_bd_net -net zynq_ultra_ps_e_0_pl_resetn0 [get_bd_pins rst_ps8_0_96M/ext_reset_in] [get_bd_pins zynq_ultra_ps_e_0/pl_resetn0]
 
   # Create address segments
   create_bd_addr_seg -range 0x00001000 -offset 0x80003000 [get_bd_addr_spaces zynq_ultra_ps_e_0/Data] [get_bd_addr_segs axi_gpio_dac_control/S_AXI/Reg] SEG_axi_gpio_dac_txen_Reg
   create_bd_addr_seg -range 0x00001000 -offset 0x80002000 [get_bd_addr_spaces zynq_ultra_ps_e_0/Data] [get_bd_addr_segs axi_gpio_spi_en/S_AXI/Reg] SEG_axi_gpio_fmc_Reg
+  create_bd_addr_seg -range 0x00001000 -offset 0x80008000 [get_bd_addr_spaces zynq_ultra_ps_e_0/Data] [get_bd_addr_segs axi_gpio_jesd/S_AXI/Reg] SEG_axi_gpio_jesd_Reg
   create_bd_addr_seg -range 0x00001000 -offset 0x80000000 [get_bd_addr_spaces zynq_ultra_ps_e_0/Data] [get_bd_addr_segs axi_gpio_led/S_AXI/Reg] SEG_axi_gpio_led_Reg
   create_bd_addr_seg -range 0x00001000 -offset 0x80004000 [get_bd_addr_spaces zynq_ultra_ps_e_0/Data] [get_bd_addr_segs axi_gpio_fmc_status/S_AXI/Reg] SEG_axi_gpio_pe_ctrl_Reg
   create_bd_addr_seg -range 0x00001000 -offset 0x80001000 [get_bd_addr_spaces zynq_ultra_ps_e_0/Data] [get_bd_addr_segs axi_quad_spi_fmc/AXI_LITE/Reg] SEG_axi_quad_spi_fmc_Reg

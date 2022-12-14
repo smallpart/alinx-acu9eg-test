@@ -56,40 +56,40 @@
 # CPLL reference clock constraint (will be overridden by required constraint on IBUFDS_GTE4 input in context)
 
 # Internal TX user clock constraint (will be overridden by required reference clock constraint propagated through CHANNEL primitive in context)
-create_clock -period 5.952 [get_ports txusrclk_in[0]]
-create_clock -period 5.952 [get_ports txusrclk_in[1]]
-create_clock -period 5.952 [get_ports txusrclk_in[2]]
-create_clock -period 5.952 [get_ports txusrclk_in[3]]
+create_clock -period 5.0 [get_ports txusrclk_in[0]]
+create_clock -period 5.0 [get_ports txusrclk_in[1]]
+create_clock -period 5.0 [get_ports txusrclk_in[2]]
+create_clock -period 5.0 [get_ports txusrclk_in[3]]
 
 # External TX user clock constraint (will be overridden by required reference clock constraint propagated through CHANNEL primitive in context)
-create_clock -period 5.952 [get_ports txusrclk2_in[0]]
-create_clock -period 5.952 [get_ports txusrclk2_in[1]]
-create_clock -period 5.952 [get_ports txusrclk2_in[2]]
-create_clock -period 5.952 [get_ports txusrclk2_in[3]]
+create_clock -period 5.0 [get_ports txusrclk2_in[0]]
+create_clock -period 5.0 [get_ports txusrclk2_in[1]]
+create_clock -period 5.0 [get_ports txusrclk2_in[2]]
+create_clock -period 5.0 [get_ports txusrclk2_in[3]]
 
 # TXOUTCLK constraint, required in OOC flows when reference clock input port is external to the IP instance
-create_clock -period 5.952 [get_pins -filter {REF_PIN_NAME=~*TXOUTCLK} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[1].*gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST}]]
-create_clock -period 5.952 [get_pins -filter {REF_PIN_NAME=~*TXOUTCLK} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[1].*gen_gthe4_channel_inst[1].GTHE4_CHANNEL_PRIM_INST}]]
-create_clock -period 5.952 [get_pins -filter {REF_PIN_NAME=~*TXOUTCLK} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[1].*gen_gthe4_channel_inst[2].GTHE4_CHANNEL_PRIM_INST}]]
-create_clock -period 5.952 [get_pins -filter {REF_PIN_NAME=~*TXOUTCLK} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[1].*gen_gthe4_channel_inst[3].GTHE4_CHANNEL_PRIM_INST}]]
+create_clock -period 5.0 [get_pins -filter {REF_PIN_NAME=~*TXOUTCLK} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[3].*gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST}]]
+create_clock -period 5.0 [get_pins -filter {REF_PIN_NAME=~*TXOUTCLK} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[3].*gen_gthe4_channel_inst[1].GTHE4_CHANNEL_PRIM_INST}]]
+create_clock -period 5.0 [get_pins -filter {REF_PIN_NAME=~*TXOUTCLK} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[3].*gen_gthe4_channel_inst[2].GTHE4_CHANNEL_PRIM_INST}]]
+create_clock -period 5.0 [get_pins -filter {REF_PIN_NAME=~*TXOUTCLK} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[3].*gen_gthe4_channel_inst[3].GTHE4_CHANNEL_PRIM_INST}]]
 
 # Internal RX user clock constraint (will be overridden by required reference clock constraint propagated through CHANNEL primitive in context)
-create_clock -period 5.952 [get_ports rxusrclk_in[0]]
-create_clock -period 5.952 [get_ports rxusrclk_in[1]]
-create_clock -period 5.952 [get_ports rxusrclk_in[2]]
-create_clock -period 5.952 [get_ports rxusrclk_in[3]]
+create_clock -period 5.0 [get_ports rxusrclk_in[0]]
+create_clock -period 5.0 [get_ports rxusrclk_in[1]]
+create_clock -period 5.0 [get_ports rxusrclk_in[2]]
+create_clock -period 5.0 [get_ports rxusrclk_in[3]]
 
 # External RX user clock constraint (will be overridden by required reference clock constraint propagated through CHANNEL primitive in context)
-create_clock -period 5.952 [get_ports rxusrclk2_in[0]]
-create_clock -period 5.952 [get_ports rxusrclk2_in[1]]
-create_clock -period 5.952 [get_ports rxusrclk2_in[2]]
-create_clock -period 5.952 [get_ports rxusrclk2_in[3]]
+create_clock -period 5.0 [get_ports rxusrclk2_in[0]]
+create_clock -period 5.0 [get_ports rxusrclk2_in[1]]
+create_clock -period 5.0 [get_ports rxusrclk2_in[2]]
+create_clock -period 5.0 [get_ports rxusrclk2_in[3]]
 
 # RXOUTCLK constraint, required in OOC flows when reference clock input port is external to the IP instance
-create_clock -period 5.952 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLK} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[1].*gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST}]]
-create_clock -period 5.952 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLK} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[1].*gen_gthe4_channel_inst[1].GTHE4_CHANNEL_PRIM_INST}]]
-create_clock -period 5.952 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLK} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[1].*gen_gthe4_channel_inst[2].GTHE4_CHANNEL_PRIM_INST}]]
-create_clock -period 5.952 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLK} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[1].*gen_gthe4_channel_inst[3].GTHE4_CHANNEL_PRIM_INST}]]
+create_clock -period 5.0 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLK} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[3].*gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST}]]
+create_clock -period 5.0 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLK} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[3].*gen_gthe4_channel_inst[1].GTHE4_CHANNEL_PRIM_INST}]]
+create_clock -period 5.0 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLK} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[3].*gen_gthe4_channel_inst[2].GTHE4_CHANNEL_PRIM_INST}]]
+create_clock -period 5.0 [get_pins -filter {REF_PIN_NAME=~*RXOUTCLK} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[3].*gen_gthe4_channel_inst[3].GTHE4_CHANNEL_PRIM_INST}]]
 
 # DRP clock constraint for CHANNEL primitive
 create_clock -period 10.0 [get_ports drpclk_in[0]]

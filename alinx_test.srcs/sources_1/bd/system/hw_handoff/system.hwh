@@ -1,17 +1,37 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Nov  3 15:32:21 2022" VIVADOVERSION="2019.1.3">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Dec 14 18:12:06 2022" VIVADOVERSION="2019.1.3">
 
   <SYSTEMINFO ARCH="zynquplus" DEVICE="xczu9eg" NAME="system" PACKAGE="ffvb1156" SPEEDGRADE="-2"/>
 
   <EXTERNALPORTS>
-    <PORT CLKFREQUENCY="400000000" DIR="I" NAME="clk_jesd_p" SIGIS="clk" SIGNAME="External_Ports_clk_jesd_p">
+    <PORT CLKFREQUENCY="200000000" DIR="I" NAME="clk_jesd_p" SIGIS="clk" SIGNAME="External_Ports_clk_jesd_p">
       <CONNECTIONS>
         <CONNECTION INSTANCE="util_ds_buf_1" PORT="IBUF_DS_P"/>
       </CONNECTIONS>
     </PORT>
-    <PORT CLKFREQUENCY="400000000" DIR="I" NAME="clk_jesd_n" SIGIS="clk" SIGNAME="External_Ports_clk_jesd_n">
+    <PORT CLKFREQUENCY="200000000" DIR="I" NAME="clk_jesd_n" SIGIS="clk" SIGNAME="External_Ports_clk_jesd_n">
       <CONNECTIONS>
         <CONNECTION INSTANCE="util_ds_buf_1" PORT="IBUF_DS_N"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="200000000" DIR="O" LEFT="0" NAME="jesd_clk_in_div" RIGHT="0" SIGIS="clk" SIGNAME="util_ds_buf_0_BUFG_GT_O">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="util_ds_buf_0" PORT="BUFG_GT_O"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="200000000" DIR="O" NAME="clk_200" SIGIS="clk" SIGNAME="clk_wiz_0_clk_200">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_200"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="400000000" DIR="O" NAME="clk_400" SIGIS="clk" SIGNAME="clk_wiz_0_clk_400">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_400"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="0" NAME="dac_sync" RIGHT="0" SIGIS="undef" SIGNAME="util_ds_buf_sync_IBUF_OUT">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="util_ds_buf_sync" PORT="IBUF_OUT"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" LEFT="3" NAME="txp_out_0" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_phy_0_txp_out">
@@ -24,31 +44,6 @@
         <CONNECTION INSTANCE="jesd204_phy_0" PORT="txn_out"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="0" NAME="led_pl_tri_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_led_gpio_io_o">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="axi_gpio_led" PORT="gpio_io_o"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="uart_control_rxd" SIGIS="undef" SIGNAME="axi_uartlite_control_rx">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="axi_uartlite_control" PORT="rx"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="uart_control_txd" SIGIS="undef" SIGNAME="axi_uartlite_control_tx">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="axi_uartlite_control" PORT="tx"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" LEFT="1" NAME="gpio_status_tri_i" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_fmc_status_gpio_io_i">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="axi_gpio_fmc_status" PORT="gpio_io_i"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="2" NAME="dac_txen_tri_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_dac_control_gpio_io_o">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="axi_gpio_dac_control" PORT="gpio_io_o"/>
-      </CONNECTIONS>
-    </PORT>
     <PORT CLKFREQUENCY="100000000" DIR="I" LEFT="0" NAME="sysref_clk_p" RIGHT="0" SIGIS="clk" SIGNAME="util_ds_buf_sysref_IBUF_DS_P">
       <CONNECTIONS>
         <CONNECTION INSTANCE="util_ds_buf_sysref" PORT="IBUF_DS_P"/>
@@ -57,6 +52,31 @@
     <PORT CLKFREQUENCY="100000000" DIR="I" LEFT="0" NAME="sysref_clk_n" RIGHT="0" SIGIS="clk" SIGNAME="util_ds_buf_sysref_IBUF_DS_N">
       <CONNECTIONS>
         <CONNECTION INSTANCE="util_ds_buf_sysref" PORT="IBUF_DS_N"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="2" NAME="dac_txen_tri_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_dac_control_gpio_io_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_gpio_dac_control" PORT="gpio_io_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="0" NAME="gpio_spi_en_tri_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_spi_en_gpio_io_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_gpio_spi_en" PORT="gpio_io_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="0" NAME="led_pl_tri_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_led_gpio_io_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_gpio_led" PORT="gpio_io_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" LEFT="0" NAME="sync_clk_p" RIGHT="0" SIGIS="clk" SIGNAME="util_ds_buf_sync_IBUF_DS_P">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="util_ds_buf_sync" PORT="IBUF_DS_P"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" LEFT="0" NAME="sync_clk_n" RIGHT="0" SIGIS="clk" SIGNAME="util_ds_buf_sync_IBUF_DS_N">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="util_ds_buf_sync" PORT="IBUF_DS_N"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="fmc_spi_io0_i" SIGIS="undef" SIGNAME="axi_quad_spi_fmc_io0_i">
@@ -119,19 +139,19 @@
         <CONNECTION INSTANCE="axi_quad_spi_fmc" PORT="ss_t"/>
       </CONNECTIONS>
     </PORT>
-    <PORT CLKFREQUENCY="100000000" DIR="I" LEFT="0" NAME="sync_clk_p" RIGHT="0" SIGIS="clk" SIGNAME="util_ds_buf_sync_IBUF_DS_P">
+    <PORT DIR="I" LEFT="1" NAME="gpio_status_tri_i" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_fmc_status_gpio_io_i">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="util_ds_buf_sync" PORT="IBUF_DS_P"/>
+        <CONNECTION INSTANCE="axi_gpio_fmc_status" PORT="gpio_io_i"/>
       </CONNECTIONS>
     </PORT>
-    <PORT CLKFREQUENCY="100000000" DIR="I" LEFT="0" NAME="sync_clk_n" RIGHT="0" SIGIS="clk" SIGNAME="util_ds_buf_sync_IBUF_DS_N">
+    <PORT DIR="I" NAME="uart_control_rxd" SIGIS="undef" SIGNAME="axi_uartlite_control_rx">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="util_ds_buf_sync" PORT="IBUF_DS_N"/>
+        <CONNECTION INSTANCE="axi_uartlite_control" PORT="rx"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="0" NAME="gpio_spi_en_tri_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_spi_en_gpio_io_o">
+    <PORT DIR="O" NAME="uart_control_txd" SIGIS="undef" SIGNAME="axi_uartlite_control_tx">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="axi_gpio_spi_en" PORT="gpio_io_o"/>
+        <CONNECTION INSTANCE="axi_uartlite_control" PORT="tx"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -906,6 +926,363 @@
         <BUSINTERFACE BUSNAME="axi_gpio_fmc_status_GPIO" NAME="GPIO" TYPE="INITIATOR" VLNV="xilinx.com:interface:gpio:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="TRI_I" PHYSICAL="gpio_io_i"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="21" FULLNAME="/axi_gpio_jesd" HWVERSION="2.0" INSTANCE="axi_gpio_jesd" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axi_gpio" VLNV="xilinx.com:ip:axi_gpio:2.0">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axi_gpio;v=v2_0;d=pg144-axi-gpio.pdf"/>
+      </DOCUMENTS>
+      <ADDRESSBLOCKS>
+        <ADDRESSBLOCK ACCESS="read-write" INTERFACE="S_AXI" NAME="Reg" RANGE="4096" USAGE="register">
+          <REGISTERS>
+            <REGISTER NAME="GPIO_DATA">
+              <PROPERTY NAME="DESCRIPTION" VALUE="Channel-1 AXI GPIO Data register"/>
+              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x0"/>
+              <PROPERTY NAME="SIZE" VALUE="2"/>
+              <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+              <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
+              <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
+              <FIELDS>
+                <FIELD NAME="Channel-1 GPIO DATA">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="AXI GPIO Data Register.&#xA;For each I/O bit programmed as input&#xA;  R - Reads value on the input pin.&#xA;  W - No effect.&#xA;For each I/O bit programmed as output&#xA;  R - Reads value on GPIO_O pins&#xA;  W - Writes value to the corresponding AXI GPIO &#xA;      data register bit and output pin&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="2"/>
+                </FIELD>
+              </FIELDS>
+            </REGISTER>
+            <REGISTER NAME="GPIO_TRI">
+              <PROPERTY NAME="DESCRIPTION" VALUE="Channel-1 AXI GPIO 3-State Control register"/>
+              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x4"/>
+              <PROPERTY NAME="SIZE" VALUE="2"/>
+              <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+              <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
+              <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
+              <FIELDS>
+                <FIELD NAME="Channel-1 GPIO TRI">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="AXI GPIO 3-State Control Register&#xA;Each I/O pin of the AXI GPIO is individually programmable as an input or output   For each of the bits     0 - I/O pin configured as output     1 - I/O pin configured as input&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="2"/>
+                </FIELD>
+              </FIELDS>
+            </REGISTER>
+            <REGISTER NAME="GPIO2_DATA">
+              <PROPERTY NAME="DESCRIPTION" VALUE="Channel-2 AXI GPIO Data register"/>
+              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x8"/>
+              <PROPERTY NAME="SIZE" VALUE="32"/>
+              <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+              <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
+              <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
+              <FIELDS>
+                <FIELD NAME="Channel-2 GPIO DATA">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="AXI GPIO Data Register.&#xA;For each I/O bit programmed as input&#xA;  R - Reads value on the input pin.&#xA;  W - No effect.&#xA;For each I/O bit programmed as output&#xA;  R - Reads value on GPIO_O pins&#xA;  W - Writes value to the corresponding AXI GPIO &#xA;      data register bit and output pin&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="32"/>
+                </FIELD>
+              </FIELDS>
+            </REGISTER>
+            <REGISTER NAME="GPIO2_TRI">
+              <PROPERTY NAME="DESCRIPTION" VALUE="Channel-2 AXI GPIO 3-State Control register"/>
+              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0xC"/>
+              <PROPERTY NAME="SIZE" VALUE="32"/>
+              <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+              <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
+              <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
+              <FIELDS>
+                <FIELD NAME="Channel-2 GPIO TRI">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="AXI GPIO 3-State Control Register&#xA;Each I/O pin of the AXI GPIO is individually programmable as an input or output   For each of the bits     0 - I/O pin configured as output     1 - I/O pin configured as input&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="32"/>
+                </FIELD>
+              </FIELDS>
+            </REGISTER>
+            <REGISTER NAME="GIER">
+              <PROPERTY NAME="DESCRIPTION" VALUE="Global Interrupt Enable register"/>
+              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x11C"/>
+              <PROPERTY NAME="SIZE" VALUE="32"/>
+              <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+              <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
+              <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
+              <FIELDS>
+                <FIELD NAME="Global Interrupt Enable">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="Master enable for the device interrupt output&#xA;  0 - Disabled&#xA;  1 - Enabled&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="31"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="31"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="1"/>
+                </FIELD>
+              </FIELDS>
+            </REGISTER>
+            <REGISTER NAME="IP_IER">
+              <PROPERTY NAME="DESCRIPTION" VALUE="IP Interrupt Enable register"/>
+              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x128"/>
+              <PROPERTY NAME="SIZE" VALUE="32"/>
+              <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+              <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
+              <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
+              <FIELDS>
+                <FIELD NAME="Channel-1 Interrupt Enable">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="Enable Channel 1 Interrupt&#xA;  0 - Disabled (masked)&#xA;  1 - Enabled&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="1"/>
+                </FIELD>
+                <FIELD NAME="Channel-2 Interrupt Enable">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="Enable Channel 2 Interrupt&#xA;  0 - Disabled (masked)&#xA;  1 - Enabled&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="1"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE=""/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="1"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="1"/>
+                </FIELD>
+              </FIELDS>
+            </REGISTER>
+            <REGISTER NAME="IP_ISR">
+              <PROPERTY NAME="DESCRIPTION" VALUE="IP Interrupt Status register"/>
+              <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x120"/>
+              <PROPERTY NAME="SIZE" VALUE="32"/>
+              <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+              <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
+              <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
+              <FIELDS>
+                <FIELD NAME="Channel-1 Interrupt Status">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="Channel 1 Interrupt Status&#xA;  0 - No Channel 1 input interrupt&#xA;  1 - Channel 1 input interrupt&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE="oneToToggle"/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="1"/>
+                </FIELD>
+                <FIELD NAME="Channel-2 Interrupt Status">
+                  <PROPERTY NAME="DESCRIPTION" VALUE="Channel 2 Interrupt Status&#xA;  0 - No Channel 2 input interrupt&#xA;  1 - Channel 2 input interrupt&#xA;"/>
+                  <PROPERTY NAME="ADDRESS_OFFSET" VALUE="1"/>
+                  <PROPERTY NAME="ACCESS" VALUE="read-write"/>
+                  <PROPERTY NAME="MODIFIED_READ_VALUES" VALUE="oneToToggle"/>
+                  <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
+                  <PROPERTY NAME="READ_ACTION" VALUE=""/>
+                  <PROPERTY NAME="BIT_OFFSET" VALUE="1"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="1"/>
+                </FIELD>
+              </FIELDS>
+            </REGISTER>
+          </REGISTERS>
+        </ADDRESSBLOCK>
+      </ADDRESSBLOCKS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_FAMILY" VALUE="zynquplus"/>
+        <PARAMETER NAME="C_S_AXI_ADDR_WIDTH" VALUE="9"/>
+        <PARAMETER NAME="C_S_AXI_DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_GPIO_WIDTH" VALUE="2"/>
+        <PARAMETER NAME="C_GPIO2_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_ALL_INPUTS" VALUE="0"/>
+        <PARAMETER NAME="C_ALL_INPUTS_2" VALUE="0"/>
+        <PARAMETER NAME="C_ALL_OUTPUTS" VALUE="1"/>
+        <PARAMETER NAME="C_ALL_OUTPUTS_2" VALUE="0"/>
+        <PARAMETER NAME="C_INTERRUPT_PRESENT" VALUE="0"/>
+        <PARAMETER NAME="C_DOUT_DEFAULT" VALUE="0x00000000"/>
+        <PARAMETER NAME="C_TRI_DEFAULT" VALUE="0xFFFFFFFF"/>
+        <PARAMETER NAME="C_IS_DUAL" VALUE="0"/>
+        <PARAMETER NAME="C_DOUT_DEFAULT_2" VALUE="0x00000000"/>
+        <PARAMETER NAME="C_TRI_DEFAULT_2" VALUE="0xFFFFFFFF"/>
+        <PARAMETER NAME="Component_Name" VALUE="system_axi_gpio_0_4"/>
+        <PARAMETER NAME="USE_BOARD_FLOW" VALUE="false"/>
+        <PARAMETER NAME="GPIO_BOARD_INTERFACE" VALUE="Custom"/>
+        <PARAMETER NAME="GPIO2_BOARD_INTERFACE" VALUE="Custom"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+        <PARAMETER NAME="C_BASEADDR" VALUE="0x80008000"/>
+        <PARAMETER NAME="C_HIGHADDR" VALUE="0x80008FFF"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="96968727" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_aresetn" SIGIS="rst" SIGNAME="rst_ps8_0_96M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_ps8_0_96M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="8" NAME="s_axi_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_jesd_s_axi_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M08_AXI_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_awvalid" SIGIS="undef" SIGNAME="axi_gpio_jesd_s_axi_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M08_AXI_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_awready" SIGIS="undef" SIGNAME="axi_gpio_jesd_s_axi_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M08_AXI_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="s_axi_wdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_jesd_s_axi_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M08_AXI_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="s_axi_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_jesd_s_axi_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M08_AXI_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_wvalid" SIGIS="undef" SIGNAME="axi_gpio_jesd_s_axi_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M08_AXI_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_wready" SIGIS="undef" SIGNAME="axi_gpio_jesd_s_axi_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M08_AXI_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="s_axi_bresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_jesd_s_axi_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M08_AXI_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_bvalid" SIGIS="undef" SIGNAME="axi_gpio_jesd_s_axi_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M08_AXI_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_bready" SIGIS="undef" SIGNAME="axi_gpio_jesd_s_axi_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M08_AXI_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="8" NAME="s_axi_araddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_jesd_s_axi_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M08_AXI_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_arvalid" SIGIS="undef" SIGNAME="axi_gpio_jesd_s_axi_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M08_AXI_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_arready" SIGIS="undef" SIGNAME="axi_gpio_jesd_s_axi_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M08_AXI_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="s_axi_rdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_jesd_s_axi_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M08_AXI_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="s_axi_rresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_jesd_s_axi_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M08_AXI_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_rvalid" SIGIS="undef" SIGNAME="axi_gpio_jesd_s_axi_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M08_AXI_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_rready" SIGIS="undef" SIGNAME="axi_gpio_jesd_s_axi_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M08_AXI_rready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="gpio_io_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_jesd_gpio_io_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlslice_jesd_reset" PORT="Din"/>
+            <CONNECTION INSTANCE="xlslice_jesd_sync" PORT="Din"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="ps8_0_axi_periph_M08_AXI" DATAWIDTH="32" NAME="S_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
+          <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
+          <PARAMETER NAME="PROTOCOL" VALUE="AXI4LITE"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="96968727"/>
+          <PARAMETER NAME="ID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="ADDR_WIDTH" VALUE="9"/>
+          <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="WUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="RUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
+          <PARAMETER NAME="HAS_BURST" VALUE="0"/>
+          <PARAMETER NAME="HAS_LOCK" VALUE="0"/>
+          <PARAMETER NAME="HAS_PROT" VALUE="0"/>
+          <PARAMETER NAME="HAS_CACHE" VALUE="0"/>
+          <PARAMETER NAME="HAS_QOS" VALUE="0"/>
+          <PARAMETER NAME="HAS_REGION" VALUE="0"/>
+          <PARAMETER NAME="HAS_WSTRB" VALUE="1"/>
+          <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
+          <PARAMETER NAME="HAS_RRESP" VALUE="1"/>
+          <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="0"/>
+          <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="1"/>
+          <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="1"/>
+          <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="1"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="system_zynq_ultra_ps_e_0_0_pl_clk0"/>
+          <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
+          <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
+          <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
+          <PARAMETER NAME="WUSER_BITS_PER_BYTE" VALUE="0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="ARADDR" PHYSICAL="s_axi_araddr"/>
+            <PORTMAP LOGICAL="ARREADY" PHYSICAL="s_axi_arready"/>
+            <PORTMAP LOGICAL="ARVALID" PHYSICAL="s_axi_arvalid"/>
+            <PORTMAP LOGICAL="AWADDR" PHYSICAL="s_axi_awaddr"/>
+            <PORTMAP LOGICAL="AWREADY" PHYSICAL="s_axi_awready"/>
+            <PORTMAP LOGICAL="AWVALID" PHYSICAL="s_axi_awvalid"/>
+            <PORTMAP LOGICAL="BREADY" PHYSICAL="s_axi_bready"/>
+            <PORTMAP LOGICAL="BRESP" PHYSICAL="s_axi_bresp"/>
+            <PORTMAP LOGICAL="BVALID" PHYSICAL="s_axi_bvalid"/>
+            <PORTMAP LOGICAL="RDATA" PHYSICAL="s_axi_rdata"/>
+            <PORTMAP LOGICAL="RREADY" PHYSICAL="s_axi_rready"/>
+            <PORTMAP LOGICAL="RRESP" PHYSICAL="s_axi_rresp"/>
+            <PORTMAP LOGICAL="RVALID" PHYSICAL="s_axi_rvalid"/>
+            <PORTMAP LOGICAL="WDATA" PHYSICAL="s_axi_wdata"/>
+            <PORTMAP LOGICAL="WREADY" PHYSICAL="s_axi_wready"/>
+            <PORTMAP LOGICAL="WSTRB" PHYSICAL="s_axi_wstrb"/>
+            <PORTMAP LOGICAL="WVALID" PHYSICAL="s_axi_wvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="GPIO" TYPE="INITIATOR" VLNV="xilinx.com:interface:gpio:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TRI_O" PHYSICAL="gpio_io_o"/>
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
@@ -3079,7 +3456,7 @@
         <PARAMETER NAME="C_USE_FAST_SIMULATION" VALUE="0"/>
         <PARAMETER NAME="C_PRIMTYPE_SEL" VALUE="AUTO"/>
         <PARAMETER NAME="C_USE_CLK_VALID" VALUE="0"/>
-        <PARAMETER NAME="C_PRIM_IN_FREQ" VALUE="400"/>
+        <PARAMETER NAME="C_PRIM_IN_FREQ" VALUE="200.000"/>
         <PARAMETER NAME="C_PRIM_IN_TIMEPERIOD" VALUE="10.000"/>
         <PARAMETER NAME="C_IN_FREQ_UNITS" VALUE="Units_MHz"/>
         <PARAMETER NAME="C_SECONDARY_IN_FREQ" VALUE="100.000"/>
@@ -3106,18 +3483,18 @@
         <PARAMETER NAME="C_CLKOUT6_DRIVES" VALUE="BUFG"/>
         <PARAMETER NAME="C_CLKOUT7_DRIVES" VALUE="BUFG"/>
         <PARAMETER NAME="C_INCLK_SUM_ROW0" VALUE="Input Clock   Freq (MHz)    Input Jitter (UI)"/>
-        <PARAMETER NAME="C_INCLK_SUM_ROW1" VALUE="__primary_____________400____________0.010"/>
+        <PARAMETER NAME="C_INCLK_SUM_ROW1" VALUE="__primary_________200.000____________0.010"/>
         <PARAMETER NAME="C_INCLK_SUM_ROW2" VALUE="no_secondary_input_clock"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW0A" VALUE="Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW0B" VALUE="Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)"/>
-        <PARAMETER NAME="C_OUTCLK_SUM_ROW1" VALUE="_clk_400___400.000______0.000______50.0_______73.940_____73.069"/>
-        <PARAMETER NAME="C_OUTCLK_SUM_ROW2" VALUE="_clk_200___200.000______0.000______50.0_______84.775_____73.069"/>
+        <PARAMETER NAME="C_OUTCLK_SUM_ROW1" VALUE="_clk_400___400.000______0.000______50.0_______81.254_____82.655"/>
+        <PARAMETER NAME="C_OUTCLK_SUM_ROW2" VALUE="_clk_200___200.000______0.000______50.0_______92.799_____82.655"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW3" VALUE="no_CLK_OUT3_output"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW4" VALUE="no_CLK_OUT4_output"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW5" VALUE="no_CLK_OUT5_output"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW6" VALUE="no_CLK_OUT6_output"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW7" VALUE="no_CLK_OUT7_output"/>
-        <PARAMETER NAME="C_CLKOUT1_REQUESTED_OUT_FREQ" VALUE="400"/>
+        <PARAMETER NAME="C_CLKOUT1_REQUESTED_OUT_FREQ" VALUE="400.000"/>
         <PARAMETER NAME="C_CLKOUT2_REQUESTED_OUT_FREQ" VALUE="200.000"/>
         <PARAMETER NAME="C_CLKOUT3_REQUESTED_OUT_FREQ" VALUE="100.000"/>
         <PARAMETER NAME="C_CLKOUT4_REQUESTED_OUT_FREQ" VALUE="100.000"/>
@@ -3170,8 +3547,8 @@
         <PARAMETER NAME="C_CLKOUT7_SEQUENCE_NUMBER" VALUE="1"/>
         <PARAMETER NAME="C_MMCM_NOTES" VALUE="None"/>
         <PARAMETER NAME="C_MMCM_BANDWIDTH" VALUE="OPTIMIZED"/>
-        <PARAMETER NAME="C_MMCM_CLKFBOUT_MULT_F" VALUE="3.000"/>
-        <PARAMETER NAME="C_MMCM_CLKIN1_PERIOD" VALUE="2.500"/>
+        <PARAMETER NAME="C_MMCM_CLKFBOUT_MULT_F" VALUE="6.000"/>
+        <PARAMETER NAME="C_MMCM_CLKIN1_PERIOD" VALUE="5.000"/>
         <PARAMETER NAME="C_MMCM_CLKIN2_PERIOD" VALUE="10.0"/>
         <PARAMETER NAME="C_MMCM_CLKOUT4_CASCADE" VALUE="FALSE"/>
         <PARAMETER NAME="C_MMCM_CLOCK_HOLD" VALUE="FALSE"/>
@@ -3274,7 +3651,7 @@
         <PARAMETER NAME="C_CLK_IN_SEL_PORT" VALUE="clk_in_sel"/>
         <PARAMETER NAME="C_INPUT_CLK_STOPPED_PORT" VALUE="input_clk_stopped"/>
         <PARAMETER NAME="C_CLKFB_STOPPED_PORT" VALUE="clkfb_stopped"/>
-        <PARAMETER NAME="C_CLKIN1_JITTER_PS" VALUE="25.0"/>
+        <PARAMETER NAME="C_CLKIN1_JITTER_PS" VALUE="50.0"/>
         <PARAMETER NAME="C_CLKIN2_JITTER_PS" VALUE="100.0"/>
         <PARAMETER NAME="C_PRIMITIVE" VALUE="MMCM"/>
         <PARAMETER NAME="C_SS_MODE" VALUE="CENTER_HIGH"/>
@@ -3369,7 +3746,7 @@
         <PARAMETER NAME="USE_DYN_PHASE_SHIFT" VALUE="false"/>
         <PARAMETER NAME="USE_DYN_RECONFIG" VALUE="false"/>
         <PARAMETER NAME="JITTER_SEL" VALUE="No_Jitter"/>
-        <PARAMETER NAME="PRIM_IN_FREQ" VALUE="400"/>
+        <PARAMETER NAME="PRIM_IN_FREQ" VALUE="200.000"/>
         <PARAMETER NAME="PRIM_IN_TIMEPERIOD" VALUE="10.000"/>
         <PARAMETER NAME="IN_FREQ_UNITS" VALUE="Units_MHz"/>
         <PARAMETER NAME="PHASESHIFT_MODE" VALUE="LATENCY"/>
@@ -3385,7 +3762,7 @@
         <PARAMETER NAME="CLKIN2_UI_JITTER" VALUE="0.010"/>
         <PARAMETER NAME="PRIM_IN_JITTER" VALUE="0.010"/>
         <PARAMETER NAME="SECONDARY_IN_JITTER" VALUE="0.010"/>
-        <PARAMETER NAME="CLKIN1_JITTER_PS" VALUE="25.0"/>
+        <PARAMETER NAME="CLKIN1_JITTER_PS" VALUE="50.0"/>
         <PARAMETER NAME="CLKIN2_JITTER_PS" VALUE="100.0"/>
         <PARAMETER NAME="CLKOUT1_USED" VALUE="true"/>
         <PARAMETER NAME="CLKOUT2_USED" VALUE="true"/>
@@ -3421,7 +3798,7 @@
         <PARAMETER NAME="PSEN_PORT" VALUE="psen"/>
         <PARAMETER NAME="PSINCDEC_PORT" VALUE="psincdec"/>
         <PARAMETER NAME="PSDONE_PORT" VALUE="psdone"/>
-        <PARAMETER NAME="CLKOUT1_REQUESTED_OUT_FREQ" VALUE="400"/>
+        <PARAMETER NAME="CLKOUT1_REQUESTED_OUT_FREQ" VALUE="400.000"/>
         <PARAMETER NAME="CLKOUT1_REQUESTED_PHASE" VALUE="0.000"/>
         <PARAMETER NAME="CLKOUT1_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
         <PARAMETER NAME="CLKOUT2_REQUESTED_OUT_FREQ" VALUE="200.000"/>
@@ -3493,10 +3870,10 @@
         <PARAMETER NAME="MMCM_NOTES" VALUE="None"/>
         <PARAMETER NAME="MMCM_DIVCLK_DIVIDE" VALUE="1"/>
         <PARAMETER NAME="MMCM_BANDWIDTH" VALUE="OPTIMIZED"/>
-        <PARAMETER NAME="MMCM_CLKFBOUT_MULT_F" VALUE="3.000"/>
+        <PARAMETER NAME="MMCM_CLKFBOUT_MULT_F" VALUE="6.000"/>
         <PARAMETER NAME="MMCM_CLKFBOUT_PHASE" VALUE="0.000"/>
         <PARAMETER NAME="MMCM_CLKFBOUT_USE_FINE_PS" VALUE="false"/>
-        <PARAMETER NAME="MMCM_CLKIN1_PERIOD" VALUE="2.500"/>
+        <PARAMETER NAME="MMCM_CLKIN1_PERIOD" VALUE="5.000"/>
         <PARAMETER NAME="MMCM_CLKIN2_PERIOD" VALUE="10.0"/>
         <PARAMETER NAME="MMCM_CLKOUT4_CASCADE" VALUE="false"/>
         <PARAMETER NAME="MMCM_CLOCK_HOLD" VALUE="false"/>
@@ -3582,10 +3959,10 @@
         <PARAMETER NAME="CDDCREQ_PORT" VALUE="cddcreq"/>
         <PARAMETER NAME="ENABLE_CLKOUTPHY" VALUE="false"/>
         <PARAMETER NAME="CLKOUTPHY_REQUESTED_FREQ" VALUE="600.000"/>
-        <PARAMETER NAME="CLKOUT1_JITTER" VALUE="73.940"/>
-        <PARAMETER NAME="CLKOUT1_PHASE_ERROR" VALUE="73.069"/>
-        <PARAMETER NAME="CLKOUT2_JITTER" VALUE="84.775"/>
-        <PARAMETER NAME="CLKOUT2_PHASE_ERROR" VALUE="73.069"/>
+        <PARAMETER NAME="CLKOUT1_JITTER" VALUE="81.254"/>
+        <PARAMETER NAME="CLKOUT1_PHASE_ERROR" VALUE="82.655"/>
+        <PARAMETER NAME="CLKOUT2_JITTER" VALUE="92.799"/>
+        <PARAMETER NAME="CLKOUT2_PHASE_ERROR" VALUE="82.655"/>
         <PARAMETER NAME="CLKOUT3_JITTER" VALUE="0.0"/>
         <PARAMETER NAME="CLKOUT3_PHASE_ERROR" VALUE="0.0"/>
         <PARAMETER NAME="CLKOUT4_JITTER" VALUE="0.0"/>
@@ -3603,22 +3980,24 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="400000000" DIR="I" NAME="clk_in1" SIGIS="clk" SIGNAME="util_ds_buf_0_BUFG_GT_O">
+        <PORT CLKFREQUENCY="200000000" DIR="I" NAME="clk_in1" SIGIS="clk" SIGNAME="util_ds_buf_0_BUFG_GT_O">
           <CONNECTIONS>
             <CONNECTION INSTANCE="util_ds_buf_0" PORT="BUFG_GT_O"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="200000000" DIR="O" NAME="clk_200" SIGIS="clk" SIGNAME="clk_wiz_0_clk_200">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="modulator_0" PORT="clk_half"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT CLKFREQUENCY="400000000" DIR="O" NAME="clk_400" SIGIS="clk" SIGNAME="clk_wiz_0_clk_400">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk_400"/>
+            <CONNECTION INSTANCE="modulator_0" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="200000000" DIR="O" NAME="clk_200" SIGIS="clk" SIGNAME="clk_wiz_0_clk_200">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk_200"/>
             <CONNECTION INSTANCE="jesd204_0" PORT="tx_core_clk"/>
             <CONNECTION INSTANCE="jesd204_phy_0" PORT="tx_core_clk"/>
             <CONNECTION INSTANCE="jesd204_phy_0" PORT="rx_core_clk"/>
-            <CONNECTION INSTANCE="modulator_0" PORT="clk"/>
+            <CONNECTION INSTANCE="modulator_0" PORT="clk_half"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -3725,9 +4104,9 @@
             <CONNECTION INSTANCE="jesd204_phy_0" PORT="rx_reset_gt"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="400000000" DIR="I" NAME="tx_core_clk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_400">
+        <PORT CLKFREQUENCY="200000000" DIR="I" NAME="tx_core_clk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_200">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_400"/>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_200"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="96968727" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
@@ -3825,9 +4204,9 @@
             <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M06_AXI_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="tx_reset" SIGIS="undef" SIGNAME="rst_ps8_0_96M_peripheral_reset">
+        <PORT DIR="I" NAME="tx_reset" SIGIS="undef" SIGNAME="xlslice_jesd_reset_Dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rst_ps8_0_96M" PORT="peripheral_reset"/>
+            <CONNECTION INSTANCE="xlslice_jesd_reset" PORT="Dout"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="tx_sysref" SIGIS="undef" SIGNAME="util_ds_buf_sysref_IBUF_OUT">
@@ -3844,9 +4223,9 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="tx_tready" SIGIS="undef"/>
-        <PORT DIR="I" NAME="tx_sync" SIGIS="undef" SIGNAME="util_ds_buf_sync_IBUF_OUT">
+        <PORT DIR="I" NAME="tx_sync" SIGIS="undef" SIGNAME="xlslice_jesd_sync_Dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="util_ds_buf_sync" PORT="IBUF_OUT"/>
+            <CONNECTION INSTANCE="xlslice_jesd_sync" PORT="Dout"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -3912,7 +4291,7 @@
           <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="400000000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="200000000"/>
           <PARAMETER NAME="PHASE" VALUE="0.0"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="system_clk_jesd_n"/>
           <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
@@ -3961,12 +4340,12 @@
         <PARAMETER NAME="C_SupportLevel" VALUE="1"/>
         <PARAMETER NAME="C_TransceiverControl" VALUE="false"/>
         <PARAMETER NAME="c_sub_core_name" VALUE="system_jesd204_phy_0_0_gt"/>
-        <PARAMETER NAME="C_GT_Line_Rate" VALUE="6.720"/>
-        <PARAMETER NAME="C_GT_REFCLK_FREQ" VALUE="168"/>
+        <PARAMETER NAME="C_GT_Line_Rate" VALUE="8.000"/>
+        <PARAMETER NAME="C_GT_REFCLK_FREQ" VALUE="200"/>
         <PARAMETER NAME="C_DRPCLK_FREQ" VALUE="100.0"/>
         <PARAMETER NAME="C_PLL_SELECTION" VALUE="1"/>
-        <PARAMETER NAME="C_RX_GT_Line_Rate" VALUE="6.720"/>
-        <PARAMETER NAME="C_RX_GT_REFCLK_FREQ" VALUE="168"/>
+        <PARAMETER NAME="C_RX_GT_Line_Rate" VALUE="8.000"/>
+        <PARAMETER NAME="C_RX_GT_REFCLK_FREQ" VALUE="200"/>
         <PARAMETER NAME="C_RX_PLL_SELECTION" VALUE="1"/>
         <PARAMETER NAME="C_QPLL_FBDIV" VALUE="40"/>
         <PARAMETER NAME="C_QPLL_REFCLKDIV" VALUE="1"/>
@@ -3979,7 +4358,7 @@
         <PARAMETER NAME="C_Axi_Lite" VALUE="false"/>
         <PARAMETER NAME="C_AXICLK_FREQ" VALUE="100.0"/>
         <PARAMETER NAME="C_Transceiver" VALUE="GTHE4"/>
-        <PARAMETER NAME="C_GT_Loc" VALUE="X0Y4"/>
+        <PARAMETER NAME="C_GT_Loc" VALUE="X0Y12"/>
         <PARAMETER NAME="C_gt_val_extended_timeout" VALUE="false"/>
         <PARAMETER NAME="C_Tx_JesdVersion" VALUE="0"/>
         <PARAMETER NAME="C_Rx_JesdVersion" VALUE="0"/>
@@ -3992,22 +4371,22 @@
         <PARAMETER NAME="C_Tx_MasterChan" VALUE="1"/>
         <PARAMETER NAME="C_Ins_Loss" VALUE="12"/>
         <PARAMETER NAME="C_Config_Type" VALUE="0"/>
-        <PARAMETER NAME="C_Min_Line_Rate" VALUE="6.72"/>
-        <PARAMETER NAME="C_Max_Line_Rate" VALUE="6.72"/>
+        <PARAMETER NAME="C_Min_Line_Rate" VALUE="8.0"/>
+        <PARAMETER NAME="C_Max_Line_Rate" VALUE="8.0"/>
         <PARAMETER NAME="C_GT_ENUM" VALUE="7"/>
         <PARAMETER NAME="Component_Name" VALUE="system_jesd204_phy_0_0"/>
         <PARAMETER NAME="Transceiver" VALUE="GTHE4"/>
         <PARAMETER NAME="SupportLevel" VALUE="1"/>
         <PARAMETER NAME="TransceiverControl" VALUE="false"/>
-        <PARAMETER NAME="GT_Line_Rate" VALUE="6.720"/>
-        <PARAMETER NAME="GT_REFCLK_FREQ" VALUE="168"/>
+        <PARAMETER NAME="GT_Line_Rate" VALUE="8.000"/>
+        <PARAMETER NAME="GT_REFCLK_FREQ" VALUE="200"/>
         <PARAMETER NAME="DRPCLK_FREQ" VALUE="100.0"/>
-        <PARAMETER NAME="RX_GT_Line_Rate" VALUE="6.720"/>
-        <PARAMETER NAME="RX_GT_REFCLK_FREQ" VALUE="168"/>
+        <PARAMETER NAME="RX_GT_Line_Rate" VALUE="8.000"/>
+        <PARAMETER NAME="RX_GT_REFCLK_FREQ" VALUE="200"/>
         <PARAMETER NAME="RX_PLL_SELECTION" VALUE="1"/>
         <PARAMETER NAME="Axi_Lite" VALUE="false"/>
         <PARAMETER NAME="AXICLK_FREQ" VALUE="100.0"/>
-        <PARAMETER NAME="GT_Location" VALUE="X0Y4"/>
+        <PARAMETER NAME="GT_Location" VALUE="X0Y12"/>
         <PARAMETER NAME="gt_val_extended_timeout" VALUE="false"/>
         <PARAMETER NAME="Tx_JesdVersion" VALUE="0"/>
         <PARAMETER NAME="Rx_JesdVersion" VALUE="0"/>
@@ -4018,12 +4397,12 @@
         <PARAMETER NAME="Tx_MasterChan" VALUE="1"/>
         <PARAMETER NAME="Ins_Loss" VALUE="12"/>
         <PARAMETER NAME="Config_Type" VALUE="0"/>
-        <PARAMETER NAME="Min_Line_Rate" VALUE="6.72"/>
-        <PARAMETER NAME="Max_Line_Rate" VALUE="6.72"/>
+        <PARAMETER NAME="Min_Line_Rate" VALUE="8.0"/>
+        <PARAMETER NAME="Max_Line_Rate" VALUE="8.0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="400000000" DIR="I" NAME="qpll0_refclk" SIGIS="clk" SIGNAME="util_ds_buf_1_IBUF_OUT">
+        <PORT CLKFREQUENCY="200000000" DIR="I" NAME="qpll0_refclk" SIGIS="clk" SIGNAME="util_ds_buf_1_IBUF_OUT">
           <CONNECTIONS>
             <CONNECTION INSTANCE="util_ds_buf_1" PORT="IBUF_OUT"/>
           </CONNECTIONS>
@@ -4043,14 +4422,14 @@
             <CONNECTION INSTANCE="jesd204_0" PORT="tx_reset_gt"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="tx_sys_reset" SIGIS="undef" SIGNAME="rst_ps8_0_96M_peripheral_reset">
+        <PORT DIR="I" NAME="tx_sys_reset" SIGIS="undef" SIGNAME="xlslice_jesd_reset_Dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rst_ps8_0_96M" PORT="peripheral_reset"/>
+            <CONNECTION INSTANCE="xlslice_jesd_reset" PORT="Dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="rx_sys_reset" SIGIS="undef" SIGNAME="rst_ps8_0_96M_peripheral_reset">
+        <PORT DIR="I" NAME="rx_sys_reset" SIGIS="undef" SIGNAME="xlslice_jesd_reset_Dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rst_ps8_0_96M" PORT="peripheral_reset"/>
+            <CONNECTION INSTANCE="xlslice_jesd_reset" PORT="Dout"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="txp_out" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_phy_0_txp_out">
@@ -4065,18 +4444,18 @@
         </PORT>
         <PORT DIR="I" LEFT="3" NAME="rxp_in" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="I" LEFT="3" NAME="rxn_in" RIGHT="0" SIGIS="undef"/>
-        <PORT CLKFREQUENCY="400000000" DIR="I" NAME="tx_core_clk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_400">
+        <PORT CLKFREQUENCY="200000000" DIR="I" NAME="tx_core_clk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_200">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_400"/>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_200"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="400000000" DIR="I" NAME="rx_core_clk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_400">
+        <PORT CLKFREQUENCY="200000000" DIR="I" NAME="rx_core_clk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_200">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_400"/>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_200"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="168000000.000" DIR="O" NAME="txoutclk" SIGIS="clk"/>
-        <PORT CLKFREQUENCY="168000000.000" DIR="O" NAME="rxoutclk" SIGIS="clk"/>
+        <PORT CLKFREQUENCY="200000000.000" DIR="O" NAME="txoutclk" SIGIS="clk"/>
+        <PORT CLKFREQUENCY="200000000.000" DIR="O" NAME="rxoutclk" SIGIS="clk"/>
         <PORT DIR="I" LEFT="3" NAME="gt_prbssel" RIGHT="0" SIGIS="undef" SIGNAME="jesd204_0_gt_prbssel_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="jesd204_0" PORT="gt_prbssel_out"/>
@@ -4219,7 +4598,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="2" FULLNAME="/modulator_0" HWVERSION="1.0" INSTANCE="modulator_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="modulator" VLNV="mig-trading.ru:atom:modulator:1.0">
+    <MODULE COREREVISION="4" FULLNAME="/modulator_0" HWVERSION="1.0" INSTANCE="modulator_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="modulator" VLNV="mig-trading.ru:atom:modulator:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="S00_AXI" NAME="S00_AXI_reg" RANGE="4096" USAGE="register"/>
@@ -4424,7 +4803,7 @@
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="NUM_SI" VALUE="1"/>
-        <PARAMETER NAME="NUM_MI" VALUE="8"/>
+        <PARAMETER NAME="NUM_MI" VALUE="9"/>
         <PARAMETER NAME="STRATEGY" VALUE="0"/>
         <PARAMETER NAME="ENABLE_ADVANCED_OPTIONS" VALUE="0"/>
         <PARAMETER NAME="ENABLE_PROTOCOL_CHECKERS" VALUE="0"/>
@@ -4827,6 +5206,26 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="M06_ARESETN" SIGIS="rst" SIGNAME="rst_ps8_0_96M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_ps8_0_96M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M07_ACLK" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M07_ARESETN" SIGIS="rst" SIGNAME="rst_ps8_0_96M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_ps8_0_96M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M08_ACLK" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M08_ARESETN" SIGIS="rst" SIGNAME="rst_ps8_0_96M_peripheral_aresetn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rst_ps8_0_96M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
@@ -5627,16 +6026,6 @@
             <CONNECTION INSTANCE="jesd204_0" PORT="s_axi_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M07_ACLK" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M07_ARESETN" SIGIS="rst" SIGNAME="rst_ps8_0_96M_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rst_ps8_0_96M" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="O" LEFT="39" NAME="M07_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="modulator_0_s00_axi_awaddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="modulator_0" PORT="s00_axi_awaddr"/>
@@ -5730,6 +6119,93 @@
         <PORT DIR="O" NAME="M07_AXI_rready" SIGIS="undef" SIGNAME="modulator_0_s00_axi_rready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="modulator_0" PORT="s00_axi_rready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="39" NAME="M08_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_jesd_s_axi_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_jesd" PORT="s_axi_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M08_AXI_awprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M08_AXI_awvalid" SIGIS="undef" SIGNAME="axi_gpio_jesd_s_axi_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_jesd" PORT="s_axi_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M08_AXI_awready" SIGIS="undef" SIGNAME="axi_gpio_jesd_s_axi_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_jesd" PORT="s_axi_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M08_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_jesd_s_axi_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_jesd" PORT="s_axi_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M08_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_jesd_s_axi_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_jesd" PORT="s_axi_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M08_AXI_wvalid" SIGIS="undef" SIGNAME="axi_gpio_jesd_s_axi_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_jesd" PORT="s_axi_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M08_AXI_wready" SIGIS="undef" SIGNAME="axi_gpio_jesd_s_axi_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_jesd" PORT="s_axi_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M08_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_jesd_s_axi_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_jesd" PORT="s_axi_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M08_AXI_bvalid" SIGIS="undef" SIGNAME="axi_gpio_jesd_s_axi_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_jesd" PORT="s_axi_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M08_AXI_bready" SIGIS="undef" SIGNAME="axi_gpio_jesd_s_axi_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_jesd" PORT="s_axi_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="39" NAME="M08_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_jesd_s_axi_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_jesd" PORT="s_axi_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M08_AXI_arprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M08_AXI_arvalid" SIGIS="undef" SIGNAME="axi_gpio_jesd_s_axi_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_jesd" PORT="s_axi_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M08_AXI_arready" SIGIS="undef" SIGNAME="axi_gpio_jesd_s_axi_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_jesd" PORT="s_axi_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="M08_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_jesd_s_axi_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_jesd" PORT="s_axi_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M08_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_jesd_s_axi_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_jesd" PORT="s_axi_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M08_AXI_rvalid" SIGIS="undef" SIGNAME="axi_gpio_jesd_s_axi_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_jesd" PORT="s_axi_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M08_AXI_rready" SIGIS="undef" SIGNAME="axi_gpio_jesd_s_axi_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_jesd" PORT="s_axi_rready"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -5961,6 +6437,29 @@
             <PORTMAP LOGICAL="RREADY" PHYSICAL="M07_AXI_rready"/>
           </PORTMAPS>
         </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="ps8_0_axi_periph_M08_AXI" DATAWIDTH="32" NAME="M08_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="AWADDR" PHYSICAL="M08_AXI_awaddr"/>
+            <PORTMAP LOGICAL="AWPROT" PHYSICAL="M08_AXI_awprot"/>
+            <PORTMAP LOGICAL="AWVALID" PHYSICAL="M08_AXI_awvalid"/>
+            <PORTMAP LOGICAL="AWREADY" PHYSICAL="M08_AXI_awready"/>
+            <PORTMAP LOGICAL="WDATA" PHYSICAL="M08_AXI_wdata"/>
+            <PORTMAP LOGICAL="WSTRB" PHYSICAL="M08_AXI_wstrb"/>
+            <PORTMAP LOGICAL="WVALID" PHYSICAL="M08_AXI_wvalid"/>
+            <PORTMAP LOGICAL="WREADY" PHYSICAL="M08_AXI_wready"/>
+            <PORTMAP LOGICAL="BRESP" PHYSICAL="M08_AXI_bresp"/>
+            <PORTMAP LOGICAL="BVALID" PHYSICAL="M08_AXI_bvalid"/>
+            <PORTMAP LOGICAL="BREADY" PHYSICAL="M08_AXI_bready"/>
+            <PORTMAP LOGICAL="ARADDR" PHYSICAL="M08_AXI_araddr"/>
+            <PORTMAP LOGICAL="ARPROT" PHYSICAL="M08_AXI_arprot"/>
+            <PORTMAP LOGICAL="ARVALID" PHYSICAL="M08_AXI_arvalid"/>
+            <PORTMAP LOGICAL="ARREADY" PHYSICAL="M08_AXI_arready"/>
+            <PORTMAP LOGICAL="RDATA" PHYSICAL="M08_AXI_rdata"/>
+            <PORTMAP LOGICAL="RRESP" PHYSICAL="M08_AXI_rresp"/>
+            <PORTMAP LOGICAL="RVALID" PHYSICAL="M08_AXI_rvalid"/>
+            <PORTMAP LOGICAL="RREADY" PHYSICAL="M08_AXI_rready"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
     <MODULE COREREVISION="13" FULLNAME="/rst_ps8_0_96M" HWVERSION="5.0" INSTANCE="rst_ps8_0_96M" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="proc_sys_reset" VLNV="xilinx.com:ip:proc_sys_reset:5.0">
@@ -5998,13 +6497,7 @@
         <PORT DIR="I" NAME="dcm_locked" SIGIS="undef"/>
         <PORT DIR="O" NAME="mb_reset" SIGIS="rst"/>
         <PORT DIR="O" LEFT="0" NAME="bus_struct_reset" RIGHT="0" SIGIS="rst"/>
-        <PORT DIR="O" LEFT="0" NAME="peripheral_reset" RIGHT="0" SIGIS="rst" SIGNAME="rst_ps8_0_96M_peripheral_reset">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd204_0" PORT="tx_reset"/>
-            <CONNECTION INSTANCE="jesd204_phy_0" PORT="tx_sys_reset"/>
-            <CONNECTION INSTANCE="jesd204_phy_0" PORT="rx_sys_reset"/>
-          </CONNECTIONS>
-        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="peripheral_reset" RIGHT="0" SIGIS="rst"/>
         <PORT DIR="O" LEFT="0" NAME="interconnect_aresetn" RIGHT="0" SIGIS="rst"/>
         <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" RIGHT="0" SIGIS="rst" SIGNAME="rst_ps8_0_96M_peripheral_aresetn">
           <CONNECTIONS>
@@ -6024,9 +6517,11 @@
             <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M05_ARESETN"/>
             <CONNECTION INSTANCE="jesd204_0" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M06_ARESETN"/>
-            <CONNECTION INSTANCE="modulator_0" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M07_ARESETN"/>
+            <CONNECTION INSTANCE="axi_gpio_jesd" PORT="s_axi_aresetn"/>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M08_ARESETN"/>
             <CONNECTION INSTANCE="modulator_0" PORT="reset_n"/>
+            <CONNECTION INSTANCE="modulator_0" PORT="s00_axi_aresetn"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -6044,7 +6539,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="400000000" DIR="I" LEFT="0" NAME="BUFG_GT_I" RIGHT="0" SIGIS="clk" SIGNAME="util_ds_buf_1_IBUF_DS_ODIV2">
+        <PORT CLKFREQUENCY="200000000" DIR="I" LEFT="0" NAME="BUFG_GT_I" RIGHT="0" SIGIS="clk" SIGNAME="util_ds_buf_1_IBUF_DS_ODIV2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="util_ds_buf_1" PORT="IBUF_DS_ODIV2"/>
           </CONNECTIONS>
@@ -6074,9 +6569,10 @@
             <CONNECTION INSTANCE="xlconstant_div1" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="400000000" DIR="O" LEFT="0" NAME="BUFG_GT_O" RIGHT="0" SIGIS="clk" SIGNAME="util_ds_buf_0_BUFG_GT_O">
+        <PORT CLKFREQUENCY="200000000" DIR="O" LEFT="0" NAME="BUFG_GT_O" RIGHT="0" SIGIS="clk" SIGNAME="util_ds_buf_0_BUFG_GT_O">
           <CONNECTIONS>
             <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_in1"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="jesd_clk_in_div"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -6094,22 +6590,22 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="400000000" DIR="I" LEFT="0" NAME="IBUF_DS_P" RIGHT="0" SIGIS="clk" SIGNAME="External_Ports_clk_jesd_p">
+        <PORT CLKFREQUENCY="200000000" DIR="I" LEFT="0" NAME="IBUF_DS_P" RIGHT="0" SIGIS="clk" SIGNAME="External_Ports_clk_jesd_p">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="clk_jesd_p"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="400000000" DIR="I" LEFT="0" NAME="IBUF_DS_N" RIGHT="0" SIGIS="clk" SIGNAME="External_Ports_clk_jesd_n">
+        <PORT CLKFREQUENCY="200000000" DIR="I" LEFT="0" NAME="IBUF_DS_N" RIGHT="0" SIGIS="clk" SIGNAME="External_Ports_clk_jesd_n">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="clk_jesd_n"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="400000000" DIR="O" LEFT="0" NAME="IBUF_OUT" RIGHT="0" SIGIS="clk" SIGNAME="util_ds_buf_1_IBUF_OUT">
+        <PORT CLKFREQUENCY="200000000" DIR="O" LEFT="0" NAME="IBUF_OUT" RIGHT="0" SIGIS="clk" SIGNAME="util_ds_buf_1_IBUF_OUT">
           <CONNECTIONS>
             <CONNECTION INSTANCE="jesd204_phy_0" PORT="qpll0_refclk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="400000000" DIR="O" LEFT="0" NAME="IBUF_DS_ODIV2" RIGHT="0" SIGIS="clk" SIGNAME="util_ds_buf_1_IBUF_DS_ODIV2">
+        <PORT CLKFREQUENCY="200000000" DIR="O" LEFT="0" NAME="IBUF_DS_ODIV2" RIGHT="0" SIGIS="clk" SIGNAME="util_ds_buf_1_IBUF_DS_ODIV2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="util_ds_buf_0" PORT="BUFG_GT_I"/>
           </CONNECTIONS>
@@ -6150,7 +6646,7 @@
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="O" LEFT="0" NAME="IBUF_OUT" RIGHT="0" SIGIS="clk" SIGNAME="util_ds_buf_sync_IBUF_OUT">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="jesd204_0" PORT="tx_sync"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="dac_sync"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -6253,6 +6749,56 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="jesd204_phy_0" PORT="rxencommaalign"/>
             <CONNECTION INSTANCE="util_ds_buf_0" PORT="BUFG_GT_CLR"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/xlslice_jesd_reset" HWVERSION="1.0" INSTANCE="xlslice_jesd_reset" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DIN_WIDTH" VALUE="2"/>
+        <PARAMETER NAME="DIN_FROM" VALUE="0"/>
+        <PARAMETER NAME="DIN_TO" VALUE="0"/>
+        <PARAMETER NAME="Component_Name" VALUE="system_xlslice_0_0"/>
+        <PARAMETER NAME="DOUT_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="1" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_jesd_gpio_io_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_jesd" PORT="gpio_io_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_jesd_reset_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="jesd204_0" PORT="tx_reset"/>
+            <CONNECTION INSTANCE="jesd204_phy_0" PORT="tx_sys_reset"/>
+            <CONNECTION INSTANCE="jesd204_phy_0" PORT="rx_sys_reset"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/xlslice_jesd_sync" HWVERSION="1.0" INSTANCE="xlslice_jesd_sync" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DIN_WIDTH" VALUE="2"/>
+        <PARAMETER NAME="DIN_FROM" VALUE="1"/>
+        <PARAMETER NAME="DIN_TO" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="system_xlslice_jesd_reset_0"/>
+        <PARAMETER NAME="DOUT_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="1" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_jesd_gpio_io_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_gpio_jesd" PORT="gpio_io_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_jesd_sync_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="jesd204_0" PORT="tx_sync"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -8200,8 +8746,10 @@
             <CONNECTION INSTANCE="jesd204_0" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M06_ACLK"/>
             <CONNECTION INSTANCE="jesd204_phy_0" PORT="drpclk"/>
-            <CONNECTION INSTANCE="modulator_0" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M07_ACLK"/>
+            <CONNECTION INSTANCE="axi_gpio_jesd" PORT="s_axi_aclk"/>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M08_ACLK"/>
+            <CONNECTION INSTANCE="modulator_0" PORT="s00_axi_aclk"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -8290,6 +8838,7 @@
         <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_BASEADDR" BASEVALUE="0x80005000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x80005FFF" INSTANCE="axi_uartlite_control" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_HPM0_LPD" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S_AXI"/>
         <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_BASEADDR" BASEVALUE="0x80006000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x80006FFF" INSTANCE="jesd204_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_HPM0_LPD" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="s_axi"/>
         <MEMRANGE ADDRESSBLOCK="S00_AXI_reg" BASENAME="C_S00_AXI_BASEADDR" BASEVALUE="0x80007000" HIGHNAME="C_S00_AXI_HIGHADDR" HIGHVALUE="0x80007FFF" INSTANCE="modulator_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_HPM0_LPD" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S00_AXI"/>
+        <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_BASEADDR" BASEVALUE="0x80008000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x80008FFF" INSTANCE="axi_gpio_jesd" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_HPM0_LPD" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S_AXI"/>
       </MEMORYMAP>
       <PERIPHERALS>
         <PERIPHERAL INSTANCE="axi_gpio_led"/>
@@ -8300,6 +8849,7 @@
         <PERIPHERAL INSTANCE="axi_uartlite_control"/>
         <PERIPHERAL INSTANCE="jesd204_0"/>
         <PERIPHERAL INSTANCE="modulator_0"/>
+        <PERIPHERAL INSTANCE="axi_gpio_jesd"/>
       </PERIPHERALS>
     </MODULE>
   </MODULES>

@@ -7,6 +7,7 @@
 
 #include "std_protocol_actions.h"
 #include "dac9173.h"
+#include "system.h"
 
 /*******************************************
  * Get ID
@@ -216,10 +217,19 @@ void std_action_getrfchf(uint16_t *freq) {
  * Set frequency
  ******************************************/
 void std_action_setfreq(uint16_t sig_id, uint64_t freq) {
-    if (sig_id == 0) {
-        DAC9173_SetFrequency(DAC9173_DAC0, freq);
-    } else {
-        DAC9173_SetFrequency(DAC9173_DAC1, freq);
+    switch (sig_id) {
+        case 0: {
+//            DAC9173_SetFrequency(DAC9173_DAC0, freq);
+        } break;
+
+        case 1: {
+//            DAC9173_SetFrequency(DAC9173_DAC1, freq);
+        } break;
+
+        case 2: {
+            modulator->lfm_rate_h = (freq >> 32) & 0xffffffff;
+            modulator->lfm_rate_l = (freq >>  0) & 0xffffffff;
+        } break;
     }
 }
 
@@ -256,6 +266,7 @@ void std_action_modview(uint16_t sig_id, uint16_t view) {
  * Set modulation form
  ******************************************/
 void std_action_modform(uint16_t sig_id, uint16_t form) {
+    modulator->config.lfm_on = form;
 }
 
 /*******************************************
@@ -274,6 +285,7 @@ void std_action_sigdelay(uint16_t sig_id, uint32_t delay) {
  * Set signal width for pulse modulation
  ******************************************/
 void std_action_sigwidthpls(uint16_t sig_id, uint32_t width) {
+    modulator->lfm_time = width;
 }
 
 /*******************************************

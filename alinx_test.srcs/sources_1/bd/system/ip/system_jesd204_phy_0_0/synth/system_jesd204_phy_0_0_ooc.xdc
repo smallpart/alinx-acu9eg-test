@@ -10,11 +10,11 @@
 # Set DRP Clock to 100.0MHz
 create_clock -period 10.000 [get_ports drpclk]
 
-# Set tx_coreclk to 168.01MHz
-create_clock -period 5.952 [get_ports tx_core_clk]
-# Set rx_coreclk to 168.01MHz
-create_clock -period 5.952 [get_ports rx_core_clk]
-# Set QPLL0 Reference Clock to 168.0MHz
-create_clock -period 5.952  [get_ports qpll0_refclk]
+# Set tx_coreclk to 200.00MHz
+create_clock -period 5.000 [get_ports tx_core_clk]
+# Set rx_coreclk to 200.00MHz
+create_clock -period 5.000 [get_ports rx_core_clk]
+# Set QPLL0 Reference Clock to 200.0MHz
+create_clock -period 5.000  [get_ports qpll0_refclk]
 
 

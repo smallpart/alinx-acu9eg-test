@@ -38,6 +38,7 @@ XGpio    gpio_led_pl;
 XGpio    gpio_spi_en;
 XGpio    gpio_dac_txen;
 XGpio    gpio_fmc_status;
+XGpio    gpio_jesd;
 XGpioPs  gpio_ps;
 
 /*******************************************
@@ -59,6 +60,9 @@ uint16_t GPIO_Init(void) {
 
     XGpio_Initialize      (&gpio_fmc_status, XPAR_AXI_GPIO_FMC_STATUS_DEVICE_ID);
     XGpio_SetDataDirection(&gpio_fmc_status, GPIO_DIRECTION_IN);
+
+    XGpio_Initialize      (&gpio_jesd,       XPAR_AXI_GPIO_JESD_DEVICE_ID);
+    XGpio_SetDataDirection(&gpio_jesd,       GPIO_DIRECTION_OUT);
 
     /* Initialization PS GPIO */
     gpio_config = XGpioPs_LookupConfig(XPAR_PSU_GPIO_0_DEVICE_ID);
@@ -109,6 +113,19 @@ uint32_t GPIO_GetFmcStatus(void) {
     return XGpio_DiscreteRead(&gpio_fmc_status);
 }
 
+/*******************************************
+ * Set JESD Reset
+ ******************************************/
+void GPIO_SetJesdReset(uint32_t value) {
+    XGpio_DiscreteWrite(&gpio_jesd, value);
+}
+
+/*******************************************
+ * Set JESD Sync
+ ******************************************/
+void GPIO_SetJesdSync(uint32_t value) {
+    XGpio_DiscreteWrite(&gpio_jesd, (value << 1));
+}
 
 
 /*******************************************************************************

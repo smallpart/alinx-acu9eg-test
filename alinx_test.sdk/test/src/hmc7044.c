@@ -173,7 +173,7 @@ void HMC7044_Init(void) {
     /* Channels */
     HMC7044_ChannelSetParameters(HMC7044_CHANNEL_0,  false, 2400);
     HMC7044_ChannelSetParameters(HMC7044_CHANNEL_1,  false, 2400);
-    HMC7044_ChannelSetParameters(HMC7044_CHANNEL_2,  true,     4); /* Clk_for_dac2 = 600 MHz */
+    HMC7044_ChannelSetParameters(HMC7044_CHANNEL_2,  true,     8); /* Clk_for_dac2 = 300 MHz */
     HMC7044_ChannelSetParameters(HMC7044_CHANNEL_3,  true,   192); /* Sysref_dac  = 12.5 MHz */
     HMC7044_ChannelSetParameters(HMC7044_CHANNEL_4,  false, 2400);
     HMC7044_ChannelSetParameters(HMC7044_CHANNEL_5,  false, 2400);
@@ -183,7 +183,8 @@ void HMC7044_Init(void) {
     HMC7044_ChannelSetParameters(HMC7044_CHANNEL_9,  false, 2400);
     HMC7044_ChannelSetParameters(HMC7044_CHANNEL_10, false, 2400);
     HMC7044_ChannelSetParameters(HMC7044_CHANNEL_11, false, 2400);
-    HMC7044_ChannelSetParameters(HMC7044_CHANNEL_12, true,     6); /* Clk_for_dac1 = 400 MHz */
+    HMC7044_ChannelSetParameters(HMC7044_CHANNEL_12, true,    12); /* Clk_for_dac1 = 200 MHz */
+//    HMC7044_ChannelSetParameters(HMC7044_CHANNEL_12, true,    18); /* Clk_for_dac1 = 168 MHz, clk_ref = 3024 MHz */
     HMC7044_ChannelSetParameters(HMC7044_CHANNEL_13, true,   192); /* Sysref_fpga = 12.5 MHz */
 }
 

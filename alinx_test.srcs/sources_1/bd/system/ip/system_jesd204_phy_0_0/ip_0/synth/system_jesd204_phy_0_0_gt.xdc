@@ -50,63 +50,63 @@
 # UltraScale FPGAs Transceivers Wizard IP core-level XDC file
 # ----------------------------------------------------------------------------------------------------------------------
 
-# Commands for enabled transceiver GTHE4_CHANNEL_X0Y4
+# Commands for enabled transceiver GTHE4_CHANNEL_X0Y12
 # ----------------------------------------------------------------------------------------------------------------------
 
 # Channel primitive location constraint
-set_property LOC GTHE4_CHANNEL_X0Y4 [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[1].*gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST}]
+set_property LOC GTHE4_CHANNEL_X0Y12 [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[3].*gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST}]
 
 # Channel primitive serial data pin location constraints
 # (Provided as comments for your reference. The channel primitive location constraint is sufficient.)
-#set_property package_pin T34 [get_ports gthrxn_in[0]]
-#set_property package_pin T33 [get_ports gthrxp_in[0]]
-#set_property package_pin T30 [get_ports gthtxn_out[0]]
-#set_property package_pin T29 [get_ports gthtxp_out[0]]
+#set_property package_pin E32 [get_ports gthrxn_in[0]]
+#set_property package_pin E31 [get_ports gthrxp_in[0]]
+#set_property package_pin F30 [get_ports gthtxn_out[0]]
+#set_property package_pin F29 [get_ports gthtxp_out[0]]
 set_false_path -through [get_pins -filter {REF_PIN_NAME=~*Q} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_pwrgood_delay_inst[0].delay_powergood_inst/gen_powergood_delay.pwr_on_fsm*}]] -quiet
 set_case_analysis 1     [get_pins -filter {REF_PIN_NAME=~*Q} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_pwrgood_delay_inst[0].delay_powergood_inst/gen_powergood_delay.pwr_on_fsm*}]] -quiet
 
-# Commands for enabled transceiver GTHE4_CHANNEL_X0Y5
+# Commands for enabled transceiver GTHE4_CHANNEL_X0Y13
 # ----------------------------------------------------------------------------------------------------------------------
 
 # Channel primitive location constraint
-set_property LOC GTHE4_CHANNEL_X0Y5 [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[1].*gen_gthe4_channel_inst[1].GTHE4_CHANNEL_PRIM_INST}]
+set_property LOC GTHE4_CHANNEL_X0Y13 [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[3].*gen_gthe4_channel_inst[1].GTHE4_CHANNEL_PRIM_INST}]
 
 # Channel primitive serial data pin location constraints
 # (Provided as comments for your reference. The channel primitive location constraint is sufficient.)
-#set_property package_pin P34 [get_ports gthrxn_in[1]]
-#set_property package_pin P33 [get_ports gthrxp_in[1]]
-#set_property package_pin R32 [get_ports gthtxn_out[1]]
-#set_property package_pin R31 [get_ports gthtxp_out[1]]
+#set_property package_pin D34 [get_ports gthrxn_in[1]]
+#set_property package_pin D33 [get_ports gthrxp_in[1]]
+#set_property package_pin D30 [get_ports gthtxn_out[1]]
+#set_property package_pin D29 [get_ports gthtxp_out[1]]
 set_false_path -through [get_pins -filter {REF_PIN_NAME=~*Q} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_pwrgood_delay_inst[1].delay_powergood_inst/gen_powergood_delay.pwr_on_fsm*}]] -quiet
 set_case_analysis 1     [get_pins -filter {REF_PIN_NAME=~*Q} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_pwrgood_delay_inst[1].delay_powergood_inst/gen_powergood_delay.pwr_on_fsm*}]] -quiet
 
-# Commands for enabled transceiver GTHE4_CHANNEL_X0Y6
+# Commands for enabled transceiver GTHE4_CHANNEL_X0Y14
 # ----------------------------------------------------------------------------------------------------------------------
 
 # Channel primitive location constraint
-set_property LOC GTHE4_CHANNEL_X0Y6 [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[1].*gen_gthe4_channel_inst[2].GTHE4_CHANNEL_PRIM_INST}]
+set_property LOC GTHE4_CHANNEL_X0Y14 [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[3].*gen_gthe4_channel_inst[2].GTHE4_CHANNEL_PRIM_INST}]
 
 # Channel primitive serial data pin location constraints
 # (Provided as comments for your reference. The channel primitive location constraint is sufficient.)
-#set_property package_pin N32 [get_ports gthrxn_in[2]]
-#set_property package_pin N31 [get_ports gthrxp_in[2]]
-#set_property package_pin P30 [get_ports gthtxn_out[2]]
-#set_property package_pin P29 [get_ports gthtxp_out[2]]
+#set_property package_pin C32 [get_ports gthrxn_in[2]]
+#set_property package_pin C31 [get_ports gthrxp_in[2]]
+#set_property package_pin B30 [get_ports gthtxn_out[2]]
+#set_property package_pin B29 [get_ports gthtxp_out[2]]
 set_false_path -through [get_pins -filter {REF_PIN_NAME=~*Q} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_pwrgood_delay_inst[2].delay_powergood_inst/gen_powergood_delay.pwr_on_fsm*}]] -quiet
 set_case_analysis 1     [get_pins -filter {REF_PIN_NAME=~*Q} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_pwrgood_delay_inst[2].delay_powergood_inst/gen_powergood_delay.pwr_on_fsm*}]] -quiet
 
-# Commands for enabled transceiver GTHE4_CHANNEL_X0Y7
+# Commands for enabled transceiver GTHE4_CHANNEL_X0Y15
 # ----------------------------------------------------------------------------------------------------------------------
 
 # Channel primitive location constraint
-set_property LOC GTHE4_CHANNEL_X0Y7 [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[1].*gen_gthe4_channel_inst[3].GTHE4_CHANNEL_PRIM_INST}]
+set_property LOC GTHE4_CHANNEL_X0Y15 [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[3].*gen_gthe4_channel_inst[3].GTHE4_CHANNEL_PRIM_INST}]
 
 # Channel primitive serial data pin location constraints
 # (Provided as comments for your reference. The channel primitive location constraint is sufficient.)
-#set_property package_pin M34 [get_ports gthrxn_in[3]]
-#set_property package_pin M33 [get_ports gthrxp_in[3]]
-#set_property package_pin M30 [get_ports gthtxn_out[3]]
-#set_property package_pin M29 [get_ports gthtxp_out[3]]
+#set_property package_pin B34 [get_ports gthrxn_in[3]]
+#set_property package_pin B33 [get_ports gthrxp_in[3]]
+#set_property package_pin A32 [get_ports gthtxn_out[3]]
+#set_property package_pin A31 [get_ports gthtxp_out[3]]
 set_false_path -through [get_pins -filter {REF_PIN_NAME=~*Q} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_pwrgood_delay_inst[3].delay_powergood_inst/gen_powergood_delay.pwr_on_fsm*}]] -quiet
 set_case_analysis 1     [get_pins -filter {REF_PIN_NAME=~*Q} -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_pwrgood_delay_inst[3].delay_powergood_inst/gen_powergood_delay.pwr_on_fsm*}]] -quiet
 

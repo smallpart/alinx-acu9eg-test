@@ -38,7 +38,7 @@ set_property ip_repo_paths {
 update_ip_catalog
 set_property ip_output_repo d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_ip -quiet d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_modulator_0_0/system_modulator_0_0.xci
+read_ip -quiet D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_modulator_0_0/system_modulator_0_0.xci
 set_property used_in_implementation false [get_files -all d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/edit_modulator_v1_0.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -94,32 +94,32 @@ write_checkpoint -force -noxdef system_modulator_0_0.dcp
 create_report "system_modulator_0_0_synth_1_synth_report_utilization_0" "report_utilization -file system_modulator_0_0_utilization_synth.rpt -pb system_modulator_0_0_utilization_synth.pb"
 
 if { [catch {
-  file copy -force D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/system_modulator_0_0_synth_1/system_modulator_0_0.dcp d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_modulator_0_0/system_modulator_0_0.dcp
+  file copy -force D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/system_modulator_0_0_synth_1/system_modulator_0_0.dcp D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_modulator_0_0/system_modulator_0_0.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_modulator_0_0/system_modulator_0_0_stub.v
+  write_verilog -force -mode synth_stub D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_modulator_0_0/system_modulator_0_0_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_modulator_0_0/system_modulator_0_0_stub.vhdl
+  write_vhdl -force -mode synth_stub D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_modulator_0_0/system_modulator_0_0_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_modulator_0_0/system_modulator_0_0_sim_netlist.v
+  write_verilog -force -mode funcsim D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_modulator_0_0/system_modulator_0_0_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_modulator_0_0/system_modulator_0_0_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_modulator_0_0/system_modulator_0_0_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -129,32 +129,32 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/system_modulator_0_0_synth_1/system_modulator_0_0.dcp d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_modulator_0_0/system_modulator_0_0.dcp
+  file copy -force D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/system_modulator_0_0_synth_1/system_modulator_0_0.dcp D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_modulator_0_0/system_modulator_0_0.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/system_modulator_0_0_synth_1/system_modulator_0_0_stub.v d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_modulator_0_0/system_modulator_0_0_stub.v
+  file rename -force D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/system_modulator_0_0_synth_1/system_modulator_0_0_stub.v D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_modulator_0_0/system_modulator_0_0_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/system_modulator_0_0_synth_1/system_modulator_0_0_stub.vhdl d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_modulator_0_0/system_modulator_0_0_stub.vhdl
+  file rename -force D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/system_modulator_0_0_synth_1/system_modulator_0_0_stub.vhdl D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_modulator_0_0/system_modulator_0_0_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/system_modulator_0_0_synth_1/system_modulator_0_0_sim_netlist.v d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_modulator_0_0/system_modulator_0_0_sim_netlist.v
+  file rename -force D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/system_modulator_0_0_synth_1/system_modulator_0_0_sim_netlist.v D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_modulator_0_0/system_modulator_0_0_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/system_modulator_0_0_synth_1/system_modulator_0_0_sim_netlist.vhdl d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_modulator_0_0/system_modulator_0_0_sim_netlist.vhdl
+  file rename -force D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/system_modulator_0_0_synth_1/system_modulator_0_0_sim_netlist.vhdl D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_modulator_0_0/system_modulator_0_0_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -163,13 +163,13 @@ if { [catch {
 
 if {[file isdir D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.ip_user_files/ip/system_modulator_0_0]} {
   catch { 
-    file copy -force d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_modulator_0_0/system_modulator_0_0_stub.v D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.ip_user_files/ip/system_modulator_0_0
+    file copy -force D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_modulator_0_0/system_modulator_0_0_stub.v D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.ip_user_files/ip/system_modulator_0_0
   }
 }
 
 if {[file isdir D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.ip_user_files/ip/system_modulator_0_0]} {
   catch { 
-    file copy -force d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_modulator_0_0/system_modulator_0_0_stub.vhdl D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.ip_user_files/ip/system_modulator_0_0
+    file copy -force D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_modulator_0_0/system_modulator_0_0_stub.vhdl D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.ip_user_files/ip/system_modulator_0_0
   }
 }
 file delete __synthesis_is_running__

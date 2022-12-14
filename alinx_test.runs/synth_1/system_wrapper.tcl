@@ -17,8 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param chipscope.maxJobs 4
-set_msg_config -id {HDL-1065} -limit 10000
 create_project -in_memory -part xczu9eg-ffvb1156-2-i
 
 set_param project.singleFileAddWarning.threshold 0
@@ -85,6 +83,9 @@ set_property used_in_implementation false [get_files -all d:/atom/program/mwsyst
 set_property used_in_implementation false [get_files -all d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_util_ds_buf_sysref_0/system_util_ds_buf_sysref_0_board.xdc]
 set_property used_in_implementation false [get_files -all d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_util_ds_buf_sysref_0/system_util_ds_buf_sysref_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/edit_modulator_v1_0.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_axi_gpio_0_4/system_axi_gpio_0_4_board.xdc]
+set_property used_in_implementation false [get_files -all d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_axi_gpio_0_4/system_axi_gpio_0_4_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_axi_gpio_0_4/system_axi_gpio_0_4.xdc]
 set_property used_in_implementation false [get_files -all d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/system_ooc.xdc]
 

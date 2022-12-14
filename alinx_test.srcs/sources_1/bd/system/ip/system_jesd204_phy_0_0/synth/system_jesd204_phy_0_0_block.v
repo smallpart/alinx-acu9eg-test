@@ -677,8 +677,8 @@ module system_jesd204_phy_0_0_block (
    .P_USE_CPLL_CAL            (0),
    .P_TX_PLL_TYPE             (0),
    .P_RX_PLL_TYPE             (0),
-   .P_RX_LINE_RATE            (6.72),
-   .P_CDR_TIMEOUT_FREERUN_CYC ((37000 * 100.0) / 6.72)
+   .P_RX_LINE_RATE            (8.0),
+   .P_CDR_TIMEOUT_FREERUN_CYC ((37000 * 100.0) / 8.0)
   ) gtwiz_reset_block_i (
 
     .gtwiz_reset_clk_freerun_in          (drpclk),

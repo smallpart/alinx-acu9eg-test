@@ -30,7 +30,8 @@ union __mod_config_u {
     uint32_t all;
     struct {
         uint32_t lfm_on   : 1;
-        uint32_t reserve  : 31;
+        uint32_t debug_on : 1;
+        uint32_t reserve  : 30;
     };
 };
 
@@ -42,7 +43,16 @@ typedef struct {
     uint32_t             lfm_time;
     uint32_t             lfm_start_freq_l;
     uint32_t             lfm_start_freq_h;
+    uint32_t             jesd_data_0;
+    uint32_t             jesd_data_1;
+    uint32_t             jesd_data_2;
+    uint32_t             jesd_data_3;
 } modulator_t;
+
+/*******************************************
+ * Public global variables
+ ******************************************/
+extern modulator_t *modulator;
 
 #endif /* SRC_SYSTEM_H_ */
 

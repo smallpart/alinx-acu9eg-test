@@ -2,23 +2,28 @@
 # Vivado v2019.1.3 (64-bit)
 # SW Build 2644227 on Wed Sep  4 09:45:24 MDT 2019
 # IP Build 2633630 on Wed Sep  4 12:30:14 MDT 2019
-# Start of session at: Wed Oct 19 11:31:04 2022
-# Process ID: 7756
+# Start of session at: Wed Dec 14 18:12:13 2022
+# Process ID: 7772
 # Current directory: D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/system_jesd204_phy_0_0_synth_1
 # Command line: vivado.exe -log system_jesd204_phy_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_jesd204_phy_0_0.tcl
 # Log file: D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/system_jesd204_phy_0_0_synth_1/system_jesd204_phy_0_0.vds
 # Journal file: D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/system_jesd204_phy_0_0_synth_1\vivado.jou
 #-----------------------------------------------------------
 source system_jesd204_phy_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/modulator_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
 Command: synth_design -top system_jesd204_phy_0_0 -part xczu9eg-ffvb1156-2-i -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xczu9eg'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu9eg'
 INFO: [Device 21-403] Loading part xczu9eg-ffvb1156-2-i
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 11604 
+INFO: Helper process launched with PID 7968 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1322.801 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1322.496 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'system_jesd204_phy_0_0' [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'system_jesd204_phy_0_0_support' [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/synth/system_jesd204_phy_0_0_support.v:52]
@@ -27,7 +32,7 @@ INFO: [Synth 8-6157] synthesizing module 'system_jesd204_phy_0_0_block' [d:/atom
 	Parameter rx_pll_sel bound to: 1 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'system_jesd204_phy_0_0_gt' [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/ip_0/synth/system_jesd204_phy_0_0_gt.v:62]
 INFO: [Synth 8-6157] synthesizing module 'system_jesd204_phy_0_0_gt_gtwizard_top' [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/ip_0/synth/system_jesd204_phy_0_0_gt_gtwizard_top.v:175]
-	Parameter C_CHANNEL_ENABLE bound to: 192'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011110000 
+	Parameter C_CHANNEL_ENABLE bound to: 192'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111000000000000 
 	Parameter C_PCIE_ENABLE bound to: 0 - type: integer 
 	Parameter C_PCIE_CORECLK_FREQ bound to: 250 - type: integer 
 	Parameter C_COMMON_SCALING_FACTOR bound to: 1 - type: integer 
@@ -73,14 +78,14 @@ INFO: [Synth 8-6157] synthesizing module 'system_jesd204_phy_0_0_gt_gtwizard_top
 	Parameter C_RX_DATA_DECODING bound to: 1 - type: integer 
 	Parameter C_RX_ENABLE bound to: 1 - type: integer 
 	Parameter C_RX_INT_DATA_WIDTH bound to: 40 - type: integer 
-	Parameter C_RX_LINE_RATE bound to: 6.720000 - type: float 
-	Parameter C_RX_MASTER_CHANNEL_IDX bound to: 4 - type: integer 
+	Parameter C_RX_LINE_RATE bound to: 8.000000 - type: float 
+	Parameter C_RX_MASTER_CHANNEL_IDX bound to: 12 - type: integer 
 	Parameter C_RX_OUTCLK_BUFG_GT_DIV bound to: 1 - type: integer 
-	Parameter C_RX_OUTCLK_FREQUENCY bound to: 168.000000 - type: float 
+	Parameter C_RX_OUTCLK_FREQUENCY bound to: 200.000000 - type: float 
 	Parameter C_RX_OUTCLK_SOURCE bound to: 1 - type: integer 
 	Parameter C_RX_PLL_TYPE bound to: 0 - type: integer 
 	Parameter C_RX_RECCLK_OUTPUT bound to: 192'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter C_RX_REFCLK_FREQUENCY bound to: 168.000000 - type: float 
+	Parameter C_RX_REFCLK_FREQUENCY bound to: 200.000000 - type: float 
 	Parameter C_RX_SLIDE_MODE bound to: 0 - type: integer 
 	Parameter C_RX_USER_CLOCKING_CONTENTS bound to: 0 - type: integer 
 	Parameter C_RX_USER_CLOCKING_INSTANCE_CTRL bound to: 0 - type: integer 
@@ -88,8 +93,8 @@ INFO: [Synth 8-6157] synthesizing module 'system_jesd204_phy_0_0_gt_gtwizard_top
 	Parameter C_RX_USER_CLOCKING_RATIO_FUSRCLK_FUSRCLK2 bound to: 1 - type: integer 
 	Parameter C_RX_USER_CLOCKING_SOURCE bound to: 0 - type: integer 
 	Parameter C_RX_USER_DATA_WIDTH bound to: 32 - type: integer 
-	Parameter C_RX_USRCLK_FREQUENCY bound to: 168.000000 - type: float 
-	Parameter C_RX_USRCLK2_FREQUENCY bound to: 168.000000 - type: float 
+	Parameter C_RX_USRCLK_FREQUENCY bound to: 200.000000 - type: float 
+	Parameter C_RX_USRCLK2_FREQUENCY bound to: 200.000000 - type: float 
 	Parameter C_SECONDARY_QPLL_ENABLE bound to: 1 - type: integer 
 	Parameter C_SECONDARY_QPLL_REFCLK_FREQUENCY bound to: 64.453125 - type: float 
 	Parameter C_TOTAL_NUM_CHANNELS bound to: 4 - type: integer 
@@ -97,30 +102,30 @@ INFO: [Synth 8-6157] synthesizing module 'system_jesd204_phy_0_0_gt_gtwizard_top
 	Parameter C_TOTAL_NUM_COMMONS_EXAMPLE bound to: 1 - type: integer 
 	Parameter C_TXPROGDIV_FREQ_ENABLE bound to: 0 - type: integer 
 	Parameter C_TXPROGDIV_FREQ_SOURCE bound to: 0 - type: integer 
-	Parameter C_TXPROGDIV_FREQ_VAL bound to: 168.000000 - type: float 
+	Parameter C_TXPROGDIV_FREQ_VAL bound to: 200.000000 - type: float 
 	Parameter C_TX_BUFFBYPASS_MODE bound to: 0 - type: integer 
 	Parameter C_TX_BUFFER_BYPASS_INSTANCE_CTRL bound to: 0 - type: integer 
 	Parameter C_TX_BUFFER_MODE bound to: 1 - type: integer 
 	Parameter C_TX_DATA_ENCODING bound to: 1 - type: integer 
 	Parameter C_TX_ENABLE bound to: 1 - type: integer 
 	Parameter C_TX_INT_DATA_WIDTH bound to: 40 - type: integer 
-	Parameter C_TX_LINE_RATE bound to: 6.720000 - type: float 
-	Parameter C_TX_MASTER_CHANNEL_IDX bound to: 4 - type: integer 
+	Parameter C_TX_LINE_RATE bound to: 8.000000 - type: float 
+	Parameter C_TX_MASTER_CHANNEL_IDX bound to: 12 - type: integer 
 	Parameter C_TX_OUTCLK_BUFG_GT_DIV bound to: 1 - type: integer 
-	Parameter C_TX_OUTCLK_FREQUENCY bound to: 168.000000 - type: float 
+	Parameter C_TX_OUTCLK_FREQUENCY bound to: 200.000000 - type: float 
 	Parameter C_TX_OUTCLK_SOURCE bound to: 1 - type: integer 
 	Parameter C_TX_PLL_TYPE bound to: 0 - type: integer 
-	Parameter C_TX_REFCLK_FREQUENCY bound to: 168.000000 - type: float 
+	Parameter C_TX_REFCLK_FREQUENCY bound to: 200.000000 - type: float 
 	Parameter C_TX_USER_CLOCKING_CONTENTS bound to: 0 - type: integer 
 	Parameter C_TX_USER_CLOCKING_INSTANCE_CTRL bound to: 0 - type: integer 
 	Parameter C_TX_USER_CLOCKING_RATIO_FSRC_FUSRCLK bound to: 1 - type: integer 
 	Parameter C_TX_USER_CLOCKING_RATIO_FUSRCLK_FUSRCLK2 bound to: 1 - type: integer 
 	Parameter C_TX_USER_CLOCKING_SOURCE bound to: 0 - type: integer 
 	Parameter C_TX_USER_DATA_WIDTH bound to: 32 - type: integer 
-	Parameter C_TX_USRCLK_FREQUENCY bound to: 168.000000 - type: float 
-	Parameter C_TX_USRCLK2_FREQUENCY bound to: 168.000000 - type: float 
+	Parameter C_TX_USRCLK_FREQUENCY bound to: 200.000000 - type: float 
+	Parameter C_TX_USRCLK2_FREQUENCY bound to: 200.000000 - type: float 
 INFO: [Synth 8-6157] synthesizing module 'system_jesd204_phy_0_0_gt_gtwizard_gthe4' [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/ip_0/synth/system_jesd204_phy_0_0_gt_gtwizard_gthe4.v:143]
-	Parameter C_CHANNEL_ENABLE bound to: 192'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011110000 
+	Parameter C_CHANNEL_ENABLE bound to: 192'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111000000000000 
 	Parameter C_PCIE_ENABLE bound to: 0 - type: integer 
 	Parameter C_PCIE_CORECLK_FREQ bound to: 250 - type: integer 
 	Parameter C_COMMON_SCALING_FACTOR bound to: 1 - type: integer 
@@ -144,8 +149,8 @@ INFO: [Synth 8-6157] synthesizing module 'system_jesd204_phy_0_0_gt_gtwizard_gth
 	Parameter C_RX_DATA_DECODING bound to: 1 - type: integer 
 	Parameter C_RX_ENABLE bound to: 1 - type: integer 
 	Parameter C_RX_INT_DATA_WIDTH bound to: 40 - type: integer 
-	Parameter C_RX_LINE_RATE bound to: 6.720000 - type: float 
-	Parameter C_RX_MASTER_CHANNEL_IDX bound to: 4 - type: integer 
+	Parameter C_RX_LINE_RATE bound to: 8.000000 - type: float 
+	Parameter C_RX_MASTER_CHANNEL_IDX bound to: 12 - type: integer 
 	Parameter C_RX_OUTCLK_BUFG_GT_DIV bound to: 1 - type: integer 
 	Parameter C_RX_PLL_TYPE bound to: 0 - type: integer 
 	Parameter C_RX_USER_CLOCKING_CONTENTS bound to: 0 - type: integer 
@@ -163,7 +168,7 @@ INFO: [Synth 8-6157] synthesizing module 'system_jesd204_phy_0_0_gt_gtwizard_gth
 	Parameter C_TX_DATA_ENCODING bound to: 1 - type: integer 
 	Parameter C_TX_ENABLE bound to: 1 - type: integer 
 	Parameter C_TX_INT_DATA_WIDTH bound to: 40 - type: integer 
-	Parameter C_TX_MASTER_CHANNEL_IDX bound to: 4 - type: integer 
+	Parameter C_TX_MASTER_CHANNEL_IDX bound to: 12 - type: integer 
 	Parameter C_TX_OUTCLK_BUFG_GT_DIV bound to: 1 - type: integer 
 	Parameter C_TX_PLL_TYPE bound to: 0 - type: integer 
 	Parameter C_TX_USER_CLOCKING_CONTENTS bound to: 0 - type: integer 
@@ -171,14 +176,14 @@ INFO: [Synth 8-6157] synthesizing module 'system_jesd204_phy_0_0_gt_gtwizard_gth
 	Parameter C_TX_USER_CLOCKING_RATIO_FUSRCLK_FUSRCLK2 bound to: 1 - type: integer 
 	Parameter C_TX_USER_CLOCKING_SOURCE bound to: 0 - type: integer 
 	Parameter C_TX_USER_DATA_WIDTH bound to: 32 - type: integer 
-	Parameter P_COMMON_ENABLE bound to: 48'b000000000000000000000000000000000000000000000010 
+	Parameter P_COMMON_ENABLE bound to: 48'b000000000000000000000000000000000000000000001000 
 	Parameter P_TX_MASTER_CH_PACKED_IDX bound to: 0 - type: integer 
 	Parameter P_RX_MASTER_CH_PACKED_IDX bound to: 0 - type: integer 
 	Parameter P_CPLL_CAL_FREQ_COUNT_WINDOW bound to: 16'b0011111010000000 
 	Parameter P_CPLL_CAL_TXOUTCLK_PERIOD bound to: 18'b000001010000100100 
 	Parameter P_CPLL_CAL_WAIT_DEASSERT_CPLLPD bound to: 16'b0000000100000000 
 	Parameter P_CPLL_CAL_TXOUTCLK_PERIOD_DIV100 bound to: 18'b000000000000110100 
-	Parameter P_CDR_TIMEOUT_FREERUN_CYC bound to: 26'b00000010000110011011000011 
+	Parameter P_CDR_TIMEOUT_FREERUN_CYC bound to: 26'b00000001110000111010100100 
 INFO: [Synth 8-6157] synthesizing module 'system_jesd204_phy_0_0_gt_gthe4_channel_wrapper' [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/ip_0/synth/system_jesd204_phy_0_0_gt_gthe4_channel_wrapper.v:56]
 	Parameter MASTER_EN bound to: 0 - type: integer 
 	Parameter NUM_CHANNELS bound to: 4 - type: integer 
@@ -220,7 +225,7 @@ INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_6_gthe4_chann
 	Parameter GTHE4_CHANNEL_CHAN_BOND_SEQ_2_ENABLE bound to: 4'b1111 
 	Parameter GTHE4_CHANNEL_CHAN_BOND_SEQ_2_USE bound to: FALSE - type: string 
 	Parameter GTHE4_CHANNEL_CHAN_BOND_SEQ_LEN bound to: 1 - type: integer 
-	Parameter GTHE4_CHANNEL_CH_HSPMUX bound to: 16'b0100010001000100 
+	Parameter GTHE4_CHANNEL_CH_HSPMUX bound to: 16'b0110100001101000 
 	Parameter GTHE4_CHANNEL_CKCAL1_CFG_0 bound to: 16'b1100000011000000 
 	Parameter GTHE4_CHANNEL_CKCAL1_CFG_1 bound to: 16'b0101000011000000 
 	Parameter GTHE4_CHANNEL_CKCAL1_CFG_2 bound to: 16'b0000000000001010 
@@ -335,8 +340,8 @@ INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_6_gthe4_chann
 	Parameter GTHE4_CHANNEL_PCIE3_CLK_COR_MAX_LAT bound to: 5'b00100 
 	Parameter GTHE4_CHANNEL_PCIE3_CLK_COR_MIN_LAT bound to: 5'b00000 
 	Parameter GTHE4_CHANNEL_PCIE3_CLK_COR_THRSH_TIMER bound to: 6'b001000 
-	Parameter GTHE4_CHANNEL_PCIE_BUFG_DIV_CTRL bound to: 16'b0001000000000000 
-	Parameter GTHE4_CHANNEL_PCIE_PLL_SEL_MODE_GEN12 bound to: 2'b00 
+	Parameter GTHE4_CHANNEL_PCIE_BUFG_DIV_CTRL bound to: 16'b0011010100000000 
+	Parameter GTHE4_CHANNEL_PCIE_PLL_SEL_MODE_GEN12 bound to: 2'b10 
 	Parameter GTHE4_CHANNEL_PCIE_PLL_SEL_MODE_GEN3 bound to: 2'b10 
 	Parameter GTHE4_CHANNEL_PCIE_PLL_SEL_MODE_GEN4 bound to: 2'b10 
 	Parameter GTHE4_CHANNEL_PCIE_RXPCS_CFG_GEN3 bound to: 16'b0000101010100101 
@@ -476,7 +481,7 @@ INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_6_gthe4_chann
 	Parameter GTHE4_CHANNEL_RXPHSLIP_CFG bound to: 16'b1001100100110011 
 	Parameter GTHE4_CHANNEL_RXPH_MONITOR_SEL bound to: 5'b00000 
 	Parameter GTHE4_CHANNEL_RXPI_AUTO_BW_SEL_BYPASS bound to: 1'b0 
-	Parameter GTHE4_CHANNEL_RXPI_CFG0 bound to: 16'b0000000100000100 
+	Parameter GTHE4_CHANNEL_RXPI_CFG0 bound to: 16'b0000000000000100 
 	Parameter GTHE4_CHANNEL_RXPI_CFG1 bound to: 16'b0000000000000000 
 	Parameter GTHE4_CHANNEL_RXPI_LPM bound to: 1'b0 
 	Parameter GTHE4_CHANNEL_RXPI_SEL_LC bound to: 2'b00 
@@ -496,7 +501,7 @@ INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_6_gthe4_chann
 	Parameter GTHE4_CHANNEL_RX_BIAS_CFG0 bound to: 16'b0001010101010100 
 	Parameter GTHE4_CHANNEL_RX_BUFFER_CFG bound to: 6'b000000 
 	Parameter GTHE4_CHANNEL_RX_CAPFF_SARC_ENB bound to: 1'b0 
-	Parameter GTHE4_CHANNEL_RX_CLK25_DIV bound to: 7 - type: integer 
+	Parameter GTHE4_CHANNEL_RX_CLK25_DIV bound to: 8 - type: integer 
 	Parameter GTHE4_CHANNEL_RX_CLKMUX_EN bound to: 1'b1 
 	Parameter GTHE4_CHANNEL_RX_CLK_SLIP_OVRD bound to: 5'b00000 
 	Parameter GTHE4_CHANNEL_RX_CM_BUF_CFG bound to: 4'b1010 
@@ -592,7 +597,7 @@ INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_6_gthe4_chann
 	Parameter GTHE4_CHANNEL_TXPI_CFG1 bound to: 2'b00 
 	Parameter GTHE4_CHANNEL_TXPI_CFG2 bound to: 2'b00 
 	Parameter GTHE4_CHANNEL_TXPI_CFG3 bound to: 1'b0 
-	Parameter GTHE4_CHANNEL_TXPI_CFG4 bound to: 1'b1 
+	Parameter GTHE4_CHANNEL_TXPI_CFG4 bound to: 1'b0 
 	Parameter GTHE4_CHANNEL_TXPI_CFG5 bound to: 3'b000 
 	Parameter GTHE4_CHANNEL_TXPI_GRAY_SEL bound to: 1'b0 
 	Parameter GTHE4_CHANNEL_TXPI_INVSTROBE_SEL bound to: 1'b0 
@@ -607,7 +612,7 @@ INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_6_gthe4_chann
 	Parameter GTHE4_CHANNEL_TXSYNC_MULTILANE bound to: 1'b1 
 	Parameter GTHE4_CHANNEL_TXSYNC_OVRD bound to: 1'b0 
 	Parameter GTHE4_CHANNEL_TXSYNC_SKIP_DA bound to: 1'b0 
-	Parameter GTHE4_CHANNEL_TX_CLK25_DIV bound to: 7 - type: integer 
+	Parameter GTHE4_CHANNEL_TX_CLK25_DIV bound to: 8 - type: integer 
 	Parameter GTHE4_CHANNEL_TX_CLKMUX_EN bound to: 1'b1 
 	Parameter GTHE4_CHANNEL_TX_DATA_WIDTH bound to: 40 - type: integer 
 	Parameter GTHE4_CHANNEL_TX_DCC_LOOP_RST_CFG bound to: 16'b0000000000000100 
@@ -639,7 +644,7 @@ INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_6_gthe4_chann
 	Parameter GTHE4_CHANNEL_TX_PHICAL_CFG0 bound to: 16'b0000000000000000 
 	Parameter GTHE4_CHANNEL_TX_PHICAL_CFG1 bound to: 16'b0111111000000000 
 	Parameter GTHE4_CHANNEL_TX_PHICAL_CFG2 bound to: 16'b0000001000000001 
-	Parameter GTHE4_CHANNEL_TX_PI_BIASSET bound to: 2 - type: integer 
+	Parameter GTHE4_CHANNEL_TX_PI_BIASSET bound to: 3 - type: integer 
 	Parameter GTHE4_CHANNEL_TX_PI_IBIAS_MID bound to: 2'b00 
 	Parameter GTHE4_CHANNEL_TX_PMADATA_OPT bound to: 1'b0 
 	Parameter GTHE4_CHANNEL_TX_PMA_POWER_SAVE bound to: 1'b0 
@@ -1199,7 +1204,7 @@ INFO: [Synth 8-6157] synthesizing module 'GTHE4_CHANNEL' [C:/Xilinx/Vivado/2019.
 	Parameter CHAN_BOND_SEQ_2_ENABLE bound to: 4'b1111 
 	Parameter CHAN_BOND_SEQ_2_USE bound to: FALSE - type: string 
 	Parameter CHAN_BOND_SEQ_LEN bound to: 1 - type: integer 
-	Parameter CH_HSPMUX bound to: 16'b0100010001000100 
+	Parameter CH_HSPMUX bound to: 16'b0110100001101000 
 	Parameter CKCAL1_CFG_0 bound to: 16'b1100000011000000 
 	Parameter CKCAL1_CFG_1 bound to: 16'b0101000011000000 
 	Parameter CKCAL1_CFG_2 bound to: 16'b0000000000001010 
@@ -1314,8 +1319,8 @@ INFO: [Synth 8-6157] synthesizing module 'GTHE4_CHANNEL' [C:/Xilinx/Vivado/2019.
 	Parameter PCIE3_CLK_COR_MAX_LAT bound to: 5'b00100 
 	Parameter PCIE3_CLK_COR_MIN_LAT bound to: 5'b00000 
 	Parameter PCIE3_CLK_COR_THRSH_TIMER bound to: 6'b001000 
-	Parameter PCIE_BUFG_DIV_CTRL bound to: 16'b0001000000000000 
-	Parameter PCIE_PLL_SEL_MODE_GEN12 bound to: 2'b00 
+	Parameter PCIE_BUFG_DIV_CTRL bound to: 16'b0011010100000000 
+	Parameter PCIE_PLL_SEL_MODE_GEN12 bound to: 2'b10 
 	Parameter PCIE_PLL_SEL_MODE_GEN3 bound to: 2'b10 
 	Parameter PCIE_PLL_SEL_MODE_GEN4 bound to: 2'b10 
 	Parameter PCIE_RXPCS_CFG_GEN3 bound to: 16'b0000101010100101 
@@ -1455,7 +1460,7 @@ INFO: [Synth 8-6157] synthesizing module 'GTHE4_CHANNEL' [C:/Xilinx/Vivado/2019.
 	Parameter RXPHSLIP_CFG bound to: 16'b1001100100110011 
 	Parameter RXPH_MONITOR_SEL bound to: 5'b00000 
 	Parameter RXPI_AUTO_BW_SEL_BYPASS bound to: 1'b0 
-	Parameter RXPI_CFG0 bound to: 16'b0000000100000100 
+	Parameter RXPI_CFG0 bound to: 16'b0000000000000100 
 	Parameter RXPI_CFG1 bound to: 16'b0000000000000000 
 	Parameter RXPI_LPM bound to: 1'b0 
 	Parameter RXPI_SEL_LC bound to: 2'b00 
@@ -1475,7 +1480,7 @@ INFO: [Synth 8-6157] synthesizing module 'GTHE4_CHANNEL' [C:/Xilinx/Vivado/2019.
 	Parameter RX_BIAS_CFG0 bound to: 16'b0001010101010100 
 	Parameter RX_BUFFER_CFG bound to: 6'b000000 
 	Parameter RX_CAPFF_SARC_ENB bound to: 1'b0 
-	Parameter RX_CLK25_DIV bound to: 7 - type: integer 
+	Parameter RX_CLK25_DIV bound to: 8 - type: integer 
 	Parameter RX_CLKMUX_EN bound to: 1'b1 
 	Parameter RX_CLK_SLIP_OVRD bound to: 5'b00000 
 	Parameter RX_CM_BUF_CFG bound to: 4'b1010 
@@ -1571,7 +1576,7 @@ INFO: [Synth 8-6157] synthesizing module 'GTHE4_CHANNEL' [C:/Xilinx/Vivado/2019.
 	Parameter TXPI_CFG1 bound to: 2'b00 
 	Parameter TXPI_CFG2 bound to: 2'b00 
 	Parameter TXPI_CFG3 bound to: 1'b0 
-	Parameter TXPI_CFG4 bound to: 1'b1 
+	Parameter TXPI_CFG4 bound to: 1'b0 
 	Parameter TXPI_CFG5 bound to: 3'b000 
 	Parameter TXPI_GRAY_SEL bound to: 1'b0 
 	Parameter TXPI_INVSTROBE_SEL bound to: 1'b0 
@@ -1586,7 +1591,7 @@ INFO: [Synth 8-6157] synthesizing module 'GTHE4_CHANNEL' [C:/Xilinx/Vivado/2019.
 	Parameter TXSYNC_MULTILANE bound to: 1'b1 
 	Parameter TXSYNC_OVRD bound to: 1'b0 
 	Parameter TXSYNC_SKIP_DA bound to: 1'b0 
-	Parameter TX_CLK25_DIV bound to: 7 - type: integer 
+	Parameter TX_CLK25_DIV bound to: 8 - type: integer 
 	Parameter TX_CLKMUX_EN bound to: 1'b1 
 	Parameter TX_DATA_WIDTH bound to: 40 - type: integer 
 	Parameter TX_DCC_LOOP_RST_CFG bound to: 16'b0000000000000100 
@@ -1618,7 +1623,7 @@ INFO: [Synth 8-6157] synthesizing module 'GTHE4_CHANNEL' [C:/Xilinx/Vivado/2019.
 	Parameter TX_PHICAL_CFG0 bound to: 16'b0000000000000000 
 	Parameter TX_PHICAL_CFG1 bound to: 16'b0111111000000000 
 	Parameter TX_PHICAL_CFG2 bound to: 16'b0000001000000001 
-	Parameter TX_PI_BIASSET bound to: 2 - type: integer 
+	Parameter TX_PI_BIASSET bound to: 3 - type: integer 
 	Parameter TX_PI_IBIAS_MID bound to: 2'b00 
 	Parameter TX_PMADATA_OPT bound to: 1'b0 
 	Parameter TX_PMA_POWER_SAVE bound to: 1'b0 
@@ -1701,8 +1706,8 @@ INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_6_gtwiz_reset
 	Parameter P_USE_CPLL_CAL bound to: 0 - type: integer 
 	Parameter P_TX_PLL_TYPE bound to: 0 - type: integer 
 	Parameter P_RX_PLL_TYPE bound to: 0 - type: integer 
-	Parameter P_RX_LINE_RATE bound to: 6.720000 - type: float 
-	Parameter P_CDR_TIMEOUT_FREERUN_CYC bound to: 26'b00000010000110011011000011 
+	Parameter P_RX_LINE_RATE bound to: 8.000000 - type: float 
+	Parameter P_CDR_TIMEOUT_FREERUN_CYC bound to: 26'b00000001110000111010100100 
 	Parameter ST_RESET_ALL_INIT bound to: 3'b000 
 	Parameter ST_RESET_ALL_BRANCH bound to: 3'b001 
 	Parameter ST_RESET_ALL_TX_PLL bound to: 3'b010 
@@ -1795,16 +1800,16 @@ INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_6_gthe4_commo
 	Parameter GTHE4_COMMON_COMMON_CFG0 bound to: 16'b0000000000000000 
 	Parameter GTHE4_COMMON_COMMON_CFG1 bound to: 16'b0000000000000000 
 	Parameter GTHE4_COMMON_POR_CFG bound to: 16'b0000000000000000 
-	Parameter GTHE4_COMMON_PPF0_CFG bound to: 16'b0000100100000000 
+	Parameter GTHE4_COMMON_PPF0_CFG bound to: 16'b0000111100000000 
 	Parameter GTHE4_COMMON_PPF1_CFG bound to: 16'b0000011000000000 
 	Parameter GTHE4_COMMON_QPLL0CLKOUT_RATE bound to: HALF - type: string 
 	Parameter GTHE4_COMMON_QPLL0_CFG0 bound to: 16'b0011001100011100 
 	Parameter GTHE4_COMMON_QPLL0_CFG1 bound to: 16'b1101000000111000 
 	Parameter GTHE4_COMMON_QPLL0_CFG1_G3 bound to: 16'b1101000000111000 
-	Parameter GTHE4_COMMON_QPLL0_CFG2 bound to: 16'b1000011111000011 
-	Parameter GTHE4_COMMON_QPLL0_CFG2_G3 bound to: 16'b1000011111000011 
+	Parameter GTHE4_COMMON_QPLL0_CFG2 bound to: 16'b1000011111000001 
+	Parameter GTHE4_COMMON_QPLL0_CFG2_G3 bound to: 16'b1000011111000001 
 	Parameter GTHE4_COMMON_QPLL0_CFG3 bound to: 16'b0000000100100000 
-	Parameter GTHE4_COMMON_QPLL0_CFG4 bound to: 16'b0000000000000100 
+	Parameter GTHE4_COMMON_QPLL0_CFG4 bound to: 16'b0000000001000101 
 	Parameter GTHE4_COMMON_QPLL0_CP bound to: 10'b0011111111 
 	Parameter GTHE4_COMMON_QPLL0_CP_G3 bound to: 10'b0000001111 
 	Parameter GTHE4_COMMON_QPLL0_FBDIV bound to: 80 - type: integer 
@@ -1813,7 +1818,7 @@ INFO: [Synth 8-6157] synthesizing module 'gtwizard_ultrascale_v1_7_6_gthe4_commo
 	Parameter GTHE4_COMMON_QPLL0_INIT_CFG1 bound to: 8'b00000000 
 	Parameter GTHE4_COMMON_QPLL0_LOCK_CFG bound to: 16'b0010010111101000 
 	Parameter GTHE4_COMMON_QPLL0_LOCK_CFG_G3 bound to: 16'b0010010111101000 
-	Parameter GTHE4_COMMON_QPLL0_LPF bound to: 10'b1000011111 
+	Parameter GTHE4_COMMON_QPLL0_LPF bound to: 10'b1101111111 
 	Parameter GTHE4_COMMON_QPLL0_LPF_G3 bound to: 10'b0111010101 
 	Parameter GTHE4_COMMON_QPLL0_PCI_EN bound to: 1'b0 
 	Parameter GTHE4_COMMON_QPLL0_RATE_SW_USE_DRP bound to: 1'b1 
@@ -2000,16 +2005,16 @@ INFO: [Synth 8-6157] synthesizing module 'GTHE4_COMMON' [C:/Xilinx/Vivado/2019.1
 	Parameter COMMON_CFG0 bound to: 16'b0000000000000000 
 	Parameter COMMON_CFG1 bound to: 16'b0000000000000000 
 	Parameter POR_CFG bound to: 16'b0000000000000000 
-	Parameter PPF0_CFG bound to: 16'b0000100100000000 
+	Parameter PPF0_CFG bound to: 16'b0000111100000000 
 	Parameter PPF1_CFG bound to: 16'b0000011000000000 
 	Parameter QPLL0CLKOUT_RATE bound to: HALF - type: string 
 	Parameter QPLL0_CFG0 bound to: 16'b0011001100011100 
 	Parameter QPLL0_CFG1 bound to: 16'b1101000000111000 
 	Parameter QPLL0_CFG1_G3 bound to: 16'b1101000000111000 
-	Parameter QPLL0_CFG2 bound to: 16'b1000011111000011 
-	Parameter QPLL0_CFG2_G3 bound to: 16'b1000011111000011 
+	Parameter QPLL0_CFG2 bound to: 16'b1000011111000001 
+	Parameter QPLL0_CFG2_G3 bound to: 16'b1000011111000001 
 	Parameter QPLL0_CFG3 bound to: 16'b0000000100100000 
-	Parameter QPLL0_CFG4 bound to: 16'b0000000000000100 
+	Parameter QPLL0_CFG4 bound to: 16'b0000000001000101 
 	Parameter QPLL0_CP bound to: 10'b0011111111 
 	Parameter QPLL0_CP_G3 bound to: 10'b0000001111 
 	Parameter QPLL0_FBDIV bound to: 80 - type: integer 
@@ -2018,7 +2023,7 @@ INFO: [Synth 8-6157] synthesizing module 'GTHE4_COMMON' [C:/Xilinx/Vivado/2019.1
 	Parameter QPLL0_INIT_CFG1 bound to: 8'b00000000 
 	Parameter QPLL0_LOCK_CFG bound to: 16'b0010010111101000 
 	Parameter QPLL0_LOCK_CFG_G3 bound to: 16'b0010010111101000 
-	Parameter QPLL0_LPF bound to: 10'b1000011111 
+	Parameter QPLL0_LPF bound to: 10'b1101111111 
 	Parameter QPLL0_LPF_G3 bound to: 10'b0111010101 
 	Parameter QPLL0_PCI_EN bound to: 1'b0 
 	Parameter QPLL0_RATE_SW_USE_DRP bound to: 1'b1 
@@ -2173,7 +2178,7 @@ WARNING: [Synth 8-3331] design system_jesd204_phy_0_0_gt_gtwizard_gthe4 has unco
 WARNING: [Synth 8-3331] design system_jesd204_phy_0_0_gt_gtwizard_gthe4 has unconnected port gtwiz_gthe4_cpll_cal_cnt_tol_in[57]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1385.227 ; gain = 62.426
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1384.945 ; gain = 62.449
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -2186,10 +2191,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1391.832 ; gain = 69.031
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1384.945 ; gain = 62.449
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1391.832 ; gain = 69.031
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1384.945 ; gain = 62.449
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -2242,14 +2247,14 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/system_jesd204_phy_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1514.535 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1507.461 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 10 instances were transformed.
   FD => FDRE: 10 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.057 . Memory (MB): peak = 1520.645 ; gain = 6.109
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 1514.242 ; gain = 6.781
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1520.645 ; gain = 197.844
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1514.242 ; gain = 191.746
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -2257,13 +2262,13 @@ Start Loading Part and Timing Information
 Loading part: xczu9eg-ffvb1156-2-i
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1520.645 ; gain = 197.844
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1514.242 ; gain = 191.746
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for inst/jesd204_phy_block_i/system_jesd204_phy_0_0_gt_i/inst. (constraint file  D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/system_jesd204_phy_0_0_synth_1/dont_touch.xdc, line 13).
-Applied set_property DONT_TOUCH = true for inst. (constraint file  D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/system_jesd204_phy_0_0_synth_1/dont_touch.xdc, line 17).
+Applied set_property DONT_TOUCH = true for inst. (constraint file  D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/system_jesd204_phy_0_0_synth_1/dont_touch.xdc, line 12).
+Applied set_property DONT_TOUCH = true for inst/jesd204_phy_block_i/system_jesd204_phy_0_0_gt_i/inst. (constraint file  D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/system_jesd204_phy_0_0_synth_1/dont_touch.xdc, line 29).
 Applied set_property DONT_TOUCH = true for inst/jesd204_phy_block_i/system_jesd204_phy_0_0_gt_i. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for inst/jesd204_phy_block_i/sync_gtwiz_userclk_tx_active/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for inst/jesd204_phy_block_i/sync_gtwiz_userclk_rx_active/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint, line ).
@@ -2276,7 +2281,7 @@ Applied set_property DONT_TOUCH = true for inst/jesd204_phy_block_i/sync_gt_rxre
 Applied set_property DONT_TOUCH = true for inst/jesd204_phy_block_i/sync_rxresetdone/cdc_i. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for inst/jesd204_phy_block_i/sync_txresetdone/cdc_i. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1520.645 ; gain = 197.844
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1514.242 ; gain = 191.746
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'sm_reset_all_reg' in module 'gtwizard_ultrascale_v1_7_6_gtwiz_reset'
 INFO: [Synth 8-802] inferred FSM for state register 'sm_reset_tx_reg' in module 'gtwizard_ultrascale_v1_7_6_gtwiz_reset'
@@ -2320,7 +2325,7 @@ ST_RESET_ALL_TX_PLL_WAIT |                              010 |                   
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'sm_reset_all_reg' using encoding 'sequential' in module 'gtwizard_ultrascale_v1_7_6_gtwiz_reset'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1520.645 ; gain = 197.844
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1514.242 ; gain = 191.746
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2434,7 +2439,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1520.645 ; gain = 197.844
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1514.242 ; gain = 191.746
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2449,7 +2454,7 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'inst/jesd204_phy_block_i/
 INFO: [Synth 8-5578] Moved timing constraint from pin 'inst/jesd204_phy_block_i/sync_gtwiz_userclk_tx_active/xpm_cdc_async_rst_inst/src_arst' to pin 'inst/i_30/jesd204_phy_block_i/gtwiz_userclk_tx_reset_int/O'
 INFO: [Synth 8-5819] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 2075.605 ; gain = 752.805
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2072.418 ; gain = 749.922
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
@@ -2459,7 +2464,7 @@ INFO: [Synth 8-620] skipping inversion-propagation across instance 'inst/i_30/\j
 INFO: [Synth 8-620] skipping inversion-propagation across instance 'inst/i_31/\jesd204_phy_block_i/gtwiz_userclk_rx_reset_int ' with timing assertions on output pin 'O'
 INFO: [Synth 8-620] skipping inversion-propagation across instance 'inst/i_30/\jesd204_phy_block_i/gtwiz_userclk_tx_reset_int ' with timing assertions on output pin 'O'
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 2086.391 ; gain = 763.590
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2083.121 ; gain = 760.625
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2471,7 +2476,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 2100.348 ; gain = 777.547
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2096.777 ; gain = 774.281
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2495,7 +2500,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 2107.742 ; gain = 784.941
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2103.555 ; gain = 781.059
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -2508,7 +2513,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 2107.742 ; gain = 784.941
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2103.555 ; gain = 781.059
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2520,25 +2525,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 2107.742 ; gain = 784.941
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2103.555 ; gain = 781.059
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 2107.742 ; gain = 784.941
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2103.555 ; gain = 781.059
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 2107.742 ; gain = 784.941
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2103.555 ; gain = 781.059
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 2107.742 ; gain = 784.941
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2103.555 ; gain = 781.059
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -2580,7 +2585,7 @@ Report Instance Areas:
 |4     |      system_jesd204_phy_0_0_gt_i                                                                        |system_jesd204_phy_0_0_gt                                    |   112|
 |5     |        inst                                                                                             |system_jesd204_phy_0_0_gt_gtwizard_top                       |   112|
 |6     |          \gen_gtwizard_gthe4_top.system_jesd204_phy_0_0_gt_gtwizard_gthe4_inst                          |system_jesd204_phy_0_0_gt_gtwizard_gthe4                     |   112|
-|7     |            \gen_gtwizard_gthe4.gen_channel_container[1].gen_enabled_channel.gthe4_channel_wrapper_inst  |system_jesd204_phy_0_0_gt_gthe4_channel_wrapper              |     8|
+|7     |            \gen_gtwizard_gthe4.gen_channel_container[3].gen_enabled_channel.gthe4_channel_wrapper_inst  |system_jesd204_phy_0_0_gt_gthe4_channel_wrapper              |     8|
 |8     |              channel_inst                                                                               |gtwizard_ultrascale_v1_7_6_gthe4_channel                     |     8|
 |9     |            \gen_gtwizard_gthe4.gen_pwrgood_delay_inst[0].delay_powergood_inst                           |gtwizard_ultrascale_v1_7_6_gthe4_delay_powergood             |    26|
 |10    |            \gen_gtwizard_gthe4.gen_pwrgood_delay_inst[1].delay_powergood_inst                           |gtwizard_ultrascale_v1_7_6_gthe4_delay_powergood_17          |    26|
@@ -2633,35 +2638,35 @@ Report Instance Areas:
 |57    |        common_inst                                                                                      |gtwizard_ultrascale_v1_7_6_gthe4_common                      |     1|
 +------+---------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 2107.742 ; gain = 784.941
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2103.555 ; gain = 781.059
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 846 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:27 . Memory (MB): peak = 2107.742 ; gain = 656.129
-Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 2107.742 ; gain = 784.941
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 2103.555 ; gain = 651.762
+Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2103.555 ; gain = 781.059
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2157.789 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2156.578 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 10 instances were transformed.
   FD => FDRE: 10 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-103 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
+106 Infos, 102 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 2157.789 ; gain = 1817.652
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2157.789 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 2156.578 ; gain = 1816.684
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2156.578 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/system_jesd204_phy_0_0_synth_1/system_jesd204_phy_0_0.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP system_jesd204_phy_0_0, cache-ID = 1c7ba47182b0dbd9
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP system_jesd204_phy_0_0, cache-ID = 2a7c06ac1756d447
 INFO: [Coretcl 2-1174] Renamed 56 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2157.789 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2156.578 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.runs/system_jesd204_phy_0_0_synth_1/system_jesd204_phy_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file system_jesd204_phy_0_0_utilization_synth.rpt -pb system_jesd204_phy_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Oct 19 11:32:02 2022...
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 14 18:13:00 2022...

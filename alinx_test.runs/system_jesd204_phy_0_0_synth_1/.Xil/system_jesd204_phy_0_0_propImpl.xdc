@@ -88,25 +88,25 @@ create_waiver -internal -scope -quiet -user JESD204_PHY -type CDC -id CDC-15 -de
 current_instance
 current_instance inst/jesd204_phy_block_i/system_jesd204_phy_0_0_gt_i/inst
 set_property src_info {type:SCOPED_XDC file:2 line:57 export:INPUT save:INPUT read:READ} [current_design]
-set_property LOC GTHE4_CHANNEL_X0Y4 [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[1].*gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST}]
+set_property LOC GTHE4_CHANNEL_X0Y12 [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[3].*gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST}]
 current_instance
 set_property src_info {type:SCOPED_XDC file:2 line:66 export:INPUT save:INPUT read:READ} [current_design]
 set_case_analysis 1 [get_pins {inst/jesd204_phy_block_i/system_jesd204_phy_0_0_gt_i/inst/gen_gtwizard_gthe4_top.system_jesd204_phy_0_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_pwrgood_delay_inst[0].delay_powergood_inst/gen_powergood_delay.pwr_on_fsm_reg/Q}]
 current_instance inst/jesd204_phy_block_i/system_jesd204_phy_0_0_gt_i/inst
 set_property src_info {type:SCOPED_XDC file:2 line:72 export:INPUT save:INPUT read:READ} [current_design]
-set_property LOC GTHE4_CHANNEL_X0Y5 [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[1].*gen_gthe4_channel_inst[1].GTHE4_CHANNEL_PRIM_INST}]
+set_property LOC GTHE4_CHANNEL_X0Y13 [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[3].*gen_gthe4_channel_inst[1].GTHE4_CHANNEL_PRIM_INST}]
 current_instance
 set_property src_info {type:SCOPED_XDC file:2 line:81 export:INPUT save:INPUT read:READ} [current_design]
 set_case_analysis 1 [get_pins {inst/jesd204_phy_block_i/system_jesd204_phy_0_0_gt_i/inst/gen_gtwizard_gthe4_top.system_jesd204_phy_0_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_pwrgood_delay_inst[1].delay_powergood_inst/gen_powergood_delay.pwr_on_fsm_reg/Q}]
 current_instance inst/jesd204_phy_block_i/system_jesd204_phy_0_0_gt_i/inst
 set_property src_info {type:SCOPED_XDC file:2 line:87 export:INPUT save:INPUT read:READ} [current_design]
-set_property LOC GTHE4_CHANNEL_X0Y6 [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[1].*gen_gthe4_channel_inst[2].GTHE4_CHANNEL_PRIM_INST}]
+set_property LOC GTHE4_CHANNEL_X0Y14 [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[3].*gen_gthe4_channel_inst[2].GTHE4_CHANNEL_PRIM_INST}]
 current_instance
 set_property src_info {type:SCOPED_XDC file:2 line:96 export:INPUT save:INPUT read:READ} [current_design]
 set_case_analysis 1 [get_pins {inst/jesd204_phy_block_i/system_jesd204_phy_0_0_gt_i/inst/gen_gtwizard_gthe4_top.system_jesd204_phy_0_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_pwrgood_delay_inst[2].delay_powergood_inst/gen_powergood_delay.pwr_on_fsm_reg/Q}]
 current_instance inst/jesd204_phy_block_i/system_jesd204_phy_0_0_gt_i/inst
 set_property src_info {type:SCOPED_XDC file:2 line:102 export:INPUT save:INPUT read:READ} [current_design]
-set_property LOC GTHE4_CHANNEL_X0Y7 [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[1].*gen_gthe4_channel_inst[3].GTHE4_CHANNEL_PRIM_INST}]
+set_property LOC GTHE4_CHANNEL_X0Y15 [get_cells -hierarchical -filter {NAME =~ *gen_channel_container[3].*gen_gthe4_channel_inst[3].GTHE4_CHANNEL_PRIM_INST}]
 current_instance
 set_property src_info {type:SCOPED_XDC file:2 line:111 export:INPUT save:INPUT read:READ} [current_design]
 set_case_analysis 1 [get_pins {inst/jesd204_phy_block_i/system_jesd204_phy_0_0_gt_i/inst/gen_gtwizard_gthe4_top.system_jesd204_phy_0_0_gt_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_pwrgood_delay_inst[3].delay_powergood_inst/gen_powergood_delay.pwr_on_fsm_reg/Q}]

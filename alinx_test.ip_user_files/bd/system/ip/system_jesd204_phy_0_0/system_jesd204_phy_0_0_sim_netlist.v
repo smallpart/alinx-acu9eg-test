@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1.3 (win64) Build 2644227 Wed Sep  4 09:45:24 MDT 2019
-// Date        : Wed Oct 19 11:32:01 2022
+// Date        : Wed Dec 14 18:13:00 2022
 // Host        : atom-pc running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/system_jesd204_phy_0_0_sim_netlist.v
+//               D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/system_jesd204_phy_0_0/system_jesd204_phy_0_0_sim_netlist.v
 // Design      : system_jesd204_phy_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -2488,7 +2488,7 @@ module system_jesd204_phy_0_0_gtwizard_ultrascale_v1_7_6_gthe4_channel
     .CHAN_BOND_SEQ_2_ENABLE(4'b1111),
     .CHAN_BOND_SEQ_2_USE("FALSE"),
     .CHAN_BOND_SEQ_LEN(1),
-    .CH_HSPMUX(16'h4444),
+    .CH_HSPMUX(16'h6868),
     .CKCAL1_CFG_0(16'b1100000011000000),
     .CKCAL1_CFG_1(16'b0101000011000000),
     .CKCAL1_CFG_2(16'b0000000000001010),
@@ -2603,8 +2603,8 @@ module system_jesd204_phy_0_0_gtwizard_ultrascale_v1_7_6_gthe4_channel
     .PCIE3_CLK_COR_MAX_LAT(5'b00100),
     .PCIE3_CLK_COR_MIN_LAT(5'b00000),
     .PCIE3_CLK_COR_THRSH_TIMER(6'b001000),
-    .PCIE_BUFG_DIV_CTRL(16'h1000),
-    .PCIE_PLL_SEL_MODE_GEN12(2'h0),
+    .PCIE_BUFG_DIV_CTRL(16'h3500),
+    .PCIE_PLL_SEL_MODE_GEN12(2'h2),
     .PCIE_PLL_SEL_MODE_GEN3(2'h2),
     .PCIE_PLL_SEL_MODE_GEN4(2'h2),
     .PCIE_RXPCS_CFG_GEN3(16'h0AA5),
@@ -2744,7 +2744,7 @@ module system_jesd204_phy_0_0_gtwizard_ultrascale_v1_7_6_gthe4_channel
     .RXPHSLIP_CFG(16'h9933),
     .RXPH_MONITOR_SEL(5'b00000),
     .RXPI_AUTO_BW_SEL_BYPASS(1'b0),
-    .RXPI_CFG0(16'h0104),
+    .RXPI_CFG0(16'h0004),
     .RXPI_CFG1(16'b0000000000000000),
     .RXPI_LPM(1'b0),
     .RXPI_SEL_LC(2'b00),
@@ -2764,7 +2764,7 @@ module system_jesd204_phy_0_0_gtwizard_ultrascale_v1_7_6_gthe4_channel
     .RX_BIAS_CFG0(16'h1554),
     .RX_BUFFER_CFG(6'b000000),
     .RX_CAPFF_SARC_ENB(1'b0),
-    .RX_CLK25_DIV(7),
+    .RX_CLK25_DIV(8),
     .RX_CLKMUX_EN(1'b1),
     .RX_CLK_SLIP_OVRD(5'b00000),
     .RX_CM_BUF_CFG(4'b1010),
@@ -2860,7 +2860,7 @@ module system_jesd204_phy_0_0_gtwizard_ultrascale_v1_7_6_gthe4_channel
     .TXPI_CFG1(2'b00),
     .TXPI_CFG2(2'b00),
     .TXPI_CFG3(1'b0),
-    .TXPI_CFG4(1'b1),
+    .TXPI_CFG4(1'b0),
     .TXPI_CFG5(3'b000),
     .TXPI_GRAY_SEL(1'b0),
     .TXPI_INVSTROBE_SEL(1'b0),
@@ -2875,7 +2875,7 @@ module system_jesd204_phy_0_0_gtwizard_ultrascale_v1_7_6_gthe4_channel
     .TXSYNC_MULTILANE(1'b1),
     .TXSYNC_OVRD(1'b0),
     .TXSYNC_SKIP_DA(1'b0),
-    .TX_CLK25_DIV(7),
+    .TX_CLK25_DIV(8),
     .TX_CLKMUX_EN(1'b1),
     .TX_DATA_WIDTH(40),
     .TX_DCC_LOOP_RST_CFG(16'h0004),
@@ -2907,7 +2907,7 @@ module system_jesd204_phy_0_0_gtwizard_ultrascale_v1_7_6_gthe4_channel
     .TX_PHICAL_CFG0(16'h0000),
     .TX_PHICAL_CFG1(16'h7E00),
     .TX_PHICAL_CFG2(16'h0201),
-    .TX_PI_BIASSET(2),
+    .TX_PI_BIASSET(3),
     .TX_PI_IBIAS_MID(2'b00),
     .TX_PMADATA_OPT(1'b0),
     .TX_PMA_POWER_SAVE(1'b0),
@@ -3336,7 +3336,7 @@ module system_jesd204_phy_0_0_gtwizard_ultrascale_v1_7_6_gthe4_channel
     .CHAN_BOND_SEQ_2_ENABLE(4'b1111),
     .CHAN_BOND_SEQ_2_USE("FALSE"),
     .CHAN_BOND_SEQ_LEN(1),
-    .CH_HSPMUX(16'h4444),
+    .CH_HSPMUX(16'h6868),
     .CKCAL1_CFG_0(16'b1100000011000000),
     .CKCAL1_CFG_1(16'b0101000011000000),
     .CKCAL1_CFG_2(16'b0000000000001010),
@@ -3451,8 +3451,8 @@ module system_jesd204_phy_0_0_gtwizard_ultrascale_v1_7_6_gthe4_channel
     .PCIE3_CLK_COR_MAX_LAT(5'b00100),
     .PCIE3_CLK_COR_MIN_LAT(5'b00000),
     .PCIE3_CLK_COR_THRSH_TIMER(6'b001000),
-    .PCIE_BUFG_DIV_CTRL(16'h1000),
-    .PCIE_PLL_SEL_MODE_GEN12(2'h0),
+    .PCIE_BUFG_DIV_CTRL(16'h3500),
+    .PCIE_PLL_SEL_MODE_GEN12(2'h2),
     .PCIE_PLL_SEL_MODE_GEN3(2'h2),
     .PCIE_PLL_SEL_MODE_GEN4(2'h2),
     .PCIE_RXPCS_CFG_GEN3(16'h0AA5),
@@ -3592,7 +3592,7 @@ module system_jesd204_phy_0_0_gtwizard_ultrascale_v1_7_6_gthe4_channel
     .RXPHSLIP_CFG(16'h9933),
     .RXPH_MONITOR_SEL(5'b00000),
     .RXPI_AUTO_BW_SEL_BYPASS(1'b0),
-    .RXPI_CFG0(16'h0104),
+    .RXPI_CFG0(16'h0004),
     .RXPI_CFG1(16'b0000000000000000),
     .RXPI_LPM(1'b0),
     .RXPI_SEL_LC(2'b00),
@@ -3612,7 +3612,7 @@ module system_jesd204_phy_0_0_gtwizard_ultrascale_v1_7_6_gthe4_channel
     .RX_BIAS_CFG0(16'h1554),
     .RX_BUFFER_CFG(6'b000000),
     .RX_CAPFF_SARC_ENB(1'b0),
-    .RX_CLK25_DIV(7),
+    .RX_CLK25_DIV(8),
     .RX_CLKMUX_EN(1'b1),
     .RX_CLK_SLIP_OVRD(5'b00000),
     .RX_CM_BUF_CFG(4'b1010),
@@ -3708,7 +3708,7 @@ module system_jesd204_phy_0_0_gtwizard_ultrascale_v1_7_6_gthe4_channel
     .TXPI_CFG1(2'b00),
     .TXPI_CFG2(2'b00),
     .TXPI_CFG3(1'b0),
-    .TXPI_CFG4(1'b1),
+    .TXPI_CFG4(1'b0),
     .TXPI_CFG5(3'b000),
     .TXPI_GRAY_SEL(1'b0),
     .TXPI_INVSTROBE_SEL(1'b0),
@@ -3723,7 +3723,7 @@ module system_jesd204_phy_0_0_gtwizard_ultrascale_v1_7_6_gthe4_channel
     .TXSYNC_MULTILANE(1'b1),
     .TXSYNC_OVRD(1'b0),
     .TXSYNC_SKIP_DA(1'b0),
-    .TX_CLK25_DIV(7),
+    .TX_CLK25_DIV(8),
     .TX_CLKMUX_EN(1'b1),
     .TX_DATA_WIDTH(40),
     .TX_DCC_LOOP_RST_CFG(16'h0004),
@@ -3755,7 +3755,7 @@ module system_jesd204_phy_0_0_gtwizard_ultrascale_v1_7_6_gthe4_channel
     .TX_PHICAL_CFG0(16'h0000),
     .TX_PHICAL_CFG1(16'h7E00),
     .TX_PHICAL_CFG2(16'h0201),
-    .TX_PI_BIASSET(2),
+    .TX_PI_BIASSET(3),
     .TX_PI_IBIAS_MID(2'b00),
     .TX_PMADATA_OPT(1'b0),
     .TX_PMA_POWER_SAVE(1'b0),
@@ -4184,7 +4184,7 @@ module system_jesd204_phy_0_0_gtwizard_ultrascale_v1_7_6_gthe4_channel
     .CHAN_BOND_SEQ_2_ENABLE(4'b1111),
     .CHAN_BOND_SEQ_2_USE("FALSE"),
     .CHAN_BOND_SEQ_LEN(1),
-    .CH_HSPMUX(16'h4444),
+    .CH_HSPMUX(16'h6868),
     .CKCAL1_CFG_0(16'b1100000011000000),
     .CKCAL1_CFG_1(16'b0101000011000000),
     .CKCAL1_CFG_2(16'b0000000000001010),
@@ -4299,8 +4299,8 @@ module system_jesd204_phy_0_0_gtwizard_ultrascale_v1_7_6_gthe4_channel
     .PCIE3_CLK_COR_MAX_LAT(5'b00100),
     .PCIE3_CLK_COR_MIN_LAT(5'b00000),
     .PCIE3_CLK_COR_THRSH_TIMER(6'b001000),
-    .PCIE_BUFG_DIV_CTRL(16'h1000),
-    .PCIE_PLL_SEL_MODE_GEN12(2'h0),
+    .PCIE_BUFG_DIV_CTRL(16'h3500),
+    .PCIE_PLL_SEL_MODE_GEN12(2'h2),
     .PCIE_PLL_SEL_MODE_GEN3(2'h2),
     .PCIE_PLL_SEL_MODE_GEN4(2'h2),
     .PCIE_RXPCS_CFG_GEN3(16'h0AA5),
@@ -4440,7 +4440,7 @@ module system_jesd204_phy_0_0_gtwizard_ultrascale_v1_7_6_gthe4_channel
     .RXPHSLIP_CFG(16'h9933),
     .RXPH_MONITOR_SEL(5'b00000),
     .RXPI_AUTO_BW_SEL_BYPASS(1'b0),
-    .RXPI_CFG0(16'h0104),
+    .RXPI_CFG0(16'h0004),
     .RXPI_CFG1(16'b0000000000000000),
     .RXPI_LPM(1'b0),
     .RXPI_SEL_LC(2'b00),
@@ -4460,7 +4460,7 @@ module system_jesd204_phy_0_0_gtwizard_ultrascale_v1_7_6_gthe4_channel
     .RX_BIAS_CFG0(16'h1554),
     .RX_BUFFER_CFG(6'b000000),
     .RX_CAPFF_SARC_ENB(1'b0),
-    .RX_CLK25_DIV(7),
+    .RX_CLK25_DIV(8),
     .RX_CLKMUX_EN(1'b1),
     .RX_CLK_SLIP_OVRD(5'b00000),
     .RX_CM_BUF_CFG(4'b1010),
@@ -4556,7 +4556,7 @@ module system_jesd204_phy_0_0_gtwizard_ultrascale_v1_7_6_gthe4_channel
     .TXPI_CFG1(2'b00),
     .TXPI_CFG2(2'b00),
     .TXPI_CFG3(1'b0),
-    .TXPI_CFG4(1'b1),
+    .TXPI_CFG4(1'b0),
     .TXPI_CFG5(3'b000),
     .TXPI_GRAY_SEL(1'b0),
     .TXPI_INVSTROBE_SEL(1'b0),
@@ -4571,7 +4571,7 @@ module system_jesd204_phy_0_0_gtwizard_ultrascale_v1_7_6_gthe4_channel
     .TXSYNC_MULTILANE(1'b1),
     .TXSYNC_OVRD(1'b0),
     .TXSYNC_SKIP_DA(1'b0),
-    .TX_CLK25_DIV(7),
+    .TX_CLK25_DIV(8),
     .TX_CLKMUX_EN(1'b1),
     .TX_DATA_WIDTH(40),
     .TX_DCC_LOOP_RST_CFG(16'h0004),
@@ -4603,7 +4603,7 @@ module system_jesd204_phy_0_0_gtwizard_ultrascale_v1_7_6_gthe4_channel
     .TX_PHICAL_CFG0(16'h0000),
     .TX_PHICAL_CFG1(16'h7E00),
     .TX_PHICAL_CFG2(16'h0201),
-    .TX_PI_BIASSET(2),
+    .TX_PI_BIASSET(3),
     .TX_PI_IBIAS_MID(2'b00),
     .TX_PMADATA_OPT(1'b0),
     .TX_PMA_POWER_SAVE(1'b0),
@@ -5032,7 +5032,7 @@ module system_jesd204_phy_0_0_gtwizard_ultrascale_v1_7_6_gthe4_channel
     .CHAN_BOND_SEQ_2_ENABLE(4'b1111),
     .CHAN_BOND_SEQ_2_USE("FALSE"),
     .CHAN_BOND_SEQ_LEN(1),
-    .CH_HSPMUX(16'h4444),
+    .CH_HSPMUX(16'h6868),
     .CKCAL1_CFG_0(16'b1100000011000000),
     .CKCAL1_CFG_1(16'b0101000011000000),
     .CKCAL1_CFG_2(16'b0000000000001010),
@@ -5147,8 +5147,8 @@ module system_jesd204_phy_0_0_gtwizard_ultrascale_v1_7_6_gthe4_channel
     .PCIE3_CLK_COR_MAX_LAT(5'b00100),
     .PCIE3_CLK_COR_MIN_LAT(5'b00000),
     .PCIE3_CLK_COR_THRSH_TIMER(6'b001000),
-    .PCIE_BUFG_DIV_CTRL(16'h1000),
-    .PCIE_PLL_SEL_MODE_GEN12(2'h0),
+    .PCIE_BUFG_DIV_CTRL(16'h3500),
+    .PCIE_PLL_SEL_MODE_GEN12(2'h2),
     .PCIE_PLL_SEL_MODE_GEN3(2'h2),
     .PCIE_PLL_SEL_MODE_GEN4(2'h2),
     .PCIE_RXPCS_CFG_GEN3(16'h0AA5),
@@ -5288,7 +5288,7 @@ module system_jesd204_phy_0_0_gtwizard_ultrascale_v1_7_6_gthe4_channel
     .RXPHSLIP_CFG(16'h9933),
     .RXPH_MONITOR_SEL(5'b00000),
     .RXPI_AUTO_BW_SEL_BYPASS(1'b0),
-    .RXPI_CFG0(16'h0104),
+    .RXPI_CFG0(16'h0004),
     .RXPI_CFG1(16'b0000000000000000),
     .RXPI_LPM(1'b0),
     .RXPI_SEL_LC(2'b00),
@@ -5308,7 +5308,7 @@ module system_jesd204_phy_0_0_gtwizard_ultrascale_v1_7_6_gthe4_channel
     .RX_BIAS_CFG0(16'h1554),
     .RX_BUFFER_CFG(6'b000000),
     .RX_CAPFF_SARC_ENB(1'b0),
-    .RX_CLK25_DIV(7),
+    .RX_CLK25_DIV(8),
     .RX_CLKMUX_EN(1'b1),
     .RX_CLK_SLIP_OVRD(5'b00000),
     .RX_CM_BUF_CFG(4'b1010),
@@ -5404,7 +5404,7 @@ module system_jesd204_phy_0_0_gtwizard_ultrascale_v1_7_6_gthe4_channel
     .TXPI_CFG1(2'b00),
     .TXPI_CFG2(2'b00),
     .TXPI_CFG3(1'b0),
-    .TXPI_CFG4(1'b1),
+    .TXPI_CFG4(1'b0),
     .TXPI_CFG5(3'b000),
     .TXPI_GRAY_SEL(1'b0),
     .TXPI_INVSTROBE_SEL(1'b0),
@@ -5419,7 +5419,7 @@ module system_jesd204_phy_0_0_gtwizard_ultrascale_v1_7_6_gthe4_channel
     .TXSYNC_MULTILANE(1'b1),
     .TXSYNC_OVRD(1'b0),
     .TXSYNC_SKIP_DA(1'b0),
-    .TX_CLK25_DIV(7),
+    .TX_CLK25_DIV(8),
     .TX_CLKMUX_EN(1'b1),
     .TX_DATA_WIDTH(40),
     .TX_DCC_LOOP_RST_CFG(16'h0004),
@@ -5451,7 +5451,7 @@ module system_jesd204_phy_0_0_gtwizard_ultrascale_v1_7_6_gthe4_channel
     .TX_PHICAL_CFG0(16'h0000),
     .TX_PHICAL_CFG1(16'h7E00),
     .TX_PHICAL_CFG2(16'h0201),
-    .TX_PI_BIASSET(2),
+    .TX_PI_BIASSET(3),
     .TX_PI_IBIAS_MID(2'b00),
     .TX_PMADATA_OPT(1'b0),
     .TX_PMA_POWER_SAVE(1'b0),
@@ -5993,16 +5993,16 @@ module system_jesd204_phy_0_0_gtwizard_ultrascale_v1_7_6_gthe4_common
     .COMMON_CFG0(16'h0000),
     .COMMON_CFG1(16'h0000),
     .POR_CFG(16'h0000),
-    .PPF0_CFG(16'h0900),
+    .PPF0_CFG(16'h0F00),
     .PPF1_CFG(16'h0600),
     .QPLL0CLKOUT_RATE("HALF"),
     .QPLL0_CFG0(16'h331C),
     .QPLL0_CFG1(16'hD038),
     .QPLL0_CFG1_G3(16'hD038),
-    .QPLL0_CFG2(16'h87C3),
-    .QPLL0_CFG2_G3(16'h87C3),
+    .QPLL0_CFG2(16'h87C1),
+    .QPLL0_CFG2_G3(16'h87C1),
     .QPLL0_CFG3(16'h0120),
-    .QPLL0_CFG4(16'h0004),
+    .QPLL0_CFG4(16'h0045),
     .QPLL0_CP(10'b0011111111),
     .QPLL0_CP_G3(10'b0000001111),
     .QPLL0_FBDIV(80),
@@ -6011,7 +6011,7 @@ module system_jesd204_phy_0_0_gtwizard_ultrascale_v1_7_6_gthe4_common
     .QPLL0_INIT_CFG1(8'h00),
     .QPLL0_LOCK_CFG(16'h25E8),
     .QPLL0_LOCK_CFG_G3(16'h25E8),
-    .QPLL0_LPF(10'b1000011111),
+    .QPLL0_LPF(10'b1101111111),
     .QPLL0_LPF_G3(10'b0111010101),
     .QPLL0_PCI_EN(1'b0),
     .QPLL0_RATE_SW_USE_DRP(1'b1),
@@ -7950,7 +7950,7 @@ module system_jesd204_phy_0_0_gtwizard_ultrascale_v1_7_6_gtwiz_reset
         .Q(sm_reset_rx_cdr_to_clr),
         .S(gtwiz_reset_rx_any_sync));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFF7)) 
+    .INIT(64'hFFFFFFFFFFFFFFFE)) 
     \sm_reset_rx_cdr_to_ctr[0]_i_1 
        (.I0(sm_reset_rx_cdr_to_ctr_reg[0]),
         .I1(sm_reset_rx_cdr_to_ctr_reg[1]),
@@ -7960,10 +7960,10 @@ module system_jesd204_phy_0_0_gtwizard_ultrascale_v1_7_6_gtwiz_reset
         .I5(\sm_reset_rx_cdr_to_ctr[0]_i_6_n_0 ),
         .O(\sm_reset_rx_cdr_to_ctr[0]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFDFFFFFFFF)) 
+    .INIT(64'hFFFFFFFFFFFFDFFF)) 
     \sm_reset_rx_cdr_to_ctr[0]_i_3 
-       (.I0(sm_reset_rx_cdr_to_ctr_reg[19]),
-        .I1(sm_reset_rx_cdr_to_ctr_reg[18]),
+       (.I0(sm_reset_rx_cdr_to_ctr_reg[18]),
+        .I1(sm_reset_rx_cdr_to_ctr_reg[19]),
         .I2(sm_reset_rx_cdr_to_ctr_reg[16]),
         .I3(sm_reset_rx_cdr_to_ctr_reg[17]),
         .I4(sm_reset_rx_cdr_to_ctr_reg[15]),
@@ -7980,22 +7980,22 @@ module system_jesd204_phy_0_0_gtwizard_ultrascale_v1_7_6_gtwiz_reset
         .I5(sm_reset_rx_cdr_to_ctr_reg[20]),
         .O(\sm_reset_rx_cdr_to_ctr[0]_i_4_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFDFFFFFFFFF)) 
+    .INIT(64'hFFFFEFFFFFFFFFFF)) 
     \sm_reset_rx_cdr_to_ctr[0]_i_5 
-       (.I0(sm_reset_rx_cdr_to_ctr_reg[13]),
-        .I1(sm_reset_rx_cdr_to_ctr_reg[12]),
+       (.I0(sm_reset_rx_cdr_to_ctr_reg[12]),
+        .I1(sm_reset_rx_cdr_to_ctr_reg[13]),
         .I2(sm_reset_rx_cdr_to_ctr_reg[10]),
         .I3(sm_reset_rx_cdr_to_ctr_reg[11]),
         .I4(sm_reset_rx_cdr_to_ctr_reg[8]),
         .I5(sm_reset_rx_cdr_to_ctr_reg[9]),
         .O(\sm_reset_rx_cdr_to_ctr[0]_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFF7)) 
+    .INIT(64'hFFFFFFDFFFFFFFFF)) 
     \sm_reset_rx_cdr_to_ctr[0]_i_6 
-       (.I0(sm_reset_rx_cdr_to_ctr_reg[6]),
-        .I1(sm_reset_rx_cdr_to_ctr_reg[7]),
-        .I2(sm_reset_rx_cdr_to_ctr_reg[4]),
-        .I3(sm_reset_rx_cdr_to_ctr_reg[5]),
+       (.I0(sm_reset_rx_cdr_to_ctr_reg[7]),
+        .I1(sm_reset_rx_cdr_to_ctr_reg[6]),
+        .I2(sm_reset_rx_cdr_to_ctr_reg[5]),
+        .I3(sm_reset_rx_cdr_to_ctr_reg[4]),
         .I4(sm_reset_rx_cdr_to_ctr_reg[3]),
         .I5(sm_reset_rx_cdr_to_ctr_reg[2]),
         .O(\sm_reset_rx_cdr_to_ctr[0]_i_6_n_0 ));
@@ -8248,7 +8248,7 @@ module system_jesd204_phy_0_0_gtwizard_ultrascale_v1_7_6_gtwiz_reset
         .I2(sm_reset_rx_cdr_to_clr),
         .O(sm_reset_rx_cdr_to_sat_i_1_n_0));
   LUT6 #(
-    .INIT(64'h8000000000000000)) 
+    .INIT(64'h0000000000008000)) 
     sm_reset_rx_cdr_to_sat_i_2
        (.I0(sm_reset_rx_cdr_to_sat_i_3_n_0),
         .I1(sm_reset_rx_cdr_to_sat_i_4_n_0),
@@ -8258,14 +8258,14 @@ module system_jesd204_phy_0_0_gtwizard_ultrascale_v1_7_6_gtwiz_reset
         .I5(sm_reset_rx_cdr_to_ctr_reg[1]),
         .O(sm_reset_rx_cdr_to_sat_i_2_n_0));
   LUT6 #(
-    .INIT(64'h0001000000000000)) 
+    .INIT(64'h0000002000000000)) 
     sm_reset_rx_cdr_to_sat_i_3
-       (.I0(sm_reset_rx_cdr_to_ctr_reg[4]),
-        .I1(sm_reset_rx_cdr_to_ctr_reg[5]),
+       (.I0(sm_reset_rx_cdr_to_ctr_reg[5]),
+        .I1(sm_reset_rx_cdr_to_ctr_reg[4]),
         .I2(sm_reset_rx_cdr_to_ctr_reg[2]),
         .I3(sm_reset_rx_cdr_to_ctr_reg[3]),
-        .I4(sm_reset_rx_cdr_to_ctr_reg[7]),
-        .I5(sm_reset_rx_cdr_to_ctr_reg[6]),
+        .I4(sm_reset_rx_cdr_to_ctr_reg[6]),
+        .I5(sm_reset_rx_cdr_to_ctr_reg[7]),
         .O(sm_reset_rx_cdr_to_sat_i_3_n_0));
   LUT6 #(
     .INIT(64'h0000000000000001)) 
@@ -8278,24 +8278,24 @@ module system_jesd204_phy_0_0_gtwizard_ultrascale_v1_7_6_gtwiz_reset
         .I5(sm_reset_rx_cdr_to_ctr_reg[24]),
         .O(sm_reset_rx_cdr_to_sat_i_4_n_0));
   LUT6 #(
-    .INIT(64'h0000001000000000)) 
+    .INIT(64'h0000000800000000)) 
     sm_reset_rx_cdr_to_sat_i_5
        (.I0(sm_reset_rx_cdr_to_ctr_reg[16]),
         .I1(sm_reset_rx_cdr_to_ctr_reg[17]),
         .I2(sm_reset_rx_cdr_to_ctr_reg[14]),
         .I3(sm_reset_rx_cdr_to_ctr_reg[15]),
-        .I4(sm_reset_rx_cdr_to_ctr_reg[18]),
-        .I5(sm_reset_rx_cdr_to_ctr_reg[19]),
+        .I4(sm_reset_rx_cdr_to_ctr_reg[19]),
+        .I5(sm_reset_rx_cdr_to_ctr_reg[18]),
         .O(sm_reset_rx_cdr_to_sat_i_5_n_0));
   LUT6 #(
-    .INIT(64'h0000002000000000)) 
+    .INIT(64'h0000000000000080)) 
     sm_reset_rx_cdr_to_sat_i_6
        (.I0(sm_reset_rx_cdr_to_ctr_reg[10]),
         .I1(sm_reset_rx_cdr_to_ctr_reg[11]),
         .I2(sm_reset_rx_cdr_to_ctr_reg[9]),
         .I3(sm_reset_rx_cdr_to_ctr_reg[8]),
-        .I4(sm_reset_rx_cdr_to_ctr_reg[12]),
-        .I5(sm_reset_rx_cdr_to_ctr_reg[13]),
+        .I4(sm_reset_rx_cdr_to_ctr_reg[13]),
+        .I5(sm_reset_rx_cdr_to_ctr_reg[12]),
         .O(sm_reset_rx_cdr_to_sat_i_6_n_0));
   FDRE #(
     .INIT(1'b0)) 
@@ -10876,7 +10876,7 @@ module system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt
   wire [0:0]NLW_inst_ubrsvdout_out_UNCONNECTED;
   wire [0:0]NLW_inst_ubtxuart_out_UNCONNECTED;
 
-  (* C_CHANNEL_ENABLE = "192'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011110000" *) 
+  (* C_CHANNEL_ENABLE = "192'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111000000000000" *) 
   (* C_COMMON_SCALING_FACTOR = "1" *) 
   (* C_CPLL_VCO_FREQUENCY = "2578.125000" *) 
   (* C_ENABLE_COMMON_USRCLK = "0" *) 
@@ -10920,14 +10920,14 @@ module system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt
   (* C_RX_DATA_DECODING = "1" *) 
   (* C_RX_ENABLE = "1" *) 
   (* C_RX_INT_DATA_WIDTH = "40" *) 
-  (* C_RX_LINE_RATE = "6.720000" *) 
-  (* C_RX_MASTER_CHANNEL_IDX = "4" *) 
+  (* C_RX_LINE_RATE = "8.000000" *) 
+  (* C_RX_MASTER_CHANNEL_IDX = "12" *) 
   (* C_RX_OUTCLK_BUFG_GT_DIV = "1" *) 
-  (* C_RX_OUTCLK_FREQUENCY = "168.000000" *) 
+  (* C_RX_OUTCLK_FREQUENCY = "200.000000" *) 
   (* C_RX_OUTCLK_SOURCE = "1" *) 
   (* C_RX_PLL_TYPE = "0" *) 
   (* C_RX_RECCLK_OUTPUT = "192'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" *) 
-  (* C_RX_REFCLK_FREQUENCY = "168.000000" *) 
+  (* C_RX_REFCLK_FREQUENCY = "200.000000" *) 
   (* C_RX_SLIDE_MODE = "0" *) 
   (* C_RX_USER_CLOCKING_CONTENTS = "0" *) 
   (* C_RX_USER_CLOCKING_INSTANCE_CTRL = "0" *) 
@@ -10935,8 +10935,8 @@ module system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt
   (* C_RX_USER_CLOCKING_RATIO_FUSRCLK_FUSRCLK2 = "1" *) 
   (* C_RX_USER_CLOCKING_SOURCE = "0" *) 
   (* C_RX_USER_DATA_WIDTH = "32" *) 
-  (* C_RX_USRCLK2_FREQUENCY = "168.000000" *) 
-  (* C_RX_USRCLK_FREQUENCY = "168.000000" *) 
+  (* C_RX_USRCLK2_FREQUENCY = "200.000000" *) 
+  (* C_RX_USRCLK_FREQUENCY = "200.000000" *) 
   (* C_SECONDARY_QPLL_ENABLE = "1" *) 
   (* C_SECONDARY_QPLL_REFCLK_FREQUENCY = "64.453125" *) 
   (* C_SIM_CPLL_CAL_BYPASS = "1" *) 
@@ -10945,28 +10945,28 @@ module system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt
   (* C_TOTAL_NUM_COMMONS_EXAMPLE = "1" *) 
   (* C_TXPROGDIV_FREQ_ENABLE = "0" *) 
   (* C_TXPROGDIV_FREQ_SOURCE = "0" *) 
-  (* C_TXPROGDIV_FREQ_VAL = "168.000000" *) 
+  (* C_TXPROGDIV_FREQ_VAL = "200.000000" *) 
   (* C_TX_BUFFBYPASS_MODE = "0" *) 
   (* C_TX_BUFFER_BYPASS_INSTANCE_CTRL = "0" *) 
   (* C_TX_BUFFER_MODE = "1" *) 
   (* C_TX_DATA_ENCODING = "1" *) 
   (* C_TX_ENABLE = "1" *) 
   (* C_TX_INT_DATA_WIDTH = "40" *) 
-  (* C_TX_LINE_RATE = "6.720000" *) 
-  (* C_TX_MASTER_CHANNEL_IDX = "4" *) 
+  (* C_TX_LINE_RATE = "8.000000" *) 
+  (* C_TX_MASTER_CHANNEL_IDX = "12" *) 
   (* C_TX_OUTCLK_BUFG_GT_DIV = "1" *) 
-  (* C_TX_OUTCLK_FREQUENCY = "168.000000" *) 
+  (* C_TX_OUTCLK_FREQUENCY = "200.000000" *) 
   (* C_TX_OUTCLK_SOURCE = "1" *) 
   (* C_TX_PLL_TYPE = "0" *) 
-  (* C_TX_REFCLK_FREQUENCY = "168.000000" *) 
+  (* C_TX_REFCLK_FREQUENCY = "200.000000" *) 
   (* C_TX_USER_CLOCKING_CONTENTS = "0" *) 
   (* C_TX_USER_CLOCKING_INSTANCE_CTRL = "0" *) 
   (* C_TX_USER_CLOCKING_RATIO_FSRC_FUSRCLK = "1" *) 
   (* C_TX_USER_CLOCKING_RATIO_FUSRCLK_FUSRCLK2 = "1" *) 
   (* C_TX_USER_CLOCKING_SOURCE = "0" *) 
   (* C_TX_USER_DATA_WIDTH = "32" *) 
-  (* C_TX_USRCLK2_FREQUENCY = "168.000000" *) 
-  (* C_TX_USRCLK_FREQUENCY = "168.000000" *) 
+  (* C_TX_USRCLK2_FREQUENCY = "200.000000" *) 
+  (* C_TX_USRCLK_FREQUENCY = "200.000000" *) 
   (* C_USER_GTPOWERGOOD_DELAY_EN = "1" *) 
   system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top inst
        (.bgbypassb_in(1'b1),
@@ -13669,10 +13669,10 @@ module system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_gthe4
   wire [3:0]freqos_in;
   wire [3:0]\gen_gtwizard_gthe4.delay_pwrgood_gtrxreset_int ;
   wire [3:0]\gen_gtwizard_gthe4.delay_pwrgood_rxpmareset_int ;
-  wire \gen_gtwizard_gthe4.gen_channel_container[1].gen_enabled_channel.gthe4_channel_wrapper_inst_n_0 ;
-  wire \gen_gtwizard_gthe4.gen_channel_container[1].gen_enabled_channel.gthe4_channel_wrapper_inst_n_5 ;
-  wire \gen_gtwizard_gthe4.gen_channel_container[1].gen_enabled_channel.gthe4_channel_wrapper_inst_n_6 ;
-  wire \gen_gtwizard_gthe4.gen_channel_container[1].gen_enabled_channel.gthe4_channel_wrapper_inst_n_7 ;
+  wire \gen_gtwizard_gthe4.gen_channel_container[3].gen_enabled_channel.gthe4_channel_wrapper_inst_n_0 ;
+  wire \gen_gtwizard_gthe4.gen_channel_container[3].gen_enabled_channel.gthe4_channel_wrapper_inst_n_5 ;
+  wire \gen_gtwizard_gthe4.gen_channel_container[3].gen_enabled_channel.gthe4_channel_wrapper_inst_n_6 ;
+  wire \gen_gtwizard_gthe4.gen_channel_container[3].gen_enabled_channel.gthe4_channel_wrapper_inst_n_7 ;
   wire \gen_gtwizard_gthe4.gen_pwrgood_delay_inst[0].delay_powergood_inst_n_1 ;
   wire \gen_gtwizard_gthe4.gen_pwrgood_delay_inst[0].delay_powergood_inst_n_4 ;
   wire \gen_gtwizard_gthe4.gen_pwrgood_delay_inst[0].delay_powergood_inst_n_5 ;
@@ -13997,7 +13997,7 @@ module system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_gthe4
   wire [3:0]txusrclk2_in;
   wire [3:0]txusrclk_in;
 
-  system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gthe4_channel_wrapper \gen_gtwizard_gthe4.gen_channel_container[1].gen_enabled_channel.gthe4_channel_wrapper_inst 
+  system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gthe4_channel_wrapper \gen_gtwizard_gthe4.gen_channel_container[3].gen_enabled_channel.gthe4_channel_wrapper_inst 
        (.GTHE4_CHANNEL_GTPOWERGOOD(\gen_gtwizard_gthe4.gtpowergood_int ),
         .GTHE4_CHANNEL_GTRXRESET(\gen_gtwizard_gthe4.delay_pwrgood_gtrxreset_int ),
         .GTHE4_CHANNEL_RXOUTCLKPCS(rxoutclkpcs_out),
@@ -14030,10 +14030,10 @@ module system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_gthe4
         .dmonitorout_out(dmonitorout_out),
         .dmonitoroutclk_out(dmonitoroutclk_out),
         .drpaddr_in(drpaddr_in),
-        .drpclk(\gen_gtwizard_gthe4.gen_channel_container[1].gen_enabled_channel.gthe4_channel_wrapper_inst_n_0 ),
-        .drpclk_0(\gen_gtwizard_gthe4.gen_channel_container[1].gen_enabled_channel.gthe4_channel_wrapper_inst_n_5 ),
-        .drpclk_1(\gen_gtwizard_gthe4.gen_channel_container[1].gen_enabled_channel.gthe4_channel_wrapper_inst_n_6 ),
-        .drpclk_2(\gen_gtwizard_gthe4.gen_channel_container[1].gen_enabled_channel.gthe4_channel_wrapper_inst_n_7 ),
+        .drpclk(\gen_gtwizard_gthe4.gen_channel_container[3].gen_enabled_channel.gthe4_channel_wrapper_inst_n_0 ),
+        .drpclk_0(\gen_gtwizard_gthe4.gen_channel_container[3].gen_enabled_channel.gthe4_channel_wrapper_inst_n_5 ),
+        .drpclk_1(\gen_gtwizard_gthe4.gen_channel_container[3].gen_enabled_channel.gthe4_channel_wrapper_inst_n_6 ),
+        .drpclk_2(\gen_gtwizard_gthe4.gen_channel_container[3].gen_enabled_channel.gthe4_channel_wrapper_inst_n_7 ),
         .drpclk_in(drpclk_in),
         .drpdi_in(drpdi_in),
         .drpdo_out(drpdo_out),
@@ -14351,7 +14351,7 @@ module system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_gthe4
         .GTHE4_CHANNEL_RXPMARESET(\gen_gtwizard_gthe4.delay_pwrgood_rxpmareset_int [0]),
         .GTHE4_CHANNEL_RXRATE({\gen_gtwizard_gthe4.rxrate_ch_int [2:1],\gen_gtwizard_gthe4.gen_pwrgood_delay_inst[0].delay_powergood_inst_n_4 }),
         .GTHE4_CHANNEL_RXRATEMODE(\gen_gtwizard_gthe4.gen_pwrgood_delay_inst[0].delay_powergood_inst_n_1 ),
-        .\gen_powergood_delay.intclk_rrst_n_r_reg[0]_0 (\gen_gtwizard_gthe4.gen_channel_container[1].gen_enabled_channel.gthe4_channel_wrapper_inst_n_0 ),
+        .\gen_powergood_delay.intclk_rrst_n_r_reg[0]_0 (\gen_gtwizard_gthe4.gen_channel_container[3].gen_enabled_channel.gthe4_channel_wrapper_inst_n_0 ),
         .gtrxreset_in(gtrxreset_in[0]),
         .out(gtpowergood_out[0]),
         .rxpd_in(rxpd_in[1:0]),
@@ -14366,7 +14366,7 @@ module system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_gthe4
         .GTHE4_CHANNEL_RXPMARESET(\gen_gtwizard_gthe4.delay_pwrgood_rxpmareset_int [1]),
         .GTHE4_CHANNEL_RXRATE({\gen_gtwizard_gthe4.rxrate_ch_int [5:4],\gen_gtwizard_gthe4.gen_pwrgood_delay_inst[1].delay_powergood_inst_n_4 }),
         .GTHE4_CHANNEL_RXRATEMODE(\gen_gtwizard_gthe4.gen_pwrgood_delay_inst[1].delay_powergood_inst_n_1 ),
-        .\gen_powergood_delay.intclk_rrst_n_r_reg[0]_0 (\gen_gtwizard_gthe4.gen_channel_container[1].gen_enabled_channel.gthe4_channel_wrapper_inst_n_5 ),
+        .\gen_powergood_delay.intclk_rrst_n_r_reg[0]_0 (\gen_gtwizard_gthe4.gen_channel_container[3].gen_enabled_channel.gthe4_channel_wrapper_inst_n_5 ),
         .gtrxreset_in(gtrxreset_in[1]),
         .out(gtpowergood_out[1]),
         .rxpd_in(rxpd_in[3:2]),
@@ -14381,7 +14381,7 @@ module system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_gthe4
         .GTHE4_CHANNEL_RXPMARESET(\gen_gtwizard_gthe4.delay_pwrgood_rxpmareset_int [2]),
         .GTHE4_CHANNEL_RXRATE({\gen_gtwizard_gthe4.rxrate_ch_int [8:7],\gen_gtwizard_gthe4.gen_pwrgood_delay_inst[2].delay_powergood_inst_n_4 }),
         .GTHE4_CHANNEL_RXRATEMODE(\gen_gtwizard_gthe4.gen_pwrgood_delay_inst[2].delay_powergood_inst_n_1 ),
-        .\gen_powergood_delay.intclk_rrst_n_r_reg[0]_0 (\gen_gtwizard_gthe4.gen_channel_container[1].gen_enabled_channel.gthe4_channel_wrapper_inst_n_6 ),
+        .\gen_powergood_delay.intclk_rrst_n_r_reg[0]_0 (\gen_gtwizard_gthe4.gen_channel_container[3].gen_enabled_channel.gthe4_channel_wrapper_inst_n_6 ),
         .gtrxreset_in(gtrxreset_in[2]),
         .out(gtpowergood_out[2]),
         .rxpd_in(rxpd_in[5:4]),
@@ -14396,7 +14396,7 @@ module system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_gthe4
         .GTHE4_CHANNEL_RXPMARESET(\gen_gtwizard_gthe4.delay_pwrgood_rxpmareset_int [3]),
         .GTHE4_CHANNEL_RXRATE({\gen_gtwizard_gthe4.rxrate_ch_int [11:10],\gen_gtwizard_gthe4.gen_pwrgood_delay_inst[3].delay_powergood_inst_n_4 }),
         .GTHE4_CHANNEL_RXRATEMODE(\gen_gtwizard_gthe4.gen_pwrgood_delay_inst[3].delay_powergood_inst_n_1 ),
-        .\gen_powergood_delay.intclk_rrst_n_r_reg[0]_0 (\gen_gtwizard_gthe4.gen_channel_container[1].gen_enabled_channel.gthe4_channel_wrapper_inst_n_7 ),
+        .\gen_powergood_delay.intclk_rrst_n_r_reg[0]_0 (\gen_gtwizard_gthe4.gen_channel_container[3].gen_enabled_channel.gthe4_channel_wrapper_inst_n_7 ),
         .gtrxreset_in(gtrxreset_in[3]),
         .out(gtpowergood_out[3]),
         .rxpd_in(rxpd_in[7:6]),
@@ -14405,7 +14405,7 @@ module system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_gthe4
         .rxratemode_in(rxratemode_in[3]));
 endmodule
 
-(* C_CHANNEL_ENABLE = "192'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011110000" *) (* C_COMMON_SCALING_FACTOR = "1" *) (* C_CPLL_VCO_FREQUENCY = "2578.125000" *) 
+(* C_CHANNEL_ENABLE = "192'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111000000000000" *) (* C_COMMON_SCALING_FACTOR = "1" *) (* C_CPLL_VCO_FREQUENCY = "2578.125000" *) 
 (* C_ENABLE_COMMON_USRCLK = "0" *) (* C_FORCE_COMMONS = "0" *) (* C_FREERUN_FREQUENCY = "100.000000" *) 
 (* C_GT_REV = "57" *) (* C_GT_TYPE = "2" *) (* C_INCLUDE_CPLL_CAL = "0" *) 
 (* C_LOCATE_COMMON = "1" *) (* C_LOCATE_IN_SYSTEM_IBERT_CORE = "2" *) (* C_LOCATE_RESET_CONTROLLER = "1" *) 
@@ -14419,23 +14419,23 @@ endmodule
 (* C_RX_CC_LEN_SEQ = "1" *) (* C_RX_CC_NUM_SEQ = "0" *) (* C_RX_CC_PERIODICITY = "5000" *) 
 (* C_RX_CC_VAL = "80'b00000000000000000000000000000000000000000000000000000000000000000000000000000000" *) (* C_RX_COMMA_M_ENABLE = "1" *) (* C_RX_COMMA_M_VAL = "10'b1010000011" *) 
 (* C_RX_COMMA_P_ENABLE = "1" *) (* C_RX_COMMA_P_VAL = "10'b0101111100" *) (* C_RX_DATA_DECODING = "1" *) 
-(* C_RX_ENABLE = "1" *) (* C_RX_INT_DATA_WIDTH = "40" *) (* C_RX_LINE_RATE = "6.720000" *) 
-(* C_RX_MASTER_CHANNEL_IDX = "4" *) (* C_RX_OUTCLK_BUFG_GT_DIV = "1" *) (* C_RX_OUTCLK_FREQUENCY = "168.000000" *) 
+(* C_RX_ENABLE = "1" *) (* C_RX_INT_DATA_WIDTH = "40" *) (* C_RX_LINE_RATE = "8.000000" *) 
+(* C_RX_MASTER_CHANNEL_IDX = "12" *) (* C_RX_OUTCLK_BUFG_GT_DIV = "1" *) (* C_RX_OUTCLK_FREQUENCY = "200.000000" *) 
 (* C_RX_OUTCLK_SOURCE = "1" *) (* C_RX_PLL_TYPE = "0" *) (* C_RX_RECCLK_OUTPUT = "192'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" *) 
-(* C_RX_REFCLK_FREQUENCY = "168.000000" *) (* C_RX_SLIDE_MODE = "0" *) (* C_RX_USER_CLOCKING_CONTENTS = "0" *) 
+(* C_RX_REFCLK_FREQUENCY = "200.000000" *) (* C_RX_SLIDE_MODE = "0" *) (* C_RX_USER_CLOCKING_CONTENTS = "0" *) 
 (* C_RX_USER_CLOCKING_INSTANCE_CTRL = "0" *) (* C_RX_USER_CLOCKING_RATIO_FSRC_FUSRCLK = "1" *) (* C_RX_USER_CLOCKING_RATIO_FUSRCLK_FUSRCLK2 = "1" *) 
-(* C_RX_USER_CLOCKING_SOURCE = "0" *) (* C_RX_USER_DATA_WIDTH = "32" *) (* C_RX_USRCLK2_FREQUENCY = "168.000000" *) 
-(* C_RX_USRCLK_FREQUENCY = "168.000000" *) (* C_SECONDARY_QPLL_ENABLE = "1" *) (* C_SECONDARY_QPLL_REFCLK_FREQUENCY = "64.453125" *) 
+(* C_RX_USER_CLOCKING_SOURCE = "0" *) (* C_RX_USER_DATA_WIDTH = "32" *) (* C_RX_USRCLK2_FREQUENCY = "200.000000" *) 
+(* C_RX_USRCLK_FREQUENCY = "200.000000" *) (* C_SECONDARY_QPLL_ENABLE = "1" *) (* C_SECONDARY_QPLL_REFCLK_FREQUENCY = "64.453125" *) 
 (* C_SIM_CPLL_CAL_BYPASS = "1" *) (* C_TOTAL_NUM_CHANNELS = "4" *) (* C_TOTAL_NUM_COMMONS = "0" *) 
 (* C_TOTAL_NUM_COMMONS_EXAMPLE = "1" *) (* C_TXPROGDIV_FREQ_ENABLE = "0" *) (* C_TXPROGDIV_FREQ_SOURCE = "0" *) 
-(* C_TXPROGDIV_FREQ_VAL = "168.000000" *) (* C_TX_BUFFBYPASS_MODE = "0" *) (* C_TX_BUFFER_BYPASS_INSTANCE_CTRL = "0" *) 
+(* C_TXPROGDIV_FREQ_VAL = "200.000000" *) (* C_TX_BUFFBYPASS_MODE = "0" *) (* C_TX_BUFFER_BYPASS_INSTANCE_CTRL = "0" *) 
 (* C_TX_BUFFER_MODE = "1" *) (* C_TX_DATA_ENCODING = "1" *) (* C_TX_ENABLE = "1" *) 
-(* C_TX_INT_DATA_WIDTH = "40" *) (* C_TX_LINE_RATE = "6.720000" *) (* C_TX_MASTER_CHANNEL_IDX = "4" *) 
-(* C_TX_OUTCLK_BUFG_GT_DIV = "1" *) (* C_TX_OUTCLK_FREQUENCY = "168.000000" *) (* C_TX_OUTCLK_SOURCE = "1" *) 
-(* C_TX_PLL_TYPE = "0" *) (* C_TX_REFCLK_FREQUENCY = "168.000000" *) (* C_TX_USER_CLOCKING_CONTENTS = "0" *) 
+(* C_TX_INT_DATA_WIDTH = "40" *) (* C_TX_LINE_RATE = "8.000000" *) (* C_TX_MASTER_CHANNEL_IDX = "12" *) 
+(* C_TX_OUTCLK_BUFG_GT_DIV = "1" *) (* C_TX_OUTCLK_FREQUENCY = "200.000000" *) (* C_TX_OUTCLK_SOURCE = "1" *) 
+(* C_TX_PLL_TYPE = "0" *) (* C_TX_REFCLK_FREQUENCY = "200.000000" *) (* C_TX_USER_CLOCKING_CONTENTS = "0" *) 
 (* C_TX_USER_CLOCKING_INSTANCE_CTRL = "0" *) (* C_TX_USER_CLOCKING_RATIO_FSRC_FUSRCLK = "1" *) (* C_TX_USER_CLOCKING_RATIO_FUSRCLK_FUSRCLK2 = "1" *) 
-(* C_TX_USER_CLOCKING_SOURCE = "0" *) (* C_TX_USER_DATA_WIDTH = "32" *) (* C_TX_USRCLK2_FREQUENCY = "168.000000" *) 
-(* C_TX_USRCLK_FREQUENCY = "168.000000" *) (* C_USER_GTPOWERGOOD_DELAY_EN = "1" *) (* ORIG_REF_NAME = "system_jesd204_phy_0_0_gt_gtwizard_top" *) 
+(* C_TX_USER_CLOCKING_SOURCE = "0" *) (* C_TX_USER_DATA_WIDTH = "32" *) (* C_TX_USRCLK2_FREQUENCY = "200.000000" *) 
+(* C_TX_USRCLK_FREQUENCY = "200.000000" *) (* C_USER_GTPOWERGOOD_DELAY_EN = "1" *) (* ORIG_REF_NAME = "system_jesd204_phy_0_0_gt_gtwizard_top" *) 
 module system_jesd204_phy_0_0_system_jesd204_phy_0_0_gt_gtwizard_top
    (gtwiz_userclk_tx_reset_in,
     gtwiz_userclk_tx_active_in,

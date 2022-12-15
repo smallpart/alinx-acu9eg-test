@@ -207,6 +207,7 @@
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/system/ip/edit_modulator_v1_0.srcs/sources_1/bd/design_1/ip/design_1_dds_compiler_0_0/sim/design_1_dds_compiler_0_0.vhd" \
+  "../../../bd/system/ip/edit_modulator_v1_0.srcs/sources_1/bd/design_1/ip/design_1_dds_compiler_0_1/sim/design_1_dds_compiler_0_1.vhd" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/system/ip/edit_modulator_v1_0.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/sim/design_1_xlconstant_0_0.v" \
@@ -214,8 +215,8 @@
   "../../../bd/system/ipshared/src/data_conv.v" \
   "../../../bd/system/ipshared/edit_modulator_v1_0.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v" \
   "../../../bd/system/ipshared/src/lfm.v" \
-  "../../../bd/system/ipshared/7c89/hdl/modulator_v1_0_S00_AXI.v" \
-  "../../../bd/system/ipshared/7c89/hdl/modulator_v1_0.v" \
+  "../../../bd/system/ipshared/02f7/hdl/modulator_v1_0_S00_AXI.v" \
+  "../../../bd/system/ipshared/02f7/hdl/modulator_v1_0.v" \
   "../../../bd/system/ip/system_modulator_0_0/sim/system_modulator_0_0.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \

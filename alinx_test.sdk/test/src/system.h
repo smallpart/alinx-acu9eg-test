@@ -29,20 +29,26 @@
 union __mod_config_u {
     uint32_t all;
     struct {
-        uint32_t lfm_on   : 1;
-        uint32_t debug_on : 1;
-        uint32_t reserve  : 30;
+        uint32_t debug      : 1;
+        uint32_t ch0_lfm_on : 1;
+        uint32_t ch1_lfm_on : 1;
+        uint32_t reserve    : 29;
     };
 };
 
 /* Modulator structure */
 typedef struct {
     union __mod_config_u config;
-    uint32_t             lfm_rate_l;
-    uint32_t             lfm_rate_h;
-    uint32_t             lfm_time;
-    uint32_t             lfm_start_freq_l;
-    uint32_t             lfm_start_freq_h;
+    uint32_t             ch0_lfm_start_freq_l;
+    uint32_t             ch0_lfm_start_freq_h;
+    uint32_t             ch0_lfm_rate_l;
+    uint32_t             ch0_lfm_rate_h;
+    uint32_t             ch0_lfm_time;
+    uint32_t             ch1_lfm_start_freq_l;
+    uint32_t             ch1_lfm_start_freq_h;
+    uint32_t             ch1_lfm_rate_l;
+    uint32_t             ch1_lfm_rate_h;
+    uint32_t             ch1_lfm_time;
     uint32_t             jesd_data_0;
     uint32_t             jesd_data_1;
     uint32_t             jesd_data_2;

@@ -2,33 +2,33 @@
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
-preplace port led_pl -pg 1 -lvl 8 -x 2670 -y 500 -defaultsOSRD
-preplace port dac_txen -pg 1 -lvl 8 -x 2670 -y 1220 -defaultsOSRD
-preplace port gpio_spi_en -pg 1 -lvl 8 -x 2670 -y 640 -defaultsOSRD
-preplace port gpio_status -pg 1 -lvl 8 -x 2670 -y 780 -defaultsOSRD
-preplace port fmc_spi -pg 1 -lvl 8 -x 2670 -y 920 -defaultsOSRD
-preplace port uart_control -pg 1 -lvl 8 -x 2670 -y 1070 -defaultsOSRD
+preplace port led_pl -pg 1 -lvl 8 -x 2680 -y 500 -defaultsOSRD
+preplace port dac_txen -pg 1 -lvl 8 -x 2680 -y 1220 -defaultsOSRD
+preplace port gpio_spi_en -pg 1 -lvl 8 -x 2680 -y 640 -defaultsOSRD
+preplace port gpio_status -pg 1 -lvl 8 -x 2680 -y 780 -defaultsOSRD
+preplace port fmc_spi -pg 1 -lvl 8 -x 2680 -y 920 -defaultsOSRD
+preplace port uart_control -pg 1 -lvl 8 -x 2680 -y 1070 -defaultsOSRD
 preplace port sysref -pg 1 -lvl 0 -x 0 -y 1100 -defaultsOSRD
 preplace port sync -pg 1 -lvl 0 -x 0 -y 990 -defaultsOSRD
 preplace port clk_jesd_p -pg 1 -lvl 0 -x 0 -y 460 -defaultsOSRD
 preplace port clk_jesd_n -pg 1 -lvl 0 -x 0 -y 480 -defaultsOSRD
-preplace port clk_200 -pg 1 -lvl 8 -x 2670 -y 110 -defaultsOSRD
-preplace port clk_400 -pg 1 -lvl 8 -x 2670 -y 140 -defaultsOSRD
-preplace portBus jesd_clk_in_div -pg 1 -lvl 8 -x 2670 -y 90 -defaultsOSRD
-preplace portBus dac_sync -pg 1 -lvl 8 -x 2670 -y 1200 -defaultsOSRD
-preplace portBus txp_out_0 -pg 1 -lvl 8 -x 2670 -y 210 -defaultsOSRD
-preplace portBus txn_out_0 -pg 1 -lvl 8 -x 2670 -y 230 -defaultsOSRD
+preplace port clk_200 -pg 1 -lvl 8 -x 2680 -y 110 -defaultsOSRD
+preplace port clk_400 -pg 1 -lvl 8 -x 2680 -y 140 -defaultsOSRD
+preplace portBus jesd_clk_in_div -pg 1 -lvl 8 -x 2680 -y 90 -defaultsOSRD
+preplace portBus dac_sync -pg 1 -lvl 8 -x 2680 -y 1200 -defaultsOSRD
+preplace portBus txp_out_0 -pg 1 -lvl 8 -x 2680 -y 210 -defaultsOSRD
+preplace portBus txn_out_0 -pg 1 -lvl 8 -x 2680 -y 230 -defaultsOSRD
 preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 3 -x 890 -y 340 -defaultsOSRD
-preplace inst axi_gpio_led -pg 1 -lvl 7 -x 2460 -y 500 -defaultsOSRD
+preplace inst axi_gpio_led -pg 1 -lvl 7 -x 2470 -y 500 -defaultsOSRD
 preplace inst ps8_0_axi_periph -pg 1 -lvl 4 -x 1370 -y 520 -defaultsOSRD
 preplace inst rst_ps8_0_96M -pg 1 -lvl 3 -x 890 -y 680 -defaultsOSRD
-preplace inst axi_quad_spi_fmc -pg 1 -lvl 7 -x 2460 -y 930 -defaultsOSRD
-preplace inst axi_gpio_spi_en -pg 1 -lvl 7 -x 2460 -y 640 -defaultsOSRD
-preplace inst axi_gpio_dac_control -pg 1 -lvl 7 -x 2460 -y 1220 -defaultsOSRD
-preplace inst axi_gpio_fmc_status -pg 1 -lvl 7 -x 2460 -y 780 -defaultsOSRD
-preplace inst axi_uartlite_control -pg 1 -lvl 7 -x 2460 -y 1080 -defaultsOSRD
+preplace inst axi_quad_spi_fmc -pg 1 -lvl 7 -x 2470 -y 930 -defaultsOSRD
+preplace inst axi_gpio_spi_en -pg 1 -lvl 7 -x 2470 -y 640 -defaultsOSRD
+preplace inst axi_gpio_dac_control -pg 1 -lvl 7 -x 2470 -y 1220 -defaultsOSRD
+preplace inst axi_gpio_fmc_status -pg 1 -lvl 7 -x 2470 -y 780 -defaultsOSRD
+preplace inst axi_uartlite_control -pg 1 -lvl 7 -x 2470 -y 1080 -defaultsOSRD
 preplace inst jesd204_0 -pg 1 -lvl 6 -x 2010 -y 360 -defaultsOSRD
-preplace inst jesd204_phy_0 -pg 1 -lvl 7 -x 2460 -y 210 -defaultsOSRD
+preplace inst jesd204_phy_0 -pg 1 -lvl 7 -x 2470 -y 210 -defaultsOSRD
 preplace inst clk_wiz_0 -pg 1 -lvl 4 -x 1370 -y 870 -defaultsOSRD
 preplace inst util_ds_buf_1 -pg 1 -lvl 1 -x 180 -y 460 -defaultsOSRD
 preplace inst xlconstant_zero -pg 1 -lvl 1 -x 180 -y 820 -defaultsOSRD
@@ -41,54 +41,54 @@ preplace inst axi_gpio_jesd -pg 1 -lvl 3 -x 890 -y 60 -defaultsOSRD
 preplace inst xlslice_jesd_reset -pg 1 -lvl 2 -x 440 -y 30 -defaultsOSRD
 preplace inst xlslice_jesd_sync -pg 1 -lvl 2 -x 440 -y 140 -defaultsOSRD -resize 160 88
 preplace inst modulator_0 -pg 1 -lvl 6 -x 2010 -y 680 -defaultsOSRD
-preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 2 5 580 240 1210 240 N 240 1740 160 2250
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 2 5 580 240 1210 240 N 240 1720 170 2300
 preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 2 2 590 430 1190
-preplace netloc rst_ps8_0_96M_peripheral_aresetn 1 2 5 590 170 1200 170 N 170 1710 170 2230
-preplace netloc jesd204_phy_0_tx_reset_done 1 5 3 1760 -30 NJ -30 2620
+preplace netloc rst_ps8_0_96M_peripheral_aresetn 1 2 5 590 200 1200 200 N 200 1690 200 2240
+preplace netloc jesd204_phy_0_tx_reset_done 1 5 3 1750 -30 NJ -30 2630
 preplace netloc jesd204_0_tx_reset_gt 1 6 1 2270 180n
 preplace netloc jesd204_0_gt_prbssel_out 1 6 1 2280 340n
 preplace netloc util_ds_buf_1_IBUF_OUT 1 1 6 NJ 450 550 140 NJ 140 NJ 140 N 140 N
-preplace netloc clk_wiz_0_clk_jesd 1 4 4 N 860 1690 -10 N -10 2640
-preplace netloc xlconstant_zero_dout 1 1 6 N 820 560 190 NJ 190 NJ 190 N 190 2290
-preplace netloc rst_ps8_0_96M_peripheral_reset 1 2 5 560 180 N 180 N 180 1750 180 2260
+preplace netloc clk_wiz_0_clk_jesd 1 4 4 N 860 1680 -10 N -10 2650
+preplace netloc xlconstant_zero_dout 1 1 6 N 820 560 210 NJ 210 NJ 210 N 210 2290
+preplace netloc rst_ps8_0_96M_peripheral_reset 1 2 5 560 160 N 160 N 160 1730 190 2310
 preplace netloc clk_jesd_p_1 1 0 1 NJ 460
 preplace netloc clk_jesd_n_1 1 0 1 NJ 480
-preplace netloc util_ds_buf_0_BUFG_GT_O 1 3 5 1220 -30 N -30 1750 -20 N -20 2650
+preplace netloc util_ds_buf_0_BUFG_GT_O 1 3 5 1220 -30 N -30 1740 -20 N -20 2660
 preplace netloc util_ds_buf_1_IBUF_DS_ODIV2 1 1 2 N 470 570
 preplace netloc xlconstant_one_dout 1 1 2 N 720 540
 preplace netloc xlconstant_div1_dout 1 1 2 NJ 920 N
-preplace netloc util_ds_buf_sysref_IBUF_OUT 1 4 2 1540J 430 1760
-preplace netloc util_ds_buf_sync_IBUF_OUT 1 4 4 NJ 990 N 990 2180 1300 2630
-preplace netloc clk_wiz_0_clk_200 1 4 4 N 880 1720 150 2300 0 2630
+preplace netloc util_ds_buf_sysref_IBUF_OUT 1 4 2 1540J 430 N
+preplace netloc util_ds_buf_sync_IBUF_OUT 1 4 4 NJ 990 N 990 2180 1300 2640
+preplace netloc clk_wiz_0_clk_200 1 4 4 N 880 1710 180 2260 0 2640
 preplace netloc axi_gpio_jesd_gpio_io_o 1 1 3 340 -30 NJ -30 1200
-preplace netloc xlslice_jesd_sync_Dout 1 2 4 540 150 NJ 150 NJ 150 1700
+preplace netloc xlslice_jesd_sync_Dout 1 2 4 540 150 NJ 150 NJ 150 1740
 preplace netloc jesd204_phy_0_txp_out 1 7 1 N 210
 preplace netloc jesd204_phy_0_txn_out 1 7 1 N 230
-preplace netloc modulator_0_data_out 1 5 2 1770 200 2180
-preplace netloc axi_quad_spi_fmc_SPI_0 1 7 1 NJ 920
-preplace netloc axi_gpio_pe_ctrl_GPIO 1 7 1 NJ 780
-preplace netloc jesd204_0_gt1_tx 1 6 1 2200 80n
-preplace netloc jesd204_0_gt0_tx 1 6 1 2190 60n
-preplace netloc ps8_0_axi_periph_M04_AXI 1 4 3 N 520 1660 530 2240J
-preplace netloc ps8_0_axi_periph_M00_AXI 1 4 3 NJ 440 1730 520 2190
-preplace netloc axi_uartlite_control_UART 1 7 1 NJ 1070
-preplace netloc ps8_0_axi_periph_M03_AXI 1 4 3 N 500 1670 550 2190J
-preplace netloc ps8_0_axi_periph_M05_AXI 1 4 3 N 540 N 540 2220J
-preplace netloc jesd204_0_gt2_tx 1 6 1 2210 100n
-preplace netloc ps8_0_axi_periph_M02_AXI 1 4 3 N 480 1650 570 2210J
+preplace netloc modulator_0_data_out 1 5 2 1760 560 2180
 preplace netloc axi_gpio_dac_txen_GPIO 1 7 1 NJ 1220
-preplace netloc axi_gpio_fmc_GPIO 1 7 1 NJ 640
-preplace netloc jesd204_0_gt3_tx 1 6 1 2240 120n
-preplace netloc CLK_IN_D_0_1 1 0 4 NJ 1100 NJ 1100 N 1100 NJ
-preplace netloc ps8_0_axi_periph_M01_AXI 1 4 3 N 460 1680 560 2200J
-preplace netloc ps8_0_axi_periph_M08_AXI 1 2 3 590 -20 NJ -20 1520
-preplace netloc axi_gpio_led_GPIO 1 7 1 NJ 500
-preplace netloc ps8_0_axi_periph_M07_AXI 1 4 2 N 580 1650
 preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_LPD 1 3 1 1190 300n
-preplace netloc ps8_0_axi_periph_M06_AXI 1 4 2 1530 260 N
+preplace netloc jesd204_0_gt3_tx 1 6 1 2250 120n
+preplace netloc axi_quad_spi_fmc_SPI_0 1 7 1 NJ 920
+preplace netloc CLK_IN_D_0_1 1 0 4 NJ 1100 NJ 1100 N 1100 NJ
+preplace netloc ps8_0_axi_periph_M07_AXI 1 4 2 N 580 1650
+preplace netloc ps8_0_axi_periph_M06_AXI 1 4 2 1530 270 N
+preplace netloc axi_gpio_fmc_GPIO 1 7 1 NJ 640
+preplace netloc ps8_0_axi_periph_M01_AXI 1 4 3 N 460 1670 550 2200J
 preplace netloc CLK_IN_D_0_2 1 0 4 NJ 990 NJ 990 N 990 NJ
-levelinfo -pg 1 0 180 440 890 1370 1630 2010 2460 2670
-pagesize -pg 1 -db -bbox -sgen -120 -40 2850 1340
+preplace netloc axi_gpio_led_GPIO 1 7 1 NJ 500
+preplace netloc jesd204_0_gt0_tx 1 6 1 2180 60n
+preplace netloc ps8_0_axi_periph_M08_AXI 1 2 3 590 -20 NJ -20 1520
+preplace netloc jesd204_0_gt1_tx 1 6 1 2200 80n
+preplace netloc axi_gpio_pe_ctrl_GPIO 1 7 1 NJ 780
+preplace netloc axi_uartlite_control_UART 1 7 1 NJ 1070
+preplace netloc ps8_0_axi_periph_M00_AXI 1 4 3 NJ 440 1700 510 2310
+preplace netloc jesd204_0_gt2_tx 1 6 1 2210 100n
+preplace netloc ps8_0_axi_periph_M04_AXI 1 4 3 N 520 N 520 2190J
+preplace netloc ps8_0_axi_periph_M03_AXI 1 4 3 N 500 1660 530 2220J
+preplace netloc ps8_0_axi_periph_M02_AXI 1 4 3 N 480 1650 570 2230J
+preplace netloc ps8_0_axi_periph_M05_AXI 1 4 3 N 540 N 540 2210J
+levelinfo -pg 1 0 180 440 890 1370 1630 2010 2470 2680
+pagesize -pg 1 -db -bbox -sgen -120 -40 2860 1340
 "
 }
 {

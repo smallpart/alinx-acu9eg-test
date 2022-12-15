@@ -7,6 +7,9 @@
 # IP: d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/edit_modulator_v1_0.srcs/sources_1/bd/design_1/ip/design_1_dds_compiler_0_0/design_1_dds_compiler_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_dds_compiler_0_0 || ORIG_REF_NAME==design_1_dds_compiler_0_0} -quiet] -quiet
 
+# IP: d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/edit_modulator_v1_0.srcs/sources_1/bd/design_1/ip/design_1_dds_compiler_0_1/design_1_dds_compiler_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_dds_compiler_0_1 || ORIG_REF_NAME==design_1_dds_compiler_0_1} -quiet] -quiet
+
 # IP: d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/edit_modulator_v1_0.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/design_1_xlconstant_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_xlconstant_0_0 || ORIG_REF_NAME==design_1_xlconstant_0_0} -quiet] -quiet
 
@@ -17,6 +20,9 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_xlcons
 
 # IP: d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/edit_modulator_v1_0.srcs/sources_1/bd/design_1/ip/design_1_dds_compiler_0_0/design_1_dds_compiler_0_0.xci
 #dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_dds_compiler_0_0 || ORIG_REF_NAME==design_1_dds_compiler_0_0} -quiet] -quiet
+
+# IP: d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/edit_modulator_v1_0.srcs/sources_1/bd/design_1/ip/design_1_dds_compiler_0_1/design_1_dds_compiler_0_1.xci
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_dds_compiler_0_1 || ORIG_REF_NAME==design_1_dds_compiler_0_1} -quiet] -quiet
 
 # IP: d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/alinx_test.srcs/sources_1/bd/system/ip/edit_modulator_v1_0.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/design_1_xlconstant_0_0.xci
 #dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_xlconstant_0_0 || ORIG_REF_NAME==design_1_xlconstant_0_0} -quiet] -quiet

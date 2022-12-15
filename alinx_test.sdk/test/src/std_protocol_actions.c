@@ -219,16 +219,35 @@ void std_action_getrfchf(uint16_t *freq) {
 void std_action_setfreq(uint16_t sig_id, uint64_t freq) {
     switch (sig_id) {
         case 0: {
-//            DAC9173_SetFrequency(DAC9173_DAC0, freq);
+            /* Set Reference Frequency */
         } break;
 
         case 1: {
-//            DAC9173_SetFrequency(DAC9173_DAC1, freq);
+            DAC9173_SetFrequency(DAC9173_DAC0, freq);
         } break;
 
         case 2: {
-            modulator->lfm_rate_h = (freq >> 32) & 0xffffffff;
-            modulator->lfm_rate_l = (freq >>  0) & 0xffffffff;
+            DAC9173_SetFrequency(DAC9173_DAC1, freq);
+        } break;
+
+        case 3: {
+            modulator->ch0_lfm_start_freq_h = (freq >> 32) & 0xffffffff;
+            modulator->ch0_lfm_start_freq_l = (freq >>  0) & 0xffffffff;
+        } break;
+
+        case 4: {
+            modulator->ch1_lfm_start_freq_h = (freq >> 32) & 0xffffffff;
+            modulator->ch1_lfm_start_freq_l = (freq >>  0) & 0xffffffff;
+        } break;
+
+        case 5: {
+            modulator->ch0_lfm_rate_h = (freq >> 32) & 0xffffffff;
+            modulator->ch0_lfm_rate_l = (freq >>  0) & 0xffffffff;
+        } break;
+
+        case 6: {
+            modulator->ch1_lfm_rate_h = (freq >> 32) & 0xffffffff;
+            modulator->ch1_lfm_rate_l = (freq >>  0) & 0xffffffff;
         } break;
     }
 }
@@ -266,7 +285,11 @@ void std_action_modview(uint16_t sig_id, uint16_t view) {
  * Set modulation form
  ******************************************/
 void std_action_modform(uint16_t sig_id, uint16_t form) {
-    modulator->config.lfm_on = form;
+    if (sig_id == 0) {
+        modulator->config.ch0_lfm_on = form;
+    } else {
+        modulator->config.ch1_lfm_on = form;
+    }
 }
 
 /*******************************************
@@ -285,7 +308,11 @@ void std_action_sigdelay(uint16_t sig_id, uint32_t delay) {
  * Set signal width for pulse modulation
  ******************************************/
 void std_action_sigwidthpls(uint16_t sig_id, uint32_t width) {
-    modulator->lfm_time = width;
+    if (sig_id == 0) {
+        modulator->ch0_lfm_time = width;
+    } else {
+        modulator->ch1_lfm_time = width;
+    }
 }
 
 /*******************************************

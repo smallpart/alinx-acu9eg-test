@@ -710,34 +710,48 @@
 	end    
 
 	// Add user logic here
-	wire [47:0] freq;
-	wire [31:0] ch0_data;
+	wire [ 47:0] ch0_freq;
+	wire [ 47:0] ch1_freq;
+	wire [ 31:0] ch0_data;
+	wire [ 31:0] ch1_data;
 	wire [127:0] mod_data;
 	
-	assign data_out = (slv_reg0[1]) ? ({slv_reg9, slv_reg8, slv_reg7, slv_reg6}) : (mod_data);
+	assign data_out = (slv_reg0[0]) ? ({slv_reg14, slv_reg13, slv_reg12, slv_reg11}) : (mod_data);
 	
-	lfm lfm (
+	lfm ch0_lfm (
 	   .clk      (clk),
 	   .reset_n  (reset_n),
-	   .lfm_rate ({slv_reg2[15:0],slv_reg1}),
-	   .lfm_time (slv_reg3),
-	   .lfm_start({slv_reg5[15:0],slv_reg4}),
-	   .lfm_on   (slv_reg0[0]),
-	   .freq_out (freq)
+	   .lfm_rate ({slv_reg4[15:0],slv_reg3}),
+	   .lfm_time (slv_reg5),
+	   .lfm_start({slv_reg2[15:0],slv_reg1}),
+	   .lfm_on   (slv_reg0[1]),
+	   .freq_out (ch0_freq)
+	);
+	
+	lfm ch1_lfm (
+	   .clk      (clk),
+	   .reset_n  (reset_n),
+	   .lfm_rate ({slv_reg9[15:0],slv_reg8}),
+	   .lfm_time (slv_reg10),
+	   .lfm_start({slv_reg7[15:0],slv_reg6}),
+	   .lfm_on   (slv_reg0[2]),
+	   .freq_out (ch1_freq)
 	);
 	
     design_1_wrapper bd (
-        .clk     (clk),
-        .reset_n (reset_n),
-        .freq    (freq),
-        .data_out(ch0_data)
+        .clk         (clk),
+        .reset_n     (reset_n),
+        .freq_ch0    (ch0_freq),
+        .freq_ch1    (ch1_freq),
+        .data_out_ch0(ch0_data),
+        .data_out_ch1(ch1_data)
     );
     
     data_conv conv (
         .clk_i    (clk),
         .reset_n_i(reset_n),
         .data0_i  (ch0_data),
-        .data1_i  (ch0_data),
+        .data1_i  (ch1_data),
         .clk_168  (clk_half),
         .ch0_en   (1),
         .ch1_en   (1),

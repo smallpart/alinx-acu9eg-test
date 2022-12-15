@@ -17,8 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param chipscope.maxJobs 4
-set_msg_config -id {HDL-1065} -limit 10000
 create_project -in_memory -part xczu9eg-ffvb1156-2-i
 
 set_param project.singleFileAddWarning.threshold 0
@@ -47,6 +45,7 @@ read_verilog -library "" {
 }
 add_files D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.srcs/sources_1/bd/design_1/design_1.bd
 set_property used_in_implementation false [get_files -all d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.srcs/sources_1/bd/design_1/ip/design_1_dds_compiler_0_0/design_1_dds_compiler_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.srcs/sources_1/bd/design_1/ip/design_1_dds_compiler_0_1/design_1_dds_compiler_0_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being

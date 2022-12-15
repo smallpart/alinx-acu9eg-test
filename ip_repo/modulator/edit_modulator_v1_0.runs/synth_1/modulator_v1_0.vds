@@ -2,8 +2,8 @@
 # Vivado v2019.1.3 (64-bit)
 # SW Build 2644227 on Wed Sep  4 09:45:24 MDT 2019
 # IP Build 2633630 on Wed Sep  4 12:30:14 MDT 2019
-# Start of session at: Wed Nov 30 18:38:15 2022
-# Process ID: 9388
+# Start of session at: Thu Dec 15 12:45:13 2022
+# Process ID: 5836
 # Current directory: D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.runs/synth_1
 # Command line: vivado.exe -log modulator_v1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source modulator_v1_0.tcl
 # Log file: D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.runs/synth_1/modulator_v1_0.vds
@@ -25,9 +25,9 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xczu9eg'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu9eg'
 INFO: [Device 21-403] Loading part xczu9eg-ffvb1156-2-i
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 7820 
+INFO: Helper process launched with PID 9624 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1312.699 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1312.102 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'modulator_v1_0' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/modulator_1.0/hdl/modulator_v1_0.v:4]
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
@@ -44,22 +44,25 @@ WARNING: [Synth 8-6014] Unused sequential element start_freq_r_reg was removed. 
 INFO: [Synth 8-6155] done synthesizing module 'lfm' (1#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/src/lfm.v:1]
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'design_1' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.srcs/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_1_dds_compiler_0_0' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.runs/synth_1/.Xil/Vivado-9388-atom-pc/realtime/design_1_dds_compiler_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_dds_compiler_0_0' (2#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.runs/synth_1/.Xil/Vivado-9388-atom-pc/realtime/design_1_dds_compiler_0_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'dds_compiler_0' of module 'design_1_dds_compiler_0_0' has 6 connections declared, but only 5 given [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.srcs/sources_1/bd/design_1/synth/design_1.v:33]
+INFO: [Synth 8-6157] synthesizing module 'design_1_dds_compiler_0_0' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.runs/synth_1/.Xil/Vivado-5836-atom-pc/realtime/design_1_dds_compiler_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_dds_compiler_0_0' (2#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.runs/synth_1/.Xil/Vivado-5836-atom-pc/realtime/design_1_dds_compiler_0_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'dds_compiler_0' of module 'design_1_dds_compiler_0_0' has 6 connections declared, but only 5 given [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.srcs/sources_1/bd/design_1/synth/design_1.v:41]
+INFO: [Synth 8-6157] synthesizing module 'design_1_dds_compiler_0_1' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.runs/synth_1/.Xil/Vivado-5836-atom-pc/realtime/design_1_dds_compiler_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_dds_compiler_0_1' (3#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.runs/synth_1/.Xil/Vivado-5836-atom-pc/realtime/design_1_dds_compiler_0_1_stub.v:6]
+WARNING: [Synth 8-7023] instance 'dds_compiler_1' of module 'design_1_dds_compiler_0_1' has 6 connections declared, but only 5 given [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.srcs/sources_1/bd/design_1/synth/design_1.v:47]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlconstant_0_0' [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_6_xlconstant' [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.srcs/sources_1/bd/design_1/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
 	Parameter CONST_VAL bound to: 1 - type: integer 
 	Parameter CONST_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_6_xlconstant' (3#1) [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.srcs/sources_1/bd/design_1/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconstant_0_0' (4#1) [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:57]
-INFO: [Synth 8-6155] done synthesizing module 'design_1' (5#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.srcs/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (6#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_6_xlconstant' (4#1) [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.srcs/sources_1/bd/design_1/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconstant_0_0' (5#1) [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (6#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.srcs/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (7#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'data_conv' [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/src/data_conv.v:12]
 WARNING: [Synth 8-6014] Unused sequential element toggle_reg was removed.  [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/src/data_conv.v:44]
-INFO: [Synth 8-6155] done synthesizing module 'data_conv' (7#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/src/data_conv.v:12]
-INFO: [Synth 8-6155] done synthesizing module 'modulator_v1_0_S00_AXI' (8#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/modulator_1.0/hdl/modulator_v1_0_S00_AXI.v:4]
-INFO: [Synth 8-6155] done synthesizing module 'modulator_v1_0' (9#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/modulator_1.0/hdl/modulator_v1_0.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'data_conv' (8#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/src/data_conv.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'modulator_v1_0_S00_AXI' (9#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/modulator_1.0/hdl/modulator_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'modulator_v1_0' (10#1) [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/modulator_1.0/hdl/modulator_v1_0.v:4]
 WARNING: [Synth 8-3331] design modulator_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
 WARNING: [Synth 8-3331] design modulator_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
 WARNING: [Synth 8-3331] design modulator_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
@@ -67,7 +70,7 @@ WARNING: [Synth 8-3331] design modulator_v1_0_S00_AXI has unconnected port S_AXI
 WARNING: [Synth 8-3331] design modulator_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
 WARNING: [Synth 8-3331] design modulator_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1352.992 ; gain = 40.293
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1352.062 ; gain = 39.961
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -80,10 +83,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1363.121 ; gain = 50.422
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1362.824 ; gain = 50.723
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1363.121 ; gain = 50.422
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1362.824 ; gain = 50.723
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -91,17 +94,19 @@ Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.srcs/sources_1/bd/design_1/ip/design_1_dds_compiler_0_0/design_1_dds_compiler_0_0/design_1_dds_compiler_0_0_in_context.xdc] for cell 'modulator_v1_0_S00_AXI_inst/bd/design_1_i/dds_compiler_0'
 Finished Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.srcs/sources_1/bd/design_1/ip/design_1_dds_compiler_0_0/design_1_dds_compiler_0_0/design_1_dds_compiler_0_0_in_context.xdc] for cell 'modulator_v1_0_S00_AXI_inst/bd/design_1_i/dds_compiler_0'
+Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.srcs/sources_1/bd/design_1/ip/design_1_dds_compiler_0_1/design_1_dds_compiler_0_1/design_1_dds_compiler_0_0_in_context.xdc] for cell 'modulator_v1_0_S00_AXI_inst/bd/design_1_i/dds_compiler_1'
+Finished Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.srcs/sources_1/bd/design_1/ip/design_1_dds_compiler_0_1/design_1_dds_compiler_0_1/design_1_dds_compiler_0_0_in_context.xdc] for cell 'modulator_v1_0_S00_AXI_inst/bd/design_1_i/dds_compiler_1'
 Parsing XDC File [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1482.117 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1484.836 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1482.117 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1484.836 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1482.117 ; gain = 169.418
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1484.836 ; gain = 172.734
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -109,7 +114,7 @@ Start Loading Part and Timing Information
 Loading part: xczu9eg-ffvb1156-2-i
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1482.117 ; gain = 169.418
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1484.836 ; gain = 172.734
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -117,11 +122,12 @@ Start Applying 'set_property' XDC Constraints
 Applied set_property DONT_TOUCH = true for modulator_v1_0_S00_AXI_inst/bd/design_1_i. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for modulator_v1_0_S00_AXI_inst/bd/design_1_i/dds_compiler_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for modulator_v1_0_S00_AXI_inst/bd/design_1_i/xlconstant_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for modulator_v1_0_S00_AXI_inst/bd/design_1_i/dds_compiler_1. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1482.117 ; gain = 169.418
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1484.836 ; gain = 172.734
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1482.117 ; gain = 169.418
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1484.836 ; gain = 172.734
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -134,20 +140,20 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     48 Bit       Adders := 1     
+	   2 Input     48 Bit       Adders := 2     
 +---Registers : 
 	              128 Bit    Registers := 1     
-	               48 Bit    Registers := 2     
-	               32 Bit    Registers := 34    
+	               48 Bit    Registers := 4     
+	               32 Bit    Registers := 35    
 	                7 Bit    Registers := 2     
 	                2 Bit    Registers := 2     
 	                1 Bit    Registers := 6     
 +---Muxes : 
 	   2 Input    128 Bit        Muxes := 7     
-	   2 Input     48 Bit        Muxes := 3     
+	   2 Input     48 Bit        Muxes := 6     
 	   2 Input     32 Bit        Muxes := 32    
 	  32 Input     32 Bit        Muxes := 32    
-	   2 Input      1 Bit        Muxes := 7     
+	   2 Input      1 Bit        Muxes := 9     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -209,72 +215,8 @@ INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/axi_rresp_reg
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (modulator_v1_0_S00_AXI_inst/\axi_rresp_reg[1] )
 INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'modulator_v1_0_S00_AXI_inst/axi_bresp_reg[1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (modulator_v1_0_S00_AXI_inst/\axi_bresp_reg[1] )
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[0]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[64]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[1]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[65]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[2]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[66]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[3]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[67]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[4]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[68]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[5]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[69]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[6]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[70]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[7]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[71]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[8]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[72]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[9]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[73]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[10]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[74]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[11]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[75]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[12]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[76]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[13]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[77]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[14]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[78]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[15]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[79]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[16]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[80]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[17]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[81]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[18]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[82]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[19]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[83]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[20]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[84]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[21]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[85]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[22]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[86]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[23]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[87]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[24]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[88]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[25]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[89]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[26]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[90]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[27]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[91]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[28]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[92]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[29]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[93]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[30]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[94]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[31]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[95]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[32]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[96]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[33]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[97]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[34]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[98]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[35]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[99]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[36]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[100]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[37]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[101]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[38]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[102]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[39]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[103]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[40]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[104]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[41]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[105]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[42]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[106]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[43]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[107]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[44]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[108]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[45]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[109]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[46]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[110]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[47]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[111]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[48]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[112]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[49]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[113]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[50]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[114]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[51]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[115]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[52]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[116]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[53]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[117]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[54]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[118]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[55]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[119]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[56]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[120]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[57]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[121]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[58]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[122]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[59]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[123]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[60]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[124]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[61]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[125]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[62]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[126]'
-INFO: [Synth 8-3886] merging instance 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[63]' (FDCE) to 'modulator_v1_0_S00_AXI_inst/conv/data_o_reg[127]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1482.117 ; gain = 169.418
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1484.836 ; gain = 172.734
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -286,13 +228,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2053.738 ; gain = 741.039
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2053.625 ; gain = 741.523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2055.488 ; gain = 742.789
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2055.660 ; gain = 743.559
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -304,7 +246,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2070.680 ; gain = 757.980
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2071.395 ; gain = 759.293
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -328,7 +270,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2084.465 ; gain = 771.766
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2085.207 ; gain = 773.105
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -341,7 +283,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2084.465 ; gain = 771.766
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2085.207 ; gain = 773.105
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -353,25 +295,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2084.465 ; gain = 771.766
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2085.207 ; gain = 773.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2084.465 ; gain = 771.766
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2085.207 ; gain = 773.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2084.465 ; gain = 771.766
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2085.207 ; gain = 773.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2084.465 ; gain = 771.766
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2085.207 ; gain = 773.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -382,6 +324,7 @@ Report BlackBoxes:
 |      |BlackBox name             |Instances |
 +------+--------------------------+----------+
 |1     |design_1_dds_compiler_0_0 |         1|
+|2     |design_1_dds_compiler_0_1 |         1|
 +------+--------------------------+----------+
 
 Report Cell Usage: 
@@ -389,58 +332,60 @@ Report Cell Usage:
 |      |Cell                      |Count |
 +------+--------------------------+------+
 |1     |design_1_dds_compiler_0_0 |     1|
-|2     |BUFG                      |     2|
-|3     |CARRY8                    |    15|
-|4     |LUT1                      |     4|
-|5     |LUT2                      |    57|
-|6     |LUT3                      |   130|
-|7     |LUT4                      |    35|
-|8     |LUT5                      |    50|
-|9     |LUT6                      |   418|
-|10    |MUXF7                     |   128|
-|11    |FDCE                      |    64|
-|12    |FDRE                      |  1249|
-|13    |FDSE                      |     1|
-|14    |IBUF                      |    56|
-|15    |OBUF                      |   169|
+|2     |design_1_dds_compiler_0_1 |     1|
+|3     |BUFG                      |     2|
+|4     |CARRY8                    |    30|
+|5     |LUT1                      |     5|
+|6     |LUT2                      |   113|
+|7     |LUT3                      |   131|
+|8     |LUT4                      |    67|
+|9     |LUT5                      |    98|
+|10    |LUT6                      |   418|
+|11    |MUXF7                     |   128|
+|12    |FDCE                      |   128|
+|13    |FDRE                      |  1425|
+|14    |FDSE                      |     1|
+|15    |IBUF                      |    56|
+|16    |OBUF                      |   169|
 +------+--------------------------+------+
 
 Report Instance Areas: 
 +------+------------------------------+------------------------+------+
 |      |Instance                      |Module                  |Cells |
 +------+------------------------------+------------------------+------+
-|1     |top                           |                        |  2411|
-|2     |  modulator_v1_0_S00_AXI_inst |modulator_v1_0_S00_AXI  |  2184|
-|3     |    bd                        |design_1_wrapper        |    33|
-|4     |      design_1_i              |design_1                |    33|
+|1     |top                           |                        |  2837|
+|2     |  modulator_v1_0_S00_AXI_inst |modulator_v1_0_S00_AXI  |  2610|
+|3     |    bd                        |design_1_wrapper        |    66|
+|4     |      design_1_i              |design_1                |    66|
 |5     |        xlconstant_1          |design_1_xlconstant_0_0 |     0|
-|6     |    conv                      |data_conv               |   194|
-|7     |    lfm                       |lfm                     |   329|
+|6     |    ch0_lfm                   |lfm                     |   329|
+|7     |    ch1_lfm                   |lfm_0                   |   329|
+|8     |    conv                      |data_conv               |   258|
 +------+------------------------------+------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2084.465 ; gain = 771.766
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2085.207 ; gain = 773.105
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 2084.465 ; gain = 652.770
-Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2084.465 ; gain = 771.766
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 2085.207 ; gain = 651.094
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2085.207 ; gain = 773.105
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 201 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 216 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2126.168 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2124.734 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 58 instances were transformed.
   BUFG => BUFGCE: 2 instances
   IBUF => IBUF (IBUFCTRL, INBUF): 56 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-103 Infos, 19 Warnings, 0 Critical Warnings and 0 Errors encountered.
+41 Infos, 20 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 2126.168 ; gain = 1787.762
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2126.168 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 2124.734 ; gain = 1786.938
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2124.734 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.runs/synth_1/modulator_v1_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file modulator_v1_0_utilization_synth.rpt -pb modulator_v1_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Nov 30 18:38:52 2022...
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 15 12:45:51 2022...

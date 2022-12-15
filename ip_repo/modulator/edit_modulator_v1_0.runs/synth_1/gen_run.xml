@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xczu9eg-ffvb1156-2-i" LaunchTime="1669819093">
+<GenRun Id="synth_1" LaunchPart="xczu9eg-ffvb1156-2-i" LaunchTime="1671093830">
   <File Type="PA-TCL" Name="modulator_v1_0.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="modulator_v1_0_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="modulator_v1_0_reports.tcl"/>
@@ -81,4 +81,5 @@
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="design_1_dds_compiler_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_dds_compiler_0_1"/>
 </GenRun>

@@ -31,26 +31,17 @@ int main() {
 
     GPIO_Init();
     SPI_Init();
-    HMC7044_Init();
     DAC9173_Init();
-//    HMC7044_Init();
+    HMC7044_Init();
     Communication_Init();
 
-    modulator->config.lfm_on    = 0;
-    modulator->config.debug_on  = 0;
-    modulator->lfm_rate_h       = 0x0005;
-    modulator->lfm_rate_l       = 0xCE13BCAA;
-    modulator->lfm_time         = 336;
-    modulator->lfm_start_freq_h = 0;
-    modulator->lfm_start_freq_l = 0;
-//    modulator->lfm_start_freq_h = 0x0333;
-//    modulator->lfm_start_freq_l = 0x33333333;
-//    modulator->jesd_data_0      = 0xffffffff; /* cos NCO_0 */
-////    modulator->jesd_data_0      = 0x00000000; /* cos NCO_0 */
-//    modulator->jesd_data_1      = 0x00000000; /* sin NCO_0 */
-//    modulator->jesd_data_2      = 0xffffffff; /* cos NCO_1 */
-////    modulator->jesd_data_2      = 0x00000000; /* cos NCO_1 */
-//    modulator->jesd_data_3      = 0x00000000; /* sin NCO_1 */
+    modulator->config.debug         = 0;
+    modulator->config.ch0_lfm_on    = 0;
+    modulator->config.ch1_lfm_on    = 0;
+    modulator->ch0_lfm_start_freq_h = 0;
+    modulator->ch0_lfm_start_freq_l = 0;
+    modulator->ch1_lfm_start_freq_h = 0;
+    modulator->ch1_lfm_start_freq_l = 0;
 
     JESD_Init();
 

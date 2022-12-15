@@ -2,12 +2,12 @@
 # Vivado v2019.1.3 (64-bit)
 # SW Build 2644227 on Wed Sep  4 09:45:24 MDT 2019
 # IP Build 2633630 on Wed Sep  4 12:30:14 MDT 2019
-# Start of session at: Thu Nov  3 15:19:01 2022
-# Process ID: 8308
-# Current directory: d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.runs/design_1_dds_compiler_0_0_synth_1
+# Start of session at: Thu Dec 15 12:43:52 2022
+# Process ID: 12148
+# Current directory: D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.runs/design_1_dds_compiler_0_0_synth_1
 # Command line: vivado.exe -log design_1_dds_compiler_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_dds_compiler_0_0.tcl
-# Log file: d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.runs/design_1_dds_compiler_0_0_synth_1/design_1_dds_compiler_0_0.vds
-# Journal file: d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.runs/design_1_dds_compiler_0_0_synth_1\vivado.jou
+# Log file: D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.runs/design_1_dds_compiler_0_0_synth_1/design_1_dds_compiler_0_0.vds
+# Journal file: D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.runs/design_1_dds_compiler_0_0_synth_1\vivado.jou
 #-----------------------------------------------------------
 source design_1_dds_compiler_0_0.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
@@ -23,9 +23,9 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xczu9eg'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu9eg'
 INFO: [Device 21-403] Loading part xczu9eg-ffvb1156-2-i
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 1720 
+INFO: Helper process launched with PID 8072 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1312.016 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1311.789 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'design_1_dds_compiler_0_0' [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.srcs/sources_1/bd/design_1/ip/design_1_dds_compiler_0_0/synth/design_1_dds_compiler_0_0.vhd:70]
 WARNING: [Synth 8-5640] Port 'debug_axi_pinc_in' is missing in component declaration [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.srcs/sources_1/bd/design_1/ip/design_1_dds_compiler_0_0/synth/design_1_dds_compiler_0_0.vhd:73]
@@ -186,7 +186,7 @@ WARNING: [Synth 8-3331] design accum has unconnected port poff_in[4]
 WARNING: [Synth 8-3331] design accum has unconnected port poff_in[3]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1532.680 ; gain = 220.664
+Finished RTL Elaboration : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1530.750 ; gain = 218.961
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -199,10 +199,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1532.680 ; gain = 220.664
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1530.750 ; gain = 218.961
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1532.680 ; gain = 220.664
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1530.750 ; gain = 218.961
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -210,17 +210,17 @@ Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.srcs/sources_1/bd/design_1/ip/design_1_dds_compiler_0_0/design_1_dds_compiler_0_0_ooc.xdc] for cell 'U0'
 Finished Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.srcs/sources_1/bd/design_1/ip/design_1_dds_compiler_0_0/design_1_dds_compiler_0_0_ooc.xdc] for cell 'U0'
-Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.runs/design_1_dds_compiler_0_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.runs/design_1_dds_compiler_0_0_synth_1/dont_touch.xdc]
+Parsing XDC File [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.runs/design_1_dds_compiler_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.runs/design_1_dds_compiler_0_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1552.234 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1583.891 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1552.234 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 1583.891 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 1552.234 ; gain = 240.219
+Finished Constraint Validation : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1583.891 ; gain = 272.102
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -228,21 +228,21 @@ Start Loading Part and Timing Information
 Loading part: xczu9eg-ffvb1156-2-i
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 1552.234 ; gain = 240.219
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1583.891 ; gain = 272.102
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for U0. (constraint file  d:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.runs/design_1_dds_compiler_0_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property DONT_TOUCH = true for U0. (constraint file  D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.runs/design_1_dds_compiler_0_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 1552.234 ; gain = 240.219
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1583.891 ; gain = 272.102
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-7031] Trying to map ROM "sin_cos_lut" into Block RAM due to explicit "ram_style" or "rom_style" specification
 INFO: [Synth 8-7031] Trying to map ROM "sin_cos_lut" into Block RAM due to explicit "ram_style" or "rom_style" specification
 WARNING: [Synth 8-6040] Register i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
 WARNING: [Synth 8-6040] Register i_rtl.i_quarter_table.i_has_cos.i_addr_mod_stage1.mod_cos_addr_reg driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 1552.234 ; gain = 240.219
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 1583.891 ; gain = 272.102
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -277,7 +277,7 @@ Start Cross Boundary and Area Optimization
 Warning: Parallel synthesis criteria is not met 
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\has_s_phase.s_phase_tlast_checks.event_s_phase_tlast_unexpected_reg )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 1552.234 ; gain = 240.219
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 1583.891 ; gain = 272.102
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6837] The timing for the instance U0/i_synth/i_0/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance U0/i_synth/i_0/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
@@ -305,13 +305,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 2096.477 ; gain = 784.461
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:53 ; elapsed = 00:00:56 . Memory (MB): peak = 2095.410 ; gain = 783.621
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 2108.520 ; gain = 796.504
+Finished Timing Optimization : Time (s): cpu = 00:00:53 ; elapsed = 00:00:56 . Memory (MB): peak = 2107.148 ; gain = 795.359
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -323,7 +323,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 2119.352 ; gain = 807.336
+Finished Technology Mapping : Time (s): cpu = 00:00:53 ; elapsed = 00:00:57 . Memory (MB): peak = 2118.023 ; gain = 806.234
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -347,7 +347,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:55 ; elapsed = 00:00:59 . Memory (MB): peak = 2132.473 ; gain = 820.457
+Finished IO Insertion : Time (s): cpu = 00:00:55 ; elapsed = 00:00:58 . Memory (MB): peak = 2132.684 ; gain = 820.895
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -360,7 +360,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:55 ; elapsed = 00:00:59 . Memory (MB): peak = 2132.473 ; gain = 820.457
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:55 ; elapsed = 00:00:58 . Memory (MB): peak = 2132.684 ; gain = 820.895
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -372,25 +372,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:55 ; elapsed = 00:00:59 . Memory (MB): peak = 2132.473 ; gain = 820.457
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:55 ; elapsed = 00:00:58 . Memory (MB): peak = 2132.684 ; gain = 820.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:55 ; elapsed = 00:00:59 . Memory (MB): peak = 2132.473 ; gain = 820.457
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:55 ; elapsed = 00:00:58 . Memory (MB): peak = 2132.684 ; gain = 820.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:55 ; elapsed = 00:00:59 . Memory (MB): peak = 2132.473 ; gain = 820.457
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:55 ; elapsed = 00:00:58 . Memory (MB): peak = 2132.684 ; gain = 820.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:55 ; elapsed = 00:00:59 . Memory (MB): peak = 2132.473 ; gain = 820.457
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:55 ; elapsed = 00:00:58 . Memory (MB): peak = 2132.684 ; gain = 820.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -426,11 +426,11 @@ Report Cell Usage:
 |18    |FDSE        |     1|
 +------+------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:55 ; elapsed = 00:00:59 . Memory (MB): peak = 2132.473 ; gain = 820.457
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:55 ; elapsed = 00:00:58 . Memory (MB): peak = 2132.684 ; gain = 820.895
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 15 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:52 . Memory (MB): peak = 2132.473 ; gain = 800.902
-Synthesis Optimization Complete : Time (s): cpu = 00:00:56 ; elapsed = 00:00:59 . Memory (MB): peak = 2132.473 ; gain = 820.457
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:52 . Memory (MB): peak = 2132.684 ; gain = 767.754
+Synthesis Optimization Complete : Time (s): cpu = 00:00:55 ; elapsed = 00:00:58 . Memory (MB): peak = 2132.684 ; gain = 820.895
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 19 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -444,24 +444,24 @@ INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/i_synth/i_rtl
 INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/i_synth/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_5 has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
 INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/i_synth/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_6 has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
 INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/i_synth/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_7 has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2166.527 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2165.863 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 46 Infos, 111 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:04 ; elapsed = 00:01:08 . Memory (MB): peak = 2166.527 ; gain = 1828.816
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2166.527 ; gain = 0.000
+synth_design: Time (s): cpu = 00:01:03 ; elapsed = 00:01:07 . Memory (MB): peak = 2165.863 ; gain = 1828.645
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2165.863 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'd:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.runs/design_1_dds_compiler_0_0_synth_1/design_1_dds_compiler_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.runs/design_1_dds_compiler_0_0_synth_1/design_1_dds_compiler_0_0.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_dds_compiler_0_0, cache-ID = a5959913de4631a1
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_dds_compiler_0_0, cache-ID = 8ece24494f2baf62
 INFO: [Coretcl 2-1174] Renamed 26 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2166.527 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2165.863 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'd:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.runs/design_1_dds_compiler_0_0_synth_1/design_1_dds_compiler_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'D:/atom/program/mwsystems/test/acu9eg_ad9173/alinx_test/ip_repo/modulator/edit_modulator_v1_0.runs/design_1_dds_compiler_0_0_synth_1/design_1_dds_compiler_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_dds_compiler_0_0_utilization_synth.rpt -pb design_1_dds_compiler_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Nov  3 15:20:15 2022...
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 15 12:45:04 2022...

@@ -158,8 +158,13 @@ proc create_root_design { parentCell } {
 
   # Create ports
   set clk [ create_bd_port -dir I -type clk clk ]
-  set data_out [ create_bd_port -dir O -from 31 -to 0 data_out ]
-  set freq [ create_bd_port -dir I -from 47 -to 0 freq ]
+  set_property -dict [ list \
+   CONFIG.FREQ_HZ {400000000} \
+ ] $clk
+  set data_out_ch0 [ create_bd_port -dir O -from 31 -to 0 data_out_ch0 ]
+  set data_out_ch1 [ create_bd_port -dir O -from 31 -to 0 data_out_ch1 ]
+  set freq_ch0 [ create_bd_port -dir I -from 47 -to 0 freq_ch0 ]
+  set freq_ch1 [ create_bd_port -dir I -from 47 -to 0 freq_ch1 ]
   set reset_n [ create_bd_port -dir I -type rst reset_n ]
 
   # Create instance: dds_compiler_0, and set properties
@@ -186,15 +191,41 @@ proc create_root_design { parentCell } {
    CONFIG.S_PHASE_Has_TUSER {Not_Required} \
  ] $dds_compiler_0
 
+  # Create instance: dds_compiler_1, and set properties
+  set dds_compiler_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:dds_compiler:6.0 dds_compiler_1 ]
+  set_property -dict [ list \
+   CONFIG.Channels {1} \
+   CONFIG.DATA_Has_TLAST {Not_Required} \
+   CONFIG.DDS_Clock_Rate {400} \
+   CONFIG.Has_ACLKEN {false} \
+   CONFIG.Has_ARESETn {true} \
+   CONFIG.Has_Phase_Out {false} \
+   CONFIG.Latency {9} \
+   CONFIG.M_DATA_Has_TUSER {Not_Required} \
+   CONFIG.M_PHASE_Has_TUSER {Not_Required} \
+   CONFIG.Noise_Shaping {None} \
+   CONFIG.Output_Frequency1 {0} \
+   CONFIG.Output_Width {16} \
+   CONFIG.PINC1 {0} \
+   CONFIG.Parameter_Entry {Hardware_Parameters} \
+   CONFIG.PartsPresent {Phase_Generator_and_SIN_COS_LUT} \
+   CONFIG.Phase_Increment {Streaming} \
+   CONFIG.Phase_Width {48} \
+   CONFIG.Phase_offset {None} \
+   CONFIG.S_PHASE_Has_TUSER {Not_Required} \
+ ] $dds_compiler_1
+
   # Create instance: xlconstant_1, and set properties
   set xlconstant_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_1 ]
 
   # Create port connections
-  connect_bd_net -net aclk_0_1 [get_bd_ports clk] [get_bd_pins dds_compiler_0/aclk]
-  connect_bd_net -net aresetn_0_1 [get_bd_ports reset_n] [get_bd_pins dds_compiler_0/aresetn]
-  connect_bd_net -net dds_compiler_0_m_axis_data_tdata [get_bd_ports data_out] [get_bd_pins dds_compiler_0/m_axis_data_tdata]
-  connect_bd_net -net s_axis_phase_tdata_0_1 [get_bd_ports freq] [get_bd_pins dds_compiler_0/s_axis_phase_tdata]
-  connect_bd_net -net xlconstant_1_dout [get_bd_pins dds_compiler_0/s_axis_phase_tvalid] [get_bd_pins xlconstant_1/dout]
+  connect_bd_net -net aclk_0_1 [get_bd_ports clk] [get_bd_pins dds_compiler_0/aclk] [get_bd_pins dds_compiler_1/aclk]
+  connect_bd_net -net aresetn_0_1 [get_bd_ports reset_n] [get_bd_pins dds_compiler_0/aresetn] [get_bd_pins dds_compiler_1/aresetn]
+  connect_bd_net -net dds_compiler_0_m_axis_data_tdata [get_bd_ports data_out_ch0] [get_bd_pins dds_compiler_0/m_axis_data_tdata]
+  connect_bd_net -net dds_compiler_1_m_axis_data_tdata [get_bd_ports data_out_ch1] [get_bd_pins dds_compiler_1/m_axis_data_tdata]
+  connect_bd_net -net freq_ch1_1 [get_bd_ports freq_ch1] [get_bd_pins dds_compiler_1/s_axis_phase_tdata]
+  connect_bd_net -net s_axis_phase_tdata_0_1 [get_bd_ports freq_ch0] [get_bd_pins dds_compiler_0/s_axis_phase_tdata]
+  connect_bd_net -net xlconstant_1_dout [get_bd_pins dds_compiler_0/s_axis_phase_tvalid] [get_bd_pins dds_compiler_1/s_axis_phase_tvalid] [get_bd_pins xlconstant_1/dout]
 
   # Create address segments
 

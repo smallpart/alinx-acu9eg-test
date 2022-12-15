@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1.3 (win64) Build 2644227 Wed Sep  4 09:45:24 MDT 2019
-//Date        : Wed Nov 30 18:45:13 2022
+//Date        : Thu Dec 15 12:47:57 2022
 //Host        : atom-pc running 64-bit major release  (build 9200)
 //Command     : generate_target system.bd
 //Design      : system
@@ -1545,10 +1545,10 @@ module system
     txp_out_0,
     uart_control_rxd,
     uart_control_txd);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_200 CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_200, CLK_DOMAIN system_clk_jesd_n, FREQ_HZ 168000000, INSERT_VIP 0, PHASE 0.0" *) output clk_200;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_400 CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_400, CLK_DOMAIN system_clk_jesd_n, FREQ_HZ 336000000, INSERT_VIP 0, PHASE 0.0" *) output clk_400;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_JESD_N CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_JESD_N, CLK_DOMAIN system_clk_jesd_n, FREQ_HZ 168000000, INSERT_VIP 0, PHASE 0.000" *) input clk_jesd_n;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_JESD_P CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_JESD_P, CLK_DOMAIN system_clk_jesd_p, FREQ_HZ 168000000, INSERT_VIP 0, PHASE 0.000" *) input clk_jesd_p;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_200 CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_200, CLK_DOMAIN system_clk_jesd_n, FREQ_HZ 200000000, INSERT_VIP 0, PHASE 0.0" *) output clk_200;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_400 CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_400, CLK_DOMAIN system_clk_jesd_n, FREQ_HZ 400000000, INSERT_VIP 0, PHASE 0.0" *) output clk_400;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_JESD_N CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_JESD_N, CLK_DOMAIN system_clk_jesd_n, FREQ_HZ 200000000, INSERT_VIP 0, PHASE 0.000" *) input clk_jesd_n;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_JESD_P CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_JESD_P, CLK_DOMAIN system_clk_jesd_p, FREQ_HZ 200000000, INSERT_VIP 0, PHASE 0.000" *) input clk_jesd_p;
   output [0:0]dac_sync;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 dac_txen TRI_O" *) output [2:0]dac_txen_tri_o;
   (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 fmc_spi IO0_I" *) input fmc_spi_io0_i;
@@ -1565,7 +1565,7 @@ module system
   (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 fmc_spi SS_T" *) output fmc_spi_ss_t;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio_spi_en TRI_O" *) output [0:0]gpio_spi_en_tri_o;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio_status TRI_I" *) input [1:0]gpio_status_tri_i;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.JESD_CLK_IN_DIV CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.JESD_CLK_IN_DIV, CLK_DOMAIN system_clk_jesd_n, FREQ_HZ 168000000, INSERT_VIP 0, PHASE 0.000" *) output [0:0]jesd_clk_in_div;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.JESD_CLK_IN_DIV CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.JESD_CLK_IN_DIV, CLK_DOMAIN system_clk_jesd_n, FREQ_HZ 200000000, INSERT_VIP 0, PHASE 0.000" *) output [0:0]jesd_clk_in_div;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 led_pl TRI_O" *) output [0:0]led_pl_tri_o;
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sync CLK_N" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME sync, CAN_DEBUG false, FREQ_HZ 100000000" *) input [0:0]sync_clk_n;
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 sync CLK_P" *) input [0:0]sync_clk_p;

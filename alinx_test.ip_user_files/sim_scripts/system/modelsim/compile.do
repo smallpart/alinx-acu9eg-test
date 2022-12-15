@@ -284,6 +284,7 @@ vcom -work dds_compiler_v6_0_18 -64 -93 \
 
 vcom -work xil_defaultlib -64 -93 \
 "../../../bd/system/ip/edit_modulator_v1_0.srcs/sources_1/bd/design_1/ip/design_1_dds_compiler_0_0/sim/design_1_dds_compiler_0_0.vhd" \
+"../../../bd/system/ip/edit_modulator_v1_0.srcs/sources_1/bd/design_1/ip/design_1_dds_compiler_0_1/sim/design_1_dds_compiler_0_1.vhd" \
 
 vlog -work xil_defaultlib -64 -incr "+incdir+../../../../alinx_test.srcs/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../alinx_test.srcs/sources_1/bd/system/ipshared/cac7/hdl" "+incdir+../../../../alinx_test.srcs/sources_1/bd/system/ipshared/c923" "+incdir+../../../../alinx_test.srcs/sources_1/bd/system/ip/system_zynq_ultra_ps_e_0_0/sim_tlm" "+incdir+../../../../alinx_test.srcs/sources_1/bd/system/ip/system_zynq_ultra_ps_e_0_0" "+incdir+C:/Xilinx/Vivado/2019.1/data/xilinx_vip/include" \
 "../../../bd/system/ip/edit_modulator_v1_0.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/sim/design_1_xlconstant_0_0.v" \
@@ -291,8 +292,8 @@ vlog -work xil_defaultlib -64 -incr "+incdir+../../../../alinx_test.srcs/sources
 "../../../bd/system/ipshared/src/data_conv.v" \
 "../../../bd/system/ipshared/edit_modulator_v1_0.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v" \
 "../../../bd/system/ipshared/src/lfm.v" \
-"../../../bd/system/ipshared/7c89/hdl/modulator_v1_0_S00_AXI.v" \
-"../../../bd/system/ipshared/7c89/hdl/modulator_v1_0.v" \
+"../../../bd/system/ipshared/02f7/hdl/modulator_v1_0_S00_AXI.v" \
+"../../../bd/system/ipshared/02f7/hdl/modulator_v1_0.v" \
 "../../../bd/system/ip/system_modulator_0_0/sim/system_modulator_0_0.v" \
 
 vcom -work xil_defaultlib -64 -93 \

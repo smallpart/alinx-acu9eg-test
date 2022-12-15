@@ -37,13 +37,13 @@ void DAC9173_InitNco(void);
 /*******************************************
  * Global variables
  ******************************************/
-bool    clk_out_en  = true;
-uint8_t clk_out_div = 4;
-uint16_t dac_en     = DAC9173_DAC0 | DAC9173_DAC1;
-uint64_t freq0      = DAC9173_DAC0_FREQUENCY;
-uint64_t freq1      = DAC9173_DAC1_FREQUENCY;
-uint16_t amp0       = DAC9173_AMPLITUDE;
-uint16_t amp1       = DAC9173_AMPLITUDE;
+bool     clk_out_en  = true;
+uint8_t  clk_out_div = 4;
+uint16_t dac_en      = DAC9173_DAC0 | DAC9173_DAC1;
+uint64_t freq0       = 1235000000;
+uint64_t freq1       = 50000000;
+uint16_t amp0        = DAC9173_AMPLITUDE;
+uint16_t amp1        = DAC9173_AMPLITUDE;
 
 struct xil_spi_init_param xil_spi_param = {
     .type = SPI_PL,
@@ -217,12 +217,11 @@ void DAC9173_InitJesd(void) {
     xil_printf("[API]  DAC Product Revision: %d\r\n", dac_chip_id.dev_revision);
     xil_printf("[API]  API Revision: %d.%d.%d\r\n",   revision[0], revision[1], revision[2]);
 
-//    dac_clkin_Hz = 9600000000;
-    dac_clkin_Hz = 6048000000;
+    dac_clkin_Hz = ad9172_device->st->dac_clkin_Hz;
 
     xil_printf("[API]  PLL Input rate: %d\r\n", dac_clkin_Hz);
 
-    ret = ad917x_set_dac_clk(ad917x_h, (uint64_t)dac_clkin_Hz, 0, dac_clkin_Hz);
+    ret = ad917x_set_dac_clk(ad917x_h, dac_clkin_Hz, 0, dac_clkin_Hz);
     if (ret != 0) {
         xil_printf("[API]  ad917x_set_dac_clk failed. Error code: %d\r\n", ret);
         return;
@@ -248,8 +247,8 @@ void DAC9173_InitJesd(void) {
         }
     }
 
-    ad917x_nco_set(ad917x_h, AD917X_DAC0, 0, 1235000000, DAC9173_AMPLITUDE, 0, 0);
-    ad917x_nco_set(ad917x_h, AD917X_DAC1, 0,   50000000, DAC9173_AMPLITUDE, 0, 0);
+    ad917x_nco_set(ad917x_h, AD917X_DAC0, 0, freq0, amp0, 0, 0);
+    ad917x_nco_set(ad917x_h, AD917X_DAC1, 0, freq1, amp1, 0, 0);
 
     ad917x_jesd_set_lane_xbar(ad917x_h, 0, 7);
     ad917x_jesd_set_lane_xbar(ad917x_h, 1, 6);
@@ -427,39 +426,49 @@ void DAC9173_OutputEnable(uint16_t dac, bool state) {
 }
 
 /*******************************************
+ * DAC9173 Set Reference Frequency
+ ******************************************/
+void DAC9173_SetRefFreq(uint64_t freq) {
+    ad9172_param.dac_clkin_Hz = freq;
+    DAC9173_InitJesd();
+}
+
+/*******************************************
  * DAC9173 Set Frequency
  ******************************************/
-void DAC9173_SetFrequency(uint16_t dac, uint64_t ftw) {
-    /* Clear update */
-    DAC9173_Write(0x0113, 0x00);
-
-    /* Change DAC */
-    DAC9173_Write(0x0008, (dac << 6));
-
-    /* Mux in dc to the input of the final DDS */
-    DAC9173_Write(0x01e6, 0x02);
-    /* Enable main datapath NCO */
-    DAC9173_Write(0x0112, 0x08);
-
-    /* Main NCO FTW */
-    DAC9173_Write(0x0114, (ftw >>  0) & 0xff);
-    DAC9173_Write(0x0115, (ftw >>  8) & 0xff);
-    DAC9173_Write(0x0116, (ftw >> 16) & 0xff);
-    DAC9173_Write(0x0117, (ftw >> 24) & 0xff);
-    DAC9173_Write(0x0118, (ftw >> 32) & 0xff);
-    DAC9173_Write(0x0119, (ftw >> 40) & 0xff);
-
-    /* Update */
-    DAC9173_Write(0x0113, 0x01);
-
-    /* Enable TXEN */
-    DAC9173_Write(0x0596, (1 << 3) | (1 << 2));
+void DAC9173_SetFrequency(uint16_t dac, uint64_t freq) {
+//    /* Clear update */
+//    DAC9173_Write(0x0113, 0x00);
+//
+//    /* Change DAC */
+//    DAC9173_Write(0x0008, (dac << 6));
+//
+//    /* Mux in dc to the input of the final DDS */
+//    DAC9173_Write(0x01e6, 0x02);
+//    /* Enable main datapath NCO */
+//    DAC9173_Write(0x0112, 0x08);
+//
+//    /* Main NCO FTW */
+//    DAC9173_Write(0x0114, (ftw >>  0) & 0xff);
+//    DAC9173_Write(0x0115, (ftw >>  8) & 0xff);
+//    DAC9173_Write(0x0116, (ftw >> 16) & 0xff);
+//    DAC9173_Write(0x0117, (ftw >> 24) & 0xff);
+//    DAC9173_Write(0x0118, (ftw >> 32) & 0xff);
+//    DAC9173_Write(0x0119, (ftw >> 40) & 0xff);
+//
+//    /* Update */
+//    DAC9173_Write(0x0113, 0x01);
+//
+//    /* Enable TXEN */
+//    DAC9173_Write(0x0596, (1 << 3) | (1 << 2));
 
     if ( (dac & DAC9173_DAC0) != 0 ) {
-        freq0 = ftw;
+        freq0 = freq;
+        ad917x_nco_set(ad917x_h, AD917X_DAC0, 0, freq0, amp0, 0, 0);
     }
     if ( (dac & DAC9173_DAC1) != 0 ) {
-        freq1 = ftw;
+        freq1 = freq;
+        ad917x_nco_set(ad917x_h, AD917X_DAC1, 0, freq1, amp1, 0, 0);
     }
 }
 

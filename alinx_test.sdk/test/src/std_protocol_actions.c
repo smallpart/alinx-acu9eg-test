@@ -220,6 +220,7 @@ void std_action_setfreq(uint16_t sig_id, uint64_t freq) {
     switch (sig_id) {
         case 0: {
             /* Set Reference Frequency */
+            DAC9173_SetRefFreq(freq);
         } break;
 
         case 1: {

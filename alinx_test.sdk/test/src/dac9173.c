@@ -476,18 +476,20 @@ void DAC9173_SetFrequency(uint16_t dac, uint64_t freq) {
  * DAC9173 Set Amplitude
  ******************************************/
 void DAC9173_SetAmplitude(uint16_t dac, uint16_t amp) {
-    /* Change channel */
-    DAC9173_Write(0x0008, dac);
-
-    /* DC test tone amplitude */
-    DAC9173_Write(0x0148, (amp >> 0) & 0xff);
-    DAC9173_Write(0x0149, (amp >> 8) & 0xff);
+//    /* Change channel */
+//    DAC9173_Write(0x0008, dac);
+//
+//    /* DC test tone amplitude */
+//    DAC9173_Write(0x0148, (amp >> 0) & 0xff);
+//    DAC9173_Write(0x0149, (amp >> 8) & 0xff);
 
     if ( (dac & DAC9173_DAC0) != 0 ) {
         amp0 = amp;
+        ad917x_nco_set(ad917x_h, AD917X_DAC0, 0, freq0, amp0, 0, 0);
     }
     if ( (dac & DAC9173_DAC1) != 0 ) {
         amp1 = amp;
+        ad917x_nco_set(ad917x_h, AD917X_DAC1, 0, freq1, amp1, 0, 0);
     }
 }
 

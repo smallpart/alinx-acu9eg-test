@@ -38,6 +38,7 @@ void DAC9173_SetAmplitude(uint16_t dac, uint16_t amp);
 void DAC9173_OutputEnable(uint16_t dac, bool state);
 void DAC9173_ClkOutEnable(bool state);
 void DAC9173_ClkOutSetDiv(uint8_t div);
+void DAC9173_SetRefFreq  (uint64_t freq);
 
 #endif /* SRC_DAC9173_H_ */
 
